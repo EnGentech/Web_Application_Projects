@@ -42,6 +42,7 @@ body{
 .head_signup{
     text-align: center;
     font-family: 'Marko One', serif; 
+    margin-top: 5%;
 }
 
 .head_signup span{
@@ -49,9 +50,9 @@ body{
 }
 
 .main .form{
-    height: 517px;
+    height: 530px;
     width: 520px;
-    border: 1px solid rgb(238, 231, 231);
+    border: 1px solid rgb(221, 210, 210);
     border-radius: 10px;
     padding:10px;
     margin: auto;
@@ -99,6 +100,11 @@ select:focus{
     text-align: center;
 }
 
+.submit:hover{
+    border-bottom: 2px solid red;
+    cursor: pointer;
+}
+
 .discipline{
     display: flex;
     justify-content: space-evenly;
@@ -114,6 +120,13 @@ select:focus{
 }
 
 .end_form{
-    color: grey;
+    color: rgb(72, 26, 26);
     font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.registered{
+    text-align: left !important;
+    font-style: italic;
+    font-size: x-small;
 }
