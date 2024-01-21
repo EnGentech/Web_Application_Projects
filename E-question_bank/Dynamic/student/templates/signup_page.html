@@ -1,0 +1,72 @@
+{% extends "landingPage.html" %}
+{% load static %}
+
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/signup.css' %}">
+    <title>Sign Up</title>
+{% endblock head %}
+
+{% block content %}
+{% block loginOut %}
+
+{% endblock loginOut %}
+    <div class="container_signUp">
+        <div class="main_signUp">
+            <h1 class="head_signup_signUp">Heritage <span>E-Question</span> Bank</h1>
+            <p> Let's begin your exploration of our archive of past questions and <br>answers. You're in the right place to access this valuable resource. <br>Happy exploring!</p>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <center><p class="signUp_messages fadeOff">{{ message }}</p></center>                 
+                {% endfor %}
+            {% endif %}
+
+            <form action="{% url 'signUp' %}" method="POST" class="form">
+                {% csrf_token %}
+                <label for="userName" class="alignleft">Username</label><br>
+                {{ form.username }}<br><br>
+                {% comment %} <input type="text" name="userName" id="userName" placeholder="student's name"><br><br> {% endcomment %}
+                <label for="email" class="alignleft">Email address</label><br>
+                {% comment %} <input type="text" name="email" id="email" placeholder="example@gmail.com"> {% endcomment %}
+                {{ form.email }}<br><br>
+                <label for="password" class="alignleft">Password</label><br>
+                {{ form.password1 }}
+                {% comment %} <input type="password" name="password" id="password" placeholder="********"> {% endcomment %}
+                <br><br>
+                <label for="cPassword" class="alignleft">Confirm Password</label><br>
+                {{ form.password2 }}
+                {% comment %} <input type="password" name="cPassword" id="cPassword" placeholder="********"> {% endcomment %}
+                <br><br><br>
+
+                <h3 class="head_signup_signUp" style="color: navy;">Discipline</h3><hr>
+                <div class="discipline">
+                    <section class="discipline_direction">
+                        <label for="faculty" class="special_label">Faculty</label>
+                        {{ form.faculty }}
+                        {% comment %} <select name="faculty" id="faculty">
+                            <option value="" disabled selected style="display:none">Choose Faculty</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Environmental Science">Environmental Science</option>
+                            <option value="Management Science">Management Science</option>
+                            <option value="Science and Technology">Science and Technology</option>
+                        </select> {% endcomment %}
+                    </section>
+                    
+                    <section class="discipline_direction">
+                        <label for="department" class="special_label">Department</label>
+                        {{ form.department }}
+                        {% comment %} <select name="department" id="department">
+                            <option value="" disabled selected style="display:none">Choose your department</option>
+                        </select> {% endcomment %}
+                    </section>
+                </div>
+                <br>
+                <button class="submit">Create Account</button>
+                <p><span class="registered">Already registered?</span> <a href="{% url 'login' %}" style="color: green; font-weight: bold; text-decoration: none;">Login</span></a>
+            </form><br><br><br>
+            <h6 class="end_form">By creating this account, you agree that you have accepted our <br>terms and conditions.</h6>
+        </div>
+    </div>
+
+{% endblock content %}

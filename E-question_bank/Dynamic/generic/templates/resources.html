@@ -1,0 +1,82 @@
+{% extends "landingPage.html" %}
+{% load static %}
+{% block head %}
+    <script src="https://kit.fontawesome.com/11285bfb5b.js" crossorigin="anonymous"></script>
+    <title>Load Resources</title>
+    <link rel="stylesheet" href="{% static 'styles/resources.css' %}">
+{% endblock head %}
+
+    
+{% block content %}   
+   <div class="resources">
+        <div class="content">
+            <section class="resourseHead">
+                <section class="rightPane">
+                    <p id="facultyTag">Faculty of Engineering</p>
+                    <p id="departmentTag">Computer Engineering</p>
+                </section>
+                <h2>
+                    Explore Resources
+                </h2>
+                <form action="">
+                    <label for="filter">Filter by</label>
+                    
+                    <select name="filter" id="filter"> 
+                        <option value="all">all</option>                   
+                        <option value="filter_cCode">Course Code</option>
+                        <option value="filter_level">Level</option>
+                        <option value="filter_semeter">Semester</option>
+                    </select> 
+                    <button style="display: none">Filter</button>                   
+                </form>
+
+                <!-- table data -->
+                <div class="tableContent">
+                    <table class="resourceTable">
+                        <thead>
+                            <td>Course Code</td>
+                            <td>Course Title</td>
+                            <td>Level</td>
+                            <td>Semester</td>
+                            <td>Lecture Resource</td>
+                            <td>Practical Resource</td>
+                            <td>Recommended site</td>
+                            <td>Youtube Channel</td>
+                        </thead>
+                        <tr>
+                            <td>CTE114</td>
+                            <td>Internet and Wed Technology</td>
+                            <td>ND 100</td>
+                            <td>Semester 1</td>
+                            <td><button class="download">Download</button></td>
+                            <td><button class="download">Download</button></td>
+                            <td><button class="download"><a href="http://">Explore</a></button></td>
+                            <td><button class="download"><a href="">Visit</a></button></td>
+                        </tr>
+                        <tr>
+                            <td>CTE114</td>
+                            <td>Internet and Wed Technology</td>
+                            <td>ND 100</td>
+                            <td>Semester 1</td>
+                            <td><button class="download">Download</button></td>
+                            <td><button class="download">Download</button></td>
+                            <td><button class="download"><a href="http://">Explore</a></button></td>
+                            <td><button class="download"><a href="">Visit</a></button></td>
+                        </tr>
+                        <tr>
+                            <td>CTE114</td>
+                            <td>Internet and Wed Technology</td>
+                            <td>ND 100</td>
+                            <td>Semester 1</td>
+                            <td><button class="download">Download</button></td>
+                            <td><button class="download">Download</button></td>
+                            <td><button class="download"><a href="http://">Explore</a></button></td>
+                            <td><button class="download"><a href="">Visit</a></button></td>
+                        </tr>
+                    </table>
+                </div>  
+            </section>
+        </div>
+   </div>
+   
+{% endblock content %}

@@ -1,0 +1,216 @@
+body{
+    background-image: url("../images/questionBank.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    background-position: top;
+   
+}
+
+.top{
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid green;
+}
+
+.top p{
+    margin-bottom: 0px;
+}
+
+.main_question{
+    height: 80%;
+    width: 70%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    background-image: url("../images/qBank.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px 1px rgb(91, 89, 89);
+    box-shadow: 0px 0px 10px gray;
+    background-color: white;
+    font-size: small;
+}
+
+.main_question p{
+    margin-top: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: smaller;
+    text-align: center;
+}
+
+.main_question h1{
+    margin-bottom: 3px;
+}
+
+.container_question{
+    margin-top: 62px;
+    margin-bottom: 62px;
+    display:flex;
+    justify-content: center;
+}
+
+.head_question{
+    text-align: center;
+    font-family: 'Marko One', serif; 
+    margin-top: 3%;
+}
+
+.head_question span{
+    color: green;
+}
+
+fieldset{
+    border-radius: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.317);
+    background-color: rgba(245, 245, 245, 0.801);
+    box-shadow: 0px 0px 10px rgb(189, 193, 190);
+}
+
+form{
+    width: 80%;
+    margin:auto;
+}
+
+.main_question select{
+    width: 32.8%;
+    padding: 1%;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+#cCode{
+    width: 22%;
+    margin-right: 20px;
+}
+
+.main_question #cTitle{
+    width: 74%;
+    padding: 1%;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.main_question label{
+    font-size: small;
+    color: gray;
+    margin-left: 2%;
+    display: inline;
+}
+
+#year_label{
+    margin-left: 21.6%;
+}
+
+#level_label{
+    margin-left: 24%;
+}
+
+#department_label{
+    margin-left: 27%;
+}
+
+#semester_label{
+    margin-left: 30%;
+}
+
+#cTitle_label{
+    margin-left: 13%;
+}
+
+#submit{
+    font-size: large;
+    font-weight: 600;
+    width: 99.5%;
+    cursor: pointer;
+    background-color: rgb(0, 88, 0);
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#submit:hover{
+    background-color: rgba(0, 110, 0, 0.693);
+    border-bottom: 2px solid rgba(255, 0, 0, 0.584);
+}
+
+.main_question select:focus, .main_question input:focus{
+    outline: none;
+}
+
+#loadQuestion, #noQuestion{
+    margin-bottom: 10px;
+    padding: 10px;
+    min-height: 100px;
+    width: 85%;
+    border-radius: 15px;
+    margin: auto;
+    border: 1px solid rgba(104, 101, 101, 0.215);
+}
+
+#loadQuestion{
+    display: none;
+}
+
+
+#loadHere{
+    color: gray;
+    font-size: small;
+    margin-top: 5%;
+}
+
+#author{
+    margin-top: 10px;
+    color: gray
+}
+
+embed{
+    width: 100%;
+    height: 680px;
+    zoom: 1.5;
+    overflow-x: none;
+}
+
+input[type="file"]{
+    border-radius: 20px;
+    color: blue;
+    width: 60%;
+    max-width: 60%;
+    border: 1px solid gray;
+}
+
+input[type="file"]::-webkit-file-upload-button{
+    background-color: darkgreen;
+    color: white;
+}
+
+#preview{
+    border: 1px solid gray;
+    width: 38%;
+    margin-left: 1%;
+    border-radius: 20px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+    display: inline-block
+}
+
+#preview:hover{
+    background-color: rgba(0, 110, 0, 0.693);
+    border-bottom: 2px solid rgba(255, 0, 0, 0.584);
+}
+
+.messages{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 22.5%;
+    background-color: lightgreen;
+    border-radius: 30px;
+    font-weight: 500;
+    padding: 3px 50px 3px 50px;
+    border: 1px solid rgba(137, 134, 134, 0.379);
+}

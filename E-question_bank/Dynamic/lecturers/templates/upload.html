@@ -1,0 +1,99 @@
+{% extends "landingPage.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'styles/upload.css' %}">
+    <title>Upload Question</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="container_question">
+        <div class="main_question">
+            <section class="top">
+                
+                {% if messages %}
+                    {% for message in messages %}
+                        <center><p class="messages fadeOff">{{ message }}</p></center>                       
+                    {% endfor %}
+                {% endif %}
+                
+                <h1 class="head_question">Heritage <span>E-Question</span> Bank</h1>
+                <p>Get prepared ahead as it is said <span style="font-weight: bolder;">"Early to bed, early to rise".</span> <br>Happy exploring!</p> 
+            </section>
+
+            <section class="input_section"><br>
+                <fieldset><br>
+                    <form action="{% url 'upload_question' %}" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <label for="faculty">Faculty <label for="department" id="department_label">Department</label><label for="level" id="level_label">Level</label></label><br>
+                        <select name="faculty" id="faculty">
+                            <option value="" disabled selected style="display:none">Choose Faculty</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Environmental Science">Environmental Science</option>
+                            <option value="Management Science">Management Science</option>
+                            <option value="Science and Technology">Science and Technology</option>
+                        </select>
+
+                        <select name="department" id="department">
+                            <option value="" disabled selected style="display:none">No Faculty Selected</option>
+                        </select>
+
+                        <select name="level" id="level">
+                            <option value="" disabled selected style="display:none">Choose your level</option>
+                            <option value="ND 100">ND 100</option>
+                            <option value="ND 200">ND 200</option>
+                            <option value="HND 100">HND 100</option>
+                            <option value="HND 200">HND 200</option>
+                        </select><br><br>
+
+                        <label for="option">Option (if any)<label for="year" id="year_label">Year</label><label for="semester" id="semester_label"></label>Semester</label><br>
+                        <select name="option" id="option">
+                            <option value="" disabled selected style="display:none">Choose Option (if any)</option>
+                            <option value="Instrumentation">Instrumentation</option>
+                            <option value="Broadcase">Broadcase</option>
+                        </select>
+
+                        <select name="year" id="year">
+                            <option value="" disabled selected style="display:none">Select year</option>
+                            <option value="2020/2021">2020/2021</option>
+                            <option value="2021/2022">2021/2022</option>
+                            <option value="2022/2023">2022/2023</option>
+                            <option value="2023/2024">2023/2024</option>
+                        </select>
+
+                        <select name="semester" id="semester">
+                            <option value="" disabled selected style="display:none">Select Semester</option>
+                            <option value="Semester 1">Semester 1</option>
+                            <option value="Semester 2">Semester 2</option>
+                        </select>
+                        <br><br>
+
+                        <label for="cCode">Course-code <label for="cTitle" id="cTitle_label">Course Title</label></label><br>
+                        <select name="cCode" id="cCode">
+                            <option value="" disabled selected style="display:none">Select Course Code</option>
+                        </select>
+                        <input type="text" name="cTitle" id="cTitle" placeholder="Course title" disabled><br><br>
+                        <input type="file" name="upload" id="upload" placeholder="Upload Question">
+                        <p id="preview">Preview</p>
+                        <br><br><br>
+
+                        <div id="loadQuestion">
+                            <embed src="Inyang, I. U. (Resume).pdf" type="application/pdf">
+                        </div>
+                        <div id="noQuestion" >
+                            <center><p id="loadHere">Your Question will be previwed here in PDF</p></center>
+                        </div><br><br>
+
+                        <input type="submit" id="submit" value="Upload Question">
+                    </form>
+                    
+
+                    <div id="author">
+                        <p>Powered by EnGentech | @2024</p>
+                    </div>
+                </fieldset>
+
+                
+            </section>
+        </div>
+    </div>
+{% endblock content %}

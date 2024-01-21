@@ -1,0 +1,47 @@
+{% extends "landingPage.html" %}
+{% load static %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styles/signIn.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+{% endblock head %}
+
+{% block content %}
+
+{% block loginOut %}
+
+{% endblock loginOut %}
+
+{% if messages %}
+    {% for message in messages %}
+        <center><p class="signIn_messages fadeOff">{{ message }}</p></center>                 
+    {% endfor %}
+{% endif %}
+    <div class="signIn_container">
+        <div class="signIn_main">
+            <h1 class="head_signIn">Heritage <span>E-Question</span> Bank</h1>
+            <p> Get prepared ahead as it is said <span style="font-weight: bolder;">"Early to bed, early to rise".</span> <br>Happy exploring!</p>
+            <hr>
+            <section class="input_section"><br>
+                <form action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                    <fieldset>
+                        <label for="user">User-Name or e-mail</label>
+                        <input type="text" name="user" id="user" placeholder="user">
+
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="********"><br>    
+
+                        <input type="submit" id="submit" value="Submit">
+                    </fieldset>
+                </form>
+
+                <p>not registered? <span><a href="{% url 'signUp' %}">SignUp</a></span></p>
+                <p id="reset">Forgot password? <span><a href="">Reset</a></span></p>
+            </section>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,127 @@
+body{
+    background-image: url("../images/book-first-sale.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 70%;
+}
+
+.signIn_main{
+    height: 620px;
+    width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgb(237, 236, 234);
+}
+
+.signIn_main p{
+    margin-top: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: smaller;
+    text-align: center;
+}
+
+.signIn_main h1{
+    margin-bottom: 3px;
+}
+
+.signIn_container{
+    margin-top: 62px;
+    margin-bottom: 62px;
+    display:flex;
+    justify-content: center;
+}
+
+.head_signIn{
+    text-align: center;
+    font-family: 'Marko One', serif; 
+    margin-top: 5%;
+    font-size: xx-large;
+}
+
+.head_signIn span{
+    color: green;
+}
+
+.input_section{
+    width: 85%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(210, 215, 211, 0.251);
+    height: 380px;
+}
+
+input{
+    width: 90%;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-bottom: 25px !important;
+    display: block;
+    margin: auto;
+}
+
+label{
+    color: darkgreen;
+    margin-left: 8%;
+}
+
+input[type="submit"]{
+    width: 90%;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-bottom: 15px !important;
+    display: block;
+    margin: auto;
+    background-color: green;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(173, 204, 173);
+    color: darkgreen;
+    border: 1px solid darkgreen;
+}
+
+#reset{
+    color: rgba(0, 100, 0, 0.426);
+    margin-top: 20%;
+    border-top: 1px solid green;
+}
+
+a{
+    text-decoration: none;
+    color: darkgreen;
+    font-weight: bold;
+    font-style: italic;
+}
+
+a:hover{
+    color: rgb(117, 149, 117);
+}
+
+fieldset{
+    border: 1px solid rgba(128, 128, 128, 0.396);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.signIn_messages{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 15.5%;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    font-size: small;
+    color: green;
+    padding: 3px 50px 3px 50px;
+    border: 1px solid rgba(137, 134, 134, 0.184);
+}

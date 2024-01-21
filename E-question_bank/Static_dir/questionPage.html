@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="questionPage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <section class="top">
+                <h1 class="head_signup">Heritage <span>E-Question</span> Bank</h1>
+                <p>Get prepared ahead as it is said <span style="font-weight: bolder;">"Early to bed, early to rise".</span> <br>Happy exploring!</p> 
+            </section>
+
+            <section class="input_section"><br>
+                <fieldset><br>
+                    <form action="">
+                        <label for="user">Level <label for="year" id="year_label">Year</label><label for="semester" id="semester_label">Semester</label></label><br>
+                        <select name="level" id="level">
+                            <option value="" disabled selected style="display:none">Choose your level</option>
+                            <option value="">ND 100</option>
+                            <option value="">ND 200</option>
+                            <option value="">HND 100</option>
+                            <option value="">HND 200</option>
+                        </select>
+
+                        <select name="year" id="year">
+                            <option value="" disabled selected style="display:none">Select year</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                            <option value="">2023</option>
+                        </select>
+
+                        <select name="semester" id="semester">
+                            <option value="" disabled selected style="display:none">Select Semester</option>
+                            <option value="">Semester 1</option>
+                            <option value="">Semester 2</option>
+                        </select>
+                        <br><br>
+
+                        <label for="cCode">Course-code <label for="cTitle" id="cTitle_label">Course Title</label></label><br>
+                        <select name="cCode" id="cCode">
+                            <option value="" disabled selected style="display:none">Choose your level</option>
+                            <option value="">CTE 112</option>
+                            <option value="">CTE 114</option>
+                            <option value="">CTE 115</option>
+                            <option value="">CTE 116</option>
+                        </select>
+                        <input type="text" name="cTitle" id="cTitle" placeholder="Course title" disabled><br><br>
+
+                        <input type="submit" id="submit" value="Load Question">
+                    </form>
+
+                    <div id="loadQuestion">
+                        <embed src="Inyang, I. U. (Resume).pdf" type="application/pdf">
+                    </div>
+                    <div id="noQuestion" >
+                        <center><p id="loadHere">Your Question will be loaded here in PDF</p></center>
+                    </div>
+
+                    
+
+                    <div id="author">
+                        <p>Powered by EnGentech | @2024</p>
+                    </div>
+                </fieldset>
+
+                
+            </section>
+        </div>
+    </div>
+</body>
+</html>

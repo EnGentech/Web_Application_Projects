@@ -1,0 +1,71 @@
+{% extends "landingPage.html" %}
+{% load static %}
+{% block head %}
+    <script src="https://kit.fontawesome.com/11285bfb5b.js" crossorigin="anonymous"></script>
+    <title>About - Page</title>
+    <link rel="stylesheet" href="{% static 'styles/aboutPage.css' %}">
+{% endblock head %}
+
+    
+{% block content %}   
+    <div class="midMe">
+        <div class="centerPage">
+          <h2 style="text-align: center; color: rgb(3, 50, 24); margin-top: 20px;">Welcome to the Developers page! 🌟</h2>
+          <hr>
+        
+        <section class="infoBase">
+            <h2>Why Heritage E_Question?</h2>
+        
+            <p>
+                Welcome to Heritage Equestion, a visionary platform born from the recognition of a fundamental need in the educational landscape. As the brainchild of Iberedem Inyang, a certified software backend engineer, this platform is meticulously crafted to address the evolving requirements of students in their pursuit of academic excellence.
+            </p>
+        
+            <p>
+                <h4>📚 Bridging the Educational Gap</h4>
+                In a world that's rapidly advancing, the need for accessible and comprehensive educational resources has never been more critical. Heritage Equestion stands as a response to the challenges students face – be it accessing past questions, obtaining lecture materials, or gaining insights into the vast array of courses offered.
+            </p>
+
+            <p>
+                <h4>🚀 Nurturing Future Leaders</h4>
+                Our commitment goes beyond merely providing information; it extends to the core belief that education is the cornerstone of leadership. Heritage Equestion is designed to foster an environment where students can not only acquire knowledge but also cultivate the skills and mindset necessary to become the leaders of tomorrow.                
+            </p>
+
+            <p>
+                <h4>🛤️ A Journey into the Future of Learning</h4>
+                Join us on this journey into the future of learning. Heritage Equestion is more than a platform; it's a testament to the evolving landscape of education. Here, we break down barriers, provide a gateway to knowledge, and empower students to navigate their educational odyssey with confidence and purpose.              
+            </p>
+
+            <p>
+                <h4>👩‍🏫 Your Path to Academic Excellence Starts Here</h4>
+                Whether you're seeking past questions to sharpen your skills, exploring lecture materials to deepen your understanding, or discovering a myriad of courses to chart your academic path, Heritage Equestion is your partner in academic success.              
+            </p>
+            
+        
+        </section>
+
+        </div> 
+               
+    </div>
+   
+    <div class="contactUs">
+        <h2>🌟 The Visionary Behind the Platform</h2>
+    </div>
+    <div class="aboutUs">
+        
+        <div class="inyang">
+            <div class="centa">
+                <img src="{% static 'images/author/pass.jpg' %}" alt="">
+                <p><b style="color: gold">Back-end Engr. <br></b>
+                    Iberedem Inyang, a certified software backend engineer, stands as a visionary force in the realm of technology, having developed a diverse portfolio of groundbreaking applications. His notable creations include Kasuwa, an innovative e-commerce platform that redefines online shopping experiences, and Lessonpedia, a connected economy site fostering global knowledge exchange. Beyond the ordinary, Iberedem's outstanding software developments span various industries, leaving an indelible mark on the digital landscape. His work has garnered recognition for its impact on industries and communities, showcasing his ability to address real-world challenges through technology. As a future-focused visionary, Iberedem Inyang is not merely building applications; he is architecting the future of technology, pushing the boundaries of what's possible in the ever-evolving world of software development.
+                </p>
+                <ul>
+                    <li><a href="https://github.com/EnGentech">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/iberedem-inyang-3b88ba223/">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+   
+{% endblock content %}

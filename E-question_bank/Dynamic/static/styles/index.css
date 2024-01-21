@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@700&family=Marko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marko+One&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Marko+One&display=swap');
+
+body{
+    margin: 0px;
+    background-image: url(../images/side_lie.png), url(../images/side_line.png), url(../images/side_line2.png);
+    background-repeat: no-repeat;
+    background-position: 0% 105%, left 50%, left 61%;
+}
+
+.header{
+    height: 90px;
+    border-bottom: 1px solid rgb(227, 214, 214);
+    background-color: white;
+    top: 0;
+}
+
+.logo{
+    padding-top: 15px;
+    margin-left: 105px;
+}
+
+.navigation{
+    float: right;
+    display: flex;
+    margin-top: 8px;
+    margin-right: 10%;
+}
+
+.navigation li{
+    list-style-type: none;
+    display: inline-flex;
+    padding: 20px;
+}
+
+.navigation a{
+    color: black;
+    text-decoration: none;
+}
+
+#default{
+    color: #01A559;
+}
+
+#special_button, #logout_button{
+    border: 1px solid black;
+    padding: 2% 2% 2% 2%;
+    width: 150px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-weight: 500;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+#logout_button{
+    background-color: red;
+    border: none;
+}
+
+.other_nav{
+    color: black;
+    text-decoration: none;
+}
+
+.midlevel{
+    margin-top: 50px;
+    height: 750px;
+    background-image: url(../images/background_circles.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.mid_image{
+    float: right;
+    margin-right: 2%;
+}
+
+.leftpane{
+    margin-left: 5%;
+}
+
+.leftpane p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.left_top{
+    font-family: 'Inika', serif;
+    font-size: 50px;
+    line-height: 80px;
+    padding-top: 180px;
+}
+
+.but2{
+    color: #033B21;
+    text-decoration: none;
+    border: 1px solid #033B21;
+    border-bottom: 2px solid #033B21;
+    border-radius: 4px;
+    padding: 10px 60px 10px 60px;
+    font-family: 'Inika', serif;
+    font-size: 18px;
+}
+
+.sec_midlevel{
+    display: flex;
+    justify-content: center;
+}
+
+.sec_midlevel_content{
+    display: flex;
+    text-align: center;
+}
+
+.box_inner{
+    height: 140px;
+    width: 380px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 2px 1px rgb(237, 234, 234);
+    border-radius: 4px;
+    margin-right: 5%;
+    padding-top: 55px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+}
+
+.box_inner span{
+    font-size: 24px;
+    color: #FFB661;
+}
+
+.third_midlevel{
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+}
+
+.third_content .third_h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    text-align: center;
+}
+
+.third_content .third_p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19.5px;
+    text-align: center;
+}
+
+.section_midle{
+    background-image: url(../images/Line.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-top: 5%;
+}
+
+.howitworks{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.icon{
+    width: 48%;
+    text-align: center;
+}
+
+.fifth_midlevel{
+    background-color: white;
+    
+}
+
+.fifthContent{
+    height: 700px;
+    width: 100%;
+    background-color: whte;
+    margin-top: 10%;
+    background-image: url(../images/YOU.png), url(../images/Loop.png);
+    background-repeat: no-repeat;
+    background-size: 250px 100px, auto auto;
+    background-position: 30%, 28%;
+}
+
+.fifthh3{
+    margin-left: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    line-height: 96px;
+}
+
+.fifthContent img{
+    float: right;
+    margin-right: 5%;
+}
+
+.exploreh3, .questionsh3{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 3%;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3%;
+}
+
+.exploreContent{
+   text-align: center;
+}
+
+.explorebutton{
+    background-color: #033B21;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.explorebutton:hover{
+    color: rgb(1, 44, 1);
+    background-color: white;
+    font-weight: 600;
+    border: 1px solid rgb(1, 44, 1);
+    border-bottom: 2px solid rgb(1, 44, 1);
+    border-radius: 20px;
+}
+
+.questions{
+    height: 680px;
+    background-color: #fdf4e6;
+    margin-bottom: 5%;
+}
+
+.questionContent{
+    overflow-y: scroll;
+    margin-top: 10%;
+    height: 650px;
+    background-color: #fdf4e6;
+}
+
+
+.questionsh3{
+    font-size: 56px !important;
+    padding-top: 2%;
+}
+
+.freq_questions{
+    height: 441px;
+    width: 932px;
+    margin: auto auto;
+    margin-top: 10px;
+}
+
+.freq_questions .content{
+    padding-top: 40px;
+}
+
+.freq_questions .content h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+  
+    padding: 2%;
+}
+
+.rightArrow{
+    float: right;
+    height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.freq_questions .content p{
+    font-size: 24px;
+    padding: 20px;
+    display: none;
+}
+
+.footer{
+    background: linear-gradient(white, transparent);
+    padding-top: 2%;
+}
+
+.freq_questions .content{
+    border-bottom: 2px solid #FFB661;
+}
+
+.footer .content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.in_content h5{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.in_content h3{
+    color: #033B21;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.phone_number{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.content p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footnote{
+    margin: auto auto;
+    margin-top: 3%;
+    border-top: 2px solid rgb(0, 69, 0);
+    width: 90%;
+}
+
+.footnote p{
+    font-family: 'Inika', serif;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 18px;
+}
+
+.landingPage_messages{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 15.5%;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    font-size: small;
+    color: green;
+    padding: 3px 50px 3px 50px;
+    border: 1px solid rgba(137, 134, 134, 0.184);
+}
+
+#welcome{
+    color: darkblue;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px){
+    #all{
+        display: none;
+    }
+
+    #noMobile{
+        display: block !important;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 10%;
+    }
+
+    body{
+        background-color: whitesmoke;
+        background-image: none;
+    }
+}

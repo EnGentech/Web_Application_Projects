@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Marko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marko+One&family=Montserrat:wght@500&display=swap');
+html, body{
+    margin: 0px;
+    height: 100 vh;
+}
+
+body{
+    background-image: url("../images/background\ picture.png"), url("../images/Ellipse\ top_right.png"), url('../images/Ellipse-top_2.png'), url("../images/Ellipse-down_right.png");
+    background-position: left top, top right, top right, bottom right;
+    background-repeat: no-repeat;
+    background-size: 60% 72.1%, auto auto, auto auto, auto auto;
+}
+
+.main_signUp{
+    height: 900px;
+    width: 714px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 1px 1px 10px 1px rgb(91, 89, 89);
+}
+
+.main_signUp p{
+    margin-top: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: smaller;
+}
+
+.main_signUp h1{
+    margin-bottom: 3px;
+}
+
+.container_signUp{
+    margin-top: 62px;
+    margin-bottom: 62px;
+    display:flex;
+    justify-content: right;
+    margin-right: 5%;
+}
+
+.head_signup_signUp{
+    text-align: center;
+    font-family: 'Marko One', serif; 
+    margin-top: 2%;
+}
+
+.head_signup_signUp span{
+    color: green;
+}
+
+.main_signUp .form{
+    height: 595px;
+    width: 520px;
+    border: 1px solid rgb(221, 210, 210);
+    border-radius: 10px;
+    padding:10px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.main_signUp input{
+    width: 500px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.main_signUp input:focus{
+    outline: none;
+}
+
+.main_signUp label{
+    color: rgba(1, 63, 1, 0.766);
+}
+
+.alignleft{
+    float:left;
+    line-height: 30px;
+    margin-left: 2%;
+}
+
+select{
+    width: 220px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+select:focus{
+    outline: none;
+    float:left;
+}
+
+.submit{
+    background-color: green;
+    padding: 10px;
+    color: white;
+    width: 500px;
+    height: 40px;
+    border: none;
+    font-weight: 600;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.submit:hover{
+    border-bottom: 2px solid red;
+    cursor: pointer;
+}
+
+.discipline{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.discipline_direction{
+    display:flex;
+    flex-direction: column;
+}
+
+.discipline_direction label{
+    line-height: 30px;
+}
+
+.end_form{
+    color: rgb(72, 26, 26);
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: small;
+}
+
+.registered{
+    text-align: left !important;
+    font-style: italic;
+    font-size: x-small;
+}
+
+.signUp_messages{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 15.5%;
+    background-color: rgb(235, 227, 227);
+    border-radius: 30px;
+    font-weight: 500;
+    color: red;
+    padding: 3px 50px 3px 50px;
+    border: 1px solid rgba(137, 134, 134, 0.379);
+}

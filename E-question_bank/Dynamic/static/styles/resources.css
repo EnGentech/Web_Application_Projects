@@ -1,0 +1,93 @@
+body{
+    background-image: url("../images/backgrounds/resourses.jpg");
+    background-position: top;
+    background-size: 100% 80%;
+}
+
+.resources{
+    padding: 40px 80px 40px 80px;
+    min-height: 100vh;
+    background-color: rgba(245, 245, 245, 0.939);
+}
+
+.rightPane{
+    float: right;
+}
+
+#facultyTag{
+    font-weight: 600;
+    font-size: large;
+    color: darkblue;
+}
+
+.resourseHead h2{
+    color: rgb(0, 0, 83);
+    margin-left: 10%;
+}
+
+.resourseHead label{
+    margin-left: 10%;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.resourseHead select{
+    padding-left: 5px;
+    padding-right: 10px;
+    border-radius: 20px;
+    width: 20%;
+    border: 1px solid rgba(128, 128, 128, 0.379);
+    color: green;
+}
+
+.resourseHead select:focus{
+    outline: none;
+}
+
+#departmentTag{
+    color: rgb(128, 0, 0);
+}
+
+.rightPane p{
+    margin: 0px;
+}
+
+.resourceTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableContent{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(169, 166, 166, 0.365);
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px 0px rgba(223, 218, 218, 0.5);
+}
+
+.resourceTable thead{
+    font-weight: bold;
+    color: darkblue;
+    border-bottom: 1px solid darkblue;
+    height: 40px;
+}
+
+.resourceTable tr td{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.resourceTable tr:nth-child(even){
+    background-color: rgba(255, 255, 255, 0.764);
+}
+
+.resourceTable tr:nth-child(odd){
+    background-color: rgba(212, 244, 231, 0.475);
+}
+
+.resourceTable .download{
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    color: rgb(0, 0, 164);
+}
