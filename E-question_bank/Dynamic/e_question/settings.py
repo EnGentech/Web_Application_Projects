@@ -142,4 +142,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'student.backends.StudentBackend',
+    'lecturers.backends.StaffBackend',
 ]

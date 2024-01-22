@@ -1,12 +1,25 @@
 $(document).ready(function(){
-    var courses_computerEngineering = [
+    var courses_computerEngineering_ND100_semester1 = [
         ["MTH112", "Algebra and Elementary Trigonometry"],
         ["CTE115", "Data Structures"],
         ["CTE114", "Internet and Web Technologies"],
         ["MEC113", "Basic Workshop Technlogy and Practice"]
     ]
 
-    var courses_electricalEngineering = [
+    var courses_computerEngineering_ND100_semester2 = [
+
+    ]
+
+    var courses_computerEngineering_ND200_semester1 = [
+        ["CTE236", "Introduction to Visual Basic"],
+        ["EED216", "Practice of Entrepreneur"],
+    ]
+
+    var courses_computerEngineering_ND200_semester2 = [
+
+    ]
+
+    var courses_electricalEngineering_ND100_semester1 = [
         ["MTH112", "Algebra and Elementary Trigonometry"],
         ["MEC113", "Basic Workshop Technlogy and Practice"]   
     ]
@@ -42,31 +55,73 @@ $(document).ready(function(){
     function updateOption(){
         cCode.append('<option disabled selected hidden>-- Course Code --</option>');
         cTitle.val("-- Select Course Code --")
-        if ((selected_department == "Computer Engineering") || (dept == 'Computer Engineering') && (selected_level == "ND 100") && (selected_semester == "Semester 1")){
+        if ((selected_department === "Computer Engineering" || dept === 'Computer Engineering') && (selected_level === "ND 100") && (selected_semester === "Semester 1")){
             cCode.empty()
             cCode.append('<option disabled selected hidden>-- Course Code --</option>');
-            courses_computerEngineering.forEach(element => {
+            courses_computerEngineering_ND100_semester1.forEach(element => {
                 cCode.append('<option value="' + element[0] + '">' + element[0] + '</option>')
             });
             cCode.change(function(){
                 selected_cCode = $(this).val();
-                for (let i = 0; i < courses_computerEngineering.length; i++) {
-                    if (courses_computerEngineering[i][0] == selected_cCode){
-                        cTitle.val(courses_computerEngineering[i][1])
+                for (let i = 0; i < courses_computerEngineering_ND100_semester1.length; i++) {
+                    if (courses_computerEngineering_ND100_semester1[i][0] === selected_cCode){
+                        cTitle.val(courses_computerEngineering_ND100_semester1[i][1])
                     } 
                 }
             })
-        } else if ((selected_department == "Electrical Engineering") || (dept == "Electrical Engineering") && (selected_level == "ND 100") && (selected_semester == "Semester 1")){
+        } else if ((selected_department === "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "ND 100") && (selected_semester === "Semester 2")){
             cCode.empty()
             cCode.append('<option disabled selected hidden>-- Course Code --</option>');
-            courses_electricalEngineering.forEach(element => {
+            courses_computerEngineering_ND100_semester2.forEach(element => {
+                cCode.append('<option value="' + element[0] + '">' + element[0] + '</option>')
+            });
+            cCode.change(function(){
+                selected_cCode = $(this).val();
+                for (let i = 0; i < courses_computerEngineering_ND100_semester2.length; i++) {
+                    if (courses_computerEngineering_ND100_semester2[i][0] === selected_cCode){
+                        cTitle.val(courses_computerEngineering_ND100_semester2[i][1])
+                    } 
+                }
+            })
+        } else if ((selected_department === "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "ND 200") && (selected_semester === "Semester 1")){
+            cCode.empty()
+            cCode.append('<option disabled selected hidden>-- Course Code --</option>');
+            courses_computerEngineering_ND200_semester1.forEach(element => {
+                cCode.append('<option value="' + element[0] + '">' + element[0] + '</option>')
+            });
+            cCode.change(function(){
+                selected_cCode = $(this).val();
+                for (let i = 0; i < courses_computerEngineering_ND200_semester1.length; i++) {
+                    if (courses_computerEngineering_ND200_semester1[i][0] === selected_cCode){
+                        cTitle.val(courses_computerEngineering_ND200_semester1[i][1])
+                    } 
+                }
+            })
+        } else if ((selected_department === "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "ND 200") && (selected_semester === "Semester 2")){
+            cCode.empty()
+            cCode.append('<option disabled selected hidden>-- Course Code --</option>');
+            courses_computerEngineering_ND200_semester2.forEach(element => {
+                cCode.append('<option value="' + element[0] + '">' + element[0] + '</option>')
+            });
+            cCode.change(function(){
+                selected_cCode = $(this).val();
+                for (let i = 0; i < courses_computerEngineering_ND200_semester2.length; i++) {
+                    if (courses_computerEngineering_ND200_semester2[i][0] === selected_cCode){
+                        cTitle.val(courses_computerEngineering_ND200_semester2[i][1])
+                    } 
+                }
+            })
+        } else if ((selected_department === "Electrical Engineering" || dept === "Electrical Engineering") && (selected_level === "ND 100") && (selected_semester === "Semester 1")){
+            cCode.empty()
+            cCode.append('<option disabled selected hidden>-- Course Code --</option>');
+            courses_electricalEngineering_ND100_semester1.forEach(element => {
                 cCode.append('<option value="' + element[0] + '">' + element[0] + '</option>')               
             });
             cCode.change(function(){
                 selected_cCode = $(this).val();
-                for (let i = 0; i < courses_electricalEngineering.length; i++) {
-                    if (courses_electricalEngineering[i][0] == selected_cCode){
-                        cTitle.val(courses_electricalEngineering[i][1])
+                for (let i = 0; i < courses_electricalEngineering_ND100_semester1.length; i++) {
+                    if (courses_electricalEngineering_ND100_semester1[i][0] === selected_cCode){
+                        cTitle.val(courses_electricalEngineering_ND100_semester1[i][1])
                     } 
                 }
             })

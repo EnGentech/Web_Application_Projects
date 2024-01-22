@@ -12,8 +12,8 @@
         <div class="content">
             <section class="resourseHead">
                 <section class="rightPane">
-                    <p id="facultyTag">Faculty of Engineering</p>
-                    <p id="departmentTag">Computer Engineering</p>
+                    <p id="facultyTag">Faculty of {{ faculty }}</p>
+                    <p id="departmentTag">{{ department }}</p>
                 </section>
                 <h2>
                     Explore Resources
@@ -39,40 +39,28 @@
                             <td>Level</td>
                             <td>Semester</td>
                             <td>Lecture Resource</td>
-                            <td>Practical Resource</td>
                             <td>Recommended site</td>
                             <td>Youtube Channel</td>
                         </thead>
-                        <tr>
-                            <td>CTE114</td>
-                            <td>Internet and Wed Technology</td>
-                            <td>ND 100</td>
-                            <td>Semester 1</td>
-                            <td><button class="download">Download</button></td>
-                            <td><button class="download">Download</button></td>
-                            <td><button class="download"><a href="http://">Explore</a></button></td>
-                            <td><button class="download"><a href="">Visit</a></button></td>
-                        </tr>
-                        <tr>
-                            <td>CTE114</td>
-                            <td>Internet and Wed Technology</td>
-                            <td>ND 100</td>
-                            <td>Semester 1</td>
-                            <td><button class="download">Download</button></td>
-                            <td><button class="download">Download</button></td>
-                            <td><button class="download"><a href="http://">Explore</a></button></td>
-                            <td><button class="download"><a href="">Visit</a></button></td>
-                        </tr>
-                        <tr>
-                            <td>CTE114</td>
-                            <td>Internet and Wed Technology</td>
-                            <td>ND 100</td>
-                            <td>Semester 1</td>
-                            <td><button class="download">Download</button></td>
-                            <td><button class="download">Download</button></td>
-                            <td><button class="download"><a href="http://">Explore</a></button></td>
-                            <td><button class="download"><a href="">Visit</a></button></td>
-                        </tr>
+                        {% if resources %}
+                            {% for resource in resources %}
+                                <tr>
+                                    <td>{{ resource.course_code }}</td>
+                                    <td>{{ resource.course_title }}</td>
+                                    <td>{{ resource.level }}</td>
+                                    <td>{{ resource.semester }}</td>
+                                    <td>
+                                        <button class="download">
+                                            <a href="{{ resource.lectureMaterial.url }}">Download</a>
+                                        </button>
+                                    </td>
+                                    <td><button class="download"><a href="{{ resource.site_recommendation }}">Explore</a></button></td>
+                                    <td><button class="download"><a href="{{ resource.youtube_channel }}">Visit</a></button></td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                        {% endif %}
+                        
                     </table>
                 </div>  
             </section>

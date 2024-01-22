@@ -54,3 +54,16 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.lecSinIn_messages{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 15.5%;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    font-size: small;
+    color: green;
+    padding: 3px 50px 3px 50px;
+    border: 1px solid rgba(137, 134, 134, 0.184);
+}

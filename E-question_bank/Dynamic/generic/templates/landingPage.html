@@ -34,19 +34,21 @@
             
             <div class="navigation">
                 <ul>
-                    <li><a id="default" href="{% url 'index' %}">Home</a></li>
-                    <li><a class="other_nav" href="">Courses</a></li>
-                    <li><a class="other_nav" href="{% url 'loadResources' %}">Resource</a></li>
-                    <li><a class="other_nav" href="{% url 'aboutPage' %}">About_Page</a></li>
+                    {% block navs %}
+                        <li><a id="default" href="{% url 'index' %}">Home</a></li>
+                        <li><a class="other_nav" href="">Courses</a></li>
+                        <li><a class="other_nav" href="{% url 'loadResources' %}">Resource</a></li>
+                        <li><a class="other_nav" href="{% url 'aboutPage' %}">About_Page</a></li>
+                    {% endblock navs %}
 
-
-                    {% if request.user.is_authenticated %}                                   
-                        <li><a class="button" href="{% url 'logout' %}" id="logout_button">LogOut</a></li>                    
-                    {% else %}
-                        {% block loginOut %}                
+                    
+                    {% block loginOut %}                
+                        {% if request.user.is_authenticated %}                                   
+                            <li><a class="button" href="{% url 'logout' %}" id="logout_button">LogOut</a></li>                    
+                        {% else %}
                             <li><a class="button" href="{% url 'signUp' %}" id="special_button">Create Account</a></li>
-                        {% endblock loginOut %}
-                    {% endif %}
+                        {% endif %}
+                    {% endblock loginOut %}
                 </ul>
             </div>
 

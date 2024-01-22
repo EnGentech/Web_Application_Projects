@@ -2,10 +2,22 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from .forms import StudentForm
 from lecturers.models import Upload
+from .models import Students_data
 from django.contrib import messages
 from .backends import StudentBackend
 from django import forms
 from django.contrib.auth.decorators import login_required
+from functools import wraps
+
+
+def student_required(view_func):
+    @wraps(view_func)
+    def _wrapped_view(request, *args, **kwargs):
+        if request.user.is_authenticated and isinstance(request.user, Students_data):
+            return view_func(request, *args, **kwargs)
+        else:
+            return redirect('signInLec')  # Redirect to the login page or another page
+    return _wrapped_view
 
 # Create your views here.
 def logout_required(view_func):
@@ -51,6 +63,7 @@ def signUp(request):
         form = StudentForm()
     return render(request, "signup_page.html", {"form": form})
 
+@student_required
 @login_required(login_url="login")
 def loadQuestion(request):
     """load questions on request"""
@@ -70,6 +83,7 @@ def loadQuestion(request):
     
     return render(request, "questionPage.html")
 
+@student_required
 @login_required(login_url="login")
 def userLogOut(request):
     """logout user"""

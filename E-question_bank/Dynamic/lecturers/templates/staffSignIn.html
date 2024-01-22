@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles/LsignIn.css' %}">
     <title>Sign In</title>
 </head>
 <body>
+{% if messages %}
+    {% for message in messages %}
+        <center><p class="lecSinIn_messages fadeOff">{{ message }}</p></center>                 
+    {% endfor %}
+{% endif %}
     <div class="container">
-        <form class="signin-form">
+        <form action="{% url 'signInLec' %}" method="POST" class="signin-form">
+            {% csrf_token %}
             <h2>Sign In</h2>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>

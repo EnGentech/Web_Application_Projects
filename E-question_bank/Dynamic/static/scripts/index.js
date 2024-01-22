@@ -15,6 +15,6 @@ $(document).ready(function(){
 
     setTimeout(function(){
         $(".fadeOff").fadeOut("slow");
-    }, 4000)
+    }, 3000)
     
 })

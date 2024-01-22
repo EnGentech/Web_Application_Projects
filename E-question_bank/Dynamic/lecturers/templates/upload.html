@@ -2,10 +2,20 @@
 {% load static %}
 {% block head %}
     <link rel="stylesheet" href="{% static 'styles/upload.css' %}">
+    <script src="{% static 'scripts/upload.js' %}"></script>
     <title>Upload Question</title>
 {% endblock head %}
 
+{% block loginOut %}
+    <li><a class="button" href="{% url 'staffLogout' %}" id="logout_button">LogOut</a></li>  
+{% endblock loginOut %}
+
 {% block content %}
+
+{% block navs %}
+
+{% endblock navs %}
+
     <div class="container_question">
         <div class="main_question">
             <section class="top">
@@ -20,9 +30,15 @@
                 <p>Get prepared ahead as it is said <span style="font-weight: bolder;">"Early to bed, early to rise".</span> <br>Happy exploring!</p> 
             </section>
 
+            <p id="uploadType">Choose Upload type <select id="uploadSelectType">
+                <option value="questions">Questions</option>
+                <option value="answers">Answers</option>
+                <option value="resources">Resources</option>
+            </select></p>
+
             <section class="input_section"><br>
                 <fieldset><br>
-                    <form action="{% url 'upload_question' %}" method="POST" enctype="multipart/form-data">
+                    <form action="{% url 'upload_question' %}" method="POST" enctype="multipart/form-data" id="uploadForm">
                         {% csrf_token %}
                         <label for="faculty">Faculty <label for="department" id="department_label">Department</label><label for="level" id="level_label">Level</label></label><br>
                         <select name="faculty" id="faculty">
@@ -71,7 +87,18 @@
                         <select name="cCode" id="cCode">
                             <option value="" disabled selected style="display:none">Select Course Code</option>
                         </select>
-                        <input type="text" name="cTitle" id="cTitle" placeholder="Course title" disabled><br><br>
+                        <input type="text" name="cTitle" id="cTitle" placeholder="Course title"><br><br>
+
+
+                        <section class="hideOff">
+                            <label for="">Site</label>
+                            <input type="text" name="site" id="site" placeholder="Paste website url">
+                            <br><br>
+                            <label for="youtube">Youtube link</label>
+                            <input type="text" name="youtube" id="youtube" placeholder="Paste Youtube url"><br><br>
+                        </section>
+
+                        <label for="upload" id="label_upload">Upload Question in PDF format</label><br>
                         <input type="file" name="upload" id="upload" placeholder="Upload Question">
                         <p id="preview">Preview</p>
                         <br><br><br>

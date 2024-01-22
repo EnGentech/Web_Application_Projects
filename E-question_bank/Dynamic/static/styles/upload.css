@@ -75,7 +75,7 @@ form{
 
 .main_question select{
     width: 32.8%;
-    padding: 1%;
+    padding: 3px;
     border-radius: 10px;
     border: 1px solid gray;
 }
@@ -87,7 +87,7 @@ form{
 
 .main_question #cTitle{
     width: 74%;
-    padding: 1%;
+    padding: 3px;
     border-radius: 10px;
     border: 1px solid gray;
 }
@@ -213,4 +213,20 @@ input[type="file"]::-webkit-file-upload-button{
     font-weight: 500;
     padding: 3px 50px 3px 50px;
     border: 1px solid rgba(137, 134, 134, 0.379);
+}
+
+#uploadType{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.hideOff input{
+    width: 99%;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.819);
+    padding: 3px 3px 3px 8px;
+}
+
+.hideOff{
+    display: none;
 }
