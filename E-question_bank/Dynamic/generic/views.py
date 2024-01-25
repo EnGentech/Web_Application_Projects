@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
+from django.core.serializers import serialize
 from courses.models import Courses
 from student.models import Students_data
 from django.contrib.auth.decorators import login_required
@@ -31,7 +32,7 @@ def questionAPI(request):
     for content in allData:
        
         obtained = {
-            "faculty": content.courses.faculty,
+            content.courses.faculty : {
             "department": content.courses.department,
             "level": content.courses.level,
             "option": content.courses.option,
@@ -40,9 +41,64 @@ def questionAPI(request):
             "semester": content.semester,
             "year": content.year,
         }
+        }
         data.append(obtained)
 
     return JsonResponse({"data": data})
+
+def resourceAPI(request, faculty):
+    """Return resource API based on faculty"""
+    data = []
+    allData = Resources.objects.filter(faculty=faculty).all()
+    for content in allData:
+        obtained = {
+            "department": content.department,
+            "level": content.level,
+            "course_code": content.course_code,
+            "course_title": content.course_title,
+            "semester": content.semester,
+            "lectureMaterial": content.lectureMaterial.url,
+            "site_recommendation": content.site_recommendation,
+            "youtube_channel": content.youtube_channel,
+        }
+        data.append(obtained)
+
+    return JsonResponse({"data": data})
+
+@login_required(login_url="login")
+def filterData(request, dataType, faculty):
+    """filter data based on preference"""
+    dataReceived = dataType.split(",")
+    resources = []
+
+    def reUse(data):
+        """reusable function"""
+        for content in data:
+            resources.append({
+                'course_code': content.course_code,
+                'course_title': content.course_title,
+                'level': content.level,
+                'semester': content.semester,
+                'lecture_material': content.lectureMaterial.url,
+                'site_recommendation': content.site_recommendation,
+                'youtube_channel': content.youtube_channel
+            })
+        
+
+    if dataReceived[0] == "filter_cCode":
+        resourceData = Resources.objects.filter(course_code=dataReceived[1], faculty=faculty).first()
+        reUse([resourceData])
+
+    elif dataReceived[0] == "filter_level":
+        resourceData = Resources.objects.filter(level=dataReceived[1], faculty=faculty).all()
+        reUse(resourceData)
+
+    elif dataReceived[0] == "filter_semester":
+        resourceData = Resources.objects.filter(semester=dataReceived[1], faculty=faculty).all()
+        reUse(resourceData)
+
+    # return JsonResponse({"data": resources})
+    return render(request, "resources.html", {"resources": resources})
 
 def aboutPage(request):
     """about page"""

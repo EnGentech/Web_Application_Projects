@@ -4,11 +4,13 @@
     <script src="https://kit.fontawesome.com/11285bfb5b.js" crossorigin="anonymous"></script>
     <title>Load Resources</title>
     <link rel="stylesheet" href="{% static 'styles/resources.css' %}">
+    <script src="{% static 'scripts/resource.js' %}"></script>
 {% endblock head %}
 
     
-{% block content %}   
-   <div class="resources">
+{% block content %} 
+    <p id="getFaculty" style="display: none">{{ faculty }}</p>
+    <div class="resources">
         <div class="content">
             <section class="resourseHead">
                 <section class="rightPane">
@@ -25,9 +27,13 @@
                         <option value="all">all</option>                   
                         <option value="filter_cCode">Course Code</option>
                         <option value="filter_level">Level</option>
-                        <option value="filter_semeter">Semester</option>
+                        <option value="filter_semester">Semester</option>
                     </select> 
-                    <button style="display: none">Filter</button>                   
+
+                    <select name="" id="filterParams">
+
+                    </select>
+                    <p id="submitFilter">Submit</p>                   
                 </form>
 
                 <!-- table data -->
@@ -44,8 +50,8 @@
                         </thead>
                         {% if resources %}
                             {% for resource in resources %}
-                                <tr>
-                                    <td>{{ resource.course_code }}</td>
+                                <tr class="tableProperty">
+                                    <td class="tdcCode">{{ resource.course_code }}</td>
                                     <td>{{ resource.course_title }}</td>
                                     <td>{{ resource.level }}</td>
                                     <td>{{ resource.semester }}</td>

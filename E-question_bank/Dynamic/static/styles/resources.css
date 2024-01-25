@@ -91,3 +91,19 @@ body{
     background-color: transparent;
     color: rgb(0, 0, 164);
 }
+
+#submitFilter{
+    border: none;
+    display: none;
+    background-color: transparent;
+    color: rgba(0, 0, 164, 0.513);
+    font-weight: bold;
+    font-size: medium;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+#submitFilter:hover{
+    color: rgb(0, 0, 164);
+}
