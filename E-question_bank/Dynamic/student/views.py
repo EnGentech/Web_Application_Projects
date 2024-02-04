@@ -2,12 +2,14 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from .forms import StudentForm
 from lecturers.models import Upload
-from .models import Students_data
+from .models import Students_data, CourseWork
 from django.contrib import messages
 from .backends import StudentBackend
 from django import forms
 from django.contrib.auth.decorators import login_required
 from functools import wraps
+from django.http import JsonResponse
+import json
 
 
 def student_required(view_func):
@@ -90,3 +92,53 @@ def userLogOut(request):
     logout(request)
     messages.success(request, "Logout successful")
     return redirect("login")
+
+@student_required
+@login_required(login_url="login")
+def profileUpdate(request):
+    """update user profile"""
+    data = Students_data.objects.filter(username=request.user).first()
+    if data.profile_picture:
+       return redirect("courseWork")
+    if request.method == 'POST':
+        ajax_data = request.POST
+        selected_courses = json.loads(ajax_data.get('selected_courses'))
+        firstName = ajax_data.get("first_name")
+        lastName = ajax_data.get("last_name")
+        otherName = ajax_data.get("other_name")
+        level = ajax_data.get('level')
+        semester = ajax_data.get('semester')
+        regNo = ajax_data.get("reg_no")
+        profile_picture = request.FILES.get('profile_picture')
+        
+        data.first_name = firstName
+        data.last_name = lastName
+        data.otherName = otherName
+        data.profile_picture = profile_picture
+
+        if regNo:
+            data.regNumber = regNo
+
+        data.save()
+
+        for course in selected_courses:
+            courseData = CourseWork(
+                level=level,
+                semester=semester,
+                courseCode=course["code"],
+                courseTitle=course["title"],
+                student=data
+            )
+            courseData.save()
+
+        messages.success(request, "Profile updated successfully")
+        return JsonResponse({"message": "Profile updated successfully"})
+
+    return render(request, "profileUpdate.html")
+
+
+def courseWork(request):
+    """render user course work"""
+    data = Students_data.objects.filter(username=request.user).first()
+    registered = CourseWork.objects.filter(student=data).all()
+    return render(request, 'courseWork.html', {"data": registered})

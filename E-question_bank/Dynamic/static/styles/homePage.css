@@ -1,0 +1,75 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.lecturers-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.lecturers-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lecturers-title {
+    color: #333;
+}
+
+.lecturers-text {
+    line-height: 1.6;
+    color: #555;
+}
+
+.lecturers-footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* drop down menu for Lecturer page */
+.uploadNavElements{
+    width: 80%;
+    background: linear-gradient(to left, antiquewhite, rgb(237, 234, 234));
+    height: 70px;
+    border-radius: 0px 0px 40px 40px;
+    border-bottom: 2px solid red;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.uploadNavElements nav ul{
+    list-style: none;
+    display: flex;
+    width: 80%;
+    justify-content: flex-end;
+}
+
+.uploadNavElements nav ul li a{
+    line-height: 50px;
+    margin-right: 70px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgba(0, 0, 255, 0.333);
+    border-bottom: 2px solid rgba(0, 0, 255, 0.258);
+}
+
+.uploadNavElements nav ul li a:hover{
+    border-bottom: 2px solid green;
+    color: green;
+}
+
+.uploadNavElements{
+    display: none;
+}

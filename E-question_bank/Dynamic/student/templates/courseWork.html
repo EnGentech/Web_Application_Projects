@@ -1,0 +1,151 @@
+{% extends "landingPage.html" %}
+{% load static %}
+{% block head %}
+    <script src="https://kit.fontawesome.com/11285bfb5b.js" crossorigin="anonymous"></script>
+    <title>Load Resources</title>
+    <link rel="stylesheet" href="{% static 'styles/courseWork.css' %}">
+    <script src="{% static 'scripts/courseWork.js' %}"></script>
+{% endblock head %}
+
+    
+{% block content %}
+    <div class="statusBoard">
+        <div class="statusContent">
+            <h2 id="title">
+                STATUS BOARD
+            </h2>
+
+            <section class="statusTop">
+                <div class="moduleTitle">
+                    <h5>Conditional Structure</h5>
+                    <p>Module 2</p>
+                </div>
+                <div class="lightUp">
+                    <section class="light">
+                        <div class="lightBox">
+
+                        </div>
+                        <p>completed</p>
+                    </section>
+                </div>
+
+            </section>
+            <section class="instruction">
+                <h6>Instructions</h6>
+                <p>
+                    Click on <b>Load Task</b>, On the URL provided, complete all required task as stated, Copy and past the url that links to your answers and ensure that the url is read access.
+                </p>
+                <button>Load Task</button>
+            </section>
+
+            <section class="submission">
+                <form action="">
+                    <label for="urlSubmit">Your answer Url</label>
+                    <input type="text" placeholder="https://www.myanswerurl.com"><br><br>
+                    <input type="submit" value="Save">
+                </form>
+            </section>
+        </div>
+    </div>
+
+
+    <div class="cWorkContainer">
+        <div class="cWorkContent">
+            <h2 id="title">
+                COURSE WORK
+            </h2>
+
+            <section class="toRight">
+                <h3>{{ request.user.faculty }}</h3>
+                <h5>{{ request.user.department }}</h5>
+            </section>
+            <div id="empty">
+
+            </div><hr>
+            <div class="flexSection">
+                <section class="leftPane">
+                    <section class="profilePics">
+                        <img src="{{ request.user.profile_picture.url }}" alt="">
+                        <p>Hello {{ request.user.username }}</p>
+                    </section>
+                    <h5>Registered Courses</h5>
+                    <ul class="listCourses">
+                    {% if data %}
+                        {% for course in data %} 
+                            <p class="regC_code" style="display: none">{{ course.courseCode }}</p>                       
+                            <li class='regCourses'>{{ course.courseTitle }}</li>
+                        {% endfor %}
+                    {% else %}
+                        <li>No registered courses yet</li>
+                    {% endif %}
+                    </ul>
+                </section>
+
+                <section class="mainContent">
+                    <section class="toRightContent">
+                        <h5>Grade: <span id="gradeColor">70%</span></h5>
+                    </section>
+                    <section class="courseDetail">
+                        <h5>Course Code: <span id='cCodeSelect'>--Select Registered Course--</span></h5>
+                        <h5>Course Title: <span id='cTitleSelect'>None</span></h5>
+                    </section>
+
+                    <section class="progressTable">
+                        <h5>Progress Table</h5>
+                        <section class="tableView">
+                            <table>
+                                <thead>
+                                    <td>S/No</td>
+                                    <td>Module Name</td>
+                                    <td>Task Type</td>
+                                    <td>Task Score</td>
+                                    <td>Start Date</td>
+                                    <td>End Date</td>
+                                    <td>Status</td>
+                                </thead>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>Module 1</td>
+                                    <td>Assignment</td>
+                                    <td>50%</td>
+                                    <td>3/05/2024</td>
+                                    <td>12/05/2024</td>
+                                    <td class='clickMe'>click me
+                                        <div class="statusLight">
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>Module 1</td>
+                                    <td>Assignment</td>
+                                    <td>50%</td>
+                                    <td>3/05/2024</td>
+                                    <td>12/05/2024</td>
+                                    <td>click me
+                                        <div class="statusLight">
+                                            
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </section>
+                    </section>
+                    
+                </section>
+            </div>
+            <section class="statistics">
+                <h5>STATISTICS</h5>
+                <section class="displayP">
+                    <p>All Task: 10 </p>
+                    <p>Completed: 2</p>
+                </section>
+                    
+            </section>
+        </div>
+    </div>
+   
+{% endblock content %}

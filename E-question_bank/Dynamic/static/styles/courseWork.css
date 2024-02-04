@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+body{
+   background-image: url("../images/backgrounds/resourses.jpg");
+   background-position: top;
+   background-size: 100% 80%;
+}
+
+.cWorkContainer{
+    background-color: rgba(245, 245, 245, 0.932);
+    padding: 20px 5% 30px 5%;
+    font-family: 'Roboto', sans-serif;
+    display: non;
+}
+
+#title{
+    text-align: center;
+    color: darkblue;
+    font-size: 1.7em;
+}
+
+.toRight{
+    float: right;
+}
+
+.toRight h3{
+    margin: 0px;
+    color: darkblue;
+    font-size: 1.4em;
+}
+
+.toRight h5{
+    font-size: small;
+    color: rgb(128, 0, 0);
+}
+
+#empty{
+    height: 50px;
+}
+
+.leftPane{
+    width: 300px;
+    background-color: rgba(245, 245, 245, 0.291);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(213, 208, 208);
+    line-height: 2.0em;
+}
+
+.leftPane .profilePics{
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
+.leftPane .profilePics img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.leftPane p{
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.leftPane h5{
+    color: rgb(156, 1, 1)
+}
+
+.leftPane li{
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.leftPane li:hover{
+    color: green;
+    text-decoration: underline;
+}
+
+.leftPane h5{
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.listCourses{
+    height: 67%;
+    overflow-y: auto;
+}
+
+.mainContent{
+    margin-left: 15px;
+    width: 100%
+}
+
+#gradeColor{
+    color: green;
+}
+
+.courseDetail h5{
+    font-size: 1.1em;
+}
+
+.toRightContent{
+    float: right;
+}
+
+.flexSection{
+    display: flex;
+    height: 650px;
+}
+
+.progressTable h5{
+    text-align: center;
+    color: rgb(81, 0, 81);
+    margin-top: 40px;
+}
+
+.progressTable table{
+    width: 100%;
+}
+
+.tableView{
+    padding: 5px 5px 5px 10px;
+    background-color: rgb(214, 231, 214);
+    border-radius: 10px;
+} 
+
+.tableView thead{
+    border-bottom: 1px solid brown;
+    color: rgb(107, 0, 0);
+    font-weight: bold;
+}
+
+.tableView .statusLight{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+    float: right;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+
+.tableView tr:nth-child(odd){
+    background-color: rgba(165, 223, 223, 0.489);
+}
+
+.tableView tr:nth-child(even){
+    background-color: rgba(245, 239, 239, 0.886);
+}
+
+.statistics h5{
+    text-align: center;
+    border-top: 1px solid rgb(0, 113, 55);
+    margin: auto;
+    margin-top: 10px;
+    color: rgb(107, 0, 0);
+}
+
+.displayP{
+    display: flex;
+    width: 400px;
+    margin: auto;
+    font-weight: 600;
+}
+
+.statistics p{
+    text-align: center;
+    margin: auto;
+}
+
+.regCourses{
+    font-weight: bold;
+}
+
+#cCodeSelect, #cTitleSelect{
+    color: navy;
+}
+
+.clickMe{
+    color: green;
+    cursor: pointer;
+}
+
+.clickMe:hover{
+    color: red;
+}
+
+
+/* obsolute display of status board */
+.statusContent{
+    background-color: rgba(245, 245, 245, 0.932);
+    padding: 50px 5% 30px 5%;
+    font-family: 'Roboto', sans-serif;
+    min-height: 650px;
+}
+
+.statusTop{
+    display: flex;
+    justify-content: space-around;
+}
+
+.lightBox{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    margin: auto;
+}
+
+.light p{
+    font-size: small;
+    color: brown;
+}
+
+.moduleTitle h5{
+    margin-bottom: 0px;
+}
+
+.instruction{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 20px;
+    padding: 12px;
+    background-color: rgba(237, 237, 231, 0.806);
+    margin-bottom: 100px;
+}
+
+.instruction h6{
+    font-weight: 600;
+    font-size: large;
+    color: navy;
+}
+
+.instruction button{
+    width: 70%;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    display: block;
+    margin: auto;
+    background-color: green;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.instruction button:hover, .submission input[type='submit']:hover{
+    background-color: rgb(173, 204, 173);
+    color: darkgreen;
+    border: 1px solid darkgreen;
+}
+
+.submission{
+    width: 50%;
+    margin: auto;
+}
+
+.submission input[type='text']{
+    width: 80%;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid rgba(47, 0, 0, 0.168);
+    padding-left: 10px;
+}
+
+.submission input[type='submit']{
+    width: 60%;
+    padding: 7px;
+    border-radius: 40px;
+    border: 1px solid gray;
+    display: block;
+    margin: auto;
+    background-color: green;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submission input[type='text']:focus{
+    outline: 1px solid rgba(47, 0, 0, 0.763);
+}
+
+.statusBoard{
+    border: 1px solid rgba(47, 0, 0, 0.763);
+}
+
+/* Hide logics */
+.statusBoard{
+    display: none;
+}

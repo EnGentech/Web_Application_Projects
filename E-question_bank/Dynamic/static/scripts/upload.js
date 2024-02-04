@@ -25,6 +25,18 @@ $(document).ready(function(){
             labelName.text("Upload Resources in Pdf Format")
             hideForm.show()
         }
-    })
+    });
+
+    // Upload Nav bar logics
+    var uploadNav = $("#uploadNav")
+    var navDisplay = $(".uploadNavElements")
+
+    navDisplay.mouseleave(function(){
+        navDisplay.slideUp();
+    });
+    
+    uploadNav.click(function(){
+        navDisplay.slideDown();
+    });
     
 })

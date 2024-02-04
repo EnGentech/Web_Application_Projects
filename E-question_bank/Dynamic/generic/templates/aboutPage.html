@@ -6,8 +6,32 @@
     <link rel="stylesheet" href="{% static 'styles/aboutPage.css' %}">
 {% endblock head %}
 
+{% block navs %}
+    {% if staff %}
+        <li><a id="default" href="{% url 'homePage' %}">Home</a></li>
+        <li><a class="other_nav" href="#" id="uploadNav">Upload</a></li>
+        <li><a class="other_nav" href="{% url 'aboutPage' %}">About_Page</a></li>
+    {% else %}
+        <li><a id="default" href="{% url 'index' %}">Home</a></li>
+        <li><a class="other_nav" href="{% url 'profileUpdate' %}">Course Work</a></li>
+        <li><a class="other_nav" href="{% url 'loadResources' %}">Resource</a></li>
+        <li><a class="other_nav" href="{% url 'aboutPage' %}">About_Page</a></li>
+    {% endif %}
+
+{% endblock navs %}
+
     
-{% block content %}   
+{% block content %} 
+
+    <div class="uploadNavElements">
+        <nav>
+            <ul>
+                <li><a href="{% url 'upload_question' %}">Questions</a></li>
+                <li><a href="#">Accessment</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <div class="midMe">
         <div class="centerPage">
           <h2 style="text-align: center; color: rgb(3, 50, 24); margin-top: 20px;">Welcome to the Developers page! 🌟</h2>

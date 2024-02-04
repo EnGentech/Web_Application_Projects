@@ -2,10 +2,10 @@ $(document).ready(function () {
     var filter = $("#filter");
     var filterParams = $("#filterParams");
     var submitFilter = $("#submitFilter");
-    var obtainedFaculty = $("#getFaculty").text();
+    var obtainedDepartment = $("#getDepartment").text();
     var tableUpdate = $(".tableContent");
 
-    var url = `/api/data/resources/${obtainedFaculty}`;
+    var url = `/api/data/resources/${obtainedDepartment}`;
     var coursesObtained = [];
 
     var levelArray = [  
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     // Recalling function
     let submitDataFunction = function(param){
-        url = `/learning/resources/${param}/${obtainedFaculty}`
+        url = `/learning/resources/${param}/${obtainedDepartment}`
         $.ajax({
             type: "GET",
             url: url,

@@ -12,11 +12,13 @@
     <link rel="shortcut icon" href="{% static 'images/favicon/equestionLogo.PNG' %}" type="image/x-icon">
 
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/homePage.css' %}">
     <script src="{% static 'scripts/index.js' %}"></script>
     <script src="{% static 'scripts/faculty_department.js' %}"></script>
     <script src="{% static 'scripts/courses_engineering.js' %}"></script>
     <script src="{% static 'scripts/courses_sciences.js' %}"></script>
     <script src="{% static 'scripts/optionValidation.js' %}"></script>
+    <script src="{% static 'scripts/homePage.js' %}"></script>
     {% block head %}
 
     {% endblock head %}
@@ -38,7 +40,7 @@
                 <ul>
                     {% block navs %}
                         <li><a id="default" href="{% url 'index' %}">Home</a></li>
-                        <li><a class="other_nav" href="">Courses</a></li>
+                        <li><a class="other_nav" href="{% url 'profileUpdate' %}">Course Work</a></li>
                         <li><a class="other_nav" href="{% url 'loadResources' %}">Resource</a></li>
                         <li><a class="other_nav" href="{% url 'aboutPage' %}">About_Page</a></li>
                     {% endblock navs %}

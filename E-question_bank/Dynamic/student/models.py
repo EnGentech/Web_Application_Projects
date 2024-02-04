@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, Group, Permission
+from django.core.validators import FileExtensionValidator
 
 class Students_data(AbstractUser):
     """Creating Students_data model"""
@@ -46,16 +47,26 @@ class Students_data(AbstractUser):
     ]
     
     email = models.EmailField(max_length=255, unique=True)
+    otherName = models.CharField(max_length=50, null=True)
     faculty = models.CharField(max_length=100, choices=faculty_choices, default="Choose faculty")
     department = models.CharField(max_length=100, choices=department_choices, default="Choose faculty")
+    profile_picture = models.FileField(upload_to="images/student_profile_picture", validators=[FileExtensionValidator(allowed_extensions=['png', 'PNG', 'jpg', 'jpeg'])], null=True)
     option = models.CharField(max_length=100, null=True)
     regNumber = models.IntegerField(unique=True, null=True)
-    level = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     groups = models.ManyToManyField(Group, related_name="students_data_groups", blank=True)
     user_permissions = models.ManyToManyField(Permission, related_name="students_data_permissions", blank=True)
+
+class CourseWork(models.Model):
+    """Students course details"""
+    level = models.CharField(max_length=100)
+    semester = models.CharField(max_length=100)
+    courseCode = models.CharField(max_length=20)
+    courseTitle = models.CharField(max_length=100)
+    scorePerCourse = models.IntegerField(null=True)
+    student = models.ForeignKey(Students_data, on_delete=models.CASCADE, null=True)
 
 
 class Transaction(models.Model):

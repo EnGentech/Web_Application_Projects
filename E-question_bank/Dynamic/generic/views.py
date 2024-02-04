@@ -4,7 +4,7 @@ from django.core.serializers import serialize
 from courses.models import Courses
 from student.models import Students_data
 from django.contrib.auth.decorators import login_required
-from lecturers.models import Upload, Resources
+from lecturers.models import Upload, Resources, Lecturer
 from django.http import HttpResponse
 from django.contrib.auth import logout
 
@@ -25,6 +25,7 @@ def landingPage(request):
     else:
         return render(request, "landingPage.html")
 
+@login_required(login_url="login")
 def questionAPI(request):
     """API for question"""
     data = []
@@ -46,10 +47,11 @@ def questionAPI(request):
 
     return JsonResponse({"data": data})
 
-def resourceAPI(request, faculty):
+@login_required(login_url="login")
+def resourceAPI(request, department):
     """Return resource API based on faculty"""
     data = []
-    allData = Resources.objects.filter(faculty=faculty).all()
+    allData = Resources.objects.filter(department=department).all()
     for content in allData:
         obtained = {
             "department": content.department,
@@ -66,7 +68,7 @@ def resourceAPI(request, faculty):
     return JsonResponse({"data": data})
 
 @login_required(login_url="login")
-def filterData(request, dataType, faculty):
+def filterData(request, dataType, department):
     """filter data based on preference"""
     dataReceived = dataType.split(",")
     resources = []
@@ -86,15 +88,15 @@ def filterData(request, dataType, faculty):
         
 
     if dataReceived[0] == "filter_cCode":
-        resourceData = Resources.objects.filter(course_code=dataReceived[1], faculty=faculty).first()
+        resourceData = Resources.objects.filter(course_code=dataReceived[1], department=department).first()
         reUse([resourceData])
 
     elif dataReceived[0] == "filter_level":
-        resourceData = Resources.objects.filter(level=dataReceived[1], faculty=faculty).all()
+        resourceData = Resources.objects.filter(level=dataReceived[1], department=department).all()
         reUse(resourceData)
 
     elif dataReceived[0] == "filter_semester":
-        resourceData = Resources.objects.filter(semester=dataReceived[1], faculty=faculty).all()
+        resourceData = Resources.objects.filter(semester=dataReceived[1], department=department).all()
         reUse(resourceData)
 
     # return JsonResponse({"data": resources})
@@ -102,6 +104,9 @@ def filterData(request, dataType, faculty):
 
 def aboutPage(request):
     """about page"""
+    if request.user.is_authenticated:
+        if isinstance(request.user, Lecturer):
+            return render(request, "aboutPage.html", {"staff": True})
     return render(request, "aboutPage.html")
 
 @login_required(login_url="login")

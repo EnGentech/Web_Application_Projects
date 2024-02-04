@@ -10,11 +10,21 @@
     <li><a class="button" href="{% url 'staffLogout' %}" id="logout_button">LogOut</a></li>  
 {% endblock loginOut %}
 
-{% block content %}
-
 {% block navs %}
-
+    <li><a id="default" href="{% url 'homePage' %}">Home</a></li>
+    <li><a class="other_nav" href="#" id="uploadNav">Upload</a></li>
+    <li><a class="other_nav" href="{% url 'aboutPage' %}">About_Page</a></li>
 {% endblock navs %}
+
+{% block content %}
+    <div class="uploadNavElements">
+        <nav>
+            <ul>
+                <li><a href="#">Questions</a></li>
+                <li><a href="#">Accessment</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <div class="container_question">
         <div class="main_question">

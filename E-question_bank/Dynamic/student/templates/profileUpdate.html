@@ -1,0 +1,81 @@
+{% extends "landingPage.html" %}
+{% load static %}
+{% block head %}
+    <script src="https://kit.fontawesome.com/11285bfb5b.js" crossorigin="anonymous"></script>
+    <title>Load Resources</title>
+    <link rel="stylesheet" href="{% static 'styles/updateProfile.css' %}">
+    <script src="{% static 'scripts/updateProfile.js' %}"></script>
+{% endblock head %}
+
+    
+{% block content %}
+<div class="updateBox">
+    <div class="updateContent">
+        <h4 id="welcomeUser">Welcome <span id="nameCheck">{{ request.user.username }}</span></h4>
+        <p id="dept" style="display: non">{{ request.user.department }}</p>
+            <h3 id="updateHeader">Update Profile</h3>
+            <p id="basicInfo"><span class="asteriskColor">* </span>Fill in your data appropriately and ensure proper documentation before submitting as your course work will be used as your assessment and a determinant for your semester's grade.</p>
+
+            <div class="formSetting">
+                
+                <h3>Profile</h3>
+                <form action="{% url 'profileUpdate' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="firstName" id="label_fName"><span class="asteriskColor">* </span>First Name <label for="lastName" class='label_' id="fName_extended"><span class="asteriskColor">* </span>Last Name</label></label><br>
+                    <input type="text" name="firstName" id="fName" placeholder="First Name" required>
+                    <input type="text" name="lastName" id="lName" placeholder="Last Name" required>
+
+                    <br><label for="OtherName" id="oName">Other Name <label for="regNo" class="label_">Registration Number</label></label><br>
+                    <input type="text" name="otherName" id="oName" placeholder="Other Name" required>
+                    <input type="number" name="regNo" id="regNo" placeholder="xxxxxxxx" min=10000000>
+
+                    <br><label for="level" id="label_level"><span class="asteriskColor">* </span> Level <label for="semester" id="label_reg"><span class="asteriskColor">* </span>Semester</label></label><br>
+
+                    <select name="level" id="level" required>
+                        <option value="" hidden>-- Select level --</option>
+                        <option value="ND 100">ND 100</option>
+                        <option value="ND 200">ND 200</option>
+                        <option value="HND 100">HND 100</option>
+                        <option value="HND 200">HND 200</option>
+                    </select>
+                    <select name="semester" id="semester" required>
+                        <option value="" hidden>-- Select Semester --</option>
+                        <option value="Semester 1">Semester 1</option>
+                        <option value="Semester 2">Semester 2</option>
+                    </select>
+                    
+                    <section class="profilePicture">
+                        <p><span class="asteriskColor">* </span>Upload Profile Picture</p>
+                        <section id="pics">                            
+                            <input type="file" name="dp" id="dp"  required>
+                        </section>
+                    </section>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <center><p class="profileUpdate_messages fadeOff">{{ message }}</p></center>                 
+                        {% endfor %}
+                    {% endif %}
+                    <p id="courseSelect"><span class="asteriskColor">*</span> Please select all courses that is relevant to you within the semester in your respective department and level</p>
+                    <section class="courseTableSelect">
+                        <table>
+                            <thead>
+                                <td>S/No.</td>
+                                <td>Course Code</td>
+                                <td>Course Title</td>
+                                <td>Register</td>
+                            </thead>
+                            <tbody id="tableBodyContent">
+                               
+                            </tbody>
+                                
+                        </table>
+                    </section>
+                    <p id="countRegistered">Registered Courses: <span id="onCheck">0</span></p>
+                    <input type="submit" value="Submit Course Form" id="submitCourseForm">
+                </form>
+                
+            </div>
+        </div>
+   </div>
+   
+{% endblock content %}

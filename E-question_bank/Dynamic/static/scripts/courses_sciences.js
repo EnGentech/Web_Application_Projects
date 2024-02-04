@@ -4,7 +4,7 @@ $(document).ready(function(){
         ["Com 111", "Introduction to computing"],
         ["Com 112", "Introductiion to Digital Electronics"],       
         ["Com 113", "Intoduction to Programming"],
-        ["Com 114", " Statistics of computing 1"],
+        ["Com 114", "Statistics of computing 1"],
         ["Com 115", "Computer application packages"],
         ["Mth 111", "Logic of linear algebra"],
         ["Gns 101", "Use of english 1"],
@@ -71,35 +71,35 @@ $(document).ready(function(){
     
 
     var courses_ScienceLaboratoryTechnology_ND100_semester1 = [
-    
+        
     ]
     
     var courses_ScienceLaboratoryTechnology_ND100_semester2 = [
-    
+        
     ]
     
     var courses_ScienceLaboratoryTechnology_ND200_semester1=[
-        
+            
     ]
     
     var courses_ScienceLaboratoryTechnology_ND200_semester2 = [
-    
+        
     ]
     
     var courses_ScienceLaboratoryTechnology_HND100_semester1 = [
-        
+            
     ]
     
     var courses_ScienceLaboratoryTechnology_HND100_semester2=[
-        
+            
     ]
     
     var courses_ScienceLaboratoryTechnology_HND200_semester1=[
-      
+          
     ]
     
     var courses_ScienceLaboratoryTechnology_HND200_semester2 = [
-    
+        
     ]
 
     let selected_department
@@ -112,6 +112,7 @@ $(document).ready(function(){
     var cCode = $("#cCode")
     var cTitle = $("#cTitle")
     var dept = $("#dept").text()
+    var tbodyContent = $("#tableBodyContent")
 
     level.on("change", function(){
         selected_level = $(this).val();
@@ -129,6 +130,41 @@ $(document).ready(function(){
         selected_department = $(this).val();
         updateOption()
     })
+
+    let updateTable = function(courses){
+        tbodyContent.empty()
+        let i = 0
+        courses.forEach(element => {
+            var row = $('<tr>')
+            row.append("<td>" + (i + 1) + "</td>");
+            row.append("<td>" + element[0] + "</td>");
+            row.append("<td>" + element[1] + "</td>");
+            row.append('<td><section class="click"><p class="onOff">off</p></section></td>');
+            
+            tbodyContent.append(row);
+            i++;
+        });
+
+        var onOffBtn = $(".onOff")
+        var clickBtn = $(".click")
+        var countDisplay = $("#onCheck")
+        var count = 0
+
+        clickBtn.click(function(){
+            $(this).toggleClass("click2")
+            $(this).find(onOffBtn).toggleClass("onOff2")
+            var newText = $(this).hasClass("click2") ? "ON" : "off";
+            $(this).find(onOffBtn).text(newText)
+            
+            if ($(this).find(onOffBtn).text() === "ON"){
+                count += 1
+            } else {
+                count -= 1
+            }
+            countDisplay.text(count)
+        });
+
+    }
 
     let callData = function(courseIteration){
         cCode.empty()
@@ -153,39 +189,55 @@ $(document).ready(function(){
         // Computer Science Department
         if ((selected_department === "Computer Science" || dept === 'Computer Science') && (selected_level === "ND 100") && (selected_semester === "Semester 1")){
             callData(courses_ComputerScience_ND100_semester1)
+            updateTable(courses_ComputerScience_ND100_semester1)
         } else if ((selected_department === "Computer Science" || dept === "Computer Science") && (selected_level === "ND 100") && (selected_semester === "Semester 2")){
             callData(courses_ComputerScience_ND100_semester2)
+            updateTable(courses_ComputerScience_ND100_semester2)
         } else if ((selected_department === "Computer Science" || dept === "Computer Science") && (selected_level === "ND 200") && (selected_semester === "Semester 1")){
             callData(courses_ComputerScience_ND200_semester1)
+            updateTable(courses_ComputerScience_ND200_semester1)
         } else if ((selected_department === "Computer Science" || dept === "Computer Science") && (selected_level === "ND 200") && (selected_semester === "Semester 2")){
            callData(courses_ComputerScience_ND200_semester2)
+           updateTable(courses_ComputerScience_ND200_semester2)
         } else if ((selected_department === "Computer Science" || dept === "Computer Science") && (selected_level === "HND 100") && (selected_semester === "Semester 1")){
             callData(courses_ComputerScience_HND100_semester1)
+            updateTable(courses_ComputerScience_HND100_semester1)
         } else if ((selected_department === "Computer Science" || dept === "Computer Science") && (selected_level === "HND 100") && (selected_semester === "Semester 2")){
             callData(courses_ComputerScience_HND100_semester2)
+            updateTable(courses_ComputerScience_HND100_semester2)
         } else if ((selected_department === "Computer Science" || dept === "Computer Science") && (selected_level === "HND 200") && (selected_semester === "Semester 1")){
             callData(courses_ComputerScience_HND200_semester1)
+            updateTable(courses_ComputerScience_HND200_semester1)
         } else if ((selected_department == "Computer Science" || dept === "Computer Science") && (selected_level === "HND 200") && (selected_semester === "Semester 2")){
             callData(courses_ComputerScience_HND200_semester2)
+            updateTable(courses_ComputerScience_HND200_semester2)
         } 
 
         // Science Lab Technology
         else if ((selected_department === "Science Laboratory Technology" || dept === 'Science Laboratory Technology') && (selected_level === "ND 100") && (selected_semester === "Semester 1")){
             callData(courses_ScienceLaboratoryTechnology_ND100_semester1)
+            updateTable(courses_ScienceLaboratoryTechnology_ND100_semester1)
         } else if ((selected_department === "Science Laboratory Technology" || dept === "Science Laboratory Technology") && (selected_level === "ND 100") && (selected_semester === "Semester 2")){
             callData(courses_ScienceLaboratoryTechnology_ND100_semester2)
+            updateTable(courses_ScienceLaboratoryTechnology_ND100_semester2)
         } else if ((selected_department === "Science Laboratory Technology" || dept === "Science Laboratory Technology") && (selected_level === "ND 200") && (selected_semester === "Semester 1")){
             callData(courses_ScienceLaboratoryTechnology_ND200_semester1)
+            updateTable(courses_ScienceLaboratoryTechnology_ND200_semester1)
         } else if ((selected_department === "Science Laboratory Technology" || dept === "Science Laboratory Technology") && (selected_level === "ND 200") && (selected_semester === "Semester 2")){
            callData(courses_ScienceLaboratoryTechnology_ND200_semester2)
+           updateTable(courses_ScienceLaboratoryTechnology_ND200_semester2)
         } else if ((selected_department === "Science Laboratory Technology" || dept === "Science Laboratory Technology") && (selected_level === "HND 100") && (selected_semester === "Semester 1")){
             callData(courses_ScienceLaboratoryTechnology_HND100_semester1)
+            updateTable(courses_ScienceLaboratoryTechnology_HND100_semester1)
         } else if ((selected_department === "Science Laboratory Technology" || dept === "Science Laboratory Technology") && (selected_level === "HND 100") && (selected_semester === "Semester 2")){
             callData(courses_ScienceLaboratoryTechnology_HND100_semester2)
+            updateTable(courses_ScienceLaboratoryTechnology_HND100_semester2)
         } else if ((selected_department === "Science Laboratory Technology" || dept === "Science Laboratory Technology") && (selected_level === "HND 200") && (selected_semester === "Semester 1")){
             callData(courses_ScienceLaboratoryTechnology_HND200_semester1)
+            updateTable(courses_ScienceLaboratoryTechnology_HND200_semester1)
         } else if ((selected_department == "Science Laboratory Technology" || dept === "Science Laboratory Technology") && (selected_level === "HND 200") && (selected_semester === "Semester 2")){
             callData(courses_ScienceLaboratoryTechnology_HND200_semester2)
+            updateTable(courses_ScienceLaboratoryTechnology_HND200_semester2)
         }
     }
 

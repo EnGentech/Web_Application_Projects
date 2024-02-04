@@ -227,6 +227,8 @@ input[type="file"]::-webkit-file-upload-button{
     padding: 3px 3px 3px 8px;
 }
 
+/* Hide things */
+
 .hideOff{
     display: none;
 }

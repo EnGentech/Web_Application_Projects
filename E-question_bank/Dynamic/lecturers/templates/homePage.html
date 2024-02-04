@@ -1,0 +1,52 @@
+{% extends "landingPage.html" %}
+{% load static %}
+{% block head %}
+    <title>Home Page</title>
+{% endblock head %}
+
+{% block loginOut %}
+    <li><a class="button" href="{% url 'staffLogout' %}" id="logout_button">LogOut</a></li>  
+{% endblock loginOut %}
+
+{% block navs %}
+    <li><a id="default" href="{% url 'homePage' %}">Home</a></li>
+    <li><a class="other_nav" href="#" id="uploadNav">Upload</a></li>
+    <li><a class="other_nav" href="{% url 'aboutPage' %}">About_Page</a></li>
+{% endblock navs %}
+
+{% block content %}
+    <div class="uploadNavElements">
+        <nav>
+            <ul>
+                <li><a href="{% url 'upload_question' %}">Questions</a></li>
+                <li><a href="#">Accessment</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="lecturers-header">
+        <h1>Lecturers' Homepage</h1>
+    </div>
+
+    <div class="lecturers-section">
+        <h2 class="lecturers-title">About Us</h2>
+        <p class="lecturers-text">Welcome to our homepage! We are passionate about [Your Field of Expertise]. Feel free to explore the resources and information provided here.</p>
+    </div>
+
+    <div class="lecturers-section">
+        <h2 class="lecturers-title">Courses</h2>
+        <p class="lecturers-text">Check out the courses we offer and find related materials, assignments, and announcements.</p>
+        <!-- Add more content related to courses -->
+    </div>
+
+    <div class="lecturers-section">
+        <h2 class="lecturers-title">Research</h2>
+        <p class="lecturers-text">Explore our research interests and publications. Stay updated on recent developments in [Your Research Area].</p>
+        <!-- Add more content related to research -->
+    </div>
+
+    <div class="lecturers-footer">
+        <p>Contact: [Your Contact Email Address]</p>
+    </div>
+
+{% endblock content %}

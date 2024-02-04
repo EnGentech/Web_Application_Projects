@@ -146,11 +146,15 @@ def signIn_lec(request):
             if user is not None:
                 login(request, user, backend='lecturers.backends.StaffBackend')
                 messages.success(request, "Login successful")
-                return redirect("upload_question")
+                return redirect("homePage")
             else:
                 messages.error(request, "Invalid login credentials")
                 return render(request, "staffSignIn.html")
     return render(request, 'staffSignIn.html')
+
+def staffHomePage(request):
+    """staff home page"""
+    return render(request, 'homePage.html')
 
 @lecturer_required
 @login_required(login_url="signInLec")

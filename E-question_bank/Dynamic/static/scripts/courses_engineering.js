@@ -127,6 +127,7 @@ $(document).ready(function(){
     var cCode = $("#cCode")
     var cTitle = $("#cTitle")
     var dept = $("#dept").text()
+    var tbodyContent = $("#tableBodyContent")
 
     level.on("change", function(){
         selected_level = $(this).val();
@@ -144,6 +145,41 @@ $(document).ready(function(){
         selected_department = $(this).val();
         updateOption()
     })
+
+    let updateTable = function(courses){
+        tbodyContent.empty()
+        let i = 0
+        courses.forEach(element => {
+            var row = $('<tr>')
+            row.append("<td>" + (i + 1) + "</td>");
+            row.append("<td>" + element[0] + "</td>");
+            row.append("<td>" + element[1] + "</td>");
+            row.append('<td><section class="click"><p class="onOff">off</p></section></td>');
+            
+            tbodyContent.append(row);
+            i++;
+        });
+
+        var onOffBtn = $(".onOff")
+        var clickBtn = $(".click")
+        var countDisplay = $("#onCheck")
+        var count = 0
+
+        clickBtn.click(function(){
+            $(this).toggleClass("click2")
+            $(this).find(onOffBtn).toggleClass("onOff2")
+            var newText = $(this).hasClass("click2") ? "ON" : "off";
+            $(this).find(onOffBtn).text(newText)
+            
+            if ($(this).find(onOffBtn).text() === "ON"){
+                count += 1
+            } else {
+                count -= 1
+            }
+            countDisplay.text(count)
+        });
+
+    }
 
     let callData = function(courseIteration){
         try {
@@ -173,44 +209,58 @@ $(document).ready(function(){
         cTitle.val("-- Select Course Code --")
         if ((selected_department === "Computer Engineering" || dept === 'Computer Engineering') && (selected_level === "ND 100") && (selected_semester === "Semester 1")){
             callData(courses_computerEngineering_ND100_semester1)
+            updateTable(courses_computerEngineering_ND100_semester1)
         } else if ((selected_department === "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "ND 100") && (selected_semester === "Semester 2")){
             callData(courses_computerEngineering_ND100_semester2)
+            updateTable(courses_computerEngineering_ND100_semester2)
         } else if ((selected_department === "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "ND 200") && (selected_semester === "Semester 1")){
             callData(courses_computerEngineering_ND200_semester1)
+            updateTable(courses_computerEngineering_ND200_semester1)
         } else if ((selected_department === "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "ND 200") && (selected_semester === "Semester 2")){
            callData(courses_computerEngineering_ND200_semester2)
+           updateTable(courses_computerEngineering_ND200_semester2)
         } else if ((selected_department === "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "HND 100") && (selected_semester === "Semester 1")){
             callData(courses_computerEngineering_HND100_semester1)
+            updateTable(courses_computerEngineering_HND100_semester1)
         } else if ((selected_department === "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "HND 100") && (selected_semester === "Semester 2")){
             callData(courses_computerEngineering_HND100_semester2)
+            updateTable(courses_computerEngineering_HND100_semester2)
         } else if ((selected_department === "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "HND 200") && (selected_semester === "Semester 1")){
             callData(courses_computerEngineering_HND200_semester1)
+            updateTable(courses_computerEngineering_HND200_semester1)
         } else if ((selected_department == "Computer Engineering" || dept === "Computer Engineering") && (selected_level === "HND 200") && (selected_semester === "Semester 2")){
             callData(courses_computerEngineering_HND200_semester2)
+            updateTable(courses_computerEngineering_HND200_semester2)
         }
         
         // Electrical Department
 
         else if ((selected_department === "Electrical Engineering" || dept === 'Electrical Engineering') && (selected_level === "ND 100") && (selected_semester === "Semester 1")){
             callData(courses_electricalEngineering_ND100_semester1)
+            updateTable(courses_electricalEngineering_ND100_semester1)
         } else if ((selected_department === "Electrical Engineering" || dept === "Electrical Engineering") && (selected_level === "ND 100") && (selected_semester === "Semester 2")){
             callData(courses_electricalEngineering_ND100_semester2)
+            updateTable(courses_electricalEngineering_ND100_semester2)
         } else if ((selected_department === "Electrical Engineering" || dept === "Electrical Engineering") && (selected_level === "ND 200") && (selected_semester === "Semester 1")){
             callData(courses_electricalEngineering_ND200_semester1)
+            updateTable(courses_electricalEngineering_ND200_semester1)
         } else if ((selected_department === "Electrical Engineering" || dept === "Electrical Engineering") && (selected_level === "ND 200") && (selected_semester === "Semester 2")){
            callData(courses_electricalEngineering_ND200_semester2)
+           updateTable(courses_electricalEngineering_ND200_semester2)
         } else if ((selected_department === "Electrical Engineering" || dept === "Electrical Engineering") && (selected_level === "HND 100") && (selected_semester === "Semester 1")){
             callData(courses_electricalEngineering_HND100_semester1)
+            updateTable(courses_electricalEngineering_HND100_semester1)
         } else if ((selected_department === "Electrical Engineering" || dept === "Electrical Engineering") && (selected_level === "HND 100") && (selected_semester === "Semester 2")){
             callData(courses_electricalEngineering_HND100_semester2)
+            updateTable(courses_electricalEngineering_HND100_semester2)
         } else if ((selected_department === "Electrical Engineering" || dept === "Electrical Engineering") && (selected_level === "HND 200") && (selected_semester === "Semester 1")){
             callData(courses_electricalEngineering_HND200_semester1)
+            updateTable(courses_electricalEngineering_HND200_semester1)
         } else if ((selected_department == "Electrical Engineering" || dept === "Electrical Engineering") && (selected_level === "HND 200") && (selected_semester === "Semester 2")){
             callData(courses_electricalEngineering_HND200_semester2)
+            updateTable(courses_electricalEngineering_HND200_semester2)
         } 
         
     }
-
-   
 
 })
