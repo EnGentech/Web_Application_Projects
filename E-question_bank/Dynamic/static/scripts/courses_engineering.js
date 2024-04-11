@@ -49,7 +49,7 @@ $(document).ready(function(){
     ]
 
     var courses_computerEngineering_HND100_semester2 = [
-
+        ["CTE326", "Python Programming Language"],
     ]
 
     var courses_computerEngineering_HND200_semester1= [

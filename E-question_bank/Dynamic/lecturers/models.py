@@ -25,6 +25,7 @@ class Upload(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     courses = models.ForeignKey(Courses, on_delete=models.CASCADE, null=True)
 
+
 class Resources(models.Model):
     """Model for uploading resources"""
     faculty = models.CharField(max_length=100)

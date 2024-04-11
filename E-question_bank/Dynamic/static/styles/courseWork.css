@@ -208,7 +208,7 @@ body{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: green;
+    background-color: brown;
     margin: auto;
 }
 
@@ -242,17 +242,21 @@ body{
     width: 70%;
     padding: 7px;
     border-radius: 10px;
-    border: 1px solid gray;
     display: block;
     margin: auto;
-    background-color: green;
+    border: none;
+    background-color: rgb(0, 128, 0);
     font-size: medium;
     color: white;
     font-weight: bold;
-    cursor: pointer;
+    cursor: none;
 }
 
-.instruction button:hover, .submission input[type='submit']:hover{
+.intruction button:focus{
+    border:none;
+}
+
+.submission input[type='submit']:hover{
     background-color: rgb(173, 204, 173);
     color: darkgreen;
     border: 1px solid darkgreen;
@@ -296,4 +300,8 @@ body{
 /* Hide logics */
 .statusBoard{
     display: none;
+}
+
+#hideRemark{
+    display:none;
 }

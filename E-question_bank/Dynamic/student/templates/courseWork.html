@@ -5,10 +5,12 @@
     <title>Load Resources</title>
     <link rel="stylesheet" href="{% static 'styles/courseWork.css' %}">
     <script src="{% static 'scripts/courseWork.js' %}"></script>
+    <script src="{% static 'scripts/assessment.js' %}"></script>
 {% endblock head %}
 
     
 {% block content %}
+    {% csrf_token %}
     <div class="statusBoard">
         <div class="statusContent">
             <h2 id="title">
@@ -17,15 +19,15 @@
 
             <section class="statusTop">
                 <div class="moduleTitle">
-                    <h5>Conditional Structure</h5>
-                    <p>Module 2</p>
+                    <h5 id="taskTitle" style="font-weight: 600"></h5>
+                    <p id="moduleNumber"></p>
                 </div>
                 <div class="lightUp">
                     <section class="light">
                         <div class="lightBox">
 
                         </div>
-                        <p>completed</p>
+                        <p id="taskRemark">Not submitted</p>
                     </section>
                 </div>
 
@@ -33,16 +35,21 @@
             <section class="instruction">
                 <h6>Instructions</h6>
                 <p>
-                    Click on <b>Load Task</b>, On the URL provided, complete all required task as stated, Copy and past the url that links to your answers and ensure that the url is read access.
+                    All assignments have been compiled into your hard copy course work, which is also available as a soft copy via this portal's resource center! <br>Using your local machine's IDE, complete the active task and ensure it is working as expected. Once done, push your code to <b>GitHub</b>.<br>
+                    Copy the URL of your pushed repository and paste it into the <b>URL</b> text field provided below, then click <b>Save</b>.<br><b>Note:</b> You can only submit your task once, so ensure you verify every aspect of your code before proceeding to click <b>Save</b>.
                 </p>
-                <button>Load Task</button>
+                <button id="noClick">Python Programming Language</button>
             </section>
 
             <section class="submission">
-                <form action="">
-                    <label for="urlSubmit">Your answer Url</label>
-                    <input type="text" placeholder="https://www.myanswerurl.com"><br><br>
-                    <input type="submit" value="Save">
+                <form method="POST">
+                    {% csrf_token %}
+                    <section id="hideIfSubmitted">
+                        <label for="urlSubmit">Your answer Url</label>
+                        <input type="text" placeholder="https://www.myanswerurl.com" id="urlSubmit"><br><br>
+                    </section>
+                    <center id="hideRemark"><h3>Task has been submitted, <i>Congratulations!</i></h3></center>
+                    <input type="submit" value="Save" id="submitAssessment">
                 </form>
             </section>
         </div>
@@ -66,7 +73,7 @@
                 <section class="leftPane">
                     <section class="profilePics">
                         <img src="{{ request.user.profile_picture.url }}" alt="">
-                        <p>Hello {{ request.user.username }}</p>
+                        <p id='userName'>Hello {{ request.user.username }}</p>
                     </section>
                     <h5>Registered Courses</h5>
                     <ul class="listCourses">
@@ -83,7 +90,7 @@
 
                 <section class="mainContent">
                     <section class="toRightContent">
-                        <h5>Grade: <span id="gradeColor">70%</span></h5>
+                        <h5>Grade: <span id="gradeColor">0%</span></h5>
                     </section>
                     <section class="courseDetail">
                         <h5>Course Code: <span id='cCodeSelect'>--Select Registered Course--</span></h5>
@@ -91,7 +98,8 @@
                     </section>
 
                     <section class="progressTable">
-                        <h5>Progress Table</h5>
+                        <h5>Progress Table <span style="float: right; margin-right: 50px" id="countdown">Timer: 00::00:00:00
+                        </span></h5>
                         <section class="tableView">
                             <table>
                                 <thead>
@@ -102,35 +110,31 @@
                                     <td>Start Date</td>
                                     <td>End Date</td>
                                     <td>Status</td>
+                                    <td>Submit</td>
                                 </thead>
+                                {% if taskUpdate %}                                                             
+                                    {% for task in taskUpdate %}
+                                        <tr class="allDataSchedule">
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ task.intro }}</td>
+                                            <td>{{ task.taskType }}</td>
+                                            <td class="scores">5<span>%</span></td>
+                                            <td class="startDate">{{ task.startDate }}</td>
+                                            <td class="endDate">{{ task.endDate }}</td>
+                                            <td class="submitStatus">Scanning</td>
+                                            <td class='clickMe'>Submit task
+                                                <div class="statusLight">
 
-                                <tr>
-                                    <td>1</td>
-                                    <td>Module 1</td>
-                                    <td>Assignment</td>
-                                    <td>50%</td>
-                                    <td>3/05/2024</td>
-                                    <td>12/05/2024</td>
-                                    <td class='clickMe'>click me
-                                        <div class="statusLight">
-
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>1</td>
-                                    <td>Module 1</td>
-                                    <td>Assignment</td>
-                                    <td>50%</td>
-                                    <td>3/05/2024</td>
-                                    <td>12/05/2024</td>
-                                    <td>click me
-                                        <div class="statusLight">
-                                            
-                                        </div>
-                                    </td>
-                                </tr>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr>
+                                        <td colspan="8"><center>No task available at the moment! enjoy the silence...</center></td>
+                                    </tr>
+                                {% endif %}
+                                
                             </table>
                         </section>
                     </section>
@@ -140,8 +144,8 @@
             <section class="statistics">
                 <h5>STATISTICS</h5>
                 <section class="displayP">
-                    <p>All Task: 10 </p>
-                    <p>Completed: 2</p>
+                    <p id="allTask">All Task: 0 </p>
+                    <p id="completedTask">Completed: 0</p>
                 </section>
                     
             </section>

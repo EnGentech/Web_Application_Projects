@@ -79,3 +79,14 @@ class Transaction(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     student = models.ForeignKey(Students_data, on_delete=models.CASCADE, null=True)
+
+class Assessment(models.Model):
+    """Assessment table generation"""
+    student = models.ForeignKey(Students_data, on_delete=models.CASCADE, null=True)
+    course_code = models.CharField(max_length=20)
+    score = models.IntegerField()
+    level = models.CharField(max_length=100, null=True)
+    semester = models.CharField(max_length=100, null=True)
+    moduleName = models.CharField(max_length=100)
+    urlSubmit = models.URLField(max_length=200, null=True)
+    taskStatus = models.IntegerField(default=0)
