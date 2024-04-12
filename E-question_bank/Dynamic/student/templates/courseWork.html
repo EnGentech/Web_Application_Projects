@@ -38,7 +38,7 @@
                     All assignments have been compiled into your hard copy course work, which is also available as a soft copy via this portal's resource center! <br>Using your local machine's IDE, complete the active task and ensure it is working as expected. Once done, push your code to <b>GitHub</b>.<br>
                     Copy the URL of your pushed repository and paste it into the <b>URL</b> text field provided below, then click <b>Save</b>.<br><b>Note:</b> You can only submit your task once, so ensure you verify every aspect of your code before proceeding to click <b>Save</b>.
                 </p>
-                <button id="noClick">Python Programming Language</button>
+                <button id="noClick"></button>
             </section>
 
             <section class="submission">
@@ -74,6 +74,11 @@
                     <section class="profilePics">
                         <img src="{{ request.user.profile_picture.url }}" alt="">
                         <p id='userName'>Hello {{ request.user.username }}</p>
+                        {% if request.user.regNumber %}
+                            <p id='regNo'>{{ request.user.regNumber }}</p>
+                        {% else %}
+                            <p id='regNo'>No RegNumber</p>
+                        {% endif %}
                     </section>
                     <h5>Registered Courses</h5>
                     <ul class="listCourses">

@@ -164,8 +164,8 @@ def courseWork(request):
     """render user course work"""
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
         courseTitle = request.POST.get("courseTitle")
+        returnList = []
         if courseTitle == "Computer Technology":
-            returnList = []
             endDateCaptured = None
             with open("student/pythonTasks.json", "r") as file:
                 content = json.load(file)

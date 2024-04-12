@@ -297,6 +297,16 @@ body{
     border: 1px solid rgba(47, 0, 0, 0.763);
 }
 
+#userName{
+    margin-bottom: 0px;
+}
+
+#regNo{
+    margin-top: 0px;
+    line-height: 5px;
+    font-size: 0.85em;
+    color: blue;
+}
 /* Hide logics */
 .statusBoard{
     display: none;

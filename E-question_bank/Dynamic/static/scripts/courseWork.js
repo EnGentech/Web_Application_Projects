@@ -149,6 +149,8 @@ $(document).ready(function() {
         var sNo = clickedRow.find('td:nth-child(1)').text();
         var moduleName = clickedRow.find('td:nth-child(2)').text();
         var moduleID = `Module ${sNo}`;
+        let courseTitle = $("#cTitleSelect").text()
+        $('#noClick').text(courseTitle);
         
         taskTitle.text(moduleName);
         moduleNumber.text(moduleID);
