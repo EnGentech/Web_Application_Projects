@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect
 from courses.models  import Courses
 from lecturers.models import Upload, Lecturer, Resources
+from student.models import Assessment
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from lecturers.backends import StaffBackend
 from django.contrib.auth import logout, login
 from functools import wraps
 from django.http import HttpResponse
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -126,6 +128,33 @@ def uploadResources(request):
 
 @lecturer_required
 @login_required(login_url="signInLec")
+def scoreBoard(request):
+    """Score Board update"""
+    if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        courseTitle = request.POST.get('courseTitle')
+        courseCode = request.POST.get('courseCode')
+        level = request.POST.get('level')
+        semester = request.POST.get('semester')
+        faculty = request.POST.get('faculty')
+        department = request.POST.get('department')
+        task = request.POST.get("task")
+
+        data = Assessment.objects.filter(course_code=courseCode, level=level, semester=semester, student__faculty=faculty, student__department=department, moduleName=task).all()
+        data_dict = {}
+        for i in data:
+            content = {
+                i.student.regNumber: {
+                    "fullName": i.student.first_name + " " + i.student.last_name,
+                    "url": i.urlSubmit,
+                }
+            }
+            data_dict.update(content)
+        if data:
+            return JsonResponse({'data': data_dict})        
+    return render(request, 'scoreBoard.html')
+
+@lecturer_required
+@login_required(login_url="signInLec")
 def uploadAnswers(request):
     """Upload answers to database"""
     return HttpResponse("Coming soon, please be patience")
@@ -162,3 +191,25 @@ def staffLogout(request):
     """logout staff"""
     logout(request)
     return redirect("signInLec")
+
+@lecturer_required
+@login_required(login_url="signInLec")
+def scoreActiveStudent(request):
+    """Update students record with verified score"""
+    if request.method == 'POST':
+        taskName = request.POST.get("taskName")
+        faculty = request.POST.get('faculty')
+        department = request.POST.get("department")
+        level = request.POST.get("level")
+        semester = request.POST.get("semester")
+        coureCode = request.POST.get("cCode")
+        regNo = request.POST.get("regNo")        
+        score = request.POST.get("score")
+        
+        user = Assessment.objects.filter(student__regNumber=regNo, course_code=coureCode, level=level, semester=semester, 
+        student__faculty=faculty, student__department=department,  moduleName=taskName).first()
+        if user:
+            user.score = score
+            user.save()    
+
+    return render(request, 'scoreBoard.html')

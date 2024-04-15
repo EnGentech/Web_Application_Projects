@@ -1,6 +1,8 @@
 $(document).ready(function(){
     let options = $('#option')
     let checkLevel = $("#level")
+    let choosen_department
+    let choosen_level
     let checkdepartment = $("#department")
 
     checkLevel.change(function(){

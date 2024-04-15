@@ -8,9 +8,10 @@ from .backends import StudentBackend
 from django import forms
 from django.contrib.auth.decorators import login_required
 from functools import wraps
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 import json
 from datetime import datetime, timedelta
+from .emailfunction import EmailLogic
 
 
 def student_required(view_func):
@@ -161,31 +162,50 @@ def timer(endDate):
 @student_required
 @login_required(login_url="login")
 def courseWork(request):
-    """render user course work"""
+    """Render user course work"""
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
-        courseTitle = request.POST.get("courseTitle")
-        returnList = []
-        if courseTitle == "Computer Technology":
-            endDateCaptured = None
-            with open("student/pythonTasks.json", "r") as file:
-                content = json.load(file)
-            for x in content:
-                if content[x]['activation'] == 1:
-                    endDateCaptured = content[x]['endDate']
-                    returnList.append(content[x])
-            remainderTimer = timer(endDateCaptured)
-            data = Students_data.objects.filter(username=request.user).first()
-            registered = CourseWork.objects.filter(student=data).all()
-            return render(request, 'courseWork.html', {"data": registered, "taskUpdate": returnList, "remainder": remainderTimer})
-        else:
-            data = Students_data.objects.filter(username=request.user).first()
-            registered = CourseWork.objects.filter(student=data).all()
-            return render(request, 'courseWork.html', {"data": registered})
-    else:
-        data = Students_data.objects.filter(username=request.user).first()
-        registered = CourseWork.objects.filter(student=data).all()
-        return render(request, 'courseWork.html', {"data": registered})
-    
+        courseCode = request.POST.get("courseCode")
+        
+        if courseCode == "CTE431":
+            return courseWorkLoad(request, "student/pythonTasks.json", courseCode)
+        
+    data = Students_data.objects.filter(username=request.user).first()
+    registered = CourseWork.objects.filter(student=data).all()
+    return render(request, 'courseWork.html', {"data": registered})
+
+@student_required
+@login_required(login_url="login")
+def courseWorkLoad(request, filePath, courseCode):
+    """Load course work data from a file"""
+    returnList = []
+    scoreObtained = {}
+    courseCode = request.POST.get("courseCode")
+    data = Students_data.objects.filter(username=request.user).first()
+    result = Assessment.objects.filter(course_code=courseCode, student=data).all()
+    if result:
+        for task in result:
+            scoreObtained[task.moduleName] = task.score
+    try:
+        with open(filePath, "r") as file:
+            content = json.load(file)
+            for task in content.values():
+                if task.get('activation') == 1:
+                    for key, value in scoreObtained.items():
+                        if key == task['intro']:
+                            task['score'] = value
+                    returnList.append(task)
+    except FileNotFoundError:
+        return HttpResponse("File not found", status=404)
+    except json.JSONDecodeError:
+        return HttpResponse("Invalid JSON content", status=500)
+
+    remainderTimer = timer(task['endDate']) if returnList else None
+    data = Students_data.objects.filter(username=request.user).first()
+    registered = CourseWork.objects.filter(student=data).all()
+    return render(request, 'courseWork.html', {"data": registered, "taskUpdate": returnList, "remainder": remainderTimer})
+
+@student_required
+@login_required(login_url="login")   
 def assessment(request):
     """render Users assessment"""
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
@@ -195,19 +215,40 @@ def assessment(request):
         moduleTitle = request.POST.get("moduleTitle")
         urlSubmit = request.POST.get("urlSubmit")
         name = name.split()
+
+        email_data = {
+            "firstName": request.user.first_name,
+            "lastName": request.user.last_name,
+            "email": request.user.email,
+            "regNo": request.user.regNumber,
+            "url": urlSubmit,
+            "courseCode": courseCode,
+            "moduleNo": moduleNo,
+            "moduleTitle": moduleTitle
+        }
+        email = EmailLogic()
+        email.assessmentSubmision(email_data)
         
         data = Students_data.objects.filter(username=request.user).first()
+        courseData = CourseWork.objects.filter(courseCode=courseCode).first()
+        level = courseData.level
+        semester = courseData.semester
+
         assessmentData = Assessment(
             student=data,
             course_code=courseCode,
             score=0,
             moduleName=moduleTitle,
             urlSubmit=urlSubmit,
-            taskStatus=True
+            taskStatus=True,
+            level=level,
+            semester=semester,
         )
         assessmentData.save()
         return JsonResponse({"message": "Assessment received"})
-    
+
+@student_required
+@login_required(login_url="login")   
 def validateAssessment(request):
     """validate assessment"""
     if request.method == "GET":
@@ -218,3 +259,15 @@ def validateAssessment(request):
         if taskStatus:
             return JsonResponse({"status": taskStatus.taskStatus})
         return JsonResponse({"status": 0})
+   
+def listSubmittedStudents(request):
+    """list submitted students data"""
+    if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        filePath = request.POST.get("filePath")
+        dataResponse = []
+        with open(f"student/{filePath}", "r") as file:
+            content = json.load(file)
+        for key, value in content.items():
+            dataResponse.append(value["intro"])
+
+        return JsonResponse({"dataResponse": dataResponse})

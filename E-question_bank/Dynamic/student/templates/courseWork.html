@@ -46,7 +46,7 @@
                     {% csrf_token %}
                     <section id="hideIfSubmitted">
                         <label for="urlSubmit">Your answer Url</label>
-                        <input type="text" placeholder="https://www.myanswerurl.com" id="urlSubmit"><br><br>
+                        <input type="text" placeholder="https://www.myanswerurl.com" id="urlSubmit" required><br><br>
                     </section>
                     <center id="hideRemark"><h3>Task has been submitted, <i>Congratulations!</i></h3></center>
                     <input type="submit" value="Save" id="submitAssessment">
@@ -123,7 +123,7 @@
                                             <td>{{ forloop.counter }}</td>
                                             <td>{{ task.intro }}</td>
                                             <td>{{ task.taskType }}</td>
-                                            <td class="scores">5<span>%</span></td>
+                                            <td class="scores">{{ task.score }}<span>%</span></td>
                                             <td class="startDate">{{ task.startDate }}</td>
                                             <td class="endDate">{{ task.endDate }}</td>
                                             <td class="submitStatus">Scanning</td>

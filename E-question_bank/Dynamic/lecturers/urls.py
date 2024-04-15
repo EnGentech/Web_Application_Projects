@@ -8,4 +8,6 @@ urlpatterns = [
     path('signIn/', views.signIn_lec, name='signInLec'),
     path("", views.lecAuth),
     path("staffLogout/", views.staffLogout, name="staffLogout"),
+    path("scoreBoard/", views.scoreBoard, name="scoreBoard"),
+    path("updateScores/", views.scoreActiveStudent, name="updateScores"),
 ]

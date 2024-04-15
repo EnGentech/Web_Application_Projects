@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Sum
 from django.contrib.auth.models import AbstractUser, Group, Permission
 from django.core.validators import FileExtensionValidator
 
@@ -79,6 +80,8 @@ class Transaction(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     student = models.ForeignKey(Students_data, on_delete=models.CASCADE, null=True)
+
+
 
 class Assessment(models.Model):
     """Assessment table generation"""

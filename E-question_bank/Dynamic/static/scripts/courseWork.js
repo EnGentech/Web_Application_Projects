@@ -32,13 +32,16 @@ $(document).ready(function() {
 
     function totalGrade() {
         let totalScore = 0;
+        count = 0
         let allScores = $('.allDataSchedule').find(".scores")
         allScores.each(function(index, element) {
+            count += 1
             let scoreObtained = $(element).text()
             splitScore = scoreObtained.split("%")
             totalScore += parseInt(splitScore[0])
         })
-        return totalScore
+        let average = totalScore/count
+        return average.toFixed(2)
     }
 
     function updateCountdown(startDate, endDate) {
@@ -128,7 +131,7 @@ $(document).ready(function() {
                 updateCountdown(startDateText, endDateText);
                 let unitScore = totalGrade()
                 gradeScore.text(`${unitScore}%`)
-                
+
             },
             error: function(xhr, status, error) {
                 console.error('AJAX request failed:', error);

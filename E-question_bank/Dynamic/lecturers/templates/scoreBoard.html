@@ -2,7 +2,9 @@
 {% load static %}
 {% block head %}
     <link rel="stylesheet" href="{% static 'styles/upload.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/submitScore.css' %}">
     <script src="{% static 'scripts/upload.js' %}"></script>
+    <script src="{% static 'scripts/submitScore.js' %}"></script>
     <title>Upload Question</title>
 {% endblock head %}
 
@@ -20,8 +22,8 @@
     <div class="uploadNavElements">
         <nav>
             <ul>
-                <li><a href="#">Questions</a></li>
-                <li><a href="{% url 'scoreBoard' %}">Accessment</a></li>
+                <li><a href="{% url 'upload_question' %}">Questions</a></li>
+                <li><a href="#">Accessment</a></li>
             </ul>
         </nav>
     </div>
@@ -36,19 +38,13 @@
                     {% endfor %}
                 {% endif %}
                 
-                <h1 class="head_question">Heritage <span>E-Question</span> Bank</h1>
-                <p>Get prepared ahead as it is said <span style="font-weight: bolder;">"Early to bed, early to rise".</span> <br>Happy exploring!</p> 
+                <h1 class="head_question">Score <span>Board</span></h1>
+                <p>Examination isn't the true test of <span style="font-weight: bolder;">Knowledge.</span> <br>Good luck!</p> 
             </section>
-
-            <p id="uploadType">Choose Upload type <select id="uploadSelectType">
-                <option value="questions">Questions</option>
-                <option value="answers">Answers</option>
-                <option value="resources">Resources</option>
-            </select></p>
 
             <section class="input_section"><br>
                 <fieldset><br>
-                    <form action="{% url 'upload_question' %}" method="POST" enctype="multipart/form-data" id="uploadForm">
+                    <form action="{% url 'updateScores' %}" method="POST" id="submitScores">
                         {% csrf_token %}
                         <label for="faculty">Faculty <label for="department" id="department_label">Department</label><label for="level" id="level_label">Level</label></label><br>
                         <select name="faculty" id="faculty">
@@ -58,6 +54,9 @@
                             <option value="Management Science">Management Science</option>
                             <option value="Science and Technology">Science and Technology</option>
                         </select>
+
+                        {% comment %} logic getter {% endcomment %}
+                        <input type="text" name="nameGet" id="nameGet" placeholder="Course title" style="display:none">
 
                         <select name="department" id="department">
                             <option value="" disabled selected style="display:none">No Faculty Selected</option>
@@ -71,54 +70,41 @@
                             <option value="HND 200">HND 200</option>
                         </select><br><br>
 
-                        <label for="option">Option (if any)<label for="year" id="year_label">Year</label><label for="semester" id="semester_label"></label>Semester</label><br>
-                        <select name="option" id="option">
-                            <option value="" disabled selected style="display:none" id="option">Choose Option (if any)</option>
-                        </select>
-
-                        <select name="year" id="year">
-                            <option value="" disabled selected style="display:none">Select year</option>
-                            <option value="2020/2021">2020/2021</option>
-                            <option value="2021/2022">2021/2022</option>
-                            <option value="2022/2023">2022/2023</option>
-                            <option value="2023/2024">2023/2024</option>
-                        </select>
-
                         <select name="semester" id="semester">
                             <option value="" disabled selected style="display:none">Select Semester</option>
                             <option value="Semester 1">Semester 1</option>
                             <option value="Semester 2">Semester 2</option>
                         </select>
-                        <br><br>
 
-                        <label for="cCode">Course-code <label for="cTitle" id="cTitle_label">Course Title</label></label><br>
+                        {% comment %} <label for="cCode">Course-code <label for="cTitle" id="cTitle_label">Course Title</label></label><br> {% endcomment %}
                         <select name="cCode" id="cCode">
                             <option value="" disabled selected style="display:none">Select Course Code</option>
                         </select>
                         <input type="text" name="cTitle" id="cTitle" placeholder="Course title"><br><br>
 
-
-                        <section class="hideOff">
-                            <label for="">Site</label>
-                            <input type="text" name="site" id="site" placeholder="Paste website url">
-                            <br><br>
-                            <label for="youtube">Youtube link</label>
-                            <input type="text" name="youtube" id="youtube" placeholder="Paste Youtube url"><br><br>
-                        </section>
-
-                        <label for="upload" id="label_upload">Upload Question in PDF format</label><br>
-                        <input type="file" name="upload" id="upload" placeholder="Upload Question">
-                        <p id="preview">Preview</p>
-                        <br><br><br>
-
                         <div id="loadQuestion">
                             <embed src="Inyang, I. U. (Resume).pdf" type="application/pdf">
                         </div>
-                        <div id="noQuestion" >
-                            <center><p id="loadHere">Your Question will be previwed here in PDF</p></center>
-                        </div><br><br>
+                        <center>
+                            <select id='taskName' name="taskName">
+                                <option value="" disabled selected style="display:none">Select Target task</option>
+                            </select>
+                            <button id="genList" type="button">Generate List</button>
+                            <p id='noneRegistered'>No registered Student</p>
+                        </center>
+                        <hr>
+                        <section id='scoreSection'>
+                            <select name="regNo" id="regNo">
+                                <option value="" disabled selected style="display:none" required>Select Reg. Number</option>
+                            </select>
+                            <span><b>Full Name:</b> <span id='fullName' name="fullName">-- Select Reg Number --</span></span>
+                            <br><br><h6 id="linkBase"><b>Link to URL: </b> <a href="#" id="urlLink" target="_blank">Visit submited URL</a>
+                            <span id="scoreValue">Score: <input type="number" name="score" id="score" placeholder="-- Select Reg. No. --" required></span></h6>
+                            <section id="submitScoreSection">
+                                <br><br><input type="submit" id="submitScore" value="Submit Score">
+                            </section>
+                        </section>
 
-                        <input type="submit" id="submit" value="Upload Question">
                     </form>
                     
 

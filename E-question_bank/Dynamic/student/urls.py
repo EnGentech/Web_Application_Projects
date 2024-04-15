@@ -10,4 +10,5 @@ urlpatterns = [
     path("user/courseWork/", views.courseWork, name="courseWork"),
     path("user/assessment/ajax/", views.assessment, name="assessment"),
     path("user/validateAssessment/ajax/", views.validateAssessment, name="validateAssessment"),
+    path("user/submitAssessment/ajax/", views.listSubmittedStudents, name="submitAssessment"),
 ]

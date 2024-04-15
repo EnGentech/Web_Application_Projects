@@ -1,0 +1,72 @@
+#cCode{
+    width: 22%;
+    margin-right: 20px;
+}
+
+#cTitle_label{
+    margin-left: 13%;
+}
+
+#cTitle{
+    width: 41% !important;
+}
+
+#genList, #submitScore{
+    font-size: large;
+    font-weight: 600;
+    width: 59.5%;
+    cursor: pointer;
+    background-color: rgb(0, 88, 0);
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+}
+
+#submitScore{
+    width: 99.5% !important;
+}
+
+#genList:hover, #submitScore:hover{
+    background-color: rgba(0, 110, 0, 0.693);
+    border-bottom: 2px solid rgba(255, 0, 0, 0.584);
+}
+
+#genList:focus, #submitScore:focus{
+    outline: none;
+}
+
+#regNo{
+    margin-right: 15px;
+}
+
+#linkBase{
+    margin-left: 10px;
+}
+
+#scoreValue{
+    margin-left: 20%;
+}
+
+#score{
+    border-radius: 20px;
+    border: 1px solid gray;
+    padding-left: 10px;
+}
+
+/* Hiding logic */
+#scoreSection{
+    display: none;
+}
+
+#noneRegistered {
+    display: none;
+}
+
+#submitScoreSection{
+    display: none;
+}
+
+#genList{
+    display: none;
+}
