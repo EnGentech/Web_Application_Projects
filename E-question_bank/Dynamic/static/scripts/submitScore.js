@@ -9,6 +9,11 @@ $(document).ready(function(){
         scoreSection.hide()
     })
 
+    let taskList = {
+        "CTE323": "pythonTasks.json",
+        "COM122": "internetTasks.json"
+    }
+
     function onStudentNameChange(mutations) {
         let studentName = $("#fullName").text().trim();
         if (studentName === "-- Select Reg Number --") {
@@ -61,8 +66,8 @@ $(document).ready(function(){
     
     courseCode.on("change", function(){
         let obtainedCode = $(this).val()
-        if (obtainedCode === "CTE431") {
-            listStudents("pythonTasks.json")
+        if (obtainedCode) {
+            listStudents(taskList[obtainedCode])
             loadTaskList()
         } else {
             loadTask.empty();

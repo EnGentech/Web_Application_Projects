@@ -94,11 +94,11 @@ body {
     border: none;
 }
 
-#genList:hover{
+#genList:hover, #printScoreList:hover{
     background-color: rgb(0, 88, 0, 0.5);
 }
 
-#genList:focus{
+#genList:focus, #printScoreList:focus{
     border: none;
     outline: none;
 }
@@ -119,4 +119,17 @@ tr:nth-child(odd){
 
 tr:nth-child(even){
     background-color: rgba(245, 239, 239, 0.886);
+}
+
+#printScoreList{
+    font-size: large;
+    font-weight: 600;
+    width: 79.5%;
+    cursor: pointer;
+    background-color: rgb(0, 88, 0);
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+    display: none;
 }

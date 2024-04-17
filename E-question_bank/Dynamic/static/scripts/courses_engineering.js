@@ -49,7 +49,7 @@ $(document).ready(function(){
     ]
 
     var courses_computerEngineering_HND100_semester2 = [
-        ["CTE326", "Python Programming Language"],
+        ["CTE323", "Python Programming Language"],
         ["GNS302", "Communication in English III"],
         ["GNS421", "Industrial Management"],
         ["MTH312", "Advanced Calculus"],

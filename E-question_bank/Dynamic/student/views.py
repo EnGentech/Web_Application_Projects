@@ -14,6 +14,11 @@ from datetime import datetime, timedelta
 from .emailfunction import EmailLogic
 
 
+tasks = {
+    "CTE323": "pythonTasks.json",
+    "COM122": "internetTasks.json"
+}
+
 def student_required(view_func):
     @wraps(view_func)
     def _wrapped_view(request, *args, **kwargs):
@@ -58,6 +63,20 @@ def signUp(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Account created successfully, please login")
+            emailAddress = request.POST.get("email")
+            userName = request.POST.get("username")
+            faculty = request.POST.get("faculty")
+            department = request.POST.get("department")
+
+            data = {
+                "email": emailAddress,
+                "username": userName,
+                "faculty": faculty,
+                "department": department
+            }
+            email = EmailLogic()
+            email.signUpNotification(data)
+
             return render(request, "landingPage.html")
         else:
             for title, msg in form.errors.items():
@@ -165,11 +184,8 @@ def courseWork(request):
     """Render user course work"""
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
         courseCode = request.POST.get("courseCode")
-        
-        if courseCode == "CTE326":
-            return courseWorkLoad(request, "student/pythonTasks.json", courseCode)
-        elif courseCode == "COM122":
-            return courseWorkLoad(request, "student/internetTasks.json", courseCode)
+ 
+        return courseWorkLoad(request, f'student/{tasks[courseCode]}', courseCode)
         
     data = Students_data.objects.filter(username=request.user).first()
     registered = CourseWork.objects.filter(student=data).all()
@@ -246,7 +262,7 @@ def assessment(request):
             level=level,
             semester=semester,
         )
-        assessmentData.save()
+        #assessmentData.save()
         return JsonResponse({"message": "Assessment received"})
 
 @student_required
@@ -277,10 +293,6 @@ def listSubmittedStudents(request):
 def returnScores(request):
     """return User Grade to user"""
     if request.method == "POST" and request.headers.get('x-requested-with') == 'XMLHttpRequest':
-        tasks = {
-            "CTE326": "student/pythonTasks.json",
-            "COM122": "student/internetTasks.json"
-        }
         courseCode = request.POST.get("cCode")
         faculty = request.POST.get("faculty")
         department = request.POST.get("department")
@@ -290,27 +302,27 @@ def returnScores(request):
 
         averageTime = 0
         try:
-            with open(tasks[courseCode], "r") as file:
+            with open(f'student/{tasks[courseCode]}', "r") as file:
                 content = json.load(file)
                 for task in content.values():
                     averageTime += 1
         except Exception:
-            return JsonResponse({"response": "No Score for this course yet!"})
+            return JsonResponse({"response": "No Score for this course yet!", "status": 501})
+        if averageTime > 0:
+            returnData = []
+            for user in users:
+                total = 0
+                result = Assessment.objects.filter(course_code=courseCode, student=user, level=level, semester=semester).all()
+                if result:
+                    for response in result:
+                        total += int(response.score)
+                        averageScore = round(total / averageTime, 2)
+                        assessmentScore = (averageScore / 100) * 30
+                    user_data = {
+                        "fullName": user.first_name + " " + user.last_name,
+                        "totalScore": round(assessmentScore, 2),
+                        "regNumber": user.regNumber
+                    }
+                    returnData.append(user_data)
+            return JsonResponse({"response": returnData})
 
-        returnData = []
-        for user in users:
-            total = 0
-            result = Assessment.objects.filter(course_code=courseCode, student=user, level=level, semester=semester).all()
-            if result:
-                for response in result:
-                    total += int(response.score)
-                    averageScore = round(total / averageTime, 2)
-                    assessmentScore = (averageScore / 100) * 30
-                user_data = {
-                    "fullName": user.first_name + " " + user.last_name,
-                    "totalScore": round(assessmentScore, 2),
-                    "regNumber": user.regNumber
-                }
-                returnData.append(user_data)
-        print(returnData)
-        return JsonResponse({"response": returnData})
