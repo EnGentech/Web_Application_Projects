@@ -1,0 +1,10 @@
+{
+    "Module1":{
+        "intro": "Basic Research",
+        "startDate": "01/05/2024",
+        "endDate": "03/05/2024",
+        "activation": 1,
+        "score": 0,
+        "taskType": "Assignment"
+    }
+}

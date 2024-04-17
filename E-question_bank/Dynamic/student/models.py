@@ -81,8 +81,6 @@ class Transaction(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     student = models.ForeignKey(Students_data, on_delete=models.CASCADE, null=True)
 
-
-
 class Assessment(models.Model):
     """Assessment table generation"""
     student = models.ForeignKey(Students_data, on_delete=models.CASCADE, null=True)

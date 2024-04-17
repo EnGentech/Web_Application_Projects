@@ -50,6 +50,15 @@ $(document).ready(function(){
 
     var courses_computerEngineering_HND100_semester2 = [
         ["CTE326", "Python Programming Language"],
+        ["GNS302", "Communication in English III"],
+        ["GNS421", "Industrial Management"],
+        ["MTH312", "Advanced Calculus"],
+        ["EEC323", "Electrical Circuit Theory IV"],
+        ["EEC324", "Control Engineering"],
+        ["EEE325", "Electronics IV"],
+        ["EEC328", "Testing Method and Reliability"],
+        ["CTE321", "Computer Hardware System Design"],
+        ["CTE322", "Mobile and Wireless Communication"]
     ]
 
     var courses_computerEngineering_HND200_semester1= [

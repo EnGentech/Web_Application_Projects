@@ -166,8 +166,10 @@ def courseWork(request):
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
         courseCode = request.POST.get("courseCode")
         
-        if courseCode == "CTE431":
+        if courseCode == "CTE326":
             return courseWorkLoad(request, "student/pythonTasks.json", courseCode)
+        elif courseCode == "COM122":
+            return courseWorkLoad(request, "student/internetTasks.json", courseCode)
         
     data = Students_data.objects.filter(username=request.user).first()
     registered = CourseWork.objects.filter(student=data).all()
@@ -271,3 +273,44 @@ def listSubmittedStudents(request):
             dataResponse.append(value["intro"])
 
         return JsonResponse({"dataResponse": dataResponse})
+    
+def returnScores(request):
+    """return User Grade to user"""
+    if request.method == "POST" and request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        tasks = {
+            "CTE326": "student/pythonTasks.json",
+            "COM122": "student/internetTasks.json"
+        }
+        courseCode = request.POST.get("cCode")
+        faculty = request.POST.get("faculty")
+        department = request.POST.get("department")
+        semester = request.POST.get("semester")
+        level = request.POST.get("level")
+        users = Students_data.objects.filter(faculty=faculty, department=department).all()
+
+        averageTime = 0
+        try:
+            with open(tasks[courseCode], "r") as file:
+                content = json.load(file)
+                for task in content.values():
+                    averageTime += 1
+        except Exception:
+            return JsonResponse({"response": "No Score for this course yet!"})
+
+        returnData = []
+        for user in users:
+            total = 0
+            result = Assessment.objects.filter(course_code=courseCode, student=user, level=level, semester=semester).all()
+            if result:
+                for response in result:
+                    total += int(response.score)
+                    averageScore = round(total / averageTime, 2)
+                    assessmentScore = (averageScore / 100) * 30
+                user_data = {
+                    "fullName": user.first_name + " " + user.last_name,
+                    "totalScore": round(assessmentScore, 2),
+                    "regNumber": user.regNumber
+                }
+                returnData.append(user_data)
+        print(returnData)
+        return JsonResponse({"response": returnData})

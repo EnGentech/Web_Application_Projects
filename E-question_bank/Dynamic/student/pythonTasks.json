@@ -1,8 +1,8 @@
 {
     "Module1":{
         "intro": "Basic syntax",
-        "startDate": "10/04/2024",
-        "endDate": "05/04/2024",
+        "startDate": "24/04/2024",
+        "endDate": "26/04/2024",
         "activation": 1,
         "score": 0,
         "taskType": "Assignment"
@@ -11,7 +11,7 @@
         "intro": "Control Structure 1",
         "startDate": "03/04/2024",
         "endDate": "10/04/2024",
-        "activation": 1,
+        "activation": 0,
         "score": 0,
         "taskType": "Assignment"
     },
@@ -19,7 +19,7 @@
         "intro": "Functions",
         "startDate": "11/04/2024",
         "endDate": "15/04/2024",
-        "activation": 1,
+        "activation": 0,
         "score": 0,
         "taskType": "Assignment"
     }

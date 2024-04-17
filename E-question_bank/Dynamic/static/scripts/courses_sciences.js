@@ -12,7 +12,16 @@ $(document).ready(function(){
     ]
 
     var courses_ComputerScience_ND100_semester2 = [
-
+        ["COM121", "Programming using C Language"],
+        ["COM122", "Introduction to Internet"],
+        ["COM123", "Programming Language using Java I"],
+        ["COM124", "Data Structure and Algorithms"],
+        ["COM125", "Introduction to System Analysis and Design"],
+        ["COM126", "PC Upgrade & Maintenance"],
+        ["GNS128", "Citizenship Education II"],
+        ["GNS101", "Communication in English"],
+        ["EED126", "Practice of Entrepreneurship"],
+        ["GNS228", "Research Methods"]
     ]
 
     var courses_ComputerScience_ND200_semester1=[

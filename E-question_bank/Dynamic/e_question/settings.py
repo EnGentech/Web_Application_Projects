@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'student',
     'generic',
     'lecturers',
-    'static',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

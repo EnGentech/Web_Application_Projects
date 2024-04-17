@@ -73,3 +73,50 @@ body {
 .uploadNavElements{
     display: none;
 }
+
+#semester{
+    width: 20% !important
+}
+
+#cTitle{
+    width: 53.5% !important;
+}
+
+#genList{
+    font-size: large;
+    font-weight: 600;
+    width: 59.5%;
+    cursor: pointer;
+    background-color: rgb(0, 88, 0);
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+}
+
+#genList:hover{
+    background-color: rgb(0, 88, 0, 0.5);
+}
+
+#genList:focus{
+    border: none;
+    outline: none;
+}
+
+table{
+    width: 80%;
+}
+
+thead{
+    border-bottom: 1px solid brown;
+    color: rgb(107, 0, 0);
+    font-weight: bold;
+}
+
+tr:nth-child(odd){
+    background-color: rgba(165, 223, 223, 0.489);
+}
+
+tr:nth-child(even){
+    background-color: rgba(245, 239, 239, 0.886);
+}

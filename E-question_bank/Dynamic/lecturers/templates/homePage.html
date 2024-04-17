@@ -2,6 +2,7 @@
 {% load static %}
 {% block head %}
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styles/upload.css' %}">
 {% endblock head %}
 
 {% block loginOut %}
@@ -28,16 +29,98 @@
         <h1>Lecturers' Homepage</h1>
     </div>
 
-    <div class="lecturers-section">
-        <h2 class="lecturers-title">About Us</h2>
-        <p class="lecturers-text">Welcome to our homepage! We are passionate about [Your Field of Expertise]. Feel free to explore the resources and information provided here.</p>
-    </div>
+        <div class="container_question">
+            <div class="main_question">
+                <section class="top">
+                    
+                    {% if messages %}
+                        {% for message in messages %}
+                            <center><p class="messages fadeOff">{{ message }}</p></center>                       
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <h1 class="head_question">Load <span>Score</span></h1>
+                    <p>Examination isn't the true test of <span style="font-weight: bolder;">Knowledge.</span> <br>Good luck!</p> 
+                </section>
+    
+                <section class="input_section"><br>
+                    <fieldset><br>
+                        <form action="#" method="POST" id="submitScores">
+                            {% csrf_token %}
+                            <label for="faculty">Faculty <label for="department" id="department_label">Department</label><label for="level" id="level_label">Level</label></label><br>
+                            <select name="faculty" id="faculty">
+                                <option value="" disabled selected style="display:none">Choose Faculty</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Environmental Science">Environmental Science</option>
+                                <option value="Management Science">Management Science</option>
+                                <option value="Science and Technology">Science and Technology</option>
+                            </select>
+    
+                            {% comment %} logic getter {% endcomment %}
+                            <input type="text" name="nameGet" id="nameGet" placeholder="Course title" style="display:none">
+    
+                            <select name="department" id="department">
+                                <option value="" disabled selected style="display:none">No Faculty Selected</option>
+                            </select>
+    
+                            <select name="level" id="level">
+                                <option value="" disabled selected style="display:none">Choose your level</option>
+                                <option value="ND 100">ND 100</option>
+                                <option value="ND 200">ND 200</option>
+                                <option value="HND 100">HND 100</option>
+                                <option value="HND 200">HND 200</option>
+                            </select><br><br>
+    
+                            <select name="semester" id="semester">
+                                <option value="" disabled selected style="display:none">Select Semester</option>
+                                <option value="Semester 1">Semester 1</option>
+                                <option value="Semester 2">Semester 2</option>
+                            </select>
+    
+                            {% comment %} <label for="cCode">Course-code <label for="cTitle" id="cTitle_label">Course Title</label></label><br> {% endcomment %}
+                            <select name="cCode" id="cCode">
+                                <option value="" disabled selected style="display:none">Select Course Code</option>
+                            </select>
+                            <input type="text" name="cTitle" id="cTitle" placeholder="Course title"><br><br>
 
-    <div class="lecturers-section">
-        <h2 class="lecturers-title">Courses</h2>
-        <p class="lecturers-text">Check out the courses we offer and find related materials, assignments, and announcements.</p>
+                            <center>
+                                <button id="genList" type="button">Generate Data</button>
+                            </center>
+                        </form>
+
+                            <hr>
+                            <center>
+                                <section id='allscores'>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>S.No</th>
+                                                <th>Full Name</th>
+                                                <th>Reg. Number</th>
+                                                <th>TScore</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                        
+                                    </table>
+                                </section>
+                            </center>
+    
+                        
+    
+                        <div id="author">
+                            <p>Powered by EnGentech | @2024</p>
+                        </div>
+                    </fieldset>
+    
+                    
+                </section>
+            </div>
+        </div>
         <!-- Add more content related to courses -->
-    </div>
+
 
     <div class="lecturers-section">
         <h2 class="lecturers-title">Research</h2>
@@ -46,7 +129,7 @@
     </div>
 
     <div class="lecturers-footer">
-        <p>Contact: [Your Contact Email Address]</p>
+        <p>Contact: engen.inyang@gmail.com</p>
     </div>
 
 {% endblock content %}
