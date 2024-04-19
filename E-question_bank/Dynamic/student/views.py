@@ -378,3 +378,17 @@ def taskNotificationMailSent(request):
         return JsonResponse({"message": "Notification sent successfully"})
     else:
         return JsonResponse({"message": "No Active Task to notify"})
+
+@student_required
+@login_required(login_url="login") 
+def validateReferenceNumber(request):
+    """validate user reference Number"""
+    if request.method == "POST":
+        refNumber = request.POST.get("reference_number")
+        user = request.user
+        userRef = Students_data.objects.filter(username=user, refNumber=refNumber).first()
+        print(userRef)
+        if userRef:
+            return JsonResponse({"status": 1})
+    messages.error(request, "Invalid Reference Number")
+    return JsonResponse({"status": 0})

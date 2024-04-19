@@ -15,4 +15,5 @@ urlpatterns = [
     path("user/generateClassList/", views.generateClassList, name="generateClassList"),
     path("user/taskNotification/", views.taskNotificationMailSent, name="taskNotification"),
     path("user/genReg/<int:regNumber>/", views.generateReferenceNumber, name="genRef"),
+    path("user/validateRefNumber/", views.validateReferenceNumber, name="validateRefNumber"),
 ]

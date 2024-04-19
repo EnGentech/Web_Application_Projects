@@ -8,7 +8,26 @@
 {% endblock head %}
 
     
-{% block content %} 
+{% block content %}
+
+    {% comment %} Reference Number collector {% endcomment %}
+    <div id="general">
+        <div class="blur-background">
+            <div id="custom-container">
+                <div id="custom-close-btn">&times;</div>
+                <h2>Enter Your Reference Number</h2>
+                <center><p id="invalidRef">Invalid Reference Number, Contact site Admin!</p></center>
+
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <label for="reference_number">Reference Number:</label>
+                    <input type="number" id="custom-reference_number" name="reference_number" placeholder="Enter your reference number" required>
+                    <center><button id="custom-submit-btn" type="submit">Submit</button></center>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <p id="getDepartment" style="display: none">{{ department }}</p>
     <div class="resources">
         <div class="content">
@@ -56,12 +75,12 @@
                                     <td>{{ resource.level }}</td>
                                     <td>{{ resource.semester }}</td>
                                     <td>
-                                        <button class="download">
-                                            <a href="{{ resource.lectureMaterial.url }}">Download</a>
+                                        <button class="download lectureDownload">
+                                            <a href="{{ resource.lectureMaterial.url }}" class="downloadResource">Download</a>
                                         </button>
                                     </td>
-                                    <td><button class="download"><a href="{{ resource.site_recommendation }}">Explore</a></button></td>
-                                    <td><button class="download"><a href="{{ resource.youtube_channel }}">Visit</a></button></td>
+                                    <td><button class="download"><a target="_blank" href="{{ resource.site_recommendation }}">Explore</a></button></td>
+                                    <td><button class="download"><a target="_blank" href="{{ resource.youtube_channel }}">Visit</a></button></td>
                                 </tr>
                             {% endfor %}
                         {% else %}

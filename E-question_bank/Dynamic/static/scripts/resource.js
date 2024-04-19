@@ -4,6 +4,8 @@ $(document).ready(function () {
     var submitFilter = $("#submitFilter");
     var obtainedDepartment = $("#getDepartment").text();
     var tableUpdate = $(".tableContent");
+    let download =  $(".lectureDownload")
+    let csrftoken = $('input[name="csrfmiddlewaretoken"]').val()
 
     var url = `/api/data/resources/${obtainedDepartment}`;
     var coursesObtained = [];
@@ -96,4 +98,49 @@ $(document).ready(function () {
     })
 
     filterParams.hide()
+
+    $('#custom-close-btn').click(function(){
+        $("#general").hide();
+    });
+
+    let requestResource
+    $(document).on("click", ".lectureDownload", function(event) {
+        event.preventDefault();
+        requestResource = $(this).find("a").attr("href");
+        $("#general").show();
+    });
+
+    let checkRefID = $("#custom-submit-btn")
+    checkRefID.click(function(event){
+        event.preventDefault()
+        let obtainedRefID = $("#custom-reference_number").val()
+        if (obtainedRefID) {
+            $.ajax({
+                type: "POST",
+                url: "/heritage_students/user/validateRefNumber/",
+                data: {
+                    reference_number: obtainedRefID
+                },
+                dataType: "json",
+                headers: {
+                    'X-CSRFToken': csrftoken
+                },
+                success: function (response) {
+                    let invalidRef = $("#invalidRef")
+                    if (response.status === 0) {
+                        invalidRef.show()
+                    } else if (response.status === 1) {
+                        invalidRef.hide();
+                        $("#general").hide();
+                        window.open(requestResource, '_blank')
+                    }
+                },
+                eror: function(){
+                    console.log("Error")
+                }
+            });
+        } else {
+            alert("Please enter your reference number")
+        }
+    })
 })
