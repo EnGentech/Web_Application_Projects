@@ -39,7 +39,7 @@
                         {% endfor %}
                     {% endif %}
                     
-                    <h1 class="head_question">Load <span>Score</span></h1>
+                    <h1 class="head_question">Load <span>Score</span> & Generate <span>Ref Number</span></h1>
                     <p>Examination isn't the true test of <span style="font-weight: bolder;">Knowledge.</span> <br>Good luck!</p> 
                 </section>
     
@@ -123,8 +123,20 @@
 
 
     <div class="lecturers-section">
-        <h2 class="lecturers-title">Research</h2>
-        <p class="lecturers-text">Explore our research interests and publications. Stay updated on recent developments in [Your Research Area].</p>
+        <center><h2 class="lecturers-title">Generators</h2></center>
+        <p class="lecturers-text">Generators are premium to authenticate paid students before obtaining lecture material on the internet in addition to the physical lecture material.</p>
+        <center>
+            <button id="genRegs" type="button" title="Ensure to select faculty and department">Generate Regs.</button>
+        </center>
+        <center>
+            <select name="" id="genRegList">
+                <option value="" disabled selected style="display:none">click to generate</option>
+            </select>
+            <input type="submit" value="Generate Reference ID" id="idGenerator">
+            <br><br>
+            <h2 id="yourRef"></h2>
+        </center>
+        
         <!-- Add more content related to research -->
     </div>
 

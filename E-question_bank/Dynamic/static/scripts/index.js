@@ -13,8 +13,22 @@ $(document).ready(function(){
         $(this).closest(".content").find("p").toggle();
     });
 
-    setTimeout(function(){
-        $(".fadeOff").fadeOut("slow");
-    }, 3000)
+    function makeAjaxRequest() {
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "/heritage_students/user/taskNotification/",
+            data: {}, 
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                console.error("AJAX request failed:", status, error);
+            }
+        });
+    }
+
+    makeAjaxRequest();
+    setInterval(makeAjaxRequest, 12 * 60 * 60 * 1000);
     
 })

@@ -12,4 +12,7 @@ urlpatterns = [
     path("user/validateAssessment/ajax/", views.validateAssessment, name="validateAssessment"),
     path("user/submitAssessment/ajax/", views.listSubmittedStudents, name="submitAssessment"),
     path("user/ReturnScores/", views.returnScores, name="returnScores"),
+    path("user/generateClassList/", views.generateClassList, name="generateClassList"),
+    path("user/taskNotification/", views.taskNotificationMailSent, name="taskNotification"),
+    path("user/genReg/<int:regNumber>/", views.generateReferenceNumber, name="genRef"),
 ]

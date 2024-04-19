@@ -48,6 +48,7 @@ class Students_data(AbstractUser):
     ]
     
     email = models.EmailField(max_length=255, unique=True)
+    refNumber = models.BigIntegerField(null=True)
     otherName = models.CharField(max_length=50, null=True)
     faculty = models.CharField(max_length=100, choices=faculty_choices, default="Choose faculty")
     department = models.CharField(max_length=100, choices=department_choices, default="Choose faculty")
@@ -72,7 +73,7 @@ class CourseWork(models.Model):
 
 class Transaction(models.Model):
     """Creating Transaction model"""
-    regNumber = models.IntegerField()
+    regNumber = models.IntegerField(unique=True)
     userName = models.CharField(max_length=100)
     amount = models.IntegerField()
     transaction_id = models.CharField(max_length=100)

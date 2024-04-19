@@ -12,6 +12,8 @@ from django.http import JsonResponse, HttpResponse
 import json
 from datetime import datetime, timedelta
 from .emailfunction import EmailLogic
+from lecturers.views import lecturer_required
+from random import randint
 
 
 tasks = {
@@ -262,7 +264,7 @@ def assessment(request):
             level=level,
             semester=semester,
         )
-        #assessmentData.save()
+        assessmentData.save()
         return JsonResponse({"message": "Assessment received"})
 
 @student_required
@@ -277,7 +279,9 @@ def validateAssessment(request):
         if taskStatus:
             return JsonResponse({"status": taskStatus.taskStatus})
         return JsonResponse({"status": 0})
-   
+
+@lecturer_required
+@login_required(login_url="signInLec")  
 def listSubmittedStudents(request):
     """list submitted students data"""
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
@@ -289,7 +293,9 @@ def listSubmittedStudents(request):
             dataResponse.append(value["intro"])
 
         return JsonResponse({"dataResponse": dataResponse})
-    
+
+@lecturer_required
+@login_required(login_url="signInLec")    
 def returnScores(request):
     """return User Grade to user"""
     if request.method == "POST" and request.headers.get('x-requested-with') == 'XMLHttpRequest':
@@ -326,3 +332,49 @@ def returnScores(request):
                     returnData.append(user_data)
             return JsonResponse({"response": returnData})
 
+@lecturer_required
+@login_required(login_url="signInLec")
+def generateClassList(request):
+    """generate Class list"""
+    regList = []
+    if request.method == "POST":
+        faculty = request.POST.get("faculty")
+        department = request.POST.get("department")
+        reglist = Students_data.objects.filter(department=department, faculty=faculty).all()
+        for reg in reglist:
+            if reg.regNumber:
+                regList.append(reg.regNumber)
+    return JsonResponse({"regList": regList})
+
+@lecturer_required
+@login_required(login_url="signInLec")
+def generateReferenceNumber(request, regNumber):
+    """Generate reference Number for the user"""
+    user = Students_data.objects.filter(regNumber=regNumber).first()
+    refNumber = user.refNumber
+    if refNumber:
+        return JsonResponse({"ref": refNumber})
+    else:
+        refNumber = randint(2000000000, 2999999999)
+        user.refNumber = refNumber
+        emailAddress = user.email
+        userName = user.username
+        refNumb = refNumber
+        data = {
+                "email": emailAddress,
+                "username": userName,
+                "ref": refNumb,
+            }
+        user.save()
+        mailme = EmailLogic()
+        mailme.refID(data)
+        return JsonResponse({'ref': refNumber})
+
+def taskNotificationMailSent(request):
+    """send task notification mail"""
+    email = EmailLogic()
+    returnStatus = email.taskNotification()
+    if returnStatus:
+        return JsonResponse({"message": "Notification sent successfully"})
+    else:
+        return JsonResponse({"message": "No Active Task to notify"})

@@ -13,20 +13,22 @@ body {
 }
 
 .lecturers-section {
-    max-width: 800px;
+    max-width: 90%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #b8dfe087;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 }
 
 .lecturers-title {
-    color: #333;
+    color: #f70303;
 }
 
 .lecturers-text {
     line-height: 1.6;
-    color: #555;
+    text-align: center;
+    color: #3a0808;
 }
 
 .lecturers-footer {
@@ -82,7 +84,7 @@ body {
     width: 53.5% !important;
 }
 
-#genList{
+#genList, #genRegs{
     font-size: large;
     font-weight: 600;
     width: 59.5%;
@@ -94,11 +96,11 @@ body {
     border: none;
 }
 
-#genList:hover, #printScoreList:hover{
+#genList:hover, #printScoreList:hover, #genRegs:hover{
     background-color: rgb(0, 88, 0, 0.5);
 }
 
-#genList:focus, #printScoreList:focus{
+#genList:focus, #printScoreList:focus, #genRegs:focus, #genRegList:focus, #idGenerator:focus{
     border: none;
     outline: none;
 }
@@ -132,4 +134,30 @@ tr:nth-child(even){
     margin-bottom: 20px;
     border: none;
     display: none;
+}
+
+#idGenerator{
+    padding: 2px 20px 2px 20px;
+    border-radius: 10px;
+    background-color: #a5626252;
+    border: 1px solid gray;
+    color: navy;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+#idGenerator:hover{
+    background-color: #839c92;
+    color: white;
+}
+
+#genRegList{
+    padding: 4px 40px 4px 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.428);
+    border: 1px solid gray;
+}
+
+#yourRef{
+    color: darkblue;
 }
