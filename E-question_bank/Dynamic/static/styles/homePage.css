@@ -76,12 +76,16 @@ body {
     display: none;
 }
 
-#semester{
+/* #semester{
     width: 20% !important
-}
+} */
 
-#cTitle{
-    width: 53.5% !important;
+/* #semester.specialSemester{
+    width: 30% !important;
+} */
+
+.adjust{
+    width: 40.5% !important;
 }
 
 #genList, #genRegs{

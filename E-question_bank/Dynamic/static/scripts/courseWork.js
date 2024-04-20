@@ -13,7 +13,7 @@ $(document).ready(function() {
             var currentTime = new Date();
             startTime = startTime.split("/")
             endTime = endTime.split("/")
-            var startDate = new Date(startTime[2], startTime[1] - 1, startTime[0], 16);
+            var startDate = new Date(startTime[2], startTime[1] - 1, startTime[0], 0, 0, 0);
             var endDate = new Date(endTime[2], endTime[1] - 1, endTime[0], 16);
             
             if (startDate > currentTime) {
@@ -53,7 +53,7 @@ $(document).ready(function() {
             var endDateTime = new Date(endDateParts[2], endDateParts[1] - 1, endDateParts[0], 16);
 
             var startDateParts = startDate.split("/");
-            var startDateTime = new Date(startDateParts[2], startDateParts[1] - 1, startDateParts[0], 16);
+            var startDateTime = new Date(startDateParts[2], startDateParts[1] - 1, startDateParts[0], 0, 0, 0);
 
             var now = new Date();
         
