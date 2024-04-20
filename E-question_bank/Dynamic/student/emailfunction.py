@@ -72,7 +72,7 @@ class EmailLogic:
             subject = 'Task Notification'
             message = 'Dear Student,\n\nNotification of task submission with the below details\nYou are hereby notified that your task has been activated. Please ensure that you complete your task and submit it before the expiration date, as the portal will close once the due date passes.\nFor further details, log in to your dashboard\n\nThank you!\nWarm regards!'
             from_email = "hpoly.eportal@gmail.com"
-            to_email = ["dgentlecute@gmail.com"]
+            to_email = emailData
             
             try:
                 send_mail(subject, message, from_email, to_email)

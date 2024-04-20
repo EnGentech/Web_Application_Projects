@@ -390,5 +390,4 @@ def validateReferenceNumber(request):
         print(userRef)
         if userRef:
             return JsonResponse({"status": 1})
-    messages.error(request, "Invalid Reference Number")
     return JsonResponse({"status": 0})

@@ -110,6 +110,10 @@ $(document).ready(function () {
         $("#general").show();
     });
 
+    $(document).on("change", "#custom-reference_number", function() {
+        $("#invalidRef").hide();
+    });
+
     let checkRefID = $("#custom-submit-btn")
     checkRefID.click(function(event){
         event.preventDefault()

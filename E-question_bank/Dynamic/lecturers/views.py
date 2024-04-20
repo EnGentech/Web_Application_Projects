@@ -38,13 +38,13 @@ def uploadQuestion(request):
         file = request.FILES.get('upload')
 
         if faculty and department and level and year and semester and course_code and course_title and file:
-            existingQuestion = Upload.objects.filter(year=year, semester=semester, courses__faculty=faculty, courses__department=department).first()
-            
+            existingQuestion = Upload.objects.filter(year=year, semester=semester, courses__faculty=faculty, courses__department=department, courses__course_code=course_code).first()
+
             if existingQuestion:
                 messages.error(request, "Question already uploaded to database")
                 return render(request, 'upload.html')
 
-            if faculty:  
+            if faculty:
                 newEntry = Courses(
                     faculty=faculty,
                     department=department,
@@ -64,7 +64,7 @@ def uploadQuestion(request):
                     )
                 loadQuestion.save()
                 messages.success(request, "Questions successfull uploaded to database, Thank you!")
-            
+
                 return render(request, 'upload.html')
         else:
             messages.error(request, "Please fill all fields, option field is optional")
@@ -91,7 +91,7 @@ def uploadResources(request):
 
         if faculty and department and level and semester and course_code and course_title and file:
             existingResource = Resources.objects.filter(semester=semester, faculty=faculty, department=department, course_code=course_code).first()
-            
+
             if existingResource:
                 messages.error(request, "Resources already uploaded to database")
                 return render(request, 'upload.html')
@@ -118,7 +118,7 @@ def uploadResources(request):
             loadResource.save()
 
             messages.success(request, "Resources successfull uploaded to database, Thank you!")
-        
+
             return render(request, 'upload.html')
         else:
             messages.error(request, "Only option, site and youtube fields are optional")
@@ -150,7 +150,7 @@ def scoreBoard(request):
             }
             data_dict.update(content)
         if data:
-            return JsonResponse({'data': data_dict})        
+            return JsonResponse({'data': data_dict})
     return render(request, 'scoreBoard.html')
 
 @lecturer_required
@@ -171,7 +171,7 @@ def signIn_lec(request):
         if "staff" in request.path:
             staffAuth = StaffBackend()
             user = staffAuth.authenticate(request, username=username, password=password)
-    
+
             if user is not None:
                 login(request, user, backend='lecturers.backends.StaffBackend')
                 messages.success(request, "Login successful")
@@ -203,13 +203,13 @@ def scoreActiveStudent(request):
         level = request.POST.get("level")
         semester = request.POST.get("semester")
         coureCode = request.POST.get("cCode")
-        regNo = request.POST.get("regNo")        
+        regNo = request.POST.get("regNo")
         score = request.POST.get("score")
-        
-        user = Assessment.objects.filter(student__regNumber=regNo, course_code=coureCode, level=level, semester=semester, 
+
+        user = Assessment.objects.filter(student__regNumber=regNo, course_code=coureCode, level=level, semester=semester,
         student__faculty=faculty, student__department=department,  moduleName=taskName).first()
         if user:
             user.score = score
-            user.save()    
+            user.save()
 
     return render(request, 'scoreBoard.html')

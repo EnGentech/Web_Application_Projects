@@ -107,6 +107,14 @@ form{
     margin-left: 30%;
 }
 
+#semester{
+    width: 33% !important;
+}
+
+#cTitle{
+    width: 74% !important;
+}
+
 #cTitle_label{
     margin-left: 13%;
 }

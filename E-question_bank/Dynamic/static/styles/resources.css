@@ -120,7 +120,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(5px);
+    backdrop-filter: brightness(15%);
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -130,10 +130,11 @@ body {
 #custom-container {
     width: 60%;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #6ef47987;
     position: relative;
     border-radius: 20px;
-    background-color: rgba(245, 222, 179, 0.7); 
+    background-color: rgba(222, 215, 205, 0.965); 
+    box-shadow: 1px 1px 12px white;
 }
 
 #custom-close-btn {
@@ -162,6 +163,7 @@ body {
 #custom-container h2 {
     text-align: center; 
     margin-top: 0;
+    color: darkblue;
 }
 
 #custom-container form {
@@ -199,6 +201,10 @@ body {
 
 #invalidRef{
     color: red;
+}
+
+#refLabel{
+    margin-left: 2%;
 }
 
 /* hiding Logic */
