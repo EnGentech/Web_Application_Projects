@@ -171,7 +171,6 @@ body{
 
 .fifth_midlevel{
     background-color: white;
-    
 }
 
 .fifthContent{
@@ -260,7 +259,7 @@ body{
 .freq_questions .content h3{
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-  
+
     padding: 2%;
 }
 
@@ -348,7 +347,19 @@ body{
 }
 
 @media screen and (max-width: 1200px){
-    #all{
+    .fifthContent{
+        height: 900px;
+        width: 100%;
+        background-image: url(../images/YOU.png), url(../images/Loop.png);
+        background-position: 22% 44.5%, 19% 44%;
+        background-size: 180px 60px, 250px auto;
+    }
+
+    .left_top{
+        font-size: 40px;
+    }
+
+    /* #all{
         display: none;
     }
 
@@ -362,5 +373,360 @@ body{
     body{
         background-color: whitesmoke;
         background-image: none;
+    } */
+}
+
+
+@media screen and (max-width: 1185px) {
+    body{
+        background-image: url(../images/side_lie.png), url(../images/side_line.png), url(../images/side_line2.png);
+        background-position: 0% 15%, left 38%, left 61%;
+    }
+
+    .midlevel{
+        margin-top: 50px;
+        height: 750px;
+        background-image: url(../images/background_circles.png);
+        background-repeat: no-repeat;
+        background-position: 110%;
+    }
+
+    .mid_image{
+        width: 50%;
+        overflow: hidden;
+        margin-right: 0px;
+    }
+
+    .box_inner{
+        height: 100px;
+        width: 280px;
+        border: 1px solid rgba(200, 97, 97, 0.414);
+        box-shadow: 1px 1px 2px 1px rgb(237, 234, 234);
+        border-radius: 10px;
+        padding-top: 35px;
+    }
+
+    .box_inner h2{
+        font-size: 0.5em;
+    }
+
+    .box_inner span{
+        font-size: 16px;
+        color: #FFB661;
+    }
+
+    .fifthContent img{
+        width: 50%;
+    }
+
+    .fifthContent{
+        height: 650px;
+        width: 100%;
+        background-image: url(../images/YOU.png), url(../images/Loop.png);
+        background-position: 22% 63%, 19% 65%;
+        background-size: 180px 60px, 250px auto;
+    }
+
+    .fifthh3{
+        font-size: 3.5em;
+    }
+
+    .navigation {
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 8px;
+        z-index: 1000;
+    }
+
+    .menu-icon {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .menu-icon-bar {
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: transform 0.3s;
+    }
+
+    .menu-open .menu-icon-bar:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+    }
+
+    .menu-open .menu-icon-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-open .menu-icon-bar:nth-child(3) {
+        transform: translateY(-10px) rotate(45deg);
+    }
+
+    .nav-links.show {
+        display: block;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin-bottom: 2px;
+        padding: 10px;
+    }
+
+    .nav-links a {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1005px){
+    .sec_midlevel {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sec_midlevel_content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box_inner {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .fifthContent img{
+        width: 40%;
+    }
+
+    .fifthh3{
+        font-size: 2.5em;
+        line-height: 80px;
+    }
+
+    .fifthContent{
+        height: 400px;
+        width: 100%;
+        background-image: url(../images/YOU.png), url(../images/Loop.png);
+        background-position: 23% 75%, 21% 78%;
+        background-size: 100px 40px, 150px auto;
+    }
+
+    body{
+        background-image: url(../images/side_lie.png), url(../images/side_line2.png);
+        background-position: 0% 15%, left 74%;
+    }
+
+    .logo img{
+        width: 100px;
+        margin-left: -50px;
+        margin-top: 1%;
+    }
+
+    .exploreh3{
+        font-size: 2em;
+    }
+
+    .questions{
+        width: 100%;
+        height: 500px;
+    }
+
+    .questions h3{
+        font-size: 1.5em !important;
+    }
+
+    .content p{
+        font-size: 1em !important;
+    }
+
+    .rightArrow{
+        float: right;
+        height: 30px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .freq_questions{
+        height: 300px;
+        width: auto;
+        margin: auto auto;
+        margin-top: 10px;
+    }
+
+    .mid_image{
+        width: 50%;
+        overflow: hidden;
+        margin-right: 0px;
+    }
+
+    .mid_image img{
+        height: 600px;
+    }
+
+    .footer h3{
+        font-size: 1em;
+    }
+
+    .in_content p{
+        font-size: 12px !important;
+    }
+
+    .in_content h5, .in_content span{
+        font-size: 0.8em !important;
+    }
+
+    .in_content #logoLight{
+        width: 80px;
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+    .midlevel{
+        background-image: none;
+    }
+
+    .mid_image{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        z-index: -1000;
+        right: 0;
+    }
+
+    .logo img{
+        width: 90px;
+        margin-left: -50px;
+        margin-top: 1%;
+    }
+
+    .header{
+        height: 70px;
+    }
+
+    .midlevel{
+        height: 550px
+    }
+
+    .third_h1 {
+        font-size: 2em !important;
+    }
+
+    .third_p{
+        font-size: 1em !important;
+    }
+
+    .fifthh3{
+        font-size: 1.7em;
+        line-height: 50px;
+    }
+
+    .fifthContent{
+        background-position: 28% 49%, 26% 48%;
+    }
+
+    .fifth_midlevel{
+        height: 220px;
+    }
+
+    .exploreh3{
+        font-size: 1.5em;
+    }
+
+    .content h3{
+        font-size: 1em !important;
+    }
+
+    .content p{
+        font-size: 0.8em !important;
+    }
+
+    .rightArrow{
+        float: right;
+        height: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .questions{
+        height: 400px;
+    }
+
+    .questionContent{
+        height: 400px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .in_content {
+        flex: 0 0 calc(33.33% - 20px);
+        margin: 10px;
+        text-align: center;
+    }
+
+    .in_content:nth-child(3) {
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+    #subAll > * {
+        visibility: hidden;
+    }
+
+    body {
+        background-image: none;
+        overflow: hidden;
+    }
+
+    footer {
+        display: none;
+    }
+
+    body:before {
+        content: "Please rotate your phone to landscape mode.";
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg); /* Rotate by 90 degrees */
+        width: 100%;
+        height: auto;
+        font-weight: bolder;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.2; /* Adjust line height for vertical text */
+        padding: 20px; /* Add padding for better readability */
+        animation: rotateToLandscape 5s infinite alternate; /* Apply rotation animation */
+    }
+
+    @keyframes rotateToLandscape {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
     }
 }

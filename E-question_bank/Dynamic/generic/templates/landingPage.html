@@ -23,7 +23,7 @@
 
     {% endblock head %}
 
-    
+
     <title>Landing page</title>
 </head>
 <body>
@@ -35,20 +35,23 @@
     <!--header page-->
     <div id="all">
         <div class="header">
-            
+
             <div class="navigation">
-                <ul>
+                <div class="menu-icon" id="menu-icon">
+                    <div class="menu-icon-bar"></div>
+                    <div class="menu-icon-bar"></div>
+                    <div class="menu-icon-bar"></div>
+                </div>
+                <ul class="nav-links">
                     {% block navs %}
                         <li><a id="default" href="{% url 'index' %}">Home</a></li>
-                        <li><a class="other_nav" href="{% url 'profileUpdate' %}">Course Work</a></li>
+                        <li><a class="other_nav" href="{% url 'profileUpdate' %}">Course_Work</a></li>
                         <li><a class="other_nav" href="{% url 'loadResources' %}">Resource</a></li>
                         <li><a class="other_nav" href="{% url 'aboutPage' %}">About_Page</a></li>
                     {% endblock navs %}
-
-                    
-                    {% block loginOut %}                
-                        {% if request.user.is_authenticated %}                                   
-                            <li><a class="button" href="{% url 'logout' %}" id="logout_button">LogOut</a></li>                    
+                    {% block loginOut %}
+                        {% if request.user.is_authenticated %}
+                            <li><a class="button" href="{% url 'logout' %}" id="logout_button">LogOut</a></li>
                         {% else %}
                             <li><a class="button" href="{% url 'signUp' %}" id="special_button">Create Account</a></li>
                         {% endif %}
@@ -61,12 +64,13 @@
             </div>
         </div>
 
+    <div id="subAll">
         {% block content %}
         <!--middle page-->
 
         {% if messages %}
             {% for message in messages %}
-                <center><p class="landingPage_messages fadeOff">{{ message }}</p></center>                 
+                <center><p class="landingPage_messages fadeOff">{{ message }}</p></center>
             {% endfor %}
         {% endif %}
 
@@ -82,7 +86,7 @@
                 <p>Elevate Learning with E-Questions: Inspiring Curiosity, Fostering Engagement, Transforming Education!</p><br>
 
                 {% if request.user.is_authenticated %}
-                    <a class="but2" href="{% url 'questions' %}">Explore Question</a>            
+                    <a class="but2" href="{% url 'questions' %}">Explore Question</a>
                 {% else %}
                     <a class="but2" href="{% url 'login' %}">Log In</a>
                 {% endif %}
@@ -149,9 +153,9 @@
                     Are you ready to start <br> exploring now?
                 </h3>
                 {% if request.user.is_authenticated %}
-                
+
                 {% else %}
-                    {% block closeUp %}            
+                    {% block closeUp %}
                         <a class="explorebutton" href="{% url 'signUp' %}">Create Account</a>
                     {% endblock closeUp %}
                 {% endif %}
@@ -168,7 +172,7 @@
                         <p>
                             Anyone wishing for a revolutionize learning experience by seemslessly integrating innovative technology with interactive questions. it aims to inspire curosity, foster engagement, and transform traditional education method.
                         </p>
-                        
+
                     </section>
 
                     <section class="content">
@@ -185,20 +189,21 @@
                         </p>
                     </section>
                 </div>
-            </div>   
+            </div>
         </div>
-        
-        
+
+
         {% endblock content %}
+    </div>
 
         <!--footer-->
         <div class="footer">
             <div class="content">
                 <section class="in_content">
-                    <img src="{% static 'images/logo_light_hp.png' %}" alt="">
+                    <img src="{% static 'images/logo_light_hp.png' %}" alt="logo" id="logoLight">
                     <h5>Empowering learning</h5>
-                    <img src="{% static 'images/call_icon.png' %}" alt=""><span class="phone_number">+234 803 9678842</span><h5>
-                    <img src="{% static 'images/email_icon.png' %}" alt=""><span class="phone_number">engen.inyang@gmail.com</span>
+                    <img src="{% static 'images/call_icon.png' %}" alt=""><span class="phone_number">+2348039678842</span><h5>
+                    <img src="{% static 'images/email_icon.png' %}" alt=""><span class="email">engen.inyang@gmail.com</span>
                 </section>
 
                 <section class="in_content">
@@ -208,7 +213,7 @@
                     <p>Mentors</p>
                     <p>Forum</p>
                 </section>
-                    
+
                 <section class="in_content">
                     <h3>Connect with us on social Media</h3>
                     <p>Follow us on social media for the latest news and <br>resources from us</p>

@@ -1,4 +1,18 @@
 $(document).ready(function(){
+
+    // var timer;
+
+    // function reloadPage() {
+    //     timer = setTimeout(function() {
+    //         location.reload();
+    //     }, 1000);
+    // }
+
+    // $(window).resize(function() {
+    //     clearTimeout(timer);
+    //     reloadPage();
+    // });
+
     $(".other_nav").hover(function(){
         $(this).css("color", "green")
         $("#default").css("color", "black")
@@ -26,6 +40,20 @@ $(document).ready(function(){
         makeAjaxRequest();
         setInterval(makeAjaxRequest, 24 * 60 * 60 * 1000);
     }, delay);
+
+    if ($(window).width() <= 1108) {
+        // Add click event handler to menu icon
+        $("#menu-icon").click(function() {
+            $(this).toggleClass("menu-open");
+            $(".nav-links").toggle();
+        });
+
+        // Add mouseleave event handler to dropdown menu
+        $(".nav-links").mouseleave(function() {
+            $(".menu-icon").removeClass("menu-open");
+            $(".nav-links").hide();
+        });
+    }
     
 })
 
