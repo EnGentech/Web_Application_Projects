@@ -10,7 +10,7 @@ $(document).ready(function(){
     })
 
     let taskList = {
-        "CTE323": "pythonTasks.json",
+        "CTE323": "pythonTasks.json",   
         "COM122": "internetTasks.json"
     }
 
@@ -135,12 +135,15 @@ $(document).ready(function(){
         let regNo = $(this).val();
         let fullName = $("#fullName");
         let url = $("#urlLink");
+        let score = $("#score");
         if (regNo === "Select Reg. Number") {
             fullName.text("-- Select Reg Number --");
             url.attr("href", "#");
+            score.val("")
         } else {
             let newUrl = arrayList[regNo]["url"];
             url.attr("href", `${newUrl}`);
+            score.val(arrayList[regNo]["score"])
             fullName.text(arrayList[regNo]["fullName"]);
         }
     });

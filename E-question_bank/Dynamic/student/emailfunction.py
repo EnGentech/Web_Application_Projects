@@ -97,3 +97,17 @@ class EmailLogic:
             print(f"An error occurred while sending email: {str(e)}")
             return False
     
+    def scoreNotification(self, data):
+        """send score notification to students"""
+        subject = "Score Notification"
+        message = f'Dear {data["username"]}\nWe have evaluated your work via the URL link you submitted and have awarded you a score of {data["score"]}% out of 100% based on our assessment criteria.\nShould you have any concerns regarding the assigned mark, please feel free to contact your course lecturer for further clarification.\n\nReviewer\'s Remark:\n{data["remark"]}\n\nYou can now view your score on the portal\n\nThank you!'
+        from_email = self.hostEmail
+        to_email = [data["email"]]
+
+        try:
+            send_mail(subject, message, from_email, to_email)
+            print("Email sent successfully")
+            return True
+        except Exception as e:
+            print(f"An error occurred while sending email: {str(e)}")
+            return False

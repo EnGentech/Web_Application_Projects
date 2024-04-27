@@ -9,6 +9,7 @@ from django.contrib.auth import logout, login
 from functools import wraps
 from django.http import HttpResponse
 from django.http import JsonResponse
+from student.emailfunction import EmailLogic
 
 # Create your views here.
 
@@ -146,6 +147,7 @@ def scoreBoard(request):
                 i.student.regNumber: {
                     "fullName": i.student.first_name + " " + i.student.last_name,
                     "url": i.urlSubmit,
+                    "score": i.score
                 }
             }
             data_dict.update(content)
@@ -205,11 +207,23 @@ def scoreActiveStudent(request):
         coureCode = request.POST.get("cCode")
         regNo = request.POST.get("regNo")
         score = request.POST.get("score")
-
+        remark = request.POST.get("remark")
+        
         user = Assessment.objects.filter(student__regNumber=regNo, course_code=coureCode, level=level, semester=semester,
         student__faculty=faculty, student__department=department,  moduleName=taskName).first()
+
         if user:
+            data = {
+                "email": user.student.email,
+                "username": user.student.username,
+                "score": score,
+                "remark": remark
+            }
+            email = EmailLogic()
+            email.scoreNotification(data)
+
             user.score = score
+            user.remark = remark
             user.save()
 
     return render(request, 'scoreBoard.html')

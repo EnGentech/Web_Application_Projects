@@ -87,6 +87,7 @@ class Assessment(models.Model):
     student = models.ForeignKey(Students_data, on_delete=models.CASCADE, null=True)
     course_code = models.CharField(max_length=20)
     score = models.IntegerField()
+    remark = models.CharField(max_length=1024, null=True)
     level = models.CharField(max_length=100, null=True)
     semester = models.CharField(max_length=100, null=True)
     moduleName = models.CharField(max_length=100)
