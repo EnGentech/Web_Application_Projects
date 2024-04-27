@@ -45,9 +45,9 @@
                 <ul class="nav-links">
                     {% block navs %}
                         <li><a id="default" href="{% url 'index' %}">Home</a></li>
-                        <li><a class="other_nav" href="{% url 'profileUpdate' %}">Course_Work</a></li>
+                        <li><a class="other_nav" href="{% url 'profileUpdate' %}">Course Work</a></li>
                         <li><a class="other_nav" href="{% url 'loadResources' %}">Resource</a></li>
-                        <li><a class="other_nav" href="{% url 'aboutPage' %}">About_Page</a></li>
+                        <li><a class="other_nav" href="{% url 'aboutPage' %}">About Page</a></li>
                     {% endblock navs %}
                     {% block loginOut %}
                         {% if request.user.is_authenticated %}

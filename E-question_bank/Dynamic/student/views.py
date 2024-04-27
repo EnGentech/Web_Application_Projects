@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from .forms import StudentForm
-from lecturers.models import Upload
+from lecturers.models import Upload, Resources
 from .models import Students_data, CourseWork, Assessment
 from django.contrib import messages
 from .backends import StudentBackend
@@ -385,9 +385,10 @@ def validateReferenceNumber(request):
     """validate user reference Number"""
     if request.method == "POST":
         refNumber = request.POST.get("reference_number")
+        courseCode = request.POST.get("course_code")
         user = request.user
         userRef = Students_data.objects.filter(username=user, refNumber=refNumber).first()
-        print(userRef)
         if userRef:
-            return JsonResponse({"status": 1})
+            lectureMaterial = Resources.objects.filter(course_code=courseCode).first()
+            return JsonResponse({"status": 1, "material": lectureMaterial.lectureMaterial.url})
     return JsonResponse({"status": 0})

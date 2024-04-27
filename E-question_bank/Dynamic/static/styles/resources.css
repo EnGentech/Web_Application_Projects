@@ -111,9 +111,7 @@ body{
 /* Reference number confirmation */
 
 /* CSS for blur background */
-body {
-    overflow: hidden;
-}
+
 .blur-background {
     position: fixed;
     top: 0;
@@ -133,7 +131,7 @@ body {
     border: 1px solid #6ef47987;
     position: relative;
     border-radius: 20px;
-    background-color: rgba(222, 215, 205, 0.965); 
+    background-color: rgba(236, 231, 225, 0.808); 
     box-shadow: 1px 1px 12px white;
 }
 
@@ -215,4 +213,55 @@ body {
 
 #invalidRef{
     display: none;
+}
+
+/* media query responsiveness */
+
+@media screen and (max-width: 1200px) {
+    .resources{
+        font-size: 0.8em;
+        padding: 30px 50px 30px 50px;
+    }
+
+    .header{
+        height: 60px;
+    }
+
+    .resources h2 {
+        font-size: 1.5em;
+    }
+
+    table th:nth-child(6),
+    table td:nth-child(6) {
+        display: none;
+    }
+
+    .tableContent{
+        border-radius: 10px;
+        padding: 5px;
+        background-color: rgba(227, 213, 213, 0.365);
+        margin-top: 40px;
+        box-shadow: 0px 0px 10px 0px rgba(223, 218, 218, 0.5);
+    }
+
+    #custom-container {
+        background-color: rgba(225, 221, 213, 0.841);
+    }
+
+    #general h2 {
+        font-size: 1.2em;
+    }
+
+    #general input{
+        font-size: 0.8em;
+        padding: 3px 3px 3px 10px;
+    }
+
+    #general #custom-submit-btn {
+        padding: 3px 30px 3px 30px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    
 }

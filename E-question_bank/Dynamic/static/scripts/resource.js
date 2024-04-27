@@ -100,17 +100,21 @@ $(document).ready(function () {
     filterParams.hide()
 
     $('#custom-close-btn').click(function(){
+        $("body").css("overflow", "auto")
         $("#general").hide();
     });
 
     let requestResource
     $(document).on("click", ".lectureDownload", function(event) {
         event.preventDefault();
-        requestResource = $(this).find("a").attr("href");
+        $("body").css("overflow", "hidden")
+        requestResource = $(this).find(".tdcCode").text();
+        console.log(requestResource)
         $("#general").show();
     });
 
     $(document).on("change", "#custom-reference_number", function() {
+        $("body").css("overflow", "auto")
         $("#invalidRef").hide();
     });
 
@@ -123,7 +127,8 @@ $(document).ready(function () {
                 type: "POST",
                 url: "/heritage_students/user/validateRefNumber/",
                 data: {
-                    reference_number: obtainedRefID
+                    reference_number: obtainedRefID,
+                    course_code: requestResource
                 },
                 dataType: "json",
                 headers: {
@@ -136,7 +141,8 @@ $(document).ready(function () {
                     } else if (response.status === 1) {
                         invalidRef.hide();
                         $("#general").hide();
-                        window.open(requestResource, '_blank')
+                        $("body").css("overflow", "auto")
+                        window.open(response.material, '_blank')
                     }
                 },
                 eror: function(){

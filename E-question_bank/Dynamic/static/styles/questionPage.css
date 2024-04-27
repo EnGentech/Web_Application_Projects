@@ -183,3 +183,53 @@ embed{
     padding: 3px 50px 3px 50px;
     border: 1px solid rgba(137, 134, 134, 0.184);
 }
+
+
+@media screen and (max-width: 1185px) {
+    .main_question{
+        height: 80%;
+        width: 85%;
+    }
+
+    #cCode{
+        width: 25%;
+    }
+
+    #cTitle{
+        width: 70.5% !important;
+    }
+
+    #cTitle_label{
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main_question{
+        height: 80%;
+        width: 94%;
+    }
+
+    #cCode{
+        width: 26%;
+    }
+
+    #cTitle{
+        width: 69% !important;
+    }
+
+    #cTitle_label{
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main_question{
+        height: 80%;
+        width: 92%;
+    }
+
+    #semester{
+        width: 32% !important;
+    }
+}

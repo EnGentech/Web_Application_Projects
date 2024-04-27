@@ -309,8 +309,8 @@ body{
 
   @media screen and (max-width: 1060px) {
     .centerPage{
-        width: 600px;
-        height: 300px;
+        width: 85%;
+        height: auto;
     }
     .info{
         margin-left: 2%;

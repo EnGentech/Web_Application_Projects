@@ -165,3 +165,24 @@ tr:nth-child(even){
 #yourRef{
     color: darkblue;
 }
+
+/* Responsiveness */
+@media screen and (max-width: 1200px) {
+    .main_question h1 {
+        font-size: 1.2em;
+    }
+
+    .main_question {
+        width: 90% !important;
+        margin-top: -5% !important;
+    }
+
+    #cTitle {
+        width: 39% !important;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    
+}

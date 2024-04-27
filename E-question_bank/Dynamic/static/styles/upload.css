@@ -232,3 +232,17 @@ input[type="file"]::-webkit-file-upload-button{
 .hideOff{
     display: none;
 }
+
+@media screen and (max-width: 1200px) {
+    .main_question h1 {
+        font-size: 1.2em;
+    }
+
+    .main_question #cTitle{
+        width: 73%;
+        padding: 3px;
+        border-radius: 10px;
+        border: 1px solid gray;
+    }
+
+}

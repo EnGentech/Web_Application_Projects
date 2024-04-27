@@ -110,7 +110,7 @@ body{
 
 .flexSection{
     display: flex;
-    height: 650px;
+    min-height: 300px;
 }
 
 .progressTable h5{
@@ -314,4 +314,33 @@ body{
 
 #hideRemark{
     display:none;
+}
+
+/* Responsiveness logic */
+@media screen and (max-width: 1200px) {
+    .cWorkContainer {
+        font-size: 0.6em;
+        padding: 30px 40px 30px 40px;
+    }
+
+    .leftPane{
+        width: 150px;
+    }    
+
+    .flexSection h5 {
+        font-size: 1.2em;
+    }
+
+    .listCourses {
+        padding-left: 0px;
+    }
+
+    .tableView .statusLight{
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    
 }

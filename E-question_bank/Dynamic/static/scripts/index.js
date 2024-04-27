@@ -42,18 +42,19 @@ $(document).ready(function(){
     }, delay);
 
     if ($(window).width() <= 1108) {
-        // Add click event handler to menu icon
-        $("#menu-icon").click(function() {
+        $("#menu-icon").click(function(e) {
+            e.stopPropagation();
             $(this).toggleClass("menu-open");
             $(".nav-links").toggle();
         });
-
-        // Add mouseleave event handler to dropdown menu
-        $(".nav-links").mouseleave(function() {
-            $(".menu-icon").removeClass("menu-open");
-            $(".nav-links").hide();
+    
+        $(document).click(function(e) {
+            if (!$(e.target).closest('.nav-links').length && !$(e.target).closest('#menu-icon').length) {
+                $(".menu-icon").removeClass("menu-open");
+                $(".nav-links").hide();
+            }
         });
-    }
+    }    
     
 })
 

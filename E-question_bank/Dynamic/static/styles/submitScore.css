@@ -70,3 +70,11 @@
 #genList{
     display: none;
 }
+
+@media screen and (max-width: 1200px) {
+
+    #cTitle {
+        width: 39% !important;
+    }
+
+}
