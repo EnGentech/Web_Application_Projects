@@ -136,14 +136,17 @@ $(document).ready(function(){
         let fullName = $("#fullName");
         let url = $("#urlLink");
         let score = $("#score");
+        let remark = $("#textArea");
         if (regNo === "Select Reg. Number") {
             fullName.text("-- Select Reg Number --");
             url.attr("href", "#");
             score.val("")
+            remark.val("")
         } else {
             let newUrl = arrayList[regNo]["url"];
             url.attr("href", `${newUrl}`);
             score.val(arrayList[regNo]["score"])
+            remark.val(arrayList[regNo]["remark"])
             fullName.text(arrayList[regNo]["fullName"]);
         }
     });
@@ -156,6 +159,66 @@ $(document).ready(function(){
 
     let submitBtn = $("#submitScoreSection")
     let scoreTracker = $("#score");
+
+    let submitscore = $("#submitScore")
+    submitBtn.click(function(event){
+        event.preventDefault();
+        let faculty = $("#faculty").val();
+        let department = $("#department").val();
+        let level = $("#level").val();
+        let semester = $("#semester").val();
+        let cCode = $("#cCode").val();
+        let taskName = loadTask.val();
+        let regNo = $("#regNo").val();
+        let score = scoreTracker.val();
+        let remark = $("#textArea").val()
+
+        // Show loading animation
+        let loadingDots = $("#loadingDots");
+        loadingDots.show();
+        let dotsCount = 0;
+        let dotsInterval = setInterval(function() {
+            dotsCount = (dotsCount % 3) + 1;
+            loadingDots.text(".".repeat(dotsCount));
+        }, 500);
+        
+        $.ajax({
+            type: "POST",
+            url: "/staff/updateScores/",
+            data: {
+                faculty: faculty,
+                department: department,
+                level: level,
+                semester: semester,
+                cCode: cCode,
+                taskName: taskName,
+                regNo: regNo,
+                score: score,
+                remark: remark
+            },
+            headers: {
+                "X-CSRFToken": $('input[name="csrfmiddlewaretoken"]').val()
+            },
+            success: function (response) {
+                // Hide loading animation
+                clearInterval(dotsInterval);
+                loadingDots.hide();
+
+                alert("Scores successfully uploaded");
+                $("#regNo option:selected").remove();
+                scoreTracker.val(0);
+                if ($("#regNo option").length === 0) {
+                    $("#regNo").val("Completed");
+                }
+            },
+            error: function(xhr, status, error) {
+                // Hide loading animation
+                clearInterval(dotsInterval);
+                loadingDots.hide();
+                alert("An error occurred while uploading scores");
+            }
+        });
+    })
 
     scoreTracker.on("input", function(){
         let score = $(this).val();

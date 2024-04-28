@@ -373,11 +373,8 @@ def generateReferenceNumber(request, regNumber):
 def taskNotificationMailSent(request):
     """send task notification mail"""
     email = EmailLogic()
-    returnStatus = email.taskNotification()
-    if returnStatus:
-        return JsonResponse({"message": "Notification sent successfully"})
-    else:
-        return JsonResponse({"message": "No Active Task to notify"})
+    email.taskNotificationMail()
+    return JsonResponse({"message": "Notification sent successfully"})
 
 @student_required
 @login_required(login_url="login") 

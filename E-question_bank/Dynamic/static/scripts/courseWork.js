@@ -3,6 +3,21 @@ $(document).ready(function() {
     var cCodeSelect = $('#cCodeSelect');
     var cTitleSelect = $('#cTitleSelect');
 
+    function makeAjaxRequest() {
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "/heritage_students/user/taskNotification/",
+            data: {}, 
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                console.error("AJAX request failed:", status, error);
+            }
+        });
+    }
+
     function updateStatus() {
         $(".allDataSchedule").each(function() {
             var startTime = $(this).find(".startDate").text();
@@ -21,6 +36,7 @@ $(document).ready(function() {
                 statusLight.css("background-color", "yellow");
             } else if (startDate <= currentTime && endDate > currentTime) {
                 statusCell.text("Active");
+                makeAjaxRequest()
                 statusLight.css("background-color", "green");
             } else {
                 statusCell.text("Expired");

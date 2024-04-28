@@ -147,7 +147,8 @@ def scoreBoard(request):
                 i.student.regNumber: {
                     "fullName": i.student.first_name + " " + i.student.last_name,
                     "url": i.urlSubmit,
-                    "score": i.score
+                    "score": i.score,
+                    "remark": i.remark
                 }
             }
             data_dict.update(content)

@@ -53,7 +53,7 @@ class EmailLogic:
         if presentTime >= userDate and presentTime <= endDate:
             return True
         
-    def taskNotification(self):
+    def taskNotificationMail(self):
         """Notification to all registered students on active task"""
         emailData = []
         for key, value in self.allTasks.items():
@@ -71,7 +71,7 @@ class EmailLogic:
         if emailData:
             subject = 'Task Notification'
             message = 'Dear Student,\n\nNotification of task submission with the below details\nYou are hereby notified that your task has been activated. Please ensure that you complete your task and submit it before the expiration date, as the portal will close once the due date passes.\nFor further details, log in to your dashboard\n\nThank you!\nWarm regards!'
-            from_email = "hpoly.eportal@gmail.com"
+            from_email = self.hostEmail
             to_email = emailData
             
             try:
