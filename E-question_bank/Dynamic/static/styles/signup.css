@@ -149,3 +149,50 @@ select:focus{
     padding: 3px 50px 3px 50px;
     border: 1px solid rgba(137, 134, 134, 0.379);
 }
+
+/* Responsiveness */
+@media only screen and (max-device-width: 500px) and (orientation: portrait) {
+    .main_signUp{
+        height: auto;
+        width: 98%;
+        font-size: 0.7em;
+    }
+
+    .main_signUp h1{
+        font-size: 1.5em;
+    }
+
+    .main_signUp .form{
+        height: auto;
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .main_signUp input{
+        height: auto;
+        width: 100%;
+    }
+
+    .discipline{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    select{
+        width: 100%;
+    }
+
+    .submit{
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .end_form{
+        font-size: 0.7em;
+    }
+}

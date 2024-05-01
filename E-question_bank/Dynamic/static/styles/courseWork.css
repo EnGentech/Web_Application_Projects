@@ -323,6 +323,22 @@ body{
         padding: 30px 40px 30px 40px;
     }
 
+    .statusBoard > * {
+        font-size: 0.7em;
+    }
+
+    .instruction{
+        width: 90%;
+    }
+
+    #urlSubmit{
+        width: 100%;
+    }
+
+    #submitAssessment, #noClick {
+        font-size: 0.8em;
+    }
+
     .leftPane{
         width: 150px;
     }    
@@ -343,4 +359,51 @@ body{
 
 @media screen and (max-width: 750px) {
     
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+    .cWorkContainer > * {
+        visibility: hidden;
+    }
+
+    .statusBoard{
+        visibility: hidden;
+    }
+
+    body {
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    body:before {
+        content: "Please rotate your phone to landscape mode.";
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        width: 100%;
+        height: auto;
+        font-weight: bolder;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.2; /* Adjust line height for vertical text */
+        padding: 20px; /* Add padding for better readability */
+        animation: rotateToLandscape 5s infinite alternate; /* Apply rotation animation */
+    }
+
+    @keyframes rotateToLandscape {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
 }

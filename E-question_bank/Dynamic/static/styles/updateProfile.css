@@ -237,3 +237,84 @@ input[type='file']::-webkit-file-upload-button{
     padding: 3px 50px 3px 50px;
     border: 1px solid rgba(137, 134, 134, 0.184);
 }
+/* media query responsiveness */
+
+@media screen and (max-width: 1200px) {
+    .updateBox{
+        font-size: 0.8em;
+    }
+
+    .updateBox h4, .updateBox h3{
+        font-size: 1.3em;
+    }
+
+    .updateContent #basicInfo{
+        width: 80%;
+    }
+
+    .updateContent .formSetting{
+        width: 100%;
+    }
+
+    .courseTableSelect{
+        width: 97%;
+    }
+
+    .courseTableSelect{
+        padding: 5px 1px 5px 1px;
+        background-color: rgba(218, 250, 215, 0.52);
+    }
+
+    #countRegistered{
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+    .updateBox > * {
+        visibility: hidden;
+    }
+
+    .general{
+        visibility: hidden;
+    }
+
+    body {
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    body:before {
+        content: "Please rotate your phone to landscape mode.";
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        width: 100%;
+        height: auto;
+        font-weight: bolder;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.2; /* Adjust line height for vertical text */
+        padding: 20px; /* Add padding for better readability */
+        animation: rotateToLandscape 5s infinite alternate; /* Apply rotation animation */
+    }
+
+    @keyframes rotateToLandscape {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+}

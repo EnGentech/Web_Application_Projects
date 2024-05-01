@@ -386,6 +386,6 @@ def validateReferenceNumber(request):
         user = request.user
         userRef = Students_data.objects.filter(username=user, refNumber=refNumber).first()
         if userRef:
-            lectureMaterial = Resources.objects.filter(course_code=courseCode).first()
-            return JsonResponse({"status": 1, "material": lectureMaterial.lectureMaterial.url})
+            material = Resources.objects.filter(course_code=courseCode).first()
+            return JsonResponse({"status": 1, "material": material.lectureMaterial.url})
     return JsonResponse({"status": 0})

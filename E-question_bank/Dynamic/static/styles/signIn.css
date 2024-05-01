@@ -125,3 +125,32 @@ fieldset{
     padding: 3px 50px 3px 50px;
     border: 1px solid rgba(137, 134, 134, 0.184);
 }
+
+/* Responsiveness */
+@media only screen and (max-device-width: 500px) and (orientation: portrait) {
+    .signIn_container{
+        font-size: 0.7em;
+    }
+
+    .signIn_main{
+        height: auto;
+    }  
+
+    .input_section{
+        width: 98%;
+        padding: 10px;
+    }
+
+    #reset{
+        margin-top: 12%;
+    }
+
+    .head_signIn{
+        font-size: 1.5em;
+    }
+
+    .footer{
+        display: none;
+    }
+
+}

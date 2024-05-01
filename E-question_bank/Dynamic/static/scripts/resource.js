@@ -10,13 +10,13 @@ $(document).ready(function () {
     var url = `/api/data/resources/${obtainedDepartment}`;
     var coursesObtained = [];
 
-    var levelArray = [  
+    var levelArray = [
         "ND 100",
         "ND 200",
         "HND 100",
         "HND 200",
     ]
-        
+
 
     $.ajax({
         url: url,
@@ -44,7 +44,7 @@ $(document).ready(function () {
                 let tableData = htmlData.find(".resourceTable")
                 tableUpdate.html(tableData)
             },
-            error: function(){ 
+            error: function(){
             }
         });
     }
@@ -107,9 +107,8 @@ $(document).ready(function () {
     let requestResource
     $(document).on("click", ".lectureDownload", function(event) {
         event.preventDefault();
-        $("body").css("overflow", "hidden")
-        requestResource = $(this).find(".tdcCode").text();
-        console.log(requestResource)
+        $("body").css("overflow", "hidden");
+        requestResource = $(this).closest("tr").find(".tdcCode").text();
         $("#general").show();
     });
 
