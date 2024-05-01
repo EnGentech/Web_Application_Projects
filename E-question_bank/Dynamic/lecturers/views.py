@@ -72,13 +72,15 @@ def uploadQuestion(request):
             return render(request, 'upload.html')
 
     return render(request, 'upload.html')
+from django.shortcuts import redirect, render
+from .models import Resources
 
 @lecturer_required
 @login_required(login_url="signInLec")
 def uploadResources(request):
-    """Upload Resources to database"""
     if not request.user.is_authenticated:
         return redirect("signInLec")
+    
     if request.method == "POST":
         faculty = request.POST.get('faculty')
         department = request.POST.get('department')
@@ -89,13 +91,25 @@ def uploadResources(request):
         file = request.FILES.get('upload')
         site = request.POST.get('site')
         youtube = request.POST.get('youtube')
+        status = request.POST.get('status')
 
         if faculty and department and level and semester and course_code and course_title and file:
             existingResource = Resources.objects.filter(semester=semester, faculty=faculty, department=department, course_code=course_code).first()
 
             if existingResource:
-                messages.error(request, "Resources already uploaded to database")
-                return render(request, 'upload.html')
+                if status == "0":
+                    messages.error(request, "Resources already uploaded to database, Use Update option")
+                    return render(request, 'upload.html')
+                elif status == "1":
+                    if file:
+                        if existingResource.lectureMaterial:
+                            existingResource.lectureMaterial.delete()
+                    if youtube:
+                        if existingResource.youtube_channel:
+                            existingResource.youtube_channel.delete()
+                    if site:
+                        if existingResource.site_recommendation:
+                            existingResource.site_recommendation.delete()
 
             common_params = {
                 'faculty': faculty,
@@ -115,10 +129,17 @@ def uploadResources(request):
             elif site:
                 common_params['site_recommendation'] = site
 
-            loadResource = Resources(**common_params)
-            loadResource.save()
+            if existingResource:
+                existingResource.__dict__.update(common_params)
+                existingResource.save()
+            else:
+                loadResource = Resources(**common_params)
+                loadResource.save()
 
-            messages.success(request, "Resources successfull uploaded to database, Thank you!")
+            if status == "1":
+                messages.success(request, "Resource successfully Updated, Thank you!")
+            else:
+                messages.success(request, "Resource successfully uploaded to database, Thank you!")
 
             return render(request, 'upload.html')
         else:

@@ -122,12 +122,15 @@ form{
 #submit{
     font-size: large;
     font-weight: 600;
-    width: 99.5%;
+    width: 90%;
+    display: block;
     cursor: pointer;
     background-color: rgb(0, 88, 0);
     border-radius: 30px;
     color: white;
+    margin: auto auto;
     margin-bottom: 20px;
+    border: none;
 }
 
 #submit:hover{
@@ -227,9 +230,39 @@ input[type="file"]::-webkit-file-upload-button{
     padding: 3px 3px 3px 8px;
 }
 
+#updateQuestion {
+    font-size: 1.2em;
+    color: gray;
+    display: block;
+    margin: auto auto;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid gray;
+    background-color: transparent;
+}
+
+#updateQuestion:hover {
+    color: darkblue;
+    border-bottom: 1.5px solid darkblue;
+    cursor: pointer;
+    user-select: none;
+}
+
+#updateQuestion:focus{
+    outline: none;
+}
+
 /* Hide things */
 
 .hideOff{
+    display: none;
+}
+
+#status{
+    display: none;
+}
+
+#update {
     display: none;
 }
 

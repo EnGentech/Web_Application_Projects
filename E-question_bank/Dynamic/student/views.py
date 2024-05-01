@@ -18,7 +18,8 @@ from random import randint
 
 tasks = {
     "CTE323": "pythonTasks.json",
-    "COM122": "internetTasks.json"
+    "COM122": "internetTasks.json",
+    "EED126": "entrepreneur.json"
 }
 
 def student_required(view_func):
