@@ -2,12 +2,13 @@
 {% load static %}
 {% block head %}
     <link rel="stylesheet" href="{% static 'styles/upload.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/homePage.css' %}">
     <script src="{% static 'scripts/upload.js' %}"></script>
     <title>Upload Question</title>
 {% endblock head %}
 
 {% block loginOut %}
-    <li><a class="button" href="{% url 'staffLogout' %}" id="logout_button">LogOut</a></li>  
+    <li><a class="button" href="{% url 'staffLogout' %}" id="logout_button">LogOut</a></li>
 {% endblock loginOut %}
 
 {% block navs %}
@@ -29,15 +30,15 @@
     <div class="container_question">
         <div class="main_question">
             <section class="top">
-                
+
                 {% if messages %}
                     {% for message in messages %}
-                        <center><p class="messages fadeOff">{{ message }}</p></center>                       
+                        <center><p class="messages fadeOff">{{ message }}</p></center>
                     {% endfor %}
                 {% endif %}
-                
+
                 <h1 class="head_question">Heritage <span>E-Question</span> Bank</h1>
-                <p>Get prepared ahead as it is said <span style="font-weight: bolder;">"Early to bed, early to rise".</span> <br>Happy exploring!</p> 
+                <p>Get prepared ahead as it is said <span style="font-weight: bolder;">"Early to bed, early to rise".</span> <br>Happy exploring!</p>
             </section>
 
             <p id="uploadType">Choose Upload type <select id="uploadSelectType">
@@ -125,14 +126,14 @@
 
                         <input type="submit" id="submit" value="Upload Question">
                     </form>
-                    
+
 
                     <div id="author">
                         <p>Powered by EnGentech | @2024</p>
                     </div>
                 </fieldset>
 
-                
+
             </section>
         </div>
     </div>

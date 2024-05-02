@@ -234,3 +234,54 @@ embed{
     }
     
 }
+
+@media screen and (max-width: 500px) {
+    .main_question{
+        height: 90%;
+        width: 95% !important;
+    }
+
+    label{
+        display: none !important;
+    }
+
+    select{
+        width: 100% !important;
+        display: block;
+        margin-top: 12px;
+        font-size: 1.2em;
+        padding: 8px !important;
+    }
+
+    #semester{
+        width: 100% !important;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    br{
+        display: none;
+    }
+
+    #cTitle{
+        margin-top: 20px;
+        padding: 8px !important;
+        width: 100% !important;
+        border: 1px solid rgba(128, 128, 128, 0.519);
+    }
+
+    #submit{
+        margin-top: 30px;
+    }
+
+    fieldset{
+        margin-top: 10px;
+    }
+
+    #noQuestion{
+        min-height: 0px;
+    }
+    
+}

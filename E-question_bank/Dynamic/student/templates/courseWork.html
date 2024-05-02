@@ -85,7 +85,7 @@
                     {% if data %}
                         {% for course in data %} 
                             <p class="regC_code" style="display: none">{{ course.courseCode }}</p>                       
-                            <li class='regCourses'>{{ course.courseTitle }}</li>
+                            <li class='regCourses' title="{{ course.courseTitle }}">{{ course.courseTitle }}</li>
                         {% endfor %}
                     {% else %}
                         <li>No registered courses yet</li>
@@ -95,7 +95,7 @@
 
                 <section class="mainContent">
                     <section class="toRightContent">
-                        <h5>Grade: <span id="gradeColor">0%</span></h5>
+                        <h5>Grade: <span id="gradeColor">0.00%</span></h5>
                     </section>
                     <section class="courseDetail">
                         <h5>Course Code: <span id='cCodeSelect'>--Select Registered Course--</span></h5>
@@ -103,46 +103,47 @@
                     </section>
 
                     <section class="progressTable">
-                        <h5>Progress Table <span style="float: right; margin-right: 50px" id="countdown">Timer: 00::00:00:00
-                        </span></h5>
+                        <h5>Progress Table <span style="float: right; margin-right: 50px" id="countdown">Timer: 00::00:00:00</span></h5>
                         <section class="tableView">
                             <table>
                                 <thead>
-                                    <td>S/No</td>
-                                    <td>Module Name</td>
-                                    <td>Task Type</td>
-                                    <td>Task Score</td>
-                                    <td>Start Date</td>
-                                    <td>End Date</td>
-                                    <td>Status</td>
-                                    <td>Submit</td>
-                                </thead>
-                                {% if taskUpdate %}                                                             
-                                    {% for task in taskUpdate %}
-                                        <tr class="allDataSchedule">
-                                            <td>{{ forloop.counter }}</td>
-                                            <td>{{ task.intro }}</td>
-                                            <td>{{ task.taskType }}</td>
-                                            <td class="scores">{{ task.score }}<span>%</span></td>
-                                            <td class="startDate">{{ task.startDate }}</td>
-                                            <td class="endDate">{{ task.endDate }}</td>
-                                            <td class="submitStatus">Scanning</td>
-                                            <td class='clickMe'>Submit task
-                                                <div class="statusLight">
-
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    {% endfor %}
-                                {% else %}
                                     <tr>
-                                        <td colspan="8"><center>No task available at the moment! enjoy the silence...</center></td>
+                                        <td>S/No</td>
+                                        <td>Module Name</td>
+                                        <td>Task Type</td>
+                                        <td>Task Score</td>
+                                        <td>Start Date</td>
+                                        <td>End Date</td>
+                                        <td>Status</td>
+                                        <td>Submit</td>
                                     </tr>
-                                {% endif %}
-                                
+                                </thead>
+                                <tbody>
+                                    {% if taskUpdate %}                                                             
+                                        {% for task in taskUpdate %}
+                                            <tr class="allDataSchedule">
+                                                <td>{{ forloop.counter }}</td>
+                                                <td>{{ task.intro }}</td>
+                                                <td>{{ task.taskType }}</td>
+                                                <td class="scores">{{ task.score }}<span>%</span></td>
+                                                <td class="startDate">{{ task.startDate }}</td>
+                                                <td class="endDate">{{ task.endDate }}</td>
+                                                <td class="submitStatus">Scanning</td>
+                                                <td class="clickMe">Submit task
+                                                    <div class="statusLight"></div>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% else %}
+                                        <tr>
+                                            <td colspan="8"><center>No task available at the moment! Enjoy the silence...</center></td>
+                                        </tr>
+                                    {% endif %}
+                                </tbody>
                             </table>
                         </section>
                     </section>
+
                     
                 </section>
             </div>

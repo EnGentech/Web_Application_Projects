@@ -13,7 +13,16 @@ $(document).ready(function(){
     ]
 
     var courses_computerEngineering_ND100_semester2 = [
-
+        ["GNS102", "Communication in English 1"],
+        ["MTH211", "Calculus"],
+        ["MEC102", "Machine Tool Technology and Practice"],
+        ["EED126", "Introduction to Entrepreneurship"],
+        ["EEC124", "Electronics1"],
+        ["EEC125", "Electrical Engineering Science II"],
+        ["CTE121", "Digital Computer Fundamental"],
+        ["CTE122", "Electrical Measurement and Instrumentaion"],
+        ["CTE123", "Comp/Electronic Maintenance $ Repairs"],
+        ["CTE124", "Technical Report Writing"]
     ]
 
     var courses_computerEngineering_ND200_semester1= [

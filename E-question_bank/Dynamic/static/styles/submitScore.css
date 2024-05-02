@@ -96,3 +96,35 @@
     }
 
 }
+
+@media screen and (max-width: 500px) {
+    #cTitle{
+        width: 100% !important;
+    }
+
+    #fullName{
+        display:block;
+        margin-bottom: 10px;
+    }
+
+    #urlLink{
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #scoreValue{
+        margin-left: 0px;
+        display: block;
+    }
+
+    #score{
+        width: 70%;
+        border-radius: 10px;
+        padding: 8px;
+    }
+
+    #textArea{
+        min-height: 120px;
+    }
+}
+

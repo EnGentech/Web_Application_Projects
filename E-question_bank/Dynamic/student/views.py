@@ -187,8 +187,10 @@ def courseWork(request):
     """Render user course work"""
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
         courseCode = request.POST.get("courseCode")
- 
-        return courseWorkLoad(request, f'student/{tasks[courseCode]}', courseCode)
+        try:
+            return courseWorkLoad(request, f'student/{tasks[courseCode]}', courseCode)
+        except Exception:
+            return JsonResponse({"status": "No task"})
         
     data = Students_data.objects.filter(username=request.user).first()
     registered = CourseWork.objects.filter(student=data).all()

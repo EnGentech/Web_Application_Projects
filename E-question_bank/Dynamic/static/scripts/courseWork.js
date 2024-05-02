@@ -2,6 +2,7 @@ $(document).ready(function() {
     var selectedCourse = $('.regCourses');
     var cCodeSelect = $('#cCodeSelect');
     var cTitleSelect = $('#cTitleSelect');
+    let timerStatus
 
     function makeAjaxRequest() {
         $.ajax({
@@ -36,7 +37,7 @@ $(document).ready(function() {
                 statusLight.css("background-color", "yellow");
             } else if (startDate <= currentTime && endDate > currentTime) {
                 statusCell.text("Active");
-                makeAjaxRequest()
+                // makeAjaxRequest()
                 statusLight.css("background-color", "green");
             } else {
                 statusCell.text("Expired");
@@ -90,7 +91,7 @@ $(document).ready(function() {
             
             }
 
-            setTimeout(function() {
+            timerStatus = setTimeout(function() {
                 updateCountdown(startDate, endDate);
                 updateStatus()
             }, 1000);
@@ -120,6 +121,14 @@ $(document).ready(function() {
                 courseCode: courseCode
             }, 
             success: function(response) {
+                clearTimeout(timerStatus)
+                if (response.status === "No task") {
+                    $("#countdown").text("Timer: 00::00:00:00");
+                    let noTaskTable = $(".progressTable .tableView table tbody");
+                    noTaskTable.empty();
+                    noTaskTable.append("<tr><td colspan='8'><center>No task available at the moment! Enjoy the silence...</center></td></tr>");
+                }
+                
                 let count = 0
                 let gradeScore = $("#gradeColor")
                 
@@ -145,9 +154,12 @@ $(document).ready(function() {
                 $('#allTask').text(`All Task: ${count}`);
 
                 updateCountdown(startDateText, endDateText);
-                let unitScore = totalGrade()
-                gradeScore.text(`${unitScore}%`)
-
+                let unitScore = totalGrade();
+                if (!isNaN(unitScore) && unitScore !== null && unitScore !== undefined) {
+                    gradeScore.text(`${unitScore}%`);
+                } else {
+                    gradeScore.text("0.00%");
+                }
             },
             error: function(xhr, status, error) {
                 console.error('AJAX request failed:', error);

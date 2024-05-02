@@ -279,3 +279,24 @@ input[type="file"]::-webkit-file-upload-button{
     }
 
 }
+
+@media screen and (max-width: 500px) {
+    #upload{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }    
+
+    #preview, #noQuestion{
+        display: none;
+    }
+
+    #uploadSelectType{
+        width: 70% !important;
+        display: block;
+        margin: auto auto;
+    }
+}
+

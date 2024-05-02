@@ -3,13 +3,14 @@
 {% block head %}
     <link rel="stylesheet" href="{% static 'styles/upload.css' %}">
     <link rel="stylesheet" href="{% static 'styles/submitScore.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/homePage.css' %}">
     <script src="{% static 'scripts/upload.js' %}"></script>
     <script src="{% static 'scripts/submitScore.js' %}"></script>
     <title>Upload Question</title>
 {% endblock head %}
 
 {% block loginOut %}
-    <li><a class="button" href="{% url 'staffLogout' %}" id="logout_button">LogOut</a></li>  
+    <li><a class="button" href="{% url 'staffLogout' %}" id="logout_button">LogOut</a></li>
 {% endblock loginOut %}
 
 {% block navs %}
@@ -31,15 +32,15 @@
     <div class="container_question">
         <div class="main_question">
             <section class="top">
-                
+
                 {% if messages %}
                     {% for message in messages %}
-                        <center><p class="messages fadeOff">{{ message }}</p></center>                       
+                        <center><p class="messages fadeOff">{{ message }}</p></center>
                     {% endfor %}
                 {% endif %}
-                
+
                 <h1 class="head_question">Score <span>Board</span></h1>
-                <p>Examination isn't the true test of <span style="font-weight: bolder;">Knowledge.</span> <br>Good luck!</p> 
+                <p>Examination isn't the true test of <span style="font-weight: bolder;">Knowledge.</span> <br>Good luck!</p>
             </section>
 
             <section class="input_section"><br>
@@ -111,14 +112,14 @@
                         </section>
 
                     </form>
-                    
+
 
                     <div id="author">
                         <p>Powered by EnGentech | @2024</p>
                     </div>
                 </fieldset>
 
-                
+
             </section>
         </div>
     </div>

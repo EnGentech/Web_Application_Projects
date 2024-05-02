@@ -91,6 +91,14 @@ body{
     overflow-y: auto;
 }
 
+.listCourses .regCourses {
+    font-size: 0.8em;
+    width: 170px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .mainContent{
     margin-left: 15px;
     width: 100%
@@ -127,7 +135,7 @@ body{
     padding: 5px 5px 5px 10px;
     background-color: rgb(214, 231, 214);
     border-radius: 10px;
-} 
+}
 
 .tableView thead{
     border-bottom: 1px solid brown;
@@ -341,7 +349,7 @@ body{
 
     .leftPane{
         width: 150px;
-    }    
+    }
 
     .flexSection h5 {
         font-size: 1.2em;
@@ -358,7 +366,7 @@ body{
 }
 
 @media screen and (max-width: 750px) {
-    
+
 }
 
 @media only screen and (max-device-width: 480px) and (orientation: portrait) {
@@ -393,9 +401,9 @@ body{
         z-index: 9999;
         text-align: center;
         font-size: 24px;
-        line-height: 1.2; /* Adjust line height for vertical text */
-        padding: 20px; /* Add padding for better readability */
-        animation: rotateToLandscape 5s infinite alternate; /* Apply rotation animation */
+        line-height: 1.2;
+        padding: 20px;
+        animation: rotateToLandscape 5s infinite alternate;
     }
 
     @keyframes rotateToLandscape {
