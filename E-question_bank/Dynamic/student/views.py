@@ -319,6 +319,7 @@ def returnScores(request):
             return JsonResponse({"response": "No Score for this course yet!", "status": 501})
         if averageTime > 0:
             returnData = []
+            print(returnData)
             for user in users:
                 total = 0
                 result = Assessment.objects.filter(course_code=courseCode, student=user, level=level, semester=semester).all()

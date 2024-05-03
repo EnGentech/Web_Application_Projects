@@ -10,7 +10,7 @@ $(document).ready(function(){
     })
 
     let taskList = {
-        "CTE323": "pythonTasks.json",   
+        "CTE323": "pythonTasks.json",
         "COM122": "internetTasks.json",
         "EED126": "entrepreneur.json"
     }
@@ -47,7 +47,7 @@ $(document).ready(function(){
                         loadTask.append(`<option value="${element}">${element}</option>`);
                     });
                 }
-            }, 
+            },
             error: function(error) {
                 console.log(error)
             }
@@ -64,7 +64,7 @@ $(document).ready(function(){
             }
         })
     }
-    
+
     courseCode.on("change", function(){
         let obtainedCode = $(this).val()
         if (obtainedCode) {
@@ -117,8 +117,8 @@ $(document).ready(function(){
                         });
                         scoreSection.show();
                         $("#noneRegistered").hide();
-                    } 
-                    
+                    }
+
                 },
                 error: function (error) {
                     $("#noneRegistered").show();
@@ -161,7 +161,7 @@ $(document).ready(function(){
     let submitBtn = $("#submitScoreSection")
     let scoreTracker = $("#score");
 
-    let submitscore = $("#submitScore")
+    let submitscore = $("#submitScore");
     submitBtn.click(function(event){
         event.preventDefault();
         let faculty = $("#faculty").val();
@@ -172,9 +172,8 @@ $(document).ready(function(){
         let taskName = loadTask.val();
         let regNo = $("#regNo").val();
         let score = scoreTracker.val();
-        let remark = $("#textArea").val()
+        let remark = $("#textArea").val();
 
-        // Show loading animation
         let loadingDots = $("#loadingDots");
         loadingDots.show();
         let dotsCount = 0;
@@ -182,7 +181,7 @@ $(document).ready(function(){
             dotsCount = (dotsCount % 3) + 1;
             loadingDots.text(".".repeat(dotsCount));
         }, 500);
-        
+
         $.ajax({
             type: "POST",
             url: "/staff/updateScores/",
@@ -201,25 +200,38 @@ $(document).ready(function(){
                 "X-CSRFToken": $('input[name="csrfmiddlewaretoken"]').val()
             },
             success: function (response) {
-                // Hide loading animation
                 clearInterval(dotsInterval);
                 loadingDots.hide();
 
                 alert("Scores successfully uploaded");
+
                 $("#regNo option:selected").remove();
-                scoreTracker.val(0);
-                if ($("#regNo option").length === 0) {
+
+               if ($("#regNo option").length > 1) {
+                    let nextRegNo = $("#regNo").val();
+                    let nextName = $("#regNo option:selected").text();
+                    let nextUrl = "";
+                    alert(($("#regNo option").length))
+
+                    $("#regNo").val(nextRegNo).trigger("change");
+                    $("#name").val(nextName);
+                    $("#url").val(nextUrl);
+                } else {
                     $("#regNo").val("Completed");
+                    $("#fullName").text("Completed");
+                    $("#url").val("#");
                 }
+
+                scoreTracker.val(0);
             },
             error: function(xhr, status, error) {
-                // Hide loading animation
                 clearInterval(dotsInterval);
                 loadingDots.hide();
                 alert("An error occurred while uploading scores");
             }
         });
-    })
+    });
+
 
     scoreTracker.on("input", function(){
         let score = $(this).val();

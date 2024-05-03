@@ -38,62 +38,69 @@ $(document).ready(function(){
 
     let generate = $("#genList")
     generate.click(function(){
-        let faculty = $("#faculty").val() 
-        let department = $("#department").val()
-        let level = $("#level").val()
-        let semester = $("#semester").val()
-        let courseCode = $("#cCode").val()
+    let faculty = $("#faculty").val() 
+    let department = $("#department").val()
+    let level = $("#level").val()
+    let semester = $("#semester").val()
+    let courseCode = $("#cCode").val()
 
-        if (courseCode){
-            $.ajax({
-                url: "/heritage_students/user/ReturnScores/",
-                type: "POST",
-                data: {
-                    faculty: faculty,
-                    department: department,
-                    level: level,
-                    semester: semester,
-                    cCode: courseCode
-                },
-                dataType: "json",
-                headers: {
-                    'X-CSRFToken': csrftoken
-                },
-                success: function(data){
-                    var dataArray = data.response;
-                    if (data.status === 501){
-                        $('#allscores table tbody tr').remove();
-                        var newRow = $("<tr></tr>");
-                        newRow.append(`<td colspan="4" style="text-align: center">${data.response}</td>`);
-                        $('#allscores table tbody').append(newRow);
-                        printBtn.hide();
-                        return
-                    } else {
-                        printBtn.show();
-                    }
+    if (courseCode){
+        $.ajax({
+            url: "/heritage_students/user/ReturnScores/",
+            type: "POST",
+            data: {
+                faculty: faculty,
+                department: department,
+                level: level,
+                semester: semester,
+                cCode: courseCode
+            },
+            dataType: "json",
+            headers: {
+                'X-CSRFToken': csrftoken
+            },
+            success: function(data){
+                var dataArray = data.response;
+                if (data.status === 501){
                     $('#allscores table tbody tr').remove();
-    
-                    $.each(dataArray, function(index, value) {
-                        var newRow = $("<tr></tr>");
-                        newRow.html('');
-                        newRow.append(`<td>${index + 1}</td>`);
-                        newRow.append(`<td>${value.fullName}</td>`);
-                        newRow.append(`<td>${value.regNumber}</td>`);
-                        newRow.append(`<td>${value.totalScore}</td>`);
-                
-                        // Append the new row after the <thead> section
-                        $('#allscores table tbody').append(newRow);
-                    })
-                },
-                error: function(error){
-                    console.log(error)
+                    var newRow = $("<tr></tr>");
+                    newRow.append(`<td colspan="4" style="text-align: center">${data.response}</td>`);
+                    $('#allscores table tbody').append(newRow);
+                    printBtn.hide();
+                    return
+                } else {
+                    printBtn.show();
                 }
-            })
-        } else {
-            alert("All fields are required!")
-        }
-        
-    })
+
+                $('#allscores table tbody tr').remove();
+
+                // Sort dataArray by regNumber
+                dataArray.sort((a, b) => {
+                    if (a.regNumber < b.regNumber) return -1;
+                    if (a.regNumber > b.regNumber) return 1;
+                    return 0;
+                });
+
+                $.each(dataArray, function(index, value) {
+                    var newRow = $("<tr></tr>");
+                    newRow.html('');
+                    newRow.append(`<td>${index + 1}</td>`);
+                    newRow.append(`<td>${value.fullName}</td>`);
+                    newRow.append(`<td>${value.regNumber}</td>`);
+                    newRow.append(`<td>${value.totalScore}</td>`);
+            
+                    $('#allscores table tbody').append(newRow);
+                })
+            },
+            error: function(error){
+                console.log(error)
+            }
+        })
+    } else {
+        alert("All fields are required!")
+    }
+})
+
 
     // Generating class list logic
     let generateClassList = $("#genRegs")
@@ -121,12 +128,12 @@ $(document).ready(function(){
                     let selectList = $("#genRegList")
                     selectList.empty()
                     selectList.append('<option value="" disabled selected style="display:none">Select Reg. Number</option>')
+                    response.regList.sort();
                     $.each(response.regList, function(index, value){
                         selectList.append($('<option>', {
                             value: value,
                             text: value
                         }));
-                        console.log(index, value)
                     })
                 }
             });
