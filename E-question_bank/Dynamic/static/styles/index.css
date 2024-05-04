@@ -350,6 +350,15 @@ body{
     color: darkblue;
 }
 
+#announcement{
+    width: 70%;
+    border-right: 1px solid rgba(128, 128, 128, 0.29);
+    border-left: 1px solid rgba(128, 128, 128, 0.29);
+    margin: auto auto;
+    color: rgb(46, 0, 46);
+    font-weight: 600;
+}
+
 @media screen and (max-width: 1200px){
     .fifthContent{
         height: 900px;

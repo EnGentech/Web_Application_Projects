@@ -44,6 +44,19 @@ $(document).ready(function(){
                 $(".nav-links").hide();
             }
         });
-    }    
+    }  
+    
+    function updateMarqueeBehavior() {
+        var marquee = $('marquee');
+        if ($(window).width() < 768) {
+            marquee.attr('behavior', 'scroll');
+        } else {
+            marquee.attr('behavior', 'alternate');
+        }
+    }
+
+    updateMarqueeBehavior();
+
+    $(window).resize(updateMarqueeBehavior);
     
 })

@@ -79,7 +79,11 @@
     <div id="subAll">
         {% block content %}
         <!--middle page-->
-
+        <section id="announcement">
+            <marquee behavior="alternate" direction="alternate">
+                Our reset button has been fixed, you can now reset your password
+            </marquee>
+        </section>
         {% if messages %}
             {% for message in messages %}
                 <center><p class="landingPage_messages fadeOff">{{ message }}</p></center>
