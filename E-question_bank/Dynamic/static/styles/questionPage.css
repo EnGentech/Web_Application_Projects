@@ -241,6 +241,10 @@ embed{
         width: 95% !important;
     }
 
+    .head_question{
+        font-size: 1.2em;
+    }
+
     label{
         display: none !important;
     }

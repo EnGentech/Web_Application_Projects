@@ -16,4 +16,6 @@ urlpatterns = [
     path("user/taskNotification/", views.taskNotificationMailSent, name="taskNotification"),
     path("user/genReg/<int:regNumber>/", views.generateReferenceNumber, name="genRef"),
     path("user/validateRefNumber/", views.validateReferenceNumber, name="validateRefNumber"),
+    path("user/resetPassword/", views.resetPinCode, name="resetPasswordNone"),
+    path("user/resetPassword/<str:type>/", views.resetPinCode, name="resetPassword"),
 ]

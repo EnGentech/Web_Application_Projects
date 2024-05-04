@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="shortcut icon" href="{% static 'images/favicon/equestionLogo.PNG' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
     <script src="{% static 'scripts/index.js' %}"></script>
@@ -31,6 +32,7 @@
             <p>Sorry, this page is not available on mobile devices at the moment</p>
         </div>
     </div>
+    
     <!--header page-->
     <div id="all">
         <div class="header">
@@ -58,9 +60,20 @@
                 </ul>
             </div>
 
-            <div class="logo">
-                <img src="{% static 'images/logo_light_hp.png' %}" alt="">
-            </div>
+            {% if staff %}
+                <a class="logoLi" href="{% url 'homePage' %}">
+                    <div class="logo">
+                        <img src="{% static 'images/logo_light_hp.png' %}" alt="">
+                    </div>
+                </a>
+            {% else %}
+                <a class="logoLi" href="{% url 'index' %}">
+                    <div class="logo">
+                        <img src="{% static 'images/logo_light_hp.png' %}" alt="">
+                    </div>
+                </a>
+            {% endif %}
+            
         </div>
 
     <div id="subAll">
@@ -216,7 +229,11 @@
                 <section class="in_content">
                     <h3>Connect with us on social Media</h3>
                     <p>Follow us on social media for the latest news and <br>resources from us</p>
-                    <img src="{% static 'images/all_media_static.png' %}" alt="" width="200px" height="30px">
+                    <a href="https://web.facebook.com/engr.gentle.1/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/08039678842" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:hp.eportal@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/iberedem-inyang-3b88ba223/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/channel/UCYmk2Fu0B1nre0N2Q05Zp_A" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 </section>
             </div>
             <div class="footnote">

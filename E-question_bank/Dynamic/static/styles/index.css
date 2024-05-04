@@ -344,6 +344,12 @@ body{
     font-weight: bold;
 }
 
+.in_content i{
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: darkblue;
+}
+
 @media screen and (max-width: 1200px){
     .fifthContent{
         height: 900px;
@@ -733,11 +739,26 @@ body{
     .in_content {
         flex: 0 0 calc(33.33% - 20px);
         margin: 10px;
-        text-align: center;
+        text-align: left;
+    }
+
+    .in_content:nth-child(1){
+        display:none;
+    }
+
+    .in_content:nth-child(2){
+        line-height: 8px;
+        padding-left: 12px;
+        flex: 1
     }
 
     .in_content:nth-child(3) {
-        margin-top: 20px;
+        flex: 2;
+        padding-right: 5px;
+    }
+
+    .in_content:nth-child(3) br{
+        display: none;
     }
 
     #welcome{

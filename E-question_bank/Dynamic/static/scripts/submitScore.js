@@ -211,11 +211,11 @@ $(document).ready(function(){
                     let nextRegNo = $("#regNo").val();
                     let nextName = $("#regNo option:selected").text();
                     let nextUrl = "";
-                    alert(($("#regNo option").length))
 
                     $("#regNo").val(nextRegNo).trigger("change");
                     $("#name").val(nextName);
                     $("#url").val(nextUrl);
+                    $("#url").attr("title", nextURL)
                 } else {
                     $("#regNo").val("Completed");
                     $("#fullName").text("Completed");

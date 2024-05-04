@@ -28,6 +28,8 @@ body{
     display: flex;
     justify-content: space-evenly;
     background: linear-gradient(-7deg, rgba(83, 83, 84, 0.892) 30%, rgba(32, 32, 32, 0.92) 0%);
+    padding-bottom: 15px;
+    padding-top: 10px;
 }
 
 .centa{
@@ -356,18 +358,37 @@ body{
     }
     .header img{
       width: 100px;
-      height: 20px;
+      height: 40px;
     }
+
+    .centa{
+      margin: 10px;
+    }
+
+    .aboutUs img{
+      display: block;
+      float: none;
+      margin: auto auto;
+    }
+
+    .midMe{
+      margin: 20px 0px 0px 0px;
+    }
+
+    .centerPage{
+      width: 95%;
+    }
+
   }
 
-  .infoBase {
-    max-width: 800px;
-    margin: 2px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 20px;
+.infoBase {
+  max-width: 800px;
+  margin: 2px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .infoBase h2 {

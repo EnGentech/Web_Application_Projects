@@ -4,6 +4,7 @@
 {% block head %}
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'styles/signIn.css' %}">
+    <script src="{% static 'scripts/signIn.js' %}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
 {% endblock head %}
@@ -19,6 +20,56 @@
         <center><p class="signIn_messages fadeOff">{{ message }}</p></center>                 
     {% endfor %}
 {% endif %}
+
+    <div id="resetHide">
+        <div id="resetDialog">
+            <span class="closeButton">&#10005;</span>
+            <form action="" class="resetForm">
+                <h2>Enter 6 digit code</h2>
+                <p>A six digit code has been sent to the mail linked to your account, please enter same code before 3mins expiration window period</p>
+                <input type="number" name="resetCode" id="resetCode">
+                
+                <p id="codeValidation"></p>
+                <input type="submit" value="Validate Code" id="validateCode">
+                <p id="resetDialogFooter">* If you enter a wrong code for a maximum of 3 times, your account shall be disabled *</p>
+            </form>
+        </div>
+    </div>
+
+    <div id="resetHide2">
+        <div id="resetDialog">
+            <span class="closeButton">&#10005;</span>
+            <form action="" class="resetForm">
+                <h2>Enter registered email address</h2>
+                <p>A six digit code will be sent to the mail linked to your account</p>
+                <input type="text" name="email" id="email">
+                <section id="spinnerSection">
+                    <div class="spinner">
+                    </div>
+                    <p id="loading">Loading...</p>
+                </section>
+                <p id="mailValidation"></p>
+                <input type="submit" value="Submit" id="submitMail">
+            </form>
+        </div>
+    </div>
+
+    <div id="resetHide3">
+        <div id="resetDialog">
+            <span class="closeButton">&#10005;</span>
+            <form action="{% url 'resetPassword' type='reset' %}" id="resetForm" method="POST">
+                {% csrf_token %}
+                <h2>Reset Password</h2>
+                <p>Enter new Login credentials</p>
+                <input type="password" name="resetPassword" id="resetPassword" placeholder="New Password">
+                <input type="password" name="resetPassword2" id="resetPassword2" placeholder="Confirm Password">
+                <p id="passwordValidation"></p>
+                <input type="submit" value="Reset" id="resetMe">
+            </form>
+        </div>
+    </div>
+
+
     <div class="signIn_container">
         <div class="signIn_main">
             <h1 class="head_signIn">Heritage <span>E-Question</span> Bank</h1>
@@ -39,7 +90,7 @@
                 </form>
 
                 <p>not registered? <span><a href="{% url 'signUp' %}">SignUp</a></span></p>
-                <p id="reset">Forgot password? <span><a href="">Reset</a></span></p>
+                <p id="reset">Forgot password? <span><a href="" id="activateResetBtn">Reset</a></span></p>
             </section>
         </div>
     </div>

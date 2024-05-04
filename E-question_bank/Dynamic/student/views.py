@@ -14,6 +14,9 @@ from datetime import datetime, timedelta
 from .emailfunction import EmailLogic
 from lecturers.views import lecturer_required
 from random import randint
+from django.core.exceptions import ValidationError
+from django.contrib.auth.password_validation import validate_password
+from django.contrib.sessions.models import Session
 
 
 tasks = {
@@ -393,3 +396,55 @@ def validateReferenceNumber(request):
             material = Resources.objects.filter(course_code=courseCode).first()
             return JsonResponse({"status": 1, "material": material.lectureMaterial.url})
     return JsonResponse({"status": 0})
+
+def resetPinCode(request, type=None):
+    if request.method == "GET":
+        email = request.GET.get("email")
+        user = Students_data.objects.filter(email=email).first()
+        if user:
+            resetCode = randint(100000, 999999)
+            request.session['resetCode'] = resetCode
+            request.session['email'] = email
+            request.session.set_expiry(180)
+            
+            emailData = {
+                "email": email,
+                "username": user.username,
+                "resetCode": resetCode
+            }
+            email_ = EmailLogic()
+            email_.passwordReset(emailData)
+            return JsonResponse({"message": "Pin code reset successful"})
+        else:
+            return JsonResponse({"message": "Not Found"})
+        
+    elif request.method == 'POST' and type == "reset":
+        resetCode = request.session.get('resetCode')
+        email = request.session.get('email')
+
+        new_password = request.POST.get("resetPassword")
+        confirm_password = request.POST.get("resetPassword2")
+        if new_password != confirm_password:
+            return JsonResponse({"message": "Passwords do not match"}, status=400)
+        try:
+            validate_password(new_password)
+            user = Students_data.objects.filter(email=email).first()
+            if user:
+                user.set_password(new_password)
+                user.save()
+                messages.success(request, "Password reset successful")
+                return render(request, "signIn.html")
+            else:
+                return JsonResponse({"message": "User not found"})
+        except ValidationError as e:
+            return JsonResponse({"message": e.messages[0]}, status=400)
+    
+    elif request.method == "POST":
+        resetCode = request.session.get('resetCode')
+        requestCode = request.POST.get("resetCode")
+        print(resetCode)
+        print(requestCode)
+        if int(requestCode) == int(resetCode):
+            return JsonResponse({"status": "1"})
+        else:
+            return JsonResponse({"status": "0"})

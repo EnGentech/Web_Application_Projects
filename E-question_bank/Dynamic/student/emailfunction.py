@@ -112,3 +112,16 @@ class EmailLogic:
         except Exception as e:
             print(f"An error occurred while sending email: {str(e)}")
             return False
+        
+    def passwordReset(self, data):
+        subject = "Password Reset Notification"
+        message = f"Dear {data['username']}\nA request for password reset was send to the server, if this was not you, kindly ignore and report same to the this mail address.\nYour reset code is: {data['resetCode']}.\nNote: For security measures, this code will no longer be active in 3 minutes time\n\nThank you!"
+        from_email = self.hostEmail
+        to_email = [data["email"]]
+        try:
+            send_mail(subject, message, from_email, to_email)
+            print("Email sent successfully")
+            return True
+        except Exception as e:
+            print(f"An error occurred while sending email: {str(e)}")
+            return False
