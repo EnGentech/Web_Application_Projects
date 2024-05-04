@@ -10,6 +10,7 @@ from functools import wraps
 from django.http import HttpResponse
 from django.http import JsonResponse
 from student.emailfunction import EmailLogic
+import json
 
 # Create your views here.
 
@@ -249,3 +250,18 @@ def scoreActiveStudent(request):
             user.save()
 
     return render(request, 'scoreBoard.html')
+
+def announcementUpdate(request):
+    if request.method == "POST":
+        announcement = request.POST.get("announcement")
+        print(announcement)
+        info = {}
+        if announcement:
+            info.update({"announcement": announcement})
+        with open("./generic/announcement.json", "w") as file:
+            json.dump(info, file)
+            messages.success(request, "Announcement successfully updated")
+        return render(request, 'homePage.html')
+    with open("./generic/announcement.json", "r") as file:
+        data = json.load(file)
+    return JsonResponse(data)

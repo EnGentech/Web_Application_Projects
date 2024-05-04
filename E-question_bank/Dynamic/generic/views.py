@@ -117,4 +117,5 @@ def loadResources(request):
     resources = Resources.objects.filter(faculty=faculty, department=department).all()
     
     return render(request, "resources.html", {"resources": resources, 'faculty': faculty, 'department': department})
+
     

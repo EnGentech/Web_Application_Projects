@@ -10,4 +10,5 @@ urlpatterns = [
     path("staffLogout/", views.staffLogout, name="staffLogout"),
     path("scoreBoard/", views.scoreBoard, name="scoreBoard"),
     path("updateScores/", views.scoreActiveStudent, name="updateScores"),
+    path("announcement/", views.announcementUpdate, name="announcement"),
 ]

@@ -166,6 +166,52 @@ tr:nth-child(even){
     color: darkblue;
 }
 
+#announcementBtn{
+    width: 30%;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.247);
+    color: wheat;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.593);
+    margin-top: 2%;
+}
+
+#announcementBtn:hover{
+    background-color: rgba(255, 255, 255, 0.493);
+    color: white;
+    font-weight: bold;
+}
+
+#updateInfo{
+    width: 70%;
+    background-color: white;
+    border: none;
+    margin: auto auto;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 7px;
+    display: none;
+}
+
+#updateInfo input{
+    background-color: none;
+    border: none;
+}
+
+#updateInfo input[type="text"]{
+    width: 78%;
+    background-color: transparent;
+}
+
+#updateInfo input[type="text"]:focus, #updateInfo input[type="submit"]:focus, #announcementBtn:focus{
+    outline: none;
+}
+
+#updateInfo input[type="submit"]{
+    width: 20%;
+    margin-left: 1%;
+    border-left: 1px solid black;
+    font-weight: 600;
+}
+
 /* Responsiveness */
 @media screen and (max-width: 1200px) {
     .main_question h1 {

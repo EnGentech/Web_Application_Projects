@@ -164,5 +164,15 @@ $(document).ready(function(){
             alert("Generate and select user Reg Number")
         }
     })
+
+    const announcement = $("#announcementBtn")
+    announcement.click(function(){
+        $("#updateInfo").toggle();
+    });
+
+    $("#submitUpdate").click(function(){
+        $("#updateInfo").hide();
+    })
+    
     
 })

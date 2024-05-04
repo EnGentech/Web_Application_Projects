@@ -142,7 +142,14 @@
     </div>
 
     <div class="lecturers-footer">
-        <p>Contact: engen.inyang@gmail.com</p>
+        <form action="{% url 'announcement' %}" method="post" id="announcementContainer">
+            {% csrf_token %}
+            <section id="updateInfo">
+                <input type="text" name="announcement" id="announcement">
+                <input type="submit" value="Update" id="submitUpdate">
+            </section>
+        </form>
+        <p><button id="announcementBtn">Update Announcement</button></p>
     </div>
 
 {% endblock content %}

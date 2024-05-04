@@ -1,5 +1,18 @@
 $(document).ready(function(){
 
+    $.ajax({
+        type: "GET",
+        url: "/staff/announcement/",
+        dataType: "json",
+        success: function (response) {
+            if (response.announcement) {
+                $("#infoUpdate").css("font-weight", "bold")
+                $("#infoUpdate").text(response.announcement)
+            }
+        },
+        
+    });
+
     // var timer;
 
     // function reloadPage() {
