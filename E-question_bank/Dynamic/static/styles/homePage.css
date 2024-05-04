@@ -283,5 +283,26 @@ tr:nth-child(even){
         border-radius: 10px;
         margin-bottom: 20px;
     }
+
+    #announcementBtn{
+        width: 60%;
+        font-size: 0.8em;
+    }
     
+    #updateInfo{
+        width: 100%;
+        background-color: transparent;
+    }
+
+    #updateInfo input[type="text"]{
+        width: 90%;
+        background-color: white;
+        padding: 2px 2px 2px 8px;
+        border-radius: 5px;
+    }
+
+    #updateInfo input[type="submit"]{
+        font-size: 0.8em;
+        margin-top: 3px;
+    }
 }

@@ -145,7 +145,7 @@
         <form action="{% url 'announcement' %}" method="post" id="announcementContainer">
             {% csrf_token %}
             <section id="updateInfo">
-                <input type="text" name="announcement" id="announcement">
+                <input type="text" name="announcement" id="announcement" placeholder="Update announcement">
                 <input type="submit" value="Update" id="submitUpdate">
             </section>
         </form>
