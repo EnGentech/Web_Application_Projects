@@ -18,4 +18,5 @@ urlpatterns = [
     path("user/validateRefNumber/", views.validateReferenceNumber, name="validateRefNumber"),
     path("user/resetPassword/", views.resetPinCode, name="resetPasswordNone"),
     path("user/resetPassword/<str:type>/", views.resetPinCode, name="resetPassword"),
+    path("user/take_test/", views.takeTest, name="takeTest"),
 ]

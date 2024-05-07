@@ -1,0 +1,95 @@
+{% extends "landingPage.html" %}
+{% load static %}
+{% block head %}
+    <script src="https://kit.fontawesome.com/11285bfb5b.js" crossorigin="anonymous"></script>
+    <title>Load Resources</title>
+    <link rel="stylesheet" href="{% static 'styles/testPage.css' %}">
+    <script src="{% static 'scripts/testPage.js' %}"></script>
+{% endblock head %}
+
+    
+{% block content %}
+<div id="allContent">
+    <div class="headContent">
+        <div id="floatRight">
+            <h5 id="timeAllowed">Time allowed: <span>30mins</span></h5>
+            <div id="scoreLog">
+                <section id="score">
+                    <h5 id="numerator">100</h5>
+                    <h5 id="denomenator">100</h5>
+                </section>
+                <p id="name">Gentle Inyang</p>
+                <p id="reg">230115003</p>
+            </div>
+        </div>
+        <h2>QUIZ ON</h2>
+        <section id="userDetails">
+            <p>CTE323: <span>Python Programming Language</span></p>
+        </section>
+    </div><hr>
+    <p id="instruction">
+        <span class="asterisk">*</span> Pick only the options that appears correct in respect to the question asked.
+    </p>
+    
+    <div class="questionSection">
+        {% if quiz %}
+            {% for questions in quiz %}
+                <div class="question">
+                    <div class="questionHead">
+                        <section class="serial">
+                            <h5>Q_{{ forloop.counter }}:</h5>
+                        </section>
+                        <section class="question_text">
+                            <p>{{ questions.question }}</p>
+                        </section>
+                    </div>
+            
+                    <section class="options">
+                        <input type="radio" class="optionSelect ans1" name="question{{ forloop.counter }}" id="" value="">
+                        <label class="optionLabel ans2" for=""><span>A.</span>  <pre>{{ questions.options.A }}</pre></label><br>
+
+                        <input type="radio" class="optionSelect ans2" name="question{{ forloop.counter }}" id="" value="">
+                        <label class="optionLabel" for=""><span>B.</span>   <pre>{{ questions.options.B }}</pre></label><br>
+
+                        <input type="radio" class="optionSelect ans3" name="question{{ forloop.counter }}" id="" value="">
+                        <label class="optionLabel" for=""><span>C.</span>   <pre>{{ questions.options.C }}</pre></label><br>
+
+                        <input type="radio" class="optionSelect ans4" name="question{{ forloop.counter }}" id="" value="">
+                       <label class="optionLabel" for=""><span>D.</span>    <pre>{{ questions.options.D }}</pre></label><br>
+                    </section>
+                </div>         
+            {% endfor %}
+        {% else %}
+        {% endif %}
+    
+        {% comment %} <div class="question">
+            <div class="questionHead">
+                <section class="serial">
+                    <h5>Q_2:</h5>
+                </section>
+                <section class="question_text">
+                    <p>What is the output of the following code?</p>
+                </section>
+            </div>
+        
+            <section class="options">
+                <input type="radio" class="optionSelect" name="question2" id="option5" value="">
+                <pre><label class="optionLabel" for="option5">A. 30</label><br></pre>
+        
+                <input type="radio" class="optionSelect" name="question2" id="option6" value="">
+                <pre><label class="optionLabel" for="option6">B. 10</label><br></pre>
+        
+                <input type="radio" class="optionSelect" name="question2" id="option7" value="">
+                <pre><label class="optionLabel" for="option7">C. 20</label><br></pre>
+        
+                <input type="radio" class="optionSelect" name="question2" id="option8" value="">
+                <pre><label class="optionLabel" for="option8">D. 40</label><br></pre>
+            </section>
+        </div>
+         {% endcomment %}
+    
+    </div>
+</div>
+
+   
+{% endblock content %}

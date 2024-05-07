@@ -1,0 +1,123 @@
+#allContent{
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
+    margin: auto auto;
+    border-radius: 10px;
+    width: 70%;
+    border: 1px solid rgba(255, 0, 0, 0.311);
+    background-color: rgba(235, 225, 225, 0.874);
+    padding: 10px 15px 15px 15px;
+}
+
+body{
+    background-image: none;
+}
+
+#floatRight{
+    float: right;
+}
+
+#timeAllowed{
+    line-height: 40px;
+    margin-right: 20px;
+    color: rgb(1, 53, 1);
+    text-decoration: underline;
+}
+
+.headContent h2, .headContent p{
+    text-align: center;
+}
+
+.headContent p{
+    color: rgb(0, 0, 78);
+    font-weight: bold;
+    font-size: small;
+}
+
+.questionHead{
+    display: flex;
+}
+
+.questionHead h5{
+    font-weight: 400;
+    color: darkblue;
+    padding-right: 10px;
+}
+
+#instruction{
+    text-align: center;
+    color: rgb(61, 1, 1);
+    font-weight: bolder;
+}
+
+.asterisk{
+    color: red;
+}
+
+.options{
+    margin-left: 60px;
+    margin-bottom: 30px;
+}
+
+.options label{
+    font-weight: 400;
+    margin-left: 12px;
+}
+
+.question_text p{
+    margin-bottom: 2px;
+}
+
+.optionSelect{
+    cursor: pointer;
+    float: left;
+    margin-top: 7px;
+}
+
+.optionSelect:hover{
+    background-color: rgb(247, 250, 246);
+}
+
+.optionLabel{
+    cursor: pointer;
+}
+
+.optionLabel:hover{
+    color: rgb(36, 0, 128);
+    font-weight: 600;
+}
+
+#score{
+    border: 1px solid rgb(63, 0, 0);
+    box-shadow: 1px 1px 5px rgb(3, 0, 0);
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    margin: auto auto;
+    padding: 10px;
+}
+
+#reg, #name{
+    line-height: 4px;
+}
+
+#name{
+    margin: 12px;
+}
+
+#numerator{
+    padding-top: 8%;
+    padding-bottom: 5%;
+    border-bottom: 2px solid rgba(0, 0, 69, 0.537);
+    margin-bottom: 2px;
+}
+
+#denominator{
+    line-height: 0px;
+}
+
+pre{
+    margin-left: 25px;
+    margin-top: -22px;
+}

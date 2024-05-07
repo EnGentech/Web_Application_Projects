@@ -448,3 +448,63 @@ def resetPinCode(request, type=None):
             return JsonResponse({"status": "1"})
         else:
             return JsonResponse({"status": "0"})
+        
+def takeTest(request):
+    courseCode = "CTE323"
+    duration = 30
+
+    pickedQuestion = []
+    request.session['pickedQuestion'] = pickedQuestion
+    request.session.set_expiry(60 * duration)
+
+    with open("student/quiz/CTE323.json", "r") as file:
+        content = json.load(file)
+        
+    length = len(content["questions"])
+
+    picks = []
+    for x in range(20):
+        while True:
+            pick = randint(0, length - 1)
+            if pick in picks:
+                continue
+            else:
+                picks.append(pick)
+                break
+
+    result = []
+    for pick in picks:
+        pickedQuestion.append(content.get("questions")[pick])
+            
+    # print("\n***  Result ***")
+    # score = 0
+    # i = 0
+    # for key in result:
+    #         if result[i]["correctAnswer"].lower() == result[i]["userChoice"].lower():
+    #             score += 1
+    #         i += 1
+    # print(f"Your score: {score}/{len(result)}")
+    # if score < len(result):
+    #     print("\n*** Corrections ***".center(70))
+    #     print("*" * 50)
+    #     print("Do you wish to view corretions?, Enter yes or no")
+    #     choice = input("...$ ")
+    #     print("*" * 70)
+    #     print("\n")
+        
+    #     if choice.lower() == "yes":
+    #         i = 0
+    #         for x in result:
+    #             print(f'Question: {result[i]["question"]}')
+    #             print(f'Your choice: {(result[i]["userChoice"]).upper()}', end="\t")
+    #             print(f'Correct Answer: {result[i]["correctAnswer"]}')
+    #             print("*" * 50 + "\n")
+    #             i += 1
+    #         print("*" * 70)
+    #         print("*** Bye ***".center(70))
+    #     else:
+    #         print("*** Bye ***".center(70))
+    # else:
+    #     print("*" * 70)
+    #     print("*** Congratulations ***".center(70))
+    return render(request, "testPage.html", {"quiz": pickedQuestion})
