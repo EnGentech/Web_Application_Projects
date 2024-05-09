@@ -4,9 +4,9 @@
 
 body{
     margin: 0px;
-    background-image: url(../images/side_lie.png), url(../images/side_line.png), url(../images/side_line2.png);
+    background-image:url(../images/side_line.png), url(../images/side_line2.png);
     background-repeat: no-repeat;
-    background-position: 0% 105%, left 50%, left 61%;
+    background-position:left 50%, left 61%;
 }
 
 .header{

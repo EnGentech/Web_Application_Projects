@@ -61,6 +61,9 @@ $(document).ready(function(){
     
     function updateMarqueeBehavior() {
         var marquee = $('marquee');
+        let count = marquee.text()
+        count = count.length
+        console.log(count)
         if ($(window).width() < 768) {
             marquee.attr('behavior', 'scroll');
         } else {

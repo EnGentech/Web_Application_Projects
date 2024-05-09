@@ -8,7 +8,7 @@ from .backends import StudentBackend
 from django import forms
 from django.contrib.auth.decorators import login_required
 from functools import wraps
-from django.http import JsonResponse, HttpResponse
+from django.http import Http404, JsonResponse, HttpResponse
 import json
 from datetime import datetime, timedelta
 from .emailfunction import EmailLogic
@@ -17,6 +17,7 @@ from random import randint
 from django.core.exceptions import ValidationError
 from django.contrib.auth.password_validation import validate_password
 from django.contrib.sessions.models import Session
+from django.core.paginator import Paginator, EmptyPage
 
 
 tasks = {
@@ -53,10 +54,13 @@ def userLogin(request):
         if "heritage_students" in request.path:
             studentAuth = StudentBackend()
             user = studentAuth.authenticate(request, username=username, password=password)
-            if user is not None:
+            if user is not None and user.is_active == 1:
                 login(request, user, backend="student.backends.StudentBackend")
                 messages.success(request, "Login successful")
                 return redirect("landingPage")
+            elif user is not None and user.is_active == 0:
+                messages.error(request, "Your account has been disabled")
+                return render(request, "signIn.html")
             else:
                 messages.error(request, "Invalid login credentials")
                 return render(request, "signIn.html")
@@ -449,62 +453,41 @@ def resetPinCode(request, type=None):
         else:
             return JsonResponse({"status": "0"})
         
-def takeTest(request):
+def takeTest(request, pageNumber=1):
     courseCode = "CTE323"
     duration = 30
 
-    pickedQuestion = []
-    request.session['pickedQuestion'] = pickedQuestion
-    request.session.set_expiry(60 * duration)
+    pickedQuestion = request.session.get('pickedQuestion', [])
+    request.session.set_expiry(duration)
 
-    with open("student/quiz/CTE323.json", "r") as file:
-        content = json.load(file)
+    if not pickedQuestion:
+        with open(f"student/quiz/{courseCode}.json", "r") as file:
+            content = json.load(file)
+            questions = content.get("questions")
         
-    length = len(content["questions"])
+        length = len(questions)
+        picks = []
+        for _ in range(20):
+            while True:
+                pick = randint(0, length - 1)
+                if pick in picks:
+                    continue
+                else:
+                    picks.append(pick)
+                    break
 
-    picks = []
-    for x in range(20):
-        while True:
-            pick = randint(0, length - 1)
-            if pick in picks:
-                continue
-            else:
-                picks.append(pick)
-                break
+        for pick in picks:
+            pickedQuestion.append(questions[pick])
 
-    result = []
-    for pick in picks:
-        pickedQuestion.append(content.get("questions")[pick])
-            
-    # print("\n***  Result ***")
-    # score = 0
-    # i = 0
-    # for key in result:
-    #         if result[i]["correctAnswer"].lower() == result[i]["userChoice"].lower():
-    #             score += 1
-    #         i += 1
-    # print(f"Your score: {score}/{len(result)}")
-    # if score < len(result):
-    #     print("\n*** Corrections ***".center(70))
-    #     print("*" * 50)
-    #     print("Do you wish to view corretions?, Enter yes or no")
-    #     choice = input("...$ ")
-    #     print("*" * 70)
-    #     print("\n")
-        
-    #     if choice.lower() == "yes":
-    #         i = 0
-    #         for x in result:
-    #             print(f'Question: {result[i]["question"]}')
-    #             print(f'Your choice: {(result[i]["userChoice"]).upper()}', end="\t")
-    #             print(f'Correct Answer: {result[i]["correctAnswer"]}')
-    #             print("*" * 50 + "\n")
-    #             i += 1
-    #         print("*" * 70)
-    #         print("*** Bye ***".center(70))
-    #     else:
-    #         print("*** Bye ***".center(70))
-    # else:
-    #     print("*" * 70)
-    #     print("*** Congratulations ***".center(70))
-    return render(request, "testPage.html", {"quiz": pickedQuestion})
+        request.session['pickedQuestion'] = pickedQuestion
+
+    paginator = Paginator(pickedQuestion, 5)
+    try:
+        page_obj = paginator.page(pageNumber)
+    except EmptyPage:
+        raise Http404("No questions available")
+    
+    totalPages = paginator.num_pages
+    count = paginator.page_range.index(pageNumber) + 1
+
+    return render(request, "testPage.html", {"quiz": page_obj, "totalPages": totalPages, "pageCount": count, "duration": duration})

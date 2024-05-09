@@ -81,7 +81,7 @@ from .models import Resources
 def uploadResources(request):
     if not request.user.is_authenticated:
         return redirect("signInLec")
-    
+
     if request.method == "POST":
         faculty = request.POST.get('faculty')
         department = request.POST.get('department')
@@ -164,7 +164,41 @@ def scoreBoard(request):
 
         data = Assessment.objects.filter(course_code=courseCode, level=level, semester=semester, student__faculty=faculty, student__department=department, moduleName=task).all()
         data_dict = {}
-        for i in data:
+        plagiarismList = {}
+
+        if data:
+            try:
+                for _ in data:
+                    url = _.urlSubmit
+                    if url in plagiarismList:
+                        plagiarismList[url].append(_.student.regNumber)
+                    else:
+                        if data.filter(urlSubmit=url).count() > 1:
+                            plagiarismList[url] = [_.student.regNumber]
+
+                    if plagiarismList:
+                        for key, value in plagiarismList.items():
+                            if len(value) > 1:
+                                for culprits in value:
+                                    user = Assessment.objects.filter(urlSubmit=key, student__regNumber=culprits).first()
+                                    user.score = 1
+                                    remark = remark = remark = f"VERBATIM PLAGIARISM DETECTED\n\nWe've noticed similarities between your submitted content and other sources, raising concerns of potential plagiarism. Academic integrity is paramount, and plagiarism is strictly prohibited.\n\nWe urge you to address this matter seriously. Misunderstandings can occur, so if you believe there's been an error, please meet with your lecturer or advisor for clarification and support.\n\nMaintaining academic integrity is essential. We trust you'll take the necessary steps to uphold these standards.\n\nThank you!"
+
+                                    user.remark = remark
+                                    data = {
+                                        "email": user.student.email,
+                                        "username": user.student.username,
+                                        "score": 1,
+                                        "remark": remark
+                                    }
+                                    email = EmailLogic()
+                                    email.scoreNotification(data)
+                                    user.save()
+            except Exception as e:
+                pass
+
+        newData = Assessment.objects.filter(course_code=courseCode, level=level, semester=semester, student__faculty=faculty, student__department=department, moduleName=task).all()
+        for i in newData:
             content = {
                 i.student.regNumber: {
                     "fullName": i.student.first_name + " " + i.student.last_name,
@@ -174,7 +208,8 @@ def scoreBoard(request):
                 }
             }
             data_dict.update(content)
-        if data:
+
+        if newData:
             return JsonResponse({'data': data_dict})
     return render(request, 'scoreBoard.html')
 
@@ -231,7 +266,7 @@ def scoreActiveStudent(request):
         regNo = request.POST.get("regNo")
         score = request.POST.get("score")
         remark = request.POST.get("remark")
-        
+
         user = Assessment.objects.filter(student__regNumber=regNo, course_code=coureCode, level=level, semester=semester,
         student__faculty=faculty, student__department=department,  moduleName=taskName).first()
 
@@ -254,7 +289,6 @@ def scoreActiveStudent(request):
 def announcementUpdate(request):
     if request.method == "POST":
         announcement = request.POST.get("announcement")
-        print(announcement)
         info = {}
         if announcement:
             info.update({"announcement": announcement})

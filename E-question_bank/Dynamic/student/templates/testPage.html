@@ -12,7 +12,7 @@
 <div id="allContent">
     <div class="headContent">
         <div id="floatRight">
-            <h5 id="timeAllowed">Time allowed: <span>30mins</span></h5>
+            <h5 id="timeAllowed">Time allowed: <span>{{ duration }}mins</span></h5>
             <div id="scoreLog">
                 <section id="score">
                     <h5 id="numerator">100</h5>
@@ -61,6 +61,13 @@
             {% endfor %}
         {% else %}
         {% endif %}
+
+        <div class="parginationBtn">
+            <button id="submit">Submit</button>
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+            <p id="pageCount">Page <span id="countPage">{{ pageCount }}</span> of {{ totalPages }}</p>
+        </div>
     
         {% comment %} <div class="question">
             <div class="questionHead">
