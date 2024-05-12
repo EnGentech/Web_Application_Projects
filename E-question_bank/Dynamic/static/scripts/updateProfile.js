@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    let spinner = $('#spinnerSection');
     var url = '/heritage_students/login/profileUpdate/';
 
     $('#submitCourseForm').click(function(event){
@@ -44,6 +45,7 @@ $(document).ready(function(){
         formData.append('level', level);
         formData.append('semester', semester);
         formData.append('profile_picture', profilePicture);
+        spinner.show()
 
         $.ajax({
             method: 'POST',

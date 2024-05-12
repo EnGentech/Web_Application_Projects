@@ -4,6 +4,7 @@
     <script src="https://kit.fontawesome.com/11285bfb5b.js" crossorigin="anonymous"></script>
     <title>Load Resources</title>
     <link rel="stylesheet" href="{% static 'styles/updateProfile.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/spinner.css' %}">
     <script src="{% static 'scripts/updateProfile.js' %}"></script>
 {% endblock head %}
 
@@ -27,7 +28,7 @@
 
                     <br><label for="OtherName" id="oName">Other Name <label for="regNo" class="label_"><span class="asteriskColor">* </span>Registration Number</label></label><br>
                     <input type="text" name="otherName" id="oName" placeholder="Other Name" required>
-                    <input type="number" name="regNo" id="regNo" placeholder="xxxxxxxx" min=10000000 max=99999999 required>
+                    <input type="number" name="regNo" id="regNo" placeholder="xxxxxxxx" pattern="\d{8}" required>
 
                     <br><label for="level" id="label_level"><span class="asteriskColor">* </span> Level <label for="semester" id="label_reg"><span class="asteriskColor">* </span>Semester</label></label><br>
 
@@ -71,6 +72,11 @@
                         </table>
                     </section>
                     <p id="countRegistered">Registered Courses: <span id="onCheck">0</span></p>
+                    <section id="spinnerSection">
+                        <div class="spinner">
+                        </div>
+                        <p id="loading">Loading...</p>
+                    </section>
                     <input type="submit" value="Submit Course Form" id="submitCourseForm">
                 </form>
                 

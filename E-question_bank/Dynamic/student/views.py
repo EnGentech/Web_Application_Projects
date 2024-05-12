@@ -456,9 +456,25 @@ def resetPinCode(request, type=None):
 def takeTest(request, pageNumber=1):
     courseCode = "CTE323"
     duration = 30
+    markScheme = {}
 
     pickedQuestion = request.session.get('pickedQuestion', [])
-    request.session.set_expiry(duration)
+    request.session.set_expiry(duration + 5)
+
+    if request.method == "POST":
+        data = request.body.decode('utf-8')
+        quiz_data = json.loads(data).get("quiz")
+
+        for x in pickedQuestion:
+            markScheme[x["questionID"]] = x["answer"]
+
+        score = 0
+
+        for key, value in quiz_data.items():
+            if str(key) in str(markScheme) and value == markScheme[int(key)]:
+                score += 5
+            
+        return JsonResponse({"score": score})
 
     if not pickedQuestion:
         with open(f"student/quiz/{courseCode}.json", "r") as file:

@@ -12,10 +12,10 @@
 <div id="allContent">
     <div class="headContent">
         <div id="floatRight">
-            <h5 id="timeAllowed">Time allowed: <span>{{ duration }}mins</span></h5>
+            <h5 id="timeAllowed">Time allowed: <span id="duration">{{ duration }}mins</span></h5>
             <div id="scoreLog">
                 <section id="score">
-                    <h5 id="numerator">100</h5>
+                    <h5 id="numerator">0</h5>
                     <h5 id="denomenator">100</h5>
                 </section>
                 <p id="name">Gentle Inyang</p>
@@ -35,6 +35,7 @@
         {% if quiz %}
             {% for questions in quiz %}
                 <div class="question">
+                    <p class="questionID hide">{{ questions.questionID }}</p>
                     <div class="questionHead">
                         <section class="serial">
                             <h5>Q_{{ forloop.counter }}:</h5>
@@ -45,16 +46,16 @@
                     </div>
             
                     <section class="options">
-                        <input type="radio" class="optionSelect ans1" name="question{{ forloop.counter }}" id="" value="">
+                        <input type="radio" class="optionSelect ans1" name="question{{ forloop.counter }}" id="" value="A">
                         <label class="optionLabel ans2" for=""><span>A.</span>  <pre>{{ questions.options.A }}</pre></label><br>
 
-                        <input type="radio" class="optionSelect ans2" name="question{{ forloop.counter }}" id="" value="">
+                        <input type="radio" class="optionSelect ans2" name="question{{ forloop.counter }}" id="" value="B">
                         <label class="optionLabel" for=""><span>B.</span>   <pre>{{ questions.options.B }}</pre></label><br>
 
-                        <input type="radio" class="optionSelect ans3" name="question{{ forloop.counter }}" id="" value="">
+                        <input type="radio" class="optionSelect ans3" name="question{{ forloop.counter }}" id="" value="C">
                         <label class="optionLabel" for=""><span>C.</span>   <pre>{{ questions.options.C }}</pre></label><br>
 
-                        <input type="radio" class="optionSelect ans4" name="question{{ forloop.counter }}" id="" value="">
+                        <input type="radio" class="optionSelect ans4" name="question{{ forloop.counter }}" id="" value="D">
                        <label class="optionLabel" for=""><span>D.</span>    <pre>{{ questions.options.D }}</pre></label><br>
                     </section>
                 </div>         
@@ -62,38 +63,18 @@
         {% else %}
         {% endif %}
 
+        
+
         <div class="parginationBtn">
-            <button id="submit">Submit</button>
+            <form>
+                {% csrf_token %}
+                <button id="submit">Submit</button>
+            </form>
             <button id="prev">Previous</button>
             <button id="next">Next</button>
+            <p class="hide totalPage"> {{ totalPages }} </p>
             <p id="pageCount">Page <span id="countPage">{{ pageCount }}</span> of {{ totalPages }}</p>
         </div>
-    
-        {% comment %} <div class="question">
-            <div class="questionHead">
-                <section class="serial">
-                    <h5>Q_2:</h5>
-                </section>
-                <section class="question_text">
-                    <p>What is the output of the following code?</p>
-                </section>
-            </div>
-        
-            <section class="options">
-                <input type="radio" class="optionSelect" name="question2" id="option5" value="">
-                <pre><label class="optionLabel" for="option5">A. 30</label><br></pre>
-        
-                <input type="radio" class="optionSelect" name="question2" id="option6" value="">
-                <pre><label class="optionLabel" for="option6">B. 10</label><br></pre>
-        
-                <input type="radio" class="optionSelect" name="question2" id="option7" value="">
-                <pre><label class="optionLabel" for="option7">C. 20</label><br></pre>
-        
-                <input type="radio" class="optionSelect" name="question2" id="option8" value="">
-                <pre><label class="optionLabel" for="option8">D. 40</label><br></pre>
-            </section>
-        </div>
-         {% endcomment %}
     
     </div>
 </div>
