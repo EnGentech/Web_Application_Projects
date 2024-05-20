@@ -10,9 +10,9 @@ class EmailLogic:
     hostEmail = os.getenv('EMAIL_HOST_ADDRESS')
     
     allTasks = {
-        "CTE323": "pythonTasks.json",
-        "COM122": "internetTasks.json",
-        "EED126": "entrepreneur.json"
+        "CTE323": "assignments/pythonTasks.json",
+        "COM122": "assignments/internetTasks.json",
+        "EED126": "assignments/entrepreneur.json"
     }
     
     def assessmentSubmision(self, data):

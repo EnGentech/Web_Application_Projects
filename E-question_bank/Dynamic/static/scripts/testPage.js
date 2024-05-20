@@ -1,4 +1,17 @@
 $(document).ready(function() {
+    $(document).on('contextmenu', function(event) {
+        event.preventDefault();
+    });
+
+    let testCompleted = false;
+
+    // Function to handle the beforeunload event
+    window.onbeforeunload = function() {
+        if (!testCompleted) {
+            return "Are you sure you want to leave this page? Your progress will be lost.";
+        }
+    };
+
     $("#submit").hide()
     $("#prev").hide()
     let selectedAnswers = {};
@@ -122,6 +135,7 @@ $(document).ready(function() {
     const countdown = () => {
         if (mins === 0 && secs === 0) {
             clearInterval(interval);
+            $("#submit").click();
             return;
         }
         if (secs === 0) {
@@ -131,10 +145,21 @@ $(document).ready(function() {
             secs--;
         }
         $("#duration").text(`${mins < 10 ? '0' + mins : mins}:${secs < 10 ? '0' + secs : secs} mins`);
-        $("#duration").css("color", "rgba(0, 0, 69)")
-        if ((mins <= 5) && (secs === 0)){
-            $("#duration").css("color", "red")
+        $("#duration").css("color", "white")
+        
+        let minsLeft = mins
+        if ((mins <= 3) && (secs === 0)){
+            var flashMessage = document.createElement("div");
+            flashMessage.classList.add("flash-message");
+            flashMessage.textContent = `You have ${minsLeft} minutes left to complete the test`;
+        
+            document.body.appendChild(flashMessage);
+        
+            setTimeout(function() {
+                flashMessage.remove();
+            }, 5000);
         }
+        
     };
     const interval = setInterval(countdown, 1000);
 
@@ -155,6 +180,33 @@ $(document).ready(function() {
                 const score = response.score;
                 $("#numerator").text(score);
                 $('html, body').animate({ scrollTop: 0 }, 'slow');
+
+                testCompleted = true;
+                window.onbeforeunload = null;
+
+                $.ajax({
+                    type: "POST",
+                    url: "/heritage_students/user/autoUpdateScore",
+                    data: {
+                        obtainedScore: score,
+                        cCode: $("#cCode").text(),
+                        moduleTitle: $("#mTitle").text()
+                    },
+                    headers: {
+                        'X-CSRFToken': csrftoken
+                    },
+                    dataType : "json",
+                    success: function (response) {
+                        console.log(response)
+                    },
+                    error: function (response) {
+                        console.log(response)
+                    }
+                });
+
+                setTimeout(() => {
+                    window.location.href = "/heritage_students/user/courseWork/";
+                }, 5000);
             },
             error: function (response) {
                 //console.log(response)

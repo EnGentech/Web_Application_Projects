@@ -22,5 +22,13 @@
         "activation": 0,
         "score": 0,
         "taskType": "Assignment"
+    },
+    "Module4":{
+        "intro": "Intro to Python",
+        "startDate": "12/05/2024",
+        "endDate": "20/05/2024",
+        "activation": 1,
+        "score": 0,
+        "taskType": "Test"
     }
 }

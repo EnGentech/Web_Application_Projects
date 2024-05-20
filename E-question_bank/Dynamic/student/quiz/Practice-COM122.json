@@ -1,0 +1,555 @@
+{
+    "questions": [
+      {
+        "question": "What is the primary function of DNS?",
+        "questionID": 1,
+        "options": {
+          "A": "Translating domain names to IP addresses",
+          "B": "Creating web pages",
+          "C": "Establishing secure connections",
+          "D": "Sending emails"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which protocol specifies communication between a browser and a server?",
+        "questionID": 2,
+        "options": {
+          "A": "FTP",
+          "B": "HTTP",
+          "C": "SMTP",
+          "D": "TCP"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What does the term 'URL' stand for?",
+        "questionID": 3,
+        "options": {
+          "A": "Universal Resource Locator",
+          "B": "Uniform Routing Language",
+          "C": "United Resource Library",
+          "D": "Unique Resource Link"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What are the components of the OSI model?",
+        "questionID": 4,
+        "options": {
+          "A": "7",
+          "B": "5",
+          "C": "3",
+          "D": "9"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does HTML define?",
+        "questionID": 5,
+        "options": {
+          "A": "Structure, organization, and content of a webpage",
+          "B": "Communication between servers",
+          "C": "Encrypted data transmission",
+          "D": "Database queries"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What are the key factors to consider when choosing a domain?",
+        "questionID": 6,
+        "options": {
+          "A": "Length of the domain name",
+          "B": "Relevance to the website's content",
+          "C": "Availability of the domain name",
+          "D": "All of the above"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What does HTTP define?",
+        "questionID": 7,
+        "options": {
+          "A": "Communication of a browser and server",
+          "B": "Data encryption",
+          "C": "Server-side scripting",
+          "D": "Database management"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the function of IPv4 and IPv6?",
+        "questionID": 8,
+        "options": {
+          "A": "Routing internet traffic",
+          "B": "Translating domain names to IP addresses",
+          "C": "Defining website structure",
+          "D": "Ensuring email security"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the purpose of an IP address?",
+        "questionID": 9,
+        "options": {
+          "A": "Identifying a device on a network",
+          "B": "Creating web pages",
+          "C": "Displaying multimedia content",
+          "D": "Sending text messages"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the term 'intranet' refer to?",
+        "questionID": 10,
+        "options": {
+          "A": "A private network within an organization",
+          "B": "A public network accessible to everyone",
+          "C": "A type of website",
+          "D": "A communication protocol"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the purpose of a URL?",
+        "questionID": 11,
+        "options": {
+          "A": "To specify the location of a resource on the web",
+          "B": "To encrypt data transmission",
+          "C": "To organize webpage content",
+          "D": "To establish secure connections"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the acronym 'DNS' stand for?",
+        "questionID": 12,
+        "options": {
+          "A": "Dynamic Naming System",
+          "B": "Domain Name System",
+          "C": "Data Network Service",
+          "D": "Digital Networking Solution"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What does the acronym 'HTTP' stand for?",
+        "questionID": 13,
+        "options": {
+          "A": "Hypertext Transmission Protocol",
+          "B": "Hyperlink Transfer Protocol",
+          "C": "Hypertext Transfer Protocol",
+          "D": "Hypertext Terminal Protocol"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What does the 'print()' function do in Python?",
+        "questionID": 14,
+        "options": {
+          "A": "Takes user input",
+          "B": "Displays output on the console",
+          "C": "Defines a new function",
+          "D": "Performs mathematical operations"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What does the term 'intranet' refer to?",
+        "questionID": 15,
+        "options": {
+          "A": "A private network within an organization",
+          "B": "A public network accessible to everyone",
+          "C": "A type of website",
+          "D": "A communication protocol"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which layer of the OSI model is responsible for routing?",
+        "questionID": 16,
+        "options": {
+          "A": "Network layer",
+          "B": "Data link layer",
+          "C": "Transport layer",
+          "D": "Session layer"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the function of an Ethernet?",
+        "questionID": 17,
+        "options": {
+          "A": "Connecting devices in a local area network (LAN)",
+          "B": "Transmitting radio signals",
+          "C": "Providing internet access",
+          "D": "Securing data transmission"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does HTML define?",
+        "questionID": 18,
+        "options": {
+          "A": "Structure, organization, and content of a webpage",
+          "B": "Communication between servers",
+          "C": "Encrypted data transmission",
+          "D": "Database queries"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the term 'OSI model' stand for?",
+        "questionID": 19,
+        "options": {
+          "A": "Online Service Integration model",
+          "B": "Open System Interconnection model",
+          "C": "Operating System Interface model",
+          "D": "Online Security Implementation model"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the primary function of an IP address?",
+        "questionID": 20,
+        "options": {
+          "A": "Identifying a device on a network",
+          "B": "Creating web pages",
+          "C": "Displaying multimedia content",
+          "D": "Sending text messages"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the purpose of a subnet mask in networking?",
+        "questionID": 21,
+        "options": {
+          "A": "To identify the network portion of an IP address",
+          "B": "To convert IP addresses into domain names",
+          "C": "To encrypt data transmission",
+          "D": "To establish secure connections"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the acronym 'FTP' stand for?",
+        "questionID": 22,
+        "options": {
+          "A": "File Transfer Protocol",
+          "B": "Fast Transmission Protocol",
+          "C": "Forwarding Table Protocol",
+          "D": "File Transport Protocol"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which protocol is used for secure communication over a computer network?",
+        "questionID": 23,
+        "options": {
+          "A": "TCP",
+          "B": "UDP",
+          "C": "SSL/TLS",
+          "D": "SMTP"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the function of a firewall?",
+        "questionID": 24,
+        "options": {
+          "A": "To protect a network from unauthorized access",
+          "B": "To increase network speed",
+          "C": "To filter spam emails",
+          "D": "To secure physical network cables"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the term 'bandwidth' refer to?",
+        "questionID": 25,
+        "options": {
+          "A": "The maximum data transfer rate of a network or internet connection",
+          "B": "The amount of data stored on a server",
+          "C": "The physical size of a network cable",
+          "D": "The speed of a computer's processor"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the purpose of a domain name?",
+        "questionID": 26,
+        "options": {
+          "A": "To provide a human-readable address for a website",
+          "B": "To encrypt data transmission",
+          "C": "To organize webpage content",
+          "D": "To establish secure connections"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which protocol is commonly used for sending emails?",
+        "questionID": 27,
+        "options": {
+          "A": "HTTP",
+          "B": "FTP",
+          "C": "SMTP",
+          "D": "DNS"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the purpose of a router in a network?",
+        "questionID": 28,
+        "options": {
+          "A": "To forward data packets between computer networks",
+          "B": "To store website content",
+          "C": "To host email servers",
+          "D": "To regulate internet speed"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the main function of a proxy server?",
+        "questionID": 29,
+        "options": {
+          "A": "To act as an intermediary between a client and a server",
+          "B": "To host websites",
+          "C": "To store network configuration settings",
+          "D": "To filter spam emails"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the acronym 'WAN' stand for?",
+        "questionID": 30,
+        "options": {
+          "A": "Wireless Area Network",
+          "B": "Wide Area Network",
+          "C": "Web Application Network",
+          "D": "Wired Access Network"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the purpose of DHCP in networking?",
+        "questionID": 31,
+        "options": {
+          "A": "To assign IP addresses dynamically to devices on a network",
+          "B": "To encrypt data transmission",
+          "C": "To secure network cables",
+          "D": "To authenticate users"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the term 'DNS' stand for?",
+        "questionID": 32,
+        "options": {
+          "A": "Dynamic Network Server",
+          "B": "Domain Name System",
+          "C": "Digital Network Security",
+          "D": "Data Naming Standard"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "Which protocol is commonly used for transferring files over the internet?",
+        "questionID": 33,
+        "options": {
+          "A": "HTTP",
+          "B": "SMTP",
+          "C": "FTP",
+          "D": "DNS"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What does the acronym 'SSL' stand for?",
+        "questionID": 34,
+        "options": {
+          "A": "Secure Socket Layer",
+          "B": "Superior Server Language",
+          "C": "Server Side Logic",
+          "D": "Simple System Layout"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the purpose of an IP address?",
+        "questionID": 35,
+        "options": {
+          "A": "To uniquely identify devices on a network",
+          "B": "To store website content",
+          "C": "To regulate internet speed",
+          "D": "To filter spam emails"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the term 'LAN' stand for?",
+        "questionID": 36,
+        "options": {
+          "A": "Local Access Network",
+          "B": "Large Area Network",
+          "C": "Logical Application Network",
+          "D": "Lightweight Authentication Network"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which protocol is used for securely accessing a remote server?",
+        "questionID": 37,
+        "options": {
+          "A": "HTTP",
+          "B": "SSH",
+          "C": "SMTP",
+          "D": "FTP"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What does the term 'URL' stand for?",
+        "questionID": 38,
+        "options": {
+          "A": "Uniform Resource Locator",
+          "B": "Universal Resource Language",
+          "C": "Unified Routing Logic",
+          "D": "User Response Link"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the purpose of NAT in networking?",
+        "questionID": 39,
+        "options": {
+          "A": "To translate private IP addresses to public IP addresses",
+          "B": "To encrypt data transmission",
+          "C": "To secure network cables",
+          "D": "To authenticate users"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which organization oversees the allocation of IP addresses?",
+        "questionID": 40,
+        "options": {
+          "A": "Internet Assigned Numbers Authority (IANA)",
+          "B": "World Wide Web Consortium (W3C)",
+          "C": "Internet Engineering Task Force (IETF)",
+          "D": "Network Solutions, LLC"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the purpose of a firewall in network security?",
+        "questionID": 41,
+        "options": {
+          "A": "To block unauthorized access and protect against cyber threats",
+          "B": "To boost internet speed",
+          "C": "To manage email accounts",
+          "D": "To encrypt data transmission"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the acronym 'ISP' stand for?",
+        "questionID": 42,
+        "options": {
+          "A": "Internet Security Protocol",
+          "B": "Internet Service Provider",
+          "C": "Internet Search Protocol",
+          "D": "International Standards Program"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "Which protocol is used for sending emails?",
+        "questionID": 43,
+        "options": {
+          "A": "HTTP",
+          "B": "SMTP",
+          "C": "FTP",
+          "D": "SSH"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the purpose of a router in a network?",
+        "questionID": 44,
+        "options": {
+          "A": "To forward data packets between computer networks",
+          "B": "To store website content",
+          "C": "To encrypt data transmission",
+          "D": "To regulate internet speed"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the difference between HTTP and HTTPS?",
+        "questionID": 45,
+        "options": {
+          "A": "HTTPS is more secure as it uses encryption (SSL/TLS)",
+          "B": "HTTP is faster but less secure compared to HTTPS",
+          "C": "HTTPS is used for secure websites while HTTP is not encrypted",
+          "D": "All of the above"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "Which organization developed the TCP/IP protocol suite?",
+        "questionID": 46,
+        "options": {
+          "A": "IBM",
+          "B": "Microsoft",
+          "C": "Google",
+          "D": "Department of Defense (DoD)"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What is the purpose of a proxy server?",
+        "questionID": 47,
+        "options": {
+          "A": "To act as an intermediary between clients and servers",
+          "B": "To provide web hosting services",
+          "C": "To manage domain name registrations",
+          "D": "To authenticate users"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the primary function of a domain name?",
+        "questionID": 48,
+        "options": {
+          "A": "To provide secure access to websites",
+          "B": "To uniquely identify a website on the internet",
+          "C": "To encrypt data transmission",
+          "D": "To boost internet speed"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What does the acronym 'FTP' stand for?",
+        "questionID": 49,
+        "options": {
+          "A": "File Transfer Protocol",
+          "B": "Fast Track Processing",
+          "C": "File Tracking Program",
+          "D": "Forwarding Transport Protocol"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which protocol is used for securely accessing web pages?",
+        "questionID": 50,
+        "options": {
+          "A": "HTTP",
+          "B": "FTP",
+          "C": "HTTPS",
+          "D": "SSH"
+        },
+        "answer": "C"
+      }
+    ]
+  }
+  

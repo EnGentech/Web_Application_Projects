@@ -4,6 +4,7 @@
     <script src="https://kit.fontawesome.com/11285bfb5b.js" crossorigin="anonymous"></script>
     <title>Load Resources</title>
     <link rel="stylesheet" href="{% static 'styles/courseWork.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/spinner.css' %}">
     <script src="{% static 'scripts/courseWork.js' %}"></script>
     <script src="{% static 'scripts/assessment.js' %}"></script>
 {% endblock head %}
@@ -11,6 +12,33 @@
     
 {% block content %}
     {% csrf_token %}
+    <div id="offInstructions">
+        <div id="filter">
+            <div id="testInstructions">
+                <span class="closeButton">&times;</span>
+                <h5 id="instructionHeader">Read the Below Instructions Carefully Before Proceeding to Take the Test</h5><hr>
+                <section id="instructionList">
+                    <ol>
+                        <li><strong>Equal Marks for Questions:</strong> Each question carries equal marks, so allocate your time accordingly to ensure you answer all questions effectively.</li>
+                        <li><strong>Internet Connection:</strong> Before proceeding to the test, ensure that your internet connection is stable to avoid any disruptions during the test duration.</li>
+                        <li><strong>Battery Check:</strong> Check your device's battery to ensure it will last for the duration of the test, which is approximately 15 minutes. Consider charging your device if necessary.</li>
+                        <li><strong>Test Monitoring and Cheating:</strong> The test is monitored, and any form of cheating will result in penalization. Ensure that you adhere to academic integrity standards throughout the test.</li>
+                        <li><strong>Page Reloading and Screen Minimization:</strong> Do not reload the test page while the test is ongoing. Additionally, avoid minimizing your screen during the test to maintain focus and prevent any unintended interruptions.</li>
+                        <li><strong>Logout Upon Test Completion:</strong> You shall be automatically logged out immediately after the test time is due. Ensure that you have completed and submitted all answers before the test duration ends.</li>
+                        <li><strong>Single Attempt Limit:</strong> You are permitted to take this test only once within the active days. No test will be taken when the date is expired.</li>
+                        <li><strong>No Retakes:</strong> Once you accept to take the test, if anything goes wrong or the test is interrupted, you shall not be allowed to retake the test again. Hence, ensure every aspect of this instruction is adhered to.</li>
+                    </ol>
+                </section>
+                <section id="spinnerSection">
+                    <div class="spinner">
+                    </div>
+                    <p id="loading">Loading...</p>
+                </section>
+                <button class="proceedButton">Proceed to Take Test</button>
+            </div>
+        </div>
+    </div>
+    
     <div class="statusBoard">
         <div class="statusContent">
             <h2 id="title">
@@ -62,6 +90,12 @@
                 COURSE WORK
             </h2>
 
+            {% if messages %}
+                {% for message in messages %}
+                    <center><p class="signIn_messages fadeOff">{{ message }}</p></center>                 
+                {% endfor %}
+            {% endif %}
+
             <section class="toRight">
                 <h3>{{ request.user.faculty }}</h3>
                 <h5>{{ request.user.department }}</h5>
@@ -96,6 +130,7 @@
                 <section class="mainContent">
                     <section class="toRightContent">
                         <h5>Grade: <span id="gradeColor">0.00%</span></h5>
+                        <button id="takeTest">Take Practice Test</button>
                     </section>
                     <section class="courseDetail">
                         <h5>Course Code: <span id='cCodeSelect'>--Select Registered Course--</span></h5>

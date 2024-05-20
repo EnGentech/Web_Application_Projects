@@ -20,7 +20,7 @@ def lecturer_required(view_func):
         if request.user.is_authenticated and isinstance(request.user, Lecturer):
             return view_func(request, *args, **kwargs)
         else:
-            return redirect('signInLec')  # Redirect to the login page or another page
+            return redirect('signInLec')
     return _wrapped_view
 
 @lecturer_required

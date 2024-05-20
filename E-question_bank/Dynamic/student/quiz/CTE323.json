@@ -1,937 +1,701 @@
 {
     "questions": [
-      {
-        "question": "What does the 'print()' function do in Python?",
+        {
+        "question": "What is one of the programming paradigms supported by Python?",
         "questionID": 1,
         "options": {
-          "A": "Takes user input",
-          "B": "Displays output on the console",
-          "C": "Defines a new function",
-          "D": "Performs mathematical operations"
+          "A": "Procedural",
+          "B": "Functional",
+          "C": "Structured",
+          "D": "Logical"
         },
-        "answer": "B"
+        "answer": "A"
       },
       {
-        "question": "Which keyword is used to define a function in Python?",
+        "question": "How do you execute a Python script from the command line?",
         "questionID": 2,
         "options": {
-          "A": "func",
-          "B": "def",
-          "C": "define",
-          "D": "function"
+          "A": "Run the 'execute script' command",
+          "B": "Open a terminal and double-click the script file",
+          "C": "Use a built-in Python function",
+          "D": "Navigate to the script's directory and run 'python script_name.py'"
         },
-        "answer": "B"
+        "answer": "D"
       },
       {
-        "question": "What is the result of '2 + 3 * 4' in Python?",
+        "question": "What is the purpose of the 'input()' function in Python?",
         "questionID": 3,
         "options": {
-          "A": "20",
-          "B": "14",
-          "C": "18",
-          "D": "16"
+          "A": "To display output to the console",
+          "B": "To format output using string formatting techniques",
+          "C": "To prompt the user for input",
+          "D": "To calculate mathematical operations"
         },
-        "answer": "D"
+        "answer": "C"
       },
       {
-        "question": "What does the 'if' statement do in Python?",
+        "question": "How are code blocks defined in Python?",
         "questionID": 4,
         "options": {
-          "A": "Defines a loop",
-          "B": "Performs conditional execution",
-          "C": "Defines a function",
-          "D": "Performs string manipulation"
+          "A": "Using curly braces",
+          "B": "Using indentation",
+          "C": "Using semicolons",
+          "D": "Using square brackets"
         },
         "answer": "B"
       },
       {
-        "question": "Which data type is used to store a sequence of characters in Python?",
+        "question": "What is the file extension for Python scripts?",
         "questionID": 5,
         "options": {
-          "A": "Integer",
-          "B": "String",
-          "C": "Float",
-          "D": "Boolean"
+          "A": ".txt",
+          "B": ".exe",
+          "C": ".py",
+          "D": ".doc"
         },
-        "answer": "B"
+        "answer": "C"
       },
       {
-        "question": "What does the 'len()' function return in Python?",
+        "question": "Which of the following is a correct way to calculate the area of a rectangle in Python?",
         "questionID": 6,
         "options": {
-          "A": "The sum of elements in a list",
-          "B": "The largest element in a list",
-          "C": "The number of elements in a sequence",
-          "D": "The average of elements in a list"
+          "A": "area = length * width",
+          "B": "area = length + width",
+          "C": "area = length / width",
+          "D": "area = length - width"
         },
-        "answer": "C"
+        "answer": "A"
       },
       {
-        "question": "What is the result of '3 // 2' in Python?",
+        "question": "What is the output of the following Python code?<br><code>x = 5<br>y = 3<br>print(x + y)<br></code>",
         "questionID": 7,
         "options": {
-          "A": "1.5",
-          "B": "1",
-          "C": "2",
-          "D": "3"
+          "A": "5",
+          "B": "3",
+          "C": "8",
+          "D": "35"
         },
-        "answer": "B"
+        "answer": "C"
       },
       {
-        "question": "Which symbol is used for comments in Python?",
+        "question": "Which of the following data types is used to store a sequence of characters in Python?",
         "questionID": 8,
         "options": {
-          "A": "//",
-          "B": "#",
-          "C": "/* */",
-          "D": "'"
+          "A": "int",
+          "B": "float",
+          "C": "str",
+          "D": "bool"
         },
-        "answer": "B"
+        "answer": "C"
       },
       {
-        "question": "What does the 'import' keyword do in Python?",
+        "question": "What does the 'print()' function do in Python?",
         "questionID": 9,
         "options": {
-            "A": "Exports a module",
-            "B": "Defines a new function",
-            "C": "Imports a module",
-            "D": "Declares a variable"
+          "A": "Prompts the user for input",
+          "B": "Calculates mathematical operations",
+          "C": "Displays output to the console",
+          "D": "Defines a new function"
         },
         "answer": "C"
-    },
-    {
-        "question": "Which statement is used to exit a loop prematurely in Python?",
+      },
+      {
+        "question": "What is the result of 'print(10 / 3)' in Python?",
         "questionID": 10,
         "options": {
-            "A": "continue",
-            "B": "break",
-            "C": "exit",
-            "D": "return"
+          "A": "3.33",
+          "B": "3",
+          "C": "3.0",
+          "D": "Error"
         },
-        "answer": "B"
-    },
-    {
-        "question": "What is the purpose of 'for' loop in Python?",
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 10<br>y = 3<br>print(x // y)<br></code>",
         "questionID": 11,
         "options": {
-            "A": "To define a function",
-            "B": "To perform conditional execution",
-            "C": "To iterate over a sequence",
-            "D": "To perform string manipulation"
+          "A": "3.33",
+          "B": "3",
+          "C": "3.0",
+          "D": "Error"
         },
-        "answer": "C"
-    },
-    {
-        "question": "Which operator is used for exponentiation in Python?",
+        "answer": "B"
+      },
+      {
+        "question": "Which of the following correctly declares a list in Python?",
         "questionID": 12,
         "options": {
-            "A": "^",
-            "B": "",
-            "C": "^^",
-            "D": "*^"
+          "A": "[1, 2, 3, 4, 5]",
+          "B": "(1, 2, 3, 4, 5)",
+          "C": "{1, 2, 3, 4, 5}",
+          "D": "{'a': 1, 'b': 2, 'c': 3}"
         },
-        "answer": "B"
-    },
-    {
-        "question": "What is the result of 'True and False' in Python?",
+        "answer": "A"
+      },
+      {
+        "question": "What does the 'len()' function do in Python?",
         "questionID": 13,
         "options": {
-            "A": "True",
-            "B": "False",
-            "C": "Error",
-            "D": "None"
+          "A": "Returns the total number of elements in a list or string",
+          "B": "Returns the largest item in an iterable",
+          "C": "Returns the sum of all elements in a list or tuple",
+          "D": "Returns the ASCII value of a character"
         },
-        "answer": "B"
-    },
-    {
-        "question": "Which data structure in Python is ordered and mutable?",
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 5<br>y = 2<br>print(x ** y)<br></code>",
         "questionID": 14,
         "options": {
-            "A": "List",
-            "B": "Tuple",
-            "C": "Set",
-            "D": "Dictionary"
+          "A": "10",
+          "B": "25",
+          "C": "7",
+          "D": "52"
         },
-        "answer": "A"
-    },
-    {
-        "question": "What is the output of 'list(range(5))' in Python?",
+        "answer": "B"
+      },
+      {
+        "question": "Which of the following data types is mutable in Python?",
         "questionID": 15,
         "options": {
-            "A": "[0, 1, 2, 3, 4]",
-            "B": "[1, 2, 3, 4, 5]",
-            "C": "[5, 4, 3, 2, 1]",
-            "D": "[4, 3, 2, 1, 0]"
+          "A": "String",
+          "B": "Tuple",
+          "C": "List",
+          "D": "Dictionary"
         },
-        "answer": "A"
-    },
-    {
-        "question": "What is the result of '2 ** 3' in Python?",
+        "answer": "C"
+      },
+      {
+        "question": "What is the result of 'print('hello' + 'world')' in Python?",
         "questionID": 16,
         "options": {
-            "A": "5",
-            "B": "8",
-            "C": "6",
-            "D": "2"
+          "A": "helloworld",
+          "B": "hello world",
+          "C": "hello+world",
+          "D": "Error"
         },
-        "answer": "B"
-    },
-    {
-        "question": "Which built-in function is used to convert a string to lowercase in Python?",
+        "answer": "A"
+      },
+      {
+        "question": "What does the 'range()' function do in Python?",
         "questionID": 17,
         "options": {
-            "A": "lower()",
-            "B": "to_lower()",
-            "C": "case_lower()",
-            "D": "convert_to_lowercase()"
+          "A": "Creates a range object",
+          "B": "Returns the sum of all elements in a list or tuple",
+          "C": "Generates a sequence of numbers",
+          "D": "Returns the ASCII value of a character"
         },
-        "answer": "A"
-    },
-    {
-        "question": "What is the output of '10 % 3' in Python?",
+        "answer": "C"
+      },
+      {
+        "question": "What is the result of 'print(10 % 3)' in Python?",
         "questionID": 18,
         "options": {
-            "A": "3.33333333333",
-            "B": "3",
-            "C": "1",
-            "D": "0.1"
+          "A": "3.33",
+          "B": "3",
+          "C": "1",
+          "D": "Error"
         },
         "answer": "C"
-    },
-    {
-        "question": "Which of the following is NOT a valid data type in Python?",
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 10<br>y = 5<br>x += y<br>print(x)<br></code>",
         "questionID": 19,
         "options": {
-            "A": "List",
-            "B": "Tuple",
-            "C": "Array",
-            "D": "Dictionary"
+          "A": "10",
+          "B": "5",
+          "C": "15",
+          "D": "Error"
         },
         "answer": "C"
-    },    
-    {
-      "question": "What is the result of '5 == 5.0' in Python?",
-      "questionID": 20,
-      "options": {
-          "A": "True",
-          "B": "False",
-          "C": "Error",
-          "D": "None"
-      },
-      "answer": "A"
+      },      
+      {
+        "question": "Which of the following is NOT a valid variable name in Python?",
+        "questionID": 20,
+        "options": {
+          "A": "my_var",
+          "B": "2ndVar",
+          "C": "_myVar",
+          "D": "myVar_2"
+        },
+        "answer": "B"
       },
       {
-          "question": "Which keyword is used to define an empty function in Python?",
-          "questionID": 21,
-          "options": {
-              "A": "void",
-              "B": "empty",
-              "C": "None",
-              "D": "pass"
-          },
-          "answer": "D"
+        "question": "What is the correct code to produce the result 10?",
+        "questionID": 21,
+        "options": {
+          "A": "x = 5\ny = 2\nresult = x * y",
+          "B": "x = 15\ny = 3\nresult = x - y",
+          "C": "x = 2\ny = 5\nresult = x ** y",
+          "D": "x = 30\ny = 3\nresult = x // y"
+        },
+        "answer": "A"
       },
       {
-          "question": "What is the purpose of 'elif' statement in Python?",
-          "questionID": 22,
-          "options": {
-              "A": "To define a loop",
-              "B": "To perform conditional execution",
-              "C": "To define a function",
-              "D": "To perform string manipulation"
-          },
-          "answer": "B"
+        "question": "Which code correctly calculates the area of a rectangle with length 8 and width 4?",
+        "questionID": 22,
+        "options": {
+          "A": "length = 8\nwidth = 4\narea = length * width",
+          "B": "length = 4\nwidth = 8\narea = length / width",
+          "C": "length = 8\nwidth = 4\narea = length - width",
+          "D": "length = 4\nwidth = 8\narea = length + width"
+        },
+        "answer": "A"
       },
       {
-          "question": "Which method is used to find the length of a string in Python?",
-          "questionID": 23,
-          "options": {
-              "A": "length()",
-              "B": "count()",
-              "C": "len()",
-              "D": "size()"
-          },
-          "answer": "C"
+        "question": "Which code snippet prints 'Hello, World!'?",
+        "questionID": 23,
+        "options": {
+          "A": "print('Hello, World!')",
+          "B": "print('Hello')\nprint('World!')",
+          "C": "print('Hello' + 'World!')",
+          "D": "print('Hello', 'World!')"
+        },
+        "answer": "A"
       },
       {
-          "question": "What does the 'not' operator do in Python?",
-          "questionID": 24,
-          "options": {
-              "A": "Performs logical AND operation",
-              "B": "Performs logical OR operation",
-              "C": "Negates a boolean value",
-              "D": "Performs bitwise NOT operation"
-          },
-          "answer": "C"
+        "question": "Which code correctly declares a list containing the integers 1, 2, and 3?",
+        "questionID": 24,
+        "options": {
+          "A": "my_list = [1, 2, 3]",
+          "B": "my_list = (1, 2, 3)",
+          "C": "my_list = {1, 2, 3}",
+          "D": "my_list = {'a': 1, 'b': 2, 'c': 3}"
+        },
+        "answer": "A"
       },
       {
-          "question": "Which method is used to split a string into a list of substrings in Python?",
-          "questionID": 25,
-          "options": {
-              "A": "split()",
-              "B": "slice()",
-              "C": "separate()",
-              "D": "explode()"
-          },
-          "answer": "A"
+        "question": "Which code correctly calculates the remainder when dividing 17 by 5?",
+        "questionID": 25,
+        "options": {
+          "A": "result = 17 % 5",
+          "B": "result = 17 / 5",
+          "C": "result = 17 // 5",
+          "D": "result = 5 % 17"
+        },
+        "answer": "A"
       },
       {
-          "question": "What is the result of '10 / 3' in Python?",
-          "questionID": 26,
-          "options": {
-              "A": "3.33333333333",
-              "B": "3",
-              "C": "3.0",
-              "D": "3.333"
-          },
-          "answer": "C"
+        "question": "Which code correctly defines a function in Python?",
+        "questionID": 26,
+        "options": {
+          "A": "def my_function():\n    print('Hello, world!')",
+          "B": "define my_function():\n    print('Hello, world!')",
+          "C": "function my_function():\n    print('Hello, world!')",
+          "D": "my_function():\n    print('Hello, world!')"
+        },
+        "answer": "A"
       },
       {
-          "question": "Which method is used to remove an element from a list in Python?",
-          "questionID": 27,
-          "options": {
-              "A": "remove()",
-              "B": "delete()",
-              "C": "pop()",
-              "D": "erase()"
-          },
-          "answer": "A"
+        "question": "Which code correctly converts the string '15' to an integer?",
+        "questionID": 27,
+        "options": {
+          "A": "num = int('15')",
+          "B": "num = str(15)",
+          "C": "num = float('15')",
+          "D": "num = int(15)"
+        },
+        "answer": "A"
       },
       {
-          "question": "What is the purpose of 'else' statement in Python?",
-          "questionID": 28,
-          "options": {
-              "A": "To define a loop",
-              "B": "To perform conditional execution",
-              "C": "To define a function",
-              "D": "To perform string manipulation"
-          },
-          "answer": "B"
+        "question": "Which code correctly creates a tuple with three elements: 'a', 'b', and 'c'?",
+        "questionID": 28,
+        "options": {
+          "A": "my_tuple = ('a', 'b', 'c')",
+          "B": "my_tuple = ['a', 'b', 'c']",
+          "C": "my_tuple = {'a', 'b', 'c'}",
+          "D": "my_tuple = {'a': 1, 'b': 2, 'c': 3}"
+        },
+        "answer": "A"
       },
-  
       {
-        "question": "What does the 'append()' method do in Python?",
+        "question": "Which code correctly checks if a number is even?",
         "questionID": 29,
         "options": {
-            "A": "Adds an element to the end of a list",
-            "B": "Removes an element from a list",
-            "C": "Returns the index of an element in a list",
-            "D": "Returns the length of a list"
+          "A": "is_even = num % 2 == 0",
+          "B": "is_even = num // 2 == 0",
+          "C": "is_even = num % 2 != 0",
+          "D": "is_even = num // 2 != 0"
         },
         "answer": "A"
-    },
-    {
-        "question": "What is the result of '10 // 3' in Python?",
+      },
+      {
+        "question": "Which code correctly swaps the values of variables x and y?",
         "questionID": 30,
         "options": {
-            "A": "3.33333333333",
-            "B": "3",
-            "C": "3.0",
-            "D": "3.333"
+          "A": "x, y = y, x",
+          "B": "temp = x\nx = y\ny = temp",
+          "C": "x = y\ny = x",
+          "D": "x = x + y\ny = x - y\nx = x - y"
         },
-        "answer": "B"
-    },
-    {
-        "question": "What is the result of 'print('Python'[1:4])' in Python?",
+        "answer": "A"
+      },
+      {
+        "question": "Which of the following code snippets correctly defines a Python function that calculates the factorial of a number?",
         "questionID": 31,
         "options": {
-            "A": "Pyt",
-            "B": "yth",
-            "C": "tho",
-            "D": "Pytho"
+          "A": "def factorial(n):\n    result = 1\n    for i in range(1, n+1):\n        result *= i\n    return result",
+          "B": "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)",
+          "C": "def factorial(n):\n    result = 1\n    while n > 0:\n        result *= n\n        n -= 1\n    return result",
+          "D": "def factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        result *= i\n    return result"
         },
-        "answer": "B"
-    },
-    {
-        "question": "What does the 'len()' function return in Python?",
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 5<br>y = 10<br>if x > 3:<br>&nbsp;&nbsp;&nbsp;&nbsp;if y > 7:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('x is greater than 3 and y is greater than 7')<br>&nbsp;&nbsp;&nbsp;&nbsp;else:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('x is greater than 3 but y is not greater than 7')<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('x is not greater than 3')<br></code>",
         "questionID": 32,
         "options": {
-            "A": "5",
-            "B": "4",
-            "C": "6",
-            "D": "Error"
+          "A": "x is greater than 3 and y is greater than 7",
+          "B": "x is greater than 3 but y is not greater than 7",
+          "C": "x is not greater than 3",
+          "D": "No output"
         },
         "answer": "A"
-    },
-    {
-        "question": "What is the output of 'print('Python'[::-1])' in Python?",
+      },      
+      {
+        "question": "Which of the following code snippets correctly implements a recursive function to calculate the nth Fibonacci number?",
         "questionID": 33,
         "options": {
-            "A": "Python",
-            "B": "nohtyP",
-            "C": "nythoP",
-            "D": "Error"
+          "A": "def fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)",
+          "B": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a",
+          "C": "def fibonacci(n):\n    fib = [0, 1]\n    for i in range(2, n+1):\n        fib.append(fib[i-1] + fib[i-2])\n    return fib[n]",
+          "D": "def fibonacci(n):\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)"
         },
-        "answer": "B"
-    },
-    {
-        "question": "Which method is used to remove whitespace from both ends of a string in Python?",
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 5<br>y = 10<br>while x > 3:<br>&nbsp;&nbsp;&nbsp;&nbsp;if y > 7:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('x is greater than 3 and y is greater than 7')<br>&nbsp;&nbsp;&nbsp;&nbsp;else:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('x is greater than 3 but y is not greater than 7')<br>&nbsp;&nbsp;&nbsp;&nbsp;x -= 1<br></code>",
         "questionID": 34,
         "options": {
-            "A": "trim()",
-            "B": "strip()",
-            "C": "remove_whitespace()",
-            "D": "clean()"
+          "A": "x is greater than 3 and y is greater than 7 (printed 2 times)",
+          "B": "x is greater than 3 but y is not greater than 7 (printed 2 times)",
+          "C": "x is greater than 3 and y is greater than 7 (printed 5 times)",
+          "D": "x is greater than 3 but y is not greater than 7 (printed 5 times)"
         },
-        "answer": "B"
-    },
-    {
-        "question": "What is the output of 'print('Python'[2])' in Python?",
+        "answer": "C"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 5<br>y = 10<br>if x > 3 and y > 7:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('x is greater than 3 and y is greater than 7')<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('x is not greater than 3 or y is not greater than 7')<br></code>",
         "questionID": 35,
         "options": {
-            "A": "P",
-            "B": "y",
-            "C": "t",
-            "D": "Error"
+          "A": "x is greater than 3 and y is greater than 7",
+          "B": "x is not greater than 3 or y is not greater than 7",
+          "C": "No output",
+          "D": "Error"
         },
-        "answer": "C"
-    },
-    {
-        "question": "Which method is used to check if a string contains a specific substring in Python?",
+        "answer": "A"
+      },      
+      {
+        "question": "Which of the following code snippets correctly implements a Python function to check whether a given positive integer is a prime number?",
         "questionID": 36,
         "options": {
-            "A": "includes()",
-            "B": "contains()",
-            "C": "has()",
-            "D": "find()"
+          "A": "def is_prime(n):\n    if n <= 1:\n        return False\n    elif n <= 3:\n        return True\n    elif n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True",
+          "B": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+          "C": "def is_prime(n):\n    if n == 2:\n        return True\n    if n < 2 or n % 2 == 0:\n        return False\n    for i in range(3, int(n**0.5) + 1, 2):\n        if n % i == 0:\n            return False\n    return True",
+          "D": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, n):\n        if n % i == 0:\n            return False\n    return True"
         },
-        "answer": "D"
-    },
-    {
-        "question": "What is the output of 'print('Python'[1:])' in Python?",
+        "answer": "C"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>for i in range(5):<br>&nbsp;&nbsp;&nbsp;&nbsp;if i == 2:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>&nbsp;&nbsp;&nbsp;&nbsp;print(i)<br></code>",
         "questionID": 37,
         "options": {
-            "A": "Python",
-            "B": "ython",
-            "C": "Pytho",
-            "D": "P"
+          "A": "0\n1\n3\n4",
+          "B": "0\n1\n2\n4",
+          "C": "0\n1\n3",
+          "D": "0\n1\n2\n3\n4"
         },
-        "answer": "B"
-    },
-    {
-        "question": "Which method is used to convert a string to uppercase in Python?",
+        "answer": "A"
+      },      
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 5<br>y = 3<br>result = 'x is greater than y' if x > y else 'x is not greater than y'<br>print(result)<br></code>",
         "questionID": 38,
         "options": {
-            "A": "uppercase()",
-            "B": "to_upper()",
-            "C": "upper()",
-            "D": "convert_to_uppercase()"
+          "A": "x is greater than y",
+          "B": "x is not greater than y",
+          "C": "Error",
+          "D": "No output"
         },
-        "answer": "C"
-    },
-    {
-        "question": "What is the result of 'print('python'.capitalize())' in Python?",
+        "answer": "A"
+      },      
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 10<br>while x > 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br>&nbsp;&nbsp;&nbsp;&nbsp;x -= 2<br></code>",
         "questionID": 39,
         "options": {
-            "A": "Python",
-            "B": "PYTHON",
-            "C": "python",
-            "D": "Pytho"
+          "A": "10\n8\n6\n4\n2",
+          "B": "10\n9\n8\n7\n6\n5\n4\n3\n2\n1",
+          "C": "10\n8\n6\n4\n2\n0",
+          "D": "10\n8\n6\n4\n2\n-1"
         },
         "answer": "A"
-    },
-    {
-        "question": "What is the output of 'print('Python' + '3')' in Python?",
+      },      
+      {
+        "question": "What is the output of the following Python code?<br><code>for i in range(3):<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Outer loop:', i)<br>&nbsp;&nbsp;&nbsp;&nbsp;for j in range(2):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Inner loop:', j)<br></code>",
         "questionID": 40,
         "options": {
-            "A": "Python3",
-            "B": "Python33",
-            "C": "TypeError",
-            "D": "Error"
+          "A": "Outer loop: 0\nInner loop: 0\nInner loop: 1\nOuter loop: 1\nInner loop: 0\nInner loop: 1\nOuter loop: 2\nInner loop: 0\nInner loop: 1",
+          "B": "Outer loop: 0\nInner loop: 0\nInner loop: 1\nOuter loop: 1\nInner loop: 0\nInner loop: 1",
+          "C": "Outer loop: 0\nInner loop: 0\nInner loop: 1\nOuter loop: 1\nInner loop: 0\nInner loop: 1\nOuter loop: 2",
+          "D": "Outer loop: 0\nInner loop: 0\nInner loop: 1\nOuter loop: 1\nInner loop: 0\nInner loop: 1\nOuter loop: 2\nInner loop: 0\nInner loop: 1"
         },
         "answer": "A"
-    },
-    {
-        "question": "Which method is used to convert a string to a list in Python?",
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 5<br>y = 3<br>result = 'x is greater than y' if x > y else 'x is not greater than y'<br>print(result)<br></code>",
         "questionID": 41,
         "options": {
-            "A": "to_list()",
-            "B": "list()",
-            "C": "convert_to_list()",
-            "D": "split()"
+          "A": "x is greater than y",
+          "B": "x is not greater than y",
+          "C": "Error",
+          "D": "No output"
         },
-        "answer": "B"
-    },
-    {
-        "question": "What is the output of 'print(2 in [1, 2, 3])' in Python?",
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 10<br>while x > 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br>&nbsp;&nbsp;&nbsp;&nbsp;x -= 2<br></code>",
         "questionID": 42,
         "options": {
-            "A": "True",
-            "B": "False",
-            "C": "Error",
-            "D": "None"
+          "A": "10\n8\n6\n4\n2",
+          "B": "10\n9\n8\n7\n6\n5\n4\n3\n2\n1",
+          "C": "10\n8\n6\n4\n2\n0",
+          "D": "10\n8\n6\n4\n2\n-1"
         },
         "answer": "A"
-    },
-    
-    {
-      "question": "What is the result of 'print('Python'.replace('P', 'J'))' in Python?",
-      "questionID": 43,
-      "options": {
-          "A": "Python",
-          "B": "Jython",
-          "C": "PythonJ",
-          "D": "Error"
       },
-      "answer": "B"
-    },
-    {
-        "question": "What is the output of 'print('Hello, World!'.split(','))' in Python?",
+      {
+        "question": "What is the output of the following Python code?<br><code>for i in range(3):<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Outer loop:', i)<br>&nbsp;&nbsp;&nbsp;&nbsp;for j in range(2):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Inner loop:', j)<br></code>",
+        "questionID": 43,
+        "options": {
+          "A": "Outer loop: 0\nInner loop: 0\nInner loop: 1\nOuter loop: 1\nInner loop: 0\nInner loop: 1\nOuter loop: 2\nInner loop: 0\nInner loop: 1",
+          "B": "Outer loop: 0\nInner loop: 0\nInner loop: 1\nOuter loop: 1\nInner loop: 0\nInner loop: 1",
+          "C": "Outer loop: 0\nInner loop: 0\nInner loop: 1\nOuter loop: 1\nInner loop: 0\nInner loop: 1\nOuter loop: 2",
+          "D": "Outer loop: 0\nInner loop: 0\nInner loop: 1\nOuter loop: 1\nInner loop: 0\nInner loop: 1\nOuter loop: 2\nInner loop: 0\nInner loop: 1"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>for i in range(5):<br>&nbsp;&nbsp;&nbsp;&nbsp;if i == 2:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>&nbsp;&nbsp;&nbsp;&nbsp;print(i)<br></code>",
         "questionID": 44,
         "options": {
-            "A": "['Hello', 'World!']",
-            "B": "['Hello, World!']",
-            "C": "['Hello']",
-            "D": "Error"
+          "A": "0\n1\n3\n4",
+          "B": "0\n1\n2\n4",
+          "C": "0\n1\n3",
+          "D": "0\n1\n2\n3\n4"
         },
         "answer": "A"
-    },
-    {
-        "question": "Which method is used to check if a string ends with a specific suffix in Python?",
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 10<br>y = 3<br>print(x // y)<br></code>",
         "questionID": 45,
         "options": {
-            "A": "endwith()",
-            "B": "has_suffix()",
-            "C": "suffix()",
-            "D": "endswith()"
+          "A": "3.33",
+          "B": "3",
+          "C": "3.0",
+          "D": "Error"
         },
-        "answer": "D"
-    },
-    {
-        "question": "What is the output of the following code?\n\npython\nx = 5\ny = 3\nprint(x % y)\n",
+        "answer": "B"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 5<br>y = 2<br>print(x ** y)<br></code>",
         "questionID": 46,
         "options": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "Error"
+          "A": "10",
+          "B": "25",
+          "C": "7",
+          "D": "52"
         },
-        "answer": "A"
-    },
-    {
-        "question": "What is the output of the following code?\n\npython\nx = 'hello'\nprint(x.capitalize())\n",
+        "answer": "B"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 5<br>y = 10<br>if x > 3 and y > 7:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('x is greater than 3 and y is greater than 7')<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('x is not greater than 3 or y is not greater than 7')<br></code>",
         "questionID": 47,
         "options": {
-            "A": "HELLO",
-            "B": "Hello",
-            "C": "hello",
-            "D": "Error"
+          "A": "x is greater than 3 and y is greater than 7",
+          "B": "x is not greater than 3 or y is not greater than 7",
+          "C": "No output",
+          "D": "Error"
         },
-        "answer": "B"
-    },
-    {
-        "question": "What is the purpose of a 'docstring' in Python?",
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>my_list = [1, 2, 3, 4, 5]<br>print(my_list[-1])</code>",
         "questionID": 48,
         "options": {
-            "A": "To document Python scripts",
-            "B": "To define variable types",
-            "C": "To write comments within code",
-            "D": "To provide documentation for functions and classes"
+          "A": "5",
+          "B": "4",
+          "C": "3",
+          "D": "Error"
         },
-        "answer": "D"
-    },
-    {
-        "question": "Which of the following is NOT a Python data type?",
+        "answer": "A"
+      },
+      {
+        "question": "Which data structure in Python uses curly braces for initialization?",
         "questionID": 49,
         "options": {
-            "A": "List",
-            "B": "String",
-            "C": "Map",
-            "D": "Tuple"
+          "A": "List",
+          "B": "Tuple",
+          "C": "Dictionary",
+          "D": "Set"
         },
         "answer": "C"
-    },
-    {
-        "question": "What is the output of the following code?\n\npython\nx = [1, 2, 3]\nprint(len(x))\n",
+      },
+      {
+        "question": "Write a Python code snippet to create a tuple containing elements 'apple', 'banana', and 'cherry'.",
         "questionID": 50,
         "options": {
-            "A": "1",
-            "B": "3",
-            "C": "Error",
-            "D": "None"
+          "A": "fruit_tuple = ('apple', 'banana', 'cherry')",
+          "B": "fruit_tuple = ['apple', 'banana', 'cherry']",
+          "C": "fruit_tuple = {'apple', 'banana', 'cherry'}",
+          "D": "fruit_tuple = {'apple': 1, 'banana': 2, 'cherry': 3}"
         },
-        "answer": "B"
-    },
-    {
-        "question": "What is the purpose of 'self' in Python classes?",
+        "answer": "A"
+      },
+      {
+        "question": "How can you remove a specific item from a dictionary in Python?",
         "questionID": 51,
         "options": {
-            "A": "To refer to the class itself",
-            "B": "To pass arguments to methods",
-            "C": "To refer to the current instance of the class",
-            "D": "To create a new instance of the class"
+          "A": "Using the remove() method",
+          "B": "Using the delete() method",
+          "C": "Using the pop() method",
+          "D": "Using the discard() method"
         },
         "answer": "C"
-    },
-    {
-        "question": "What is the result of the following code?\n\npython\ndef add(x, y):\n    return x + y\n\nresult = add(3, 4)\nprint(result)\n",
+      },
+      {
+        "question": "Describe how to check if a key exists in a dictionary in Python.",
         "questionID": 52,
         "options": {
-            "A": "7",
-            "B": "12",
-            "C": "Error",
-            "D": "None"
+          "A": "Using the has_key() method",
+          "B": "Using the check_key() method",
+          "C": "Using the in keyword",
+          "D": "Using the exists() method"
         },
-        "answer": "A"
-    },
-    {
-        "question": "Which keyword is used to define a function in Python?",
+        "answer": "C"
+      },
+      {
+        "question": "Explain the concept of immutability with respect to Python data structures.",
         "questionID": 53,
         "options": {
-            "A": "def",
-            "B": "function",
-            "C": "define",
-            "D": "func"
+          "A": "Immutability means that data structures cannot be changed after they are created.",
+          "B": "Immutability means that data structures can only be modified using specific methods.",
+          "C": "Immutability means that data structures can have variable sizes.",
+          "D": "Immutability means that data structures are resizable."
         },
         "answer": "A"
-    },
-    {
-        "question": "What is the output of the following code?\n\npython\nx = [1, 2, 3]\nprint(x[-1])\n",
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>my_list = [3, 1, 4, 1, 5, 9]<br>print(sorted(my_list))</code>",
         "questionID": 54,
         "options": {
-            "A": "1",
-            "B": "3",
-            "C": "Error",
-            "D": "None"
+          "A": "[1, 1, 3, 4, 5, 9]",
+          "B": "[9, 5, 4, 3, 1, 1]",
+          "C": "[1, 1, 3, 4, 5, 9]",
+          "D": "[9, 5, 4, 3, 1, 1]"
         },
-        "answer": "B"
-    },
-    {
-        "question": "Which method is used to add an element to the end of a list in Python?",
+        "answer": "A"
+      },
+      {
+        "question": "How can you remove the last element from a list in Python?",
         "questionID": 55,
         "options": {
-            "A": "add()",
-            "B": "insert()",
-            "C": "append()",
-            "D": "push()"
+          "A": "Using the pop() method",
+          "B": "Using the remove() method",
+          "C": "Using slicing",
+          "D": "Using the clear() method"
         },
-        "answer": "C"
-    },
-    {
-        "question": "What is the output of the following code?\n\npython\nx = {1: 'one', 2: 'two', 3: 'three'}\nprint(x[2])\n",
+        "answer": "A"
+      },
+      {
+        "question": "Write a Python function to find the sum of all elements in a list.",
         "questionID": 56,
         "options": {
-            "A": "1",
-            "B": "'two'",
-            "C": "2",
-            "D": "Error"
+          "A": "def sum_list(lst):\n    return sum(lst)",
+          "B": "def sum_list(lst):\n    total = 0\n    for num in lst:\n        total += num\n    return total",
+          "C": "def sum_list(lst):\n    total = 0\n    for i in range(len(lst)):\n        total += lst[i]\n    return total",
+          "D": "def sum_list(lst):\n    return lst.sum()"
         },
         "answer": "B"
-    },
-  
-    {
-      "question": "What is the result of the following code?\n\npython\nclass MyClass:\n    def __init__(self):\n        print('Hello')\n\nobj = MyClass()\n",
-      "questionID": 57,
-      "options": {
-          "A": "Hello",
-          "B": "MyClass",
-          "C": "Error",
-          "D": "None"
       },
-      "answer": "A"
-    },
-    {
-        "question": "What is the purpose of 'return' statement in a function?",
+      {
+        "question": "Describe the process of merging two dictionaries in Python.",
+        "questionID": 57,
+        "options": {
+          "A": "Using the merge() method",
+          "B": "Using the concat() method",
+          "C": "Using the update() method",
+          "D": "Using the extend() method"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>x = 7<br>y = 2<br>result = x // y<br>print(result)</code>",
         "questionID": 58,
         "options": {
-            "A": "To print a value",
-            "B": "To exit the function and return a value",
-            "C": "To define a new variable",
-            "D": "To comment out code"
+          "A": "3.5",
+          "B": "3",
+          "C": "3.0",
+          "D": "Error"
         },
         "answer": "B"
-    },
-    {
-        "question": "Which method is used to remove an element from a list in Python?",
+      },
+      {
+        "question": "What will be the output of the following Python code?<br><code>def greet(name, message='Hello'):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(message, name)<br><br>greet('Alice')</code>",
         "questionID": 59,
         "options": {
-            "A": "remove()",
-            "B": "delete()",
-            "C": "pop()",
-            "D": "erase()"
+          "A": "Hello Alice",
+          "B": "Alice",
+          "C": "Error",
+          "D": "None"
         },
         "answer": "A"
-    },
-    {
-        "question": "What is the result of the following code?\n\npython\nx = (1, 2, 3)\nprint(type(x))\n",
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>my_tuple = (1, 2, 3, 4, 5)<br>print(my_tuple[-1])</code>",
         "questionID": 60,
         "options": {
-            "A": "list",
-            "B": "tuple",
-            "C": "dict",
-            "D": "set"
+          "A": "5",
+          "B": "1",
+          "C": "4",
+          "D": "Error"
         },
-        "answer": "B"
-    },
-    {
-        "question": "What is the purpose of a flowchart?",
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>my_set = {1, 2, 3, 4, 5}<br>my_set.add(6)<br>print(my_set)</code>",
         "questionID": 61,
         "options": {
-            "A": "To write code",
-            "B": "To visualize an algorithm",
-            "C": "To execute a program",
-            "D": "To debug code"
+          "A": "{1, 2, 3, 4, 5, 6}",
+          "B": "{1, 2, 3, 4, 5}",
+          "C": "[1, 2, 3, 4, 5, 6]",
+          "D": "[1, 2, 3, 4, 5]"
         },
-        "answer": "B"
-    },
-    {
-        "question": "Which symbol in a flowchart represents a process or action?",
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>num_set = {1, 2, 3, 4, 5}<br>num_set.discard(3)<br>print(num_set)</code>",
         "questionID": 62,
         "options": {
-            "A": "Rectangle",
-            "B": "Diamond",
-            "C": "Circle",
-            "D": "Arrow"
+          "A": "{1, 2, 4, 5}",
+          "B": "{1, 2, 3, 4, 5}",
+          "C": "{1, 2, 4}",
+          "D": "[1, 2, 4, 5]"
         },
         "answer": "A"
-    },
-    {
-        "question": "What does a diamond shape represent in a flowchart?",
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>my_dict = {'a': 1, 'b': 2, 'c': 3}<br>del my_dict['b']<br>print(my_dict)</code>",
         "questionID": 63,
         "options": {
-            "A": "Start/End",
-            "B": "Input/Output",
-            "C": "Decision",
-            "D": "Process"
-        },
-        "answer": "C"
-    },
-    {
-        "question": "What is the purpose of an algorithm?",
-        "questionID": 64,
-        "options": {
-            "A": "To write code",
-            "B": "To visualize a program",
-            "C": "To execute a program",
-            "D": "To solve a problem"
-        },
-        "answer": "D"
-    },
-    {
-        "question": "Which of the following is NOT a characteristic of a good algorithm?",
-        "questionID": 65,
-        "options": {
-            "A": "Efficiency",
-            "B": "Clarity",
-            "C": "Flexibility",
-            "D": "Complexity"
-        },
-        "answer": "D"
-    },
-    {
-        "question": "What does 'BFS' stand for in algorithm design?",
-        "questionID": 66,
-        "options": {
-            "A": "Best Fit Search",
-            "B": "Binary File System",
-            "C": "Breadth-First Search",
-            "D": "Balanced File System"
-        },
-        "answer": "C"
-    },
-    {
-        "question": "Which sorting algorithm has the worst time complexity?",
-        "questionID": 67,
-        "options": {
-            "A": "Bubble Sort",
-            "B": "Insertion Sort",
-            "C": "Merge Sort",
-            "D": "Quick Sort"
-        },
-        "answer": "A"
-    },
-    {
-        "question": "What is the Big O notation for the worst case time complexity of Bubble Sort?",
-        "questionID": 68,
-        "options": {
-            "A": "O(n)",
-            "B": "O(n log n)",
-            "C": "O(n^2)",
-            "D": "O(log n)"
-        },
-        "answer": "C"
-    },
-    {
-        "question": "What is the purpose of the 'while' loop in algorithms?",
-        "questionID": 69,
-        "options": {
-            "A": "To iterate over a sequence",
-            "B": "To execute a block of code repeatedly",
-            "C": "To make decisions",
-            "D": "To define a function"
-        },
-        "answer": "B"
-    },
-    {
-        "question": "What is the Big O notation for the time complexity of linear search?",
-        "questionID": 70,
-        "options": {
-            "A": "O(1)",
-            "B": "O(log n)",
-            "C": "O(n)",
-            "D": "O(n^2)"
-        },
-        "answer": "C"
-    },
-    {
-        "question": "What is the purpose of an 'if' statement in algorithms?",
-        "questionID": 71,
-        "options": {
-            "A": "To iterate over a sequence",
-            "B": "To execute a block of code repeatedly",
-            "C": "To make decisions",
-            "D": "To define a function"
-        },
-        "answer": "C"
-    },
-  
-    {
-      "question": "Which of the following is an example of a greedy algorithm?",
-      "questionID": 72,
-      "options": {
-          "A": "Bubble Sort",
-          "B": "Dijkstra's Algorithm",
-          "C": "Merge Sort",
-          "D": "Quick Sort"
-      },
-      "answer": "B"
-    },
-    {
-        "question": "What is the Big O notation for the best case time complexity of Quick Sort?",
-        "questionID": 73,
-        "options": {
-            "A": "O(n)",
-            "B": "O(n log n)",
-            "C": "O(n^2)",
-            "D": "O(log n)"
-        },
-        "answer": "B"
-    },
-    {
-        "question": "Which data structure is typically used to implement a priority queue?",
-        "questionID": 74,
-        "options": {
-            "A": "Array",
-            "B": "Linked List",
-            "C": "Queue",
-            "D": "Heap"
-        },
-        "answer": "D"
-    },
-    {
-        "question": "What is the primary goal of dynamic programming?",
-        "questionID": 75,
-        "options": {
-            "A": "To minimize the use of resources",
-            "B": "To divide a problem into smaller subproblems",
-            "C": "To store and reuse solutions to subproblems",
-            "D": "To find the optimal solution to a problem"
-        },
-        "answer": "C"
-    },
-    {
-        "question": "What is the result of 'print(10 // 3)' in Python?",
-        "questionID": 76,
-        "options": {
-            "A": "3.33",
-            "B": "3",
-            "C": "3.0",
-            "D": "Error"
-        },
-        "answer": "B"
-    },
-    {
-        "question": "What does the 'pass' statement do in Python?",
-        "questionID": 77,
-        "options": {
-            "A": "Stops the execution of the program",
-            "B": "Does nothing",
-            "C": "Prints a message",
-            "D": "Exits a loop"
-        },
-        "answer": "B"
-    },
-    {
-        "question": "Which data structure is used to implement a queue in Python?",
-        "questionID": 78,
-        "options": {
-            "A": "Array",
-            "B": "Linked List",
-            "C": "Dictionary",
-            "D": "Tuple"
-        },
-        "answer": "B"
-    },
-    {
-        "question": "What is the purpose of '_init_' method in Python classes?",
-        "questionID": 79,
-        "options": {
-            "A": "To initialize class variables",
-            "B": "To define instance methods",
-            "C": "To create a new instance of the class",
-            "D": "To destroy objects"
-        },
-        "answer": "A"
-    },
-    {
-        "question": "What does '_name_' represent in a Python module?",
-        "questionID": 80,
-        "options": {
-            "A": "Name of the module",
-            "B": "Name of the function",
-            "C": "Name of the class",
-            "D": "Name of the package"
-        },
-        "answer": "A"
-    },
-    {
-        "question": "Which keyword is used to define a class in Python?",
-        "questionID": 81,
-        "options": {
-            "A": "class",
-            "B": "define",
-            "C": "struct",
-            "D": "type"
-        },
-        "answer": "A"
-    },
-    
-    {
-      "question": "What is the output of the following code?\n\npython\ndef greet(name='World'):\n    return f'Hello, {name}!'\n\nprint(greet('Alice'))\n",
-      "questionID": 82,
-      "options": {
-          "A": "Hello, World!",
-          "B": "Hello, Alice!",
-          "C": "Hello, !",
+          "A": "{'a': 1, 'c': 3}",
+          "B": "{'a': 1, 'b': 2, 'c': 3}",
+          "C": "{'a': 1, 'b': 3}",
           "D": "Error"
+        },
+        "answer": "A"
       },
-      "answer": "B"
-    },
-    {
-        "question": "Which method is used to sort a list in Python?",
-        "questionID": 83,
-        "options": {
-            "A": "sort()",
-            "B": "sorted()",
-            "C": "order()",
-            "D": "arrange()"
-        },
-        "answer": "B"
-    },
-    {
-        "question": "What is the output of the following code?\n\npython\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)\n",
-        "questionID": 84,
-        "options": {
-            "A": "[1, 2, 3]",
-            "B": "[1, 2, 3, 4]",
-            "C": "[1, 2, 4]",
-            "D": "Error"
-        },
-        "answer": "B"
-    },
-    {
+      {
         "question": "What does the 'git pull' command do in Git?",
-        "questionID": 85,
+        "questionID": 64,
         "options": {
             "A": "Pushes changes from local repository to remote repository",
             "B": "Updates the local repository with changes from the remote repository",
@@ -942,7 +706,7 @@
     },
     {
         "question": "What is the purpose of the 'git checkout' command in Git?",
-        "questionID": 86,
+        "questionID": 65,
         "options": {
             "A": "Creates a new branch",
             "B": "Switches between branches",
@@ -953,7 +717,7 @@
     },
     {
         "question": "Which command is used to stage changes for commit in Git?",
-        "questionID": 87,
+        "questionID": 66,
         "options": {
             "A": "git commit",
             "B": "git stage",
@@ -964,7 +728,7 @@
     },
     {
         "question": "What is the purpose of the 'git merge' command in Git?",
-        "questionID": 88,
+        "questionID": 67,
         "options": {
             "A": "Pushes changes from local repository to remote repository",
             "B": "Merges changes from one branch into another",
@@ -975,7 +739,7 @@
     },
     {
         "question": "Which command is used to create a new branch in Git?",
-        "questionID": 89,
+        "questionID": 68,
         "options": {
             "A": "git checkout",
             "B": "git pull",
@@ -986,7 +750,7 @@
     },
     {
         "question": "What does the 'git commit' command do in Git?",
-        "questionID": 90,
+        "questionID": 69,
         "options": {
             "A": "Pushes changes from local repository to remote repository",
             "B": "Commits changes to the local repository",
@@ -996,8 +760,8 @@
         "answer": "B"
     },
     {
-        "question": "What does the following list comprehension do?\n\npython\n[x for x in range(10) if x % 2 == 0]\n",
-        "questionID": 91,
+        "question": "What does the following list comprehension do?<br><code>[x for x in range(10) if x % 2 == 0]</code>",
+        "questionID": 70,
         "options": {
             "A": "Creates a list of even numbers from 0 to 9",
             "B": "Creates a list of odd numbers from 0 to 9",
@@ -1008,7 +772,7 @@
     },
     {
         "question": "What is the purpose of the 'continue' statement in Python?",
-        "questionID": 92,
+        "questionID": 71,
         "options": {
             "A": "To skip the remaining code in the loop and move to the next iteration",
             "B": "To exit the loop and move to the next statement",
@@ -1018,19 +782,8 @@
         "answer": "A"
     },
     {
-        "question": "What is the result of '3 * (1 + 2)' in Python?",
-        "questionID": 93,
-        "options": {
-            "A": "6",
-            "B": "9",
-            "C": "12",
-            "D": "Error"
-        },
-        "answer": "B"
-    },
-    {
         "question": "What is the purpose of 'args' and 'kwargs' in Python function definitions?",
-        "questionID": 94,
+        "questionID": 72,
         "options": {
             "A": "To define required and optional arguments",
             "B": "To pass a variable number of arguments to a function",
@@ -1041,7 +794,7 @@
     },
     {
         "question": "What is the purpose of 'sys.argv' in Python?",
-        "questionID": 95,
+        "questionID": 73,
         "options": {
             "A": "To specify command-line arguments",
             "B": "To access command-line arguments passed to a script",
@@ -1052,7 +805,7 @@
     },
     {
         "question": "What is the result of 'len({'a': 1, 'b': 2, 'c': 3})' in Python?",
-        "questionID": 96,
+        "questionID": 74,
         "options": {
             "A": "3",
             "B": "4",
@@ -1061,43 +814,42 @@
         },
         "answer": "A"
     },
-  
     {
-      "question": "Which of the following is a valid way to iterate over a dictionary in Python?",
-      "questionID": 97,
-      "options": {
-          "A": "for key, value in dict:",
-          "B": "for key in dict.keys():",
-          "C": "for value in dict.values():",
-          "D": "All of the above"
+        "question": "Which of the following is a valid way to iterate over a dictionary in Python?",
+        "questionID": 75,
+        "options": {
+            "A": "for key, value in dict:",
+            "B": "for key in dict.keys():",
+            "C": "for value in dict.values():",
+            "D": "All of the above"
+        },
+        "answer": "D"
       },
-      "answer": "D"
-    },
-    {
-        "question": "What does the 'del' keyword do in Python?",
-        "questionID": 98,
-        "options": {
-            "A": "Deletes a file from the file system",
-            "B": "Deletes a variable or item from a list",
-            "C": "Deletes a character from a string",
-            "D": "Deletes a line from a text file"
-        },
-        "answer": "B"
-    },
-    {
-        "question": "What is the result of '3 ** 2' in Python?",
-        "questionID": 99,
-        "options": {
-            "A": "6",
-            "B": "9",
-            "C": "Error",
-            "D": "None"
-        },
-        "answer": "B"
-    },
-    {
+      {
+          "question": "What does the 'del' keyword do in Python?",
+          "questionID": 76,
+          "options": {
+              "A": "Deletes a file from the file system",
+              "B": "Deletes a variable or item from a list",
+              "C": "Deletes a character from a string",
+              "D": "Deletes a line from a text file"
+          },
+          "answer": "B"
+      },
+      {
+          "question": "What is the result of '3 ** 2' in Python?",
+          "questionID": 77,
+          "options": {
+              "A": "6",
+              "B": "9",
+              "C": "Error",
+              "D": "None"
+          },
+          "answer": "B"
+      },
+      {
         "question": "What is the purpose of 'setdefault()' method in Python dictionaries?",
-        "questionID": 100,
+        "questionID": 78,
         "options": {
             "A": "To add a new key-value pair to the dictionary if the key does not exist",
             "B": "To update the value of a key in the dictionary",
@@ -1108,7 +860,7 @@
     },
     {
         "question": "What is the output of 'print('Hello'[::-1])' in Python?",
-        "questionID": 101,
+        "questionID": 79,
         "options": {
             "A": "Hello",
             "B": "olleH",
@@ -1119,7 +871,7 @@
     },
     {
         "question": "What is the result of '3 == '3'' in Python?",
-        "questionID": 102,
+        "questionID": 80,
         "options": {
             "A": "True",
             "B": "False",
@@ -1129,41 +881,30 @@
         "answer": "B"
     },
     {
-        "question": "What is the purpose of the 'pop()' method in Python dictionaries?",
-        "questionID": 103,
+        "question": "What is the result of 'bool(0)' in Python?",
+        "questionID": 81,
         "options": {
-            "A": "To remove the last element from a list",
-            "B": "To remove the first element from a list",
-            "C": "To remove a key-value pair from the dictionary",
-            "D": "To remove a character from a string"
+            "A": "0",
+            "B": "Error",
+            "C": "True",
+            "D": "False"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "What is the purpose of the 'filter()' function in Python?",
+        "questionID": 82,
+        "options": {
+            "A": "To apply a function to all elements in an iterable",
+            "B": "To return the minimum element in an iterable",
+            "C": "To create a new iterable containing only elements that satisfy a certain condition",
+            "D": "To return the maximum element in an iterable"
         },
         "answer": "C"
     },
     {
-        "question": "What is the result of 'bool(0)' in Python?",
-        "questionID": 104,
-        "options": {
-            "A": "0",
-            "B": "False",
-            "C": "True",
-            "D": "Error"
-        },
-        "answer": "B"
-    },
-    {
-        "question": "What is the purpose of the 'filter()' function in Python?",
-        "questionID": 105,
-        "options": {
-            "A": "To apply a function to all elements in an iterable",
-            "B": "To create a new iterable containing only elements that satisfy a certain condition",
-            "C": "To return the maximum element in an iterable",
-            "D": "To return the minimum element in an iterable"
-        },
-        "answer": "B"
-    },
-    {
         "question": "Which of the following code snippets will correctly produce the result 10?",
-        "questionID": 106,
+        "questionID": 83,
         "options": {
             "A": "x = 5\ny = 3\nprint(x * y + 5)",
             "B": "x = 15\ny = 2\nprint(x - y)",
@@ -1174,18 +915,18 @@
     },
     {
         "question": "Which of the following code snippets will correctly remove the element 'banana' from the list ['apple', 'banana', 'cherry']?",
-        "questionID": 107,
+        "questionID": 84,
         "options": {
-            "A": "fruits = ['apple', 'banana', 'cherry']\nfruits.remove('banana')\nprint(fruits)",
-            "B": "fruits = ['apple', 'banana', 'cherry']\ndel fruits[1]\nprint(fruits)",
-            "C": "fruits = ['apple', 'banana', 'cherry']\nfruits.pop(1)\nprint(fruits)",
+            "A": "fruits = ['apple', 'banana', 'cherry']\ndel fruits[1]\nprint(fruits)",
+            "B": "fruits = ['apple', 'banana', 'cherry']\nfruits.pop(1)\nprint(fruits)",
+            "C": "fruits = ['apple', 'banana', 'cherry']\nfruits.remove('banana')\nprint(fruits)",
             "D": "fruits = ['apple', 'banana', 'cherry']\nfruits.delete('banana')\nprint(fruits)"
         },
-        "answer": "A"
+        "answer": "C"
     },
     {
         "question": "Which of the following code snippets will correctly check if the key 'name' is present in the dictionary {'age': 25, 'city': 'New York', 'name': 'John'}?",
-        "questionID": 108,
+        "questionID": 85,
         "options": {
             "A": "my_dict = {'age': 25, 'city': 'New York', 'name': 'John'}\nif 'name' in my_dict:\n    print('Present')\nelse:\n    print('Not present')",
             "B": "my_dict = {'age': 25, 'city': 'New York', 'name': 'John'}\nif my_dict.has_key('name'):\n    print('Present')\nelse:\n    print('Not present')",
@@ -1196,29 +937,18 @@
     },
     {
         "question": "Which of the following code snippets will correctly print the keys of the dictionary {'a': 1, 'b': 2, 'c': 3}?",
-        "questionID": 109,
-        "options": {
-            "A": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nfor key in my_dict:\n    print(key)",
-            "B": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(my_dict.keys())",
-            "C": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nfor key in my_dict.keys():\n    print(key)",
-            "D": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(my_dict)"
+        "questionID": 86,
+        "options": {            
+            "A": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(my_dict.keys())",
+            "B": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nfor key in my_dict.keys():\n    print(key)",
+            "C": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(my_dict)",
+            "D": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nfor key in my_dict:\n    print(key)"
         },
-        "answer": "A"
-    },
-    {
-        "question": "Which of the following code snippets will correctly find the length of the string 'hello'?",
-        "questionID": 110,
-        "options": {
-            "A": "my_string = 'hello'\nprint(len(my_string))",
-            "B": "my_string = 'hello'\nprint(my_string.length())",
-            "C": "my_string = 'hello'\nprint(my_string.len())",
-            "D": "my_string = 'hello'\nprint(length(my_string))"
-        },
-        "answer": "A"
+        "answer": "D"
     },
     {
         "question": "Which of the following code snippets will correctly split the string 'apple,banana,cherry' into a list?",
-        "questionID": 111,
+        "questionID": 87,
         "options": {
             "A": "my_string = 'apple,banana,cherry'\nmy_list = my_string.split(',')\nprint(my_list)",
             "B": "my_string = 'apple,banana,cherry'\nmy_list = my_string.split()\nprint(my_list)",
@@ -1227,21 +957,20 @@
         },
         "answer": "A"
     },
-  
     {
-      "question": "Which of the following code snippets will correctly join the elements of the list ['apple', 'banana', 'cherry'] into a string separated by '-'?",
-      "questionID": 112,
-      "options": {
-          "A": "my_list = ['apple', 'banana', 'cherry']\nmy_string = '-'.join(my_list)\nprint(my_string)",
-          "B": "my_list = ['apple', 'banana', 'cherry']\nmy_string = ''.join(my_list)\nprint(my_string)",
-          "C": "my_list = ['apple', 'banana', 'cherry']\nmy_string = ','.join(my_list)\nprint(my_string)",
-          "D": "my_list = ['apple', 'banana', 'cherry']\nmy_string = '/'.join(my_list)\nprint(my_string)"
+        "question": "Which of the following code snippets will correctly join the elements of the list ['apple', 'banana', 'cherry'] into a string separated by '-'?",
+        "questionID": 88,
+        "options": {
+            "A": "my_list = ['apple', 'banana', 'cherry']\nmy_string = '/'.join(my_list)\nprint(my_string) ",
+            "B": "my_list = ['apple', 'banana', 'cherry']\nmy_string = ''.join(my_list)\nprint(my_string)",
+            "C": "my_list = ['apple', 'banana', 'cherry']\nmy_string = ','.join(my_list)\nprint(my_string)",
+            "D": "my_list = ['apple', 'banana', 'cherry']\nmy_string = '-'.join(my_list)\nprint(my_string)"
+        },
+        "answer": "D"
       },
-      "answer": "A"
-    },
-    {
+      {
         "question": "Which of the following code snippets will correctly convert the string '5' to an integer?",
-        "questionID": 113,
+        "questionID": 89,
         "options": {
             "A": "my_string = '5'\nmy_int = int(my_string)\nprint(my_int)",
             "B": "my_string = '5'\nmy_int = my_string.to_int()\nprint(my_int)",
@@ -1252,139 +981,84 @@
     },
     {
         "question": "Which of the following code snippets will correctly generate a list of even numbers from 2 to 10?",
-        "questionID": 114,
+        "questionID": 90,
         "options": {
-            "A": "even_numbers = [i for i in range(2, 11) if i % 2 == 0]",
+            "A": "even_numbers = [i for i in range(1, 11)]",
             "B": "even_numbers = [i for i in range(1, 11) if i % 2 == 0]",
             "C": "even_numbers = [i for i in range(2, 10)]",
-            "D": "even_numbers = [i for i in range(1, 11)]"
+            "D": "even_numbers = [i for i in range(2, 11) if i % 2 == 0]"
         },
-        "answer": "A"
-    },
-    {
-        "question": "Which of the following code snippets will correctly define a function 'add' that adds two numbers?",
-        "questionID": 115,
-        "options": {
-            "A": "def add(x, y):\n    return x + y",
-            "B": "def add(x, y):\n    print(x + y)",
-            "C": "function add(x, y):\n    return x + y",
-            "D": "function add(x, y):\n    print(x + y)"
-        },
-        "answer": "A"
+        "answer": "D"
     },
     {
         "question": "Which of the following code snippets will correctly define a class 'Person' with a constructor that initializes 'name' and 'age' attributes?",
-        "questionID": 116,
+        "questionID": 91,
         "options": {
-            "A": "class Person:\n    def _init_(self, name, age):\n        self.name = name\n        self.age = age",
-            "B": "class Person:\n    def _init_(name, age):\n        self.name = name\n        self.age = age",
-            "C": "def class Person:\n    def _init_(self, name, age):\n        self.name = name\n        self.age = age",
+            "A": "class Person:\n    def _init_(name, age):\n        self.name = name\n        self.age = age",
+            "B": "def class Person:\n    def _init_(self, name, age):\n        self.name = name\n        self.age = age",
+            "C": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age",
             "D": "class Person:\n    def init(self, name, age):\n        self.name = name\n        self.age = age"
         },
-        "answer": "A"
+        "answer": "C"
     },
     {
         "question": "Which of the following code snippets will correctly define a function 'is_prime' that checks if a number is prime?",
-        "questionID": 117,
-        "options": {
-            "A": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
-            "B": "def is_prime(n):\n    if n <= 1:\n        return True\n    for i in range(2, n):\n        if n % i == 0:\n            return False\n    return True",
+        "questionID": 92,
+        "options": {            
+            "A": "def is_prime(n):\n    if n <= 1:\n        return True\n    for i in range(2, n):\n        if n % i == 0:\n            return False\n    return True",
+            "B": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
             "C": "def is_prime(n):\n    for i in range(2, int(n/2)):\n        if n % i == 0:\n            return False\n    return True",
             "D": "def is_prime(n):\n    if n == 2:\n        return True\n    if n % 2 == 0 or n <= 1:\n        return False\n    for i in range(3, int(n**0.5) + 1, 2):\n        if n % i == 0:\n            return False\n    return True"
         },
-        "answer": "A"
-    },
-    {
-        "question": "Which of the following code snippets will correctly define a function 'factorial' that computes the factorial of a number?",
-        "questionID": 118,
-        "options": {
-            "A": "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)",
-            "B": "def factorial(n):\n    result = 1\n    for i in range(1, n+1):\n        result *= i\n    return result",
-            "C": "def factorial(n):\n    result = 1\n    while n > 0:\n        result *= n\n        n -= 1\n    return result",
-            "D": "def factorial(n):\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n-2)"
-        },
-        "answer": "A"
+        "answer": "B"
     },
     {
         "question": "Which of the following code snippets will correctly define a class 'Rectangle' with methods 'area' and 'perimeter' to compute its area and perimeter respectively?",
-        "questionID": 119,
+        "questionID": 93,
         "options": {
-            "A": "class Rectangle:\n    def _init_(self, length, width):\n        self.length = length\n        self.width = width\n    def area(self):\n        return self.length * self.width\n    def perimeter(self):\n        return 2 * (self.length + self.width)",
-            "B": "class Rectangle:\n    def _init_(self, length, width):\n        self.length = length\n        self.width = width\n    def get_area(self):\n        return self.length * self.width\n    def get_perimeter(self):\n        return 2 * (self.length + self.width)",
+            "A": "class Rectangle:\n    def _init_(self, length, width):\n        self.length = length\n        self.width = width\n    def get_area(self):\n        return self.length * self.width\n    def get_perimeter(self):\n        return 2 * (self.length + self.width)",
+            "B": "class Rectangle:\n    def __init__(self, length, width):\n        self.length = length\n        self.width = width\n    def area(self):\n        return self.length * self.width\n    def perimeter(self):\n        return 2 * (self.length + self.width)",
             "C": "class Rectangle:\n    def _init_(length, width):\n        self.length = length\n        self.width = width\n    def area(self):\n        return length * width\n    def perimeter(self):\n        return 2 * (length + width)",
             "D": "class Rectangle:\n    def _init_(self, length, width):\n        self.length = length\n        self.width = width\n    def calculate_area(self):\n        return self.length * self.width\n    def calculate_perimeter(self):\n        return 2 * (self.length + self.width)"
         },
-        "answer": "A"
-    },
-    {
-        "question": "Which of the following code snippets will correctly check if a number is odd?",
-        "questionID": 120,
-        "options": {
-            "A": "def is_odd(n):\n    return n % 2 != 0",
-            "B": "def is_odd(n):\n    if n % 2 == 1:\n        return True\n    else:\n        return False",
-            "C": "def is_odd(n):\n    return n % 2 == 1",
-            "D": "def is_odd(n):\n    return n % 2 == 0"
-        },
-        "answer": "A"
+        "answer": "B"
     },
     {
         "question": "Which of the following code snippets will correctly find the greatest common divisor (GCD) of two numbers?",
-        "questionID": 121,
-        "options": {
-            "A": "import math\nmath.gcd(a, b)",
-            "B": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
-            "C": "from fractions import gcd\ngcd(a, b)",
+        "questionID": 94,
+        "options": {           
+            "A": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+            "B": "from fractions import gcd\ngcd(a, b)",
+            "C": "import math\nmath.gcd(a, b)",
             "D": "import numpy as np\nnp.gcd(a, b)"
         },
-        "answer": "A"
+        "answer": "C"
     },
     {
         "question": "Which of the following code snippets will correctly swap the values of two variables 'a' and 'b'?",
-        "questionID": 122,
+        "questionID": 95,
         "options": {
-            "A": "a, b = b, a",
-            "B": "temp = a\na = b\nb = temp",
+            "A": "temp = a\na = b\nb = temp",
+            "B": "a, b = b, a",
             "C": "temp = a\nb = a\na = temp",
             "D": "a = a + b\nb = a - b\na = a - b"
         },
-        "answer": "A"
-    },
-    {
-        "question": "Which of the following code snippets will correctly check if a string is a palindrome?",
-        "questionID": 123,
-        "options": {
-            "A": "def is_palindrome(s):\n    return s == s[::-1]",
-            "B": "def is_palindrome(s):\n    for i in range(len(s) // 2):\n        if s[i] != s[len(s) - i - 1]:\n            return False\n    return True",
-            "C": "def is_palindrome(s):\n    reversed_s = ''.join(reversed(s))\n    return s == reversed_s",
-            "D": "def is_palindrome(s):\n    return s.reverse() == s"
-        },
-        "answer": "A"
-    },
-    {
-      "question": "Which of the following code snippets will correctly convert a string to uppercase?",
-      "questionID": 124,
-      "options": {
-          "A": "s.upper()",
-          "B": "s = s.upper()",
-          "C": "s = to_upper(s)",
-          "D": "s = s.convert_to_upper()"
-      },
-        "answer": "A"
+        "answer": "B"
     },
     {
         "question": "Which of the following code snippets will correctly count the occurrences of a character 'c' in a string 's'?",
-        "questionID": 125,
+        "questionID": 96,
         "options": {
-            "A": "s.count('c')",
+            "A": "count('c', s)",
             "B": "s.count(c)",
             "C": "count(s, 'c')",
-            "D": "count('c', s)"
+            "D": "s.count('c')"
         },
-        "answer": "A"
+        "answer": "D"
     },
     {
         "question": "Which of the following code snippets will correctly check if all elements of a list 'lst' are equal?",
-        "questionID": 126,
+        "questionID": 97,
         "options": {
             "A": "len(set(lst)) == 1",
             "B": "all(x == lst[0] for x in lst)",
@@ -1394,49 +1068,950 @@
         "answer": "A"
     },
     {
-        "question": "Which of the following code snippets will correctly create a shallow copy of a list 'lst'?",
+        "question": "Which of the following Python code snippets correctly defines a class named 'Person' with an __init__ method that initializes the 'name' attribute?",
+        "questionID": 98,
+        "options": {
+          "A": "class Person:\n    def __init__(self, name):\n        self.name = name",
+          "B": "class Person:\n    def init(self, name):\n        self.name = name",
+          "C": "class Person:\n    def __init__(name):\n        self.name = name",
+          "D": "class Person:\n    def __init__(self, name):\n        Person.name = name"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which of the following Python code snippets correctly defines a method named 'add' inside a class named 'Calculator' that adds two numbers and returns the result?",
+        "questionID": 99,
+        "options": {
+            "A": "class Calculator:\n    def sum(self, x, y):\n        return x + y",
+            "B": "class Calculator:\n    def add(x, y):\n        return x + y",
+            "C": "class Calculator:\n    def add(self, x, y):\n        return x + y",
+            "D": "class Calculator:\n    def sum(x, y):\n        return x + y"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "Which of the following Python code snippets correctly defines a class named 'Square' with an attribute 'side_length' and a method named 'calculate_area' that returns the area of the square?",
+        "questionID": 100,
+        "options": {
+          "A": "class Square:\n    def __init__(self, side_length):\n        self.side_length = side_length\n    def calculate_area(self):\n        return self.side_length ** 2",
+          "B": "class Square:\n    def __init__(self, side_length):\n        Square.side_length = side_length\n    def calculate_area(self):\n        return Square.side_length ** 2",
+          "C": "class Square:\n    def __init__(side_length):\n        self.side_length = side_length\n    def calculate_area(self):\n        return self.side_length ** 2",
+          "D": "class Square:\n    def __init__(self, side_length):\n        self.side_length = side_length\n    def calculate_area():\n        return self.side_length ** 2"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which of the following Python code snippets correctly defines a subclass named 'Dog' that inherits from a superclass named 'Animal'?",
+        "questionID": 101,
+        "options": {
+          "A": "class Dog(Animal):\n    def __init__(self, name):\n        super().__init__(name)",
+          "B": "class Dog:\n    def __init__(self, name):\n        super().__init__(name)",
+          "C": "class Dog:\n    def __init__(self, name):\n        Animal.__init__(self, name)",
+          "D": "class Dog:\n    def __init__(self, name):\n        Animal.__init__(self, dog, name)"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which of the following Python code snippets correctly defines a method named 'add' inside a class named 'Calculator' that adds two numbers and returns the result?",
+        "questionID": 102,
+        "options": {
+          "A": "class Calculator:\n    def add(self, x, y):\n        return x + y",
+          "B": "class Calculator:\n    def sum(self, x, y):\n        return x + y",
+          "C": "class Calculator:\n    def add(x, y):\n        return x + y",
+          "D": "class Calculator:\n    def addNumbs(self, x, y):\n        return x + y"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "Which of the following Python code snippets correctly defines a method named 'is_even' inside a class named 'Number' that checks if a given number is even?",
+        "questionID": 103,
+        "options": {
+          "A": "class Number:\n    def __init__(self, number):\n        self.number = number\n    def is_even(self):\n        return self.number % 2 == 0",
+          "B": "class Number:\n    def __init__(self, number):\n        self.number = number\n    def is_even(number):\n        return number % 2 == 0",
+          "C": "class Number:\n    def __init__(self, number):\n        self.number = number\n    def is_even(self, number):\n        return sef.number % 2 == 0",
+          "D": "class Number:\n    def __init__(self, number):\n        self.number = number\n    def is_even(self, number):\n        return self.number % 2 == 1"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which of the following Python code snippets correctly defines a class named 'Square' with an attribute 'side_length' and a method named 'calculate_area' that returns the area of the square?",
+        "questionID": 104,
+        "options": {
+          "A": "class Square:\n    def __init__(self, side_length):\n        self.side_length = side_length\n    def calculate_area(self):\n        return self.side_length ** 2",
+          "B": "class Square:\n    def __init__(self, side_lenth):\n        Square.side_length = side_length\n    def calculate_area(self):\n        return Square.side_length ** 2",
+          "C": "class Square:\n    def __init__(self, side_length):\n        side_length = side_length\n    def calculate_area():\n        return self.side_length ** 2",
+          "D": "class Square:\n    def __init__(self, side_length):\n        self.side_length = side_length\n    def calclate_area():\n        return self.side_length ^ 2"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the following Python code do?<br><code>class MyClass:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, x, y):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.x = x<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.y = y<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def multiply(self):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.x * self.y<br><br>obj = MyClass(3, 4)<br>print(obj.multiply())</code>",
+        "questionID": 105,
+        "options": {
+          "A": "Creates a class with an __init__ method to initialize 'x' and 'y' attributes, \nand a 'multiply' method to return the product of 'x' and 'y'",
+          "B": "Creates an instance of MyClass and prints its product",
+          "C": "Creates a class with an __init__ method to initialize 'x' and 'y' attributes",
+          "D": "Prints '12'"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>class Car:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, make, model):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.make = make<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.model = model<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def display_info(self):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Make:', self.make)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Model:', self.model)<br><br>car = Car('Toyota', 'Camry')<br>car.display_info()</code>",
+        "questionID": 106,
+        "options": {
+          "A": "Make: Toyota\nModel: Camry",
+          "B": "Car('Toyota', 'Camry')",
+          "C": "Error",
+          "D": "None"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>class Circle:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, radius):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.radius = radius<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def calculate_area(self):</code>",
+        "questionID": 107,
+        "options": {
+          "A": "Error",
+          "B": "None",
+          "C": "No output",
+          "D": "A Circle class is created"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>class Rectangle:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, length, width):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.length = length<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.width = width<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def calculate_area(self):</code>",
+        "questionID": 108,
+        "options": {
+          "A": "Error",
+          "B": "None",
+          "C": "No output",
+          "D": "A Rectangle class is created"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What does the following Python code do?<br><code>class BankAccount:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, balance):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.balance = balance<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def deposit(self, amount):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.balance += amount<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def withdraw(self, amount):</code>",
+        "questionID": 109,
+        "options": {
+          "A": "Creates a BankAccount class with methods to deposit and withdraw money",
+          "B": "Creates an instance of BankAccount and performs deposit and withdrawal operations",
+          "C": "Creates a BankAccount class with a balance attribute",
+          "D": "Performs deposit and withdrawal operations"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the output of the following Python code?<br><code>class Student:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, name, age):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def display_info(self):</code>",
+        "questionID": 110,
+        "options": {
+          "A": "Error",
+          "B": "None",
+          "C": "No output",
+          "D": "A Student class is created"
+        },
+        "answer": "C"
+      },      
+      {
+        "question": "What does the following Python code do?<br><code>class Employee:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, name, salary):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.salary = salary<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def display_info(self):</code>",
+        "questionID": 111,
+        "options": {
+          "A": "Displays employee information",
+          "B": "Creates an instance of Employee and displays its information",
+          "C": "Creates an Employee class",
+          "D": "Creates an Employee class with attributes name and salary"
+        },
+        "answer": "D"
+      },      
+      {
+        "question": "What are decorators used for in Python?",
+        "questionID": 112,
+        "options": {
+          "A": "To modify or extend the behavior of functions or methods without changing their code",
+          "B": "To define class attributes",
+          "C": "To handle exceptions gracefully",
+          "D": "To define class properties"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "How are class methods defined in Python?",
+        "questionID": 113,
+        "options": {
+          "A": "Using the @classmethod decorator",
+          "B": "Using the @staticmethod decorator",
+          "C": "Using the @property decorator",
+          "D": "Using the @class decorator"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the purpose of static methods in Python?",
+        "questionID": 114,
+        "options": {
+          "A": "To modify or extend the behavior of functions or methods without changing their code",
+          "B": "To define class attributes",
+          "C": "To create methods that do not access or modify class or instance state",
+          "D": "To define class properties"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "How are properties defined in Python?",
+        "questionID": 115,
+        "options": {
+          "A": "Using the @classmethod decorator",
+          "B": "Using the @staticmethod decorator",
+          "C": "Using the @property decorator",
+          "D": "Using the @class decorator"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the primary use of the 'with' statement in Python?",
+        "questionID": 116,
+        "options": {
+          "A": "To define class methods",
+          "B": "To handle exceptions",
+          "C": "To ensure proper acquisition and release of resources",
+          "D": "To define static methods"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "Which module is used to handle CSV files in Python?",
+        "questionID": 117,
+        "options": {
+          "A": "os",
+          "B": "csv",
+          "C": "json",
+          "D": "sys"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "Which function is used to read JSON data from a file in Python?",
+        "questionID": 118,
+        "options": {
+          "A": "json.load()",
+          "B": "json.read()",
+          "C": "json.loads()",
+          "D": "json.parse()"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the purpose of the 'try-except' block in Python?",
+        "questionID": 119,
+        "options": {
+          "A": "To define class methods",
+          "B": "To handle exceptions",
+          "C": "To ensure proper acquisition and release of resources",
+          "D": "To define static methods"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the purpose of the 'raise' statement in Python?",
+        "questionID": 120,
+        "options": {
+          "A": "To define class methods",
+          "B": "To handle exceptions",
+          "C": "To ensure proper acquisition and release of resources",
+          "D": "To raise custom exceptions"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What does the following Python code do?<br><code>class BankAccount:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, balance):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.balance = balance<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def deposit(self, amount):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.balance += amount<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def withdraw(self, amount):</code>",
+        "questionID": 121,
+        "options": {
+          "A": "Creates a BankAccount class with methods to deposit and withdraw money",
+          "B": "Creates an instance of BankAccount and performs deposit and withdrawal operations",
+          "C": "Creates a BankAccount class with a balance attribute",
+          "D": "Performs deposit and withdrawal operations"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What does the following Python code do?<br><code>class BankAccount:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, balance):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.balance = balance<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def deposit(self, amount):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.balance += amount<br><br>&nbsp;&nbsp;&nbsp;&nbsp;def withdraw(self, amount):</code>",
+        "questionID": 122,
+        "options": {
+          "A": "Creates a BankAccount class with methods to deposit and withdraw money",
+          "B": "Creates an instance of BankAccount and performs deposit and withdrawal operations",
+          "C": "Creates a BankAccount class with a balance attribute",
+          "D": "Performs deposit and withdrawal operations"
+        },
+        "answer": "A"
+      },      
+      {
+        "question": "What is the purpose of the 'try-except' block in Python?",
+        "questionID": 123,
+        "options": {
+          "A": "To handle exceptions",
+          "B": "To define class methods",
+          "C": "To ensure proper acquisition and release of resources",
+          "D": "To define static methods"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the purpose of the 'raise' statement in Python?",
+        "questionID": 124,
+        "options": {
+          "A": "To define class methods",
+          "B": "To handle exceptions",
+          "C": "To ensure proper acquisition and release of resources",
+          "D": "To raise custom exceptions"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What does the following Python code snippet do?<br><code>try:<br>&nbsp;&nbsp;&nbsp;&nbsp;result = 10 / 0<br>except ZeroDivisionError:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Error: Division by zero')</code>",
+        "questionID": 125,
+        "options": {
+          "A": "Attempts to perform a division operation and handles the ZeroDivisionError exception",
+          "B": "Raises a ZeroDivisionError exception",
+          "C": "Performs an arithmetic operation without handling any exceptions",
+          "D": "Prints 'Error: Division by zero'"
+        },
+        "answer": "A"
+      },      
+      {
+        "question": "What is the purpose of the 'finally' block in a 'try-except-finally' statement?",
+        "questionID": 126,
+        "options": {
+          "A": "To handle exceptions",
+          "B": "To define class methods",
+          "C": "To ensure proper acquisition and release of resources",
+          "D": "To perform cleanup actions, regardless of whether an exception occurs"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "How can you define a custom exception class in Python?",
         "questionID": 127,
         "options": {
-            "A": "lst.copy()",
-            "B": "list(lst)",
-            "C": "lst[:]",
-            "D": "copy(lst)"
+            "A": "By defining a function with the name 'exception'",
+            "B": "By using the @exception decorator",
+            "C": "By inheriting from the Exception class",
+            "D": "By using the raise statement"
         },
-        "answer": "A"
-    },
-    {
-        "question": "Which of the following code snippets will correctly remove duplicates from a list 'lst' while preserving the order?",
+        "answer": "C"
+      },
+      {
+        "question": "What does the following Python code snippet do?<br><code>try:<br>&nbsp;&nbsp;&nbsp;&nbsp;file = open('nonexistent.txt', 'r')<br>except FileNotFoundError:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Error: File not found')</code>",
         "questionID": 128,
         "options": {
-            "A": "list(dict.fromkeys(lst))",
-            "B": "[i for n, i in enumerate(lst) if i not in lst[:n]]",
-            "C": "set(lst)",
-            "D": "[x for i, x in enumerate(lst) if lst.index(x) == i]"
+          "A": "Prints 'Error: File not found'",
+          "B": "Raises a FileNotFoundError exception",
+          "C": "Performs file reading without handling any exceptions",
+          "D": "Attempts to open a file for reading and handles the FileNotFoundError exception"
         },
-        "answer": "A"
-    },
-    {
-        "question": "Which of the following code snippets will correctly sort a list 'lst' in ascending order?",
+        "answer": "D"
+      },      
+      {
+        "question": "What is the purpose of the 'else' block in a 'try-except-else' statement?",
         "questionID": 129,
         "options": {
-            "A": "sorted(lst)",
-            "B": "lst.sort()",
-            "C": "lst.sort(reverse=False)",
-            "D": "sort(lst)"
+          "A": "To handle exceptions",
+          "B": "To execute code that should run only if no exceptions occur",
+          "C": "To ensure proper acquisition and release of resources",
+          "D": "To define static methods"
         },
-        "answer": "A"
-    },
-    {
-        "question": "Which of the following code snippets will correctly filter out even numbers from a list 'lst' using the 'filter' function?",
+        "answer": "B"
+      },
+      {
+        "question": "What does the following Python code snippet do?<br><code>try:<br>&nbsp;&nbsp;&nbsp;&nbsp;x = int('abc')<br>except ValueError:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Error: Invalid conversion')<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Conversion successful')</code>",
         "questionID": 130,
         "options": {
-            "A": "list(filter(lambda x: x % 2 == 0, lst))",
-            "B": "[x for x in lst if x % 2 == 0]",
-            "C": "filter(lambda x: x % 2 == 0, lst)",
-            "D": "[x for x in filter(lambda x: x % 2 == 0, lst)]"
+          "A": "Performs a conversion without handling any exceptions",
+          "B": "Raises a ValueError exception",
+          "C": "Attempts to convert a string to an integer and handles the ValueError exception",
+          "D": "Prints 'Conversion successful'"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What does the following Python code snippet do?<br><code>try:<br>&nbsp;&nbsp;&nbsp;&nbsp;result = 10 / 2<br>except ZeroDivisionError:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Error: Division by zero')<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Division successful')<br>finally:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('End of execution')</code>",
+        "questionID": 131,
+        "options": {
+          "A": "Attempts to perform a division operation, handles the ZeroDivisionError exception, and executes cleanup actions",
+          "B": "Raises a ZeroDivisionError exception",
+          "C": "Performs a division operation without handling any exceptions",
+          "D": "Prints 'Division successful' and 'End of execution'"
         },
         "answer": "A"
-    }
-  
+      },      
+      {
+        "question": "What Python code snippet correctly handles the scenario of opening a file 'data.txt' for reading and printing its content line by line?",
+        "questionID": 132,
+        "options": {
+            "A": "try:\n    file = open('data.txt', 'r')\n    for line in file:\n        print(line)\nfinally:\n    fil.close()",
+            "B": "try:\n    with open('data.txt', 'w') as file:\n        for line in file:\n            print(line)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "C": "try:\n    with open('data.txt', 'r') as file:\n        for line in file:\n            print(line)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "D": "try:\n    with open('data.txt', 'r') as file:\n        file.read()\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "Which Python code snippet correctly handles the scenario of reading JSON data from a file named 'data.json' and loading it into a dictionary?",
+        "questionID": 133,
+        "options": {
+          "A": "import json\n\ntry:\n    with open('data.json', 'r') as file:\n        data = json.load(file)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "B": "import json\n\ntry:\n    file = open('data.json', 'r')\n    data = json.loads(file.read())\nfinally:\n    file.close()",
+          "C": "import json\n\ntry:\n    with open('data.json', 'w') as file:\n        data = json.load(file)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "D": "import json\n\ntry:\n    with open('data.json', 'r') as file:\n        data = json.loads(file.read())\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of opening a CSV file 'data.csv' for reading and printing its content row by row?",
+        "questionID": 134,
+        "options": {
+            "A": "import csv\n\ntry:\n    with open('data.csv', 'w') as file:\n        reader = csv.reader(file)\n        for row in reader:\n            print(row)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "B": "import csv\n\ntry:\n    file = open('data.csv', 'r')\n    reader = csv.reader(file)\n    for row in reader:\n        print(row)\nfinally:\n    file.close()",
+            "C": "import csv\n\ntry:\n    with open('data.csv', 'r') as file:\n        reader = csv.reader(file)\n        for row in reader:\n            print(row)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "D": "import csv\n\ntry:\n    with open('data.csv', 'r') as file:\n        reader = csv.writer(file)\n        for row in reader:\n            print(row)\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of opening a file 'data.txt' for writing and writing 'Hello, world!' to it?",
+        "questionID": 135,
+        "options": {
+            "A": "try:\n    with open('data.txt', 'r') as file:\n        file.read()\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "B": "try:\n    file = open('data.txt', 'w')\n    file.write('Hello, world!')\nfinally:\n    file.close()",
+            "C": "try:\n    with open('data.txt', 'r') as file:\n        file.write('Hello, world!')\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "D": "try:\n    with open('data.txt', 'w') as file:\n        file.write('Hello, world!')\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of attempting to convert a string '123' to an integer and printing the result?",
+        "questionID": 136,
+        "options": {
+            "A": "try:\n    value = int('abc')\n    print(value)\nexcept ValueError:\n    print('Error: Invalid conversion')",
+            "B": "try:\n    value = int('123')\nexcept ValueError:\n    print('Error: Invalid conversion')\nelse:\n    print(value)",
+            "C": "try:\n    value = int('abc')\nexcept ValueError:\n    print('Error: Invalid conversion')\nelse:\n    print(value)",
+            "D": "try:\n    value = int('123')\n    print(value)\nexcept ValueError:\n    print('Error: Invalid conversion')"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of attempting to divide 10 by 0 and printing 'Error: Division by zero'?",
+        "questionID": 137,
+        "options": {
+            "A": "try:\n    result = 10 / 0\nexcept ArithmeticError:\n    print('Error: Division by zero')",
+            "B": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Error: Division by zero')",
+          "C": "try:\n    result = 10 / 0\nexcept ValueError:\n    print('Error: Division by zero')",
+          "D": "try:\n    result = 10 / 0\nexcept TypeError:\n    print('Error: Division by zero')"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of attempting to read data from a file 'data.txt' and printing 'Error: File not found' if the file does not exist?",
+        "questionID": 138,
+        "options": {
+          "A": "try:\n    with open('data.txt', 'r') as file:\n        data = file.read()\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "B": "try:\n    with open('data.txt', 'r') as file:\n        data = file.read()\nexcept FileNotFound:\n    print('Error: File not found')",
+          "C": "try:\n    with open('data.txt', 'w') as file:\n        data = file.read()\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "D": "try:\n    with open('data.txt', 'r') as file:\n        data = file.write()\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of attempting to read JSON data from a file 'data.json' and printing 'Error: File not found' if the file does not exist?",
+        "questionID": 139,
+        "options": {
+            "A": "import json\n\ntry:\n    with open('data.json', 'r') as file:\n        data = json.loads(file.read())\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "B": "import json\n\ntry:\n    with open('data.json', 'w') as file:\n        data = json.load(file)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "C": "import json\n\ntry:\n    with open('data.json', 'r') as file:\n        data = json.load(file)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "D": "import json\n\ntry:\n    with open('data.json', 'r') as file:\n        data = json.load()\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of attempting to read CSV data from a file 'data.csv' and printing 'Error: File not found' if the file does not exist?",
+        "questionID": 140,
+        "options": {
+            "A": "import csv\n\ntry:\n    with open('data.csv', 'w') as file:\n        reader = csv.reader(file)\n        for row in reader:\n            print(row)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "B": "import csv\n\ntry:\n    with open('data.csv', 'r') as file:\n        data = csv.load(file)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "C": "import csv\n\ntry:\n    with open('data.csv', 'r') as file:\n        reader = csv.reader(file)\n        for row in reader:\n            print(row)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "D": "import csv\n\ntry:\n    with open('data.csv', 'r') as file:\n        reader = csv.writer(file)\n        for row in reader:\n            print(row)\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of attempting to write data to a file 'data.txt' and printing 'Error: File not found' if the file does not exist?",
+        "questionID": 141,
+        "options": {
+            "A": "try:\n    with open('data.txt', 'r') as file:\n        file.write('Hello, world!')\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "B": "try:\n    with open('data.txt', 'w') as file:\n        file.write('Hello, world!')\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "C": "try:\n    with open('data.txt', 'r') as file:\n        data = file.read()\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "D": "try:\n    with open('data.txt', 'r') as file:\n        file.read()\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of attempting to read from a file 'data.txt' and printing 'Error: File not found' if the file does not exist?",
+        "questionID": 142,
+        "options": {
+            "A": "try:\n    with open('data.txt', 'w') as file:\n        data = file.write()\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "B": "try:\n    with open('data.txt', 'w') as file:\n        data = file.read()\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "C": "try:\n    with open('data.txt', 'r') as file:\n        data = file.write()\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "D": "try:\n    with open('data.txt', 'r') as file:\n        data = file.read()\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of attempting to read JSON data from a file 'data.json' and printing 'Error: File not found' if the file does not exist?",
+        "questionID": 143,
+        "options": {
+            "A": "import json\n\ntry:\n    with open('data.json', 'r') as file:\n        data = json.load()\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "B": "import json\n\ntry:\n    with open('data.json', 'r') as file:\n        data = json.loads(file.read())\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "C": "import json\n\ntry:\n    with open('data.json', 'w') as file:\n        data = json.load(file)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "D": "import json\n\ntry:\n    with open('data.json', 'r') as file:\n        data = json.load(file)\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What Python code correctly handles the scenario of attempting to read CSV data from a file 'data.csv' and printing 'Error: File not found' if the file does not exist?",
+        "questionID": 144,
+        "options": {
+          "A": "import csv\n\ntry:\n    with open('data.csv', 'r') as file:\n        reader = csv.reader(file)\n        for row in reader:\n            print(row)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "B": "import csv\n\ntry:\n    with open('data.csv', 'r') as file:\n        data = csv.load(file)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "C": "import csv\n\ntry:\n    with open('data.csv', 'w') as file:\n        reader = csv.reader(file)\n        for row in reader:\n            print(row)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "D": "import csv\n\ntry:\n    with open('data.csv', 'r') as file:\n        reader = csv.writer(file)\n        for row in reader:\n            print(row)\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which of the following Python code snippets correctly defines a class method named 'calculate_salary' inside a class named 'Employee' using the @classmethod decorator?",
+        "questionID": 145,
+        "options": {
+            "A": "class Employee:\n    def calculate_salary(self, hours_worked, hourly_rate):\n        return hours_worked * hourly_rate",
+            "B": "class Employee:\n    def calculate_salary(cls, hours_worked, hourly_rate):\n        return hours_worked * hourly_rate",
+            "C": "class Employee:\n    @staticmethod\n    def calculate_salary(hours_worked, hourly_rate):\n        return hours_worked * hourly_rate",
+            "D": "class Employee:\n    @classmethod\n    def calculate_salary(cls, hours_worked, hourly_rate):\n        return hours_worked * hourly_rate"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What Python code correctly reads from a file named 'data.txt' and prints its content line by line?",
+        "questionID": 146,
+        "options": {
+            "A": "try:\n    with open('data.txt', 'r') as file:\n        lines = file.read().splitlines()\n        for line in lines:\n            print(line)\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "B": "try:\n    file = open('data.txt', 'r')\n    for line in file.readlines():\n        print(line.strip())\n    file.close()\nexcept FileNotFoundError:\n    print('Error: File not found')",
+            "C": "try:\n    with open('data.txt', 'r') as file:\n        for line in file:\n            print(line.strip())\nexcept FileNotFoundError:\n    print('Error: File not found')",
+          "D": "try:\n    file = open('data.txt', 'r')\n    lines = file.read().split('\\n')\n    for line in lines:\n        print(line)\n    file.close()\nexcept FileNotFoundError:\n    print('Error: File not found')"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "Which of the following Python code snippets correctly defines a try-except block to handle a FileNotFoundError?",
+        "questionID": 147,
+        "options": {
+            "A": "try:\n    # code that may raise FileNotFoundError\nexcept Exception as e:\n    # code to handle other exceptions\n    if isinstance(e, FileNotFoundError):\n        # code to handle FileNotFoundError",
+            "B": "try:\n    # code that may raise FileNotFoundError\nexcept IOError:\n    # code to handle IOError",
+            "C": "try:\n    # code that may raise FileNotFoundError\nexcept FileNotFoundError:\n    # code to handle FileNotFoundError",
+          "D": "try:\n    # code that may raise FileNotFoundError\nexcept ValueError:\n    # code to handle ValueError"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What Python code correctly defines a regular expression pattern to match email addresses?",
+        "questionID": 148,
+        "options": {
+          "A": "r\"[\\w\\.-]+@[\\w\\.-]+\"",
+          "B": "r\"\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b\"",
+          "C": "r\"\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,3}\\b\"",
+          "D": "r\"\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,3}\\b\""
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What Python code correctly defines a regular expression pattern to match URLs?",
+        "questionID": 149,
+        "options": {
+          "A": "r\"https?://(?:[-\\w.]|(?:%[\\da-fA-F]{2}))+\"",
+          "B": "r\"^(http[s]?://)?(www\\.)?[a-zA-Z0-9\\.\\-]+\\.[a-zA-Z]{2,3}(/\\S*)?$\"",
+          "C": "r\"(?i)\\b((?:https?://|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}/)(?:[^\\s()<>]+|\"",
+          "D": "r\"(https?://[^\\s]+)\""
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What Python code correctly uses the re.findall() function to find all occurrences of the pattern 'python' in a string 'text'?",
+        "questionID": 150,
+        "options": {
+          "A": "import re\nmatches = re.findall('python', text)",
+          "B": "import re\nmatches = re.findall(r'python', text, re.IGNORECASE)",
+          "C": "import re\nmatches = re.findall('python', text, re.IGNORECASE)",
+          "D": "import re\nmatches = re.findall(r'python', text)"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What Python code correctly uses the re.sub() function to replace occurrences of 'apple' with 'banana' in a string 'text'?",
+        "questionID": 151,
+        "options": {
+          "A": "import re\ntext = re.sub('apple', 'banana', text)",
+          "B": "import re\ntext = re.sub(r'apple', 'banana', text)",
+          "C": "import re\ntext = re.sub(r'banana', 'apple', text)",
+          "D": "import re\ntext = re.sub('banana', 'apple', text)"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What Python code correctly opens a file named 'data.json' in read mode using the json module?",
+        "questionID": 152,
+        "options": {
+          "A": "import json\n\nwith open('data.json', 'r') as file:\n    data = json.load(file)",
+          "B": "import json\n\nfile = open('data.json', 'r')\ntry:\n    data = json.load(file)\nfinally:\n    file.close()",
+          "C": "import json\n\nwith open('data.json', 'w') as file:\n    data = json.load(file)",
+          "D": "import json\n\nfile = open('data.json', 'w')\ntry:\n    data = json.load(file)\nfinally:\n    file.close()"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What Python code correctly writes a dictionary 'data' to a file named 'output.json' in JSON format using the json module?",
+        "questionID": 153,
+        "options": {
+            "A": "import json\n\nwith open('output.json', 'r') as file:\n    json.dump(data, file)",
+            "B": "import json\n\nfile = open('output.json', 'w')\ntry:\n    json.dump(data, file)\nfinally:\n    file.close()",
+            "C": "import json\n\nwith open('output.json', 'w') as file:\n    json.dump(data, file)",
+          "D": "import json\n\nfile = open('output.json', 'r')\ntry:\n    json.dump(data, file)\nfinally:\n    file.close()"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What Python code correctly opens a file named 'data.csv' in read mode using the csv module?",
+        "questionID": 154,
+        "options": {
+            "A": "import csv\n\nfile = open('data.csv', 'w')\ntry:\n    reader = csv.reader(file)\nfinally:\n    file.close()",
+            "B": "import csv\n\nfile = open('data.csv', 'r')\ntry:\n    reader = csv.reader(file)\nfinally:\n    file.close()",
+            "C": "import csv\n\nwith open('data.csv', 'w') as file:\n    reader = csv.reader(file)",
+            "D": "import csv\n\nwith open('data.csv', 'r') as file:\n    reader = csv.reader(file)"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What Python code correctly writes a list 'data' to a file named 'output.csv' in CSV format using the csv module?",
+        "questionID": 155,
+        "options": {
+          "A": "import csv\n\nwith open('output.csv', 'w', newline='') as file:\n    writer = csv.writer(file)\n    writer.writerow(data)",
+          "B": "import csv\n\nfile = open('output.csv', 'w', newline='')\ntry:\n    writer = csv.writer(file)\n    writer.writerow(data)\nfinally:\n    file.close()",
+          "C": "import csv\n\nwith open('output.csv', 'r', newline='') as file:\n    writer = csv.writer(file)\n    writer.writerow(data)",
+          "D": "import csv\n\nfile = open('output.csv', 'r', newline='')\ntry:\n    writer = csv.writer(file)\n    writer.writerow(data)\nfinally:\n    file.close()"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>x = 5<br>y = 0<br>try:<br>&nbsp;&nbsp;&nbsp;&nbsp;result = x / y<br>except ZeroDivisionError:<br>&nbsp;&nbsp;&nbsp;&nbsp;result = 'Division by zero'<br>finally:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(result)<br></code>",
+        "questionID": 156,
+        "options": {
+          "A": "5.0",
+          "B": "Division by zero",
+          "C": "Error",
+          "D": "0"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import json<br><br>with open('data.json', 'r') as file:<br>&nbsp;&nbsp;&nbsp;&nbsp;data = json.load(file)<br>print(data)<br></code>",
+        "questionID": 157,
+        "options": {
+          "A": "Prints the contents of 'data.json'",
+          "B": "Error: 'data.json' not found",
+          "C": "None",
+          "D": "[]"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import csv<br><br>data = [['John', 'Doe', 'john@example.com'], ['Jane', 'Smith', 'jane@example.com']]<br><br>with open('output.csv', 'w', newline='') as file:<br>&nbsp;&nbsp;&nbsp;&nbsp;writer = csv.writer(file)<br>&nbsp;&nbsp;&nbsp;&nbsp;writer.writerows(data)<br></code>",
+        "questionID": 158,
+        "options": {
+            "A": "None",
+            "B": "Error: 'output.csv' file already exists",
+            "C": "Creates a CSV file named 'output.csv' with the provided data",
+          "D": "Creates a text file named 'output.csv' with the provided data"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import re<br><br>text = 'The quick brown fox jumps over the lazy dog'<br>matches = re.findall(r'fox|dog', text)<br>print(matches)<br></code>",
+        "questionID": 159,
+        "options": {
+            "A": "['fox jumps over the lazy dog']",
+            "B": "['fox', 'dog']",
+          "C": "Error: Invalid regular expression pattern",
+          "D": "None"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import os<br><br>path = '/path/to/directory'<br>files = os.listdir(path)<br>print(files)<br></code>",
+        "questionID": 160,
+        "options": {
+            "A": "Prints a list of files only in the specified directory",
+            "B": "Error: Invalid path",
+            "C": "None",
+            "D": "Prints a list of files and directories in the specified directory"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import random<br><br>numbers = [1, 2, 3, 4, 5]<br>random.shuffle(numbers)<br>print(numbers)<br></code>",
+        "questionID": 161,
+        "options": {
+            "A": "None",
+            "B": "Error: Invalid random module import",
+            "C": "Prints a shuffled list of numbers",
+          "D": "Prints the original list of numbers"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import datetime<br><br>date = datetime.date.today()<br>print(date)<br></code>",
+        "questionID": 162,
+        "options": {
+          "A": "Prints the current date in YYYY-MM-DD format",
+          "B": "Error: Invalid datetime module import",
+          "C": "None",
+          "D": "Prints the current date in MM-DD-YYYY format"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import math<br><br>value = math.sqrt(16)<br>print(value)<br></code>",
+        "questionID": 163,
+        "options": {
+            "A": "None",
+            "B": "Error: Invalid math module import",
+            "C": "4.0",
+          "D": "16"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import json<br><br>data = {'name': 'John', 'age': 30}<br>json_string = json.dumps(data)<br>print(json_string)<br></code>",
+        "questionID": 164,
+        "options": {
+          "A": "{'name': 'John', 'age': 30}",
+          "B": "Error: Invalid json module import",
+          "C": "None",
+          "D": "{\"name\": \"John\", \"age\": 30}"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import csv<br><br>with open('data.csv', 'r') as file:<br>&nbsp;&nbsp;&nbsp;&nbsp;reader = csv.reader(file)<br>&nbsp;&nbsp;&nbsp;&nbsp;for row in reader:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(row)<br></code>",
+        "questionID": 165,
+        "options": {
+          "A": "Prints the contents of 'data.csv'",
+          "B": "Error: 'data.csv' file not found",
+          "C": "None",
+          "D": "Prints an empty list"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import random<br><br>value = random.randint(1, 10)<br>print(value)<br></code>",
+        "questionID": 166,
+        "options": {
+            "A": "Prints 1",
+            "B": "Error: Invalid random module import",
+            "C": "None",
+            "D": "Prints a random integer between 1 and 10"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What is the expected output of the following Python code?<br><code>import os<br><br>path = '/path/to/file.txt'<br>basename = os.path.basename(path)<br>print(basename)<br></code>",
+        "questionID": 167,
+        "options": {
+          "A": "Prints the base name of the file ('file.txt')",
+          "B": "Error: Invalid os module import",
+          "C": "None",
+          "D": "Prints the full path of the file ('/path/to/file.txt')"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "Which command is used to install Django?",
+        "questionID": 168,
+        "options": {
+          "A": "pip install django",
+          "B": "django-admin startproject myproject",
+          "C": "python manage.py startapp myapp",
+          "D": "startapp myapp"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "How do you create a new Django project?",
+        "questionID": 169,
+        "options": {
+          "A": "pip install django",
+          "B": "django-admin startproject myproject",
+          "C": "python manage.py startapp myapp",
+          "D": "startapp myapp"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the purpose of creating Django apps?",
+        "questionID": 170,
+        "options": {
+          "A": "To install Django on the system",
+          "B": "To create HTML templates",
+          "C": "To define models and views",
+          "D": "To handle HTTP requests"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the purpose of Django models?",
+        "questionID": 171,
+        "options": {
+          "A": "To define HTML templates",
+          "B": "To represent database tables",
+          "C": "To handle HTTP requests",
+          "D": "To install Django on the system"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "How do you configure URL patterns in Django?",
+        "questionID": 172,
+        "options": {
+          "A": "Using django-admin command",
+          "B": "Using startapp command",
+          "C": "Using URLconf",
+          "D": "Using HTML templates"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the purpose of Django views?",
+        "questionID": 173,
+        "options": {
+          "A": "To represent database tables",
+          "B": "To handle HTTP requests",
+          "C": "To create HTML templates",
+          "D": "To install Django on the system"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "How do you create a new Django app?",
+        "questionID": 174,
+        "options": {
+          "A": "pip install django",
+          "B": "django-admin startproject myproject",
+          "C": "python manage.py startapp myapp",
+          "D": "startapp myapp"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What command is used to create HTML templates in Django?",
+        "questionID": 175,
+        "options": {
+          "A": "pip install django",
+          "B": "django-admin startproject myproject",
+          "C": "python manage.py startapp myapp",
+          "D": "startapp myapp"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What is the purpose of Django templates?",
+        "questionID": 176,
+        "options": {
+          "A": "To define models and views",
+          "B": "To represent database tables",
+          "C": "To handle HTTP requests",
+          "D": "To render dynamic content"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "How do you start a new Django project?",
+        "questionID": 177,
+        "options": {
+          "A": "pip install django",
+          "B": "django-admin startproject myproject",
+          "C": "python manage.py startapp myapp",
+          "D": "startapp myapp"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the expected output of the following Django shell command:<br><code>from django.contrib.auth.models import User; users = User.objects.all(); print(users)</code>",
+        "questionID": 178,
+        "options": {
+          "A": "Prints a list of all User instances",
+          "B": "Error: Invalid User model import",
+          "C": "None",
+          "D": "Prints the total count of User instances"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the expected output of the following Django template code:<br><code>{{ user.username }}</code>",
+        "questionID": 179,
+        "options": {
+            "A": "The full name of the currently logged-in user",
+            "B": "Error: Invalid template tag",
+            "C": "None",
+            "D": "The username of the currently logged-in user"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "What is the expected output of the following Django management command:<br><code>python manage.py check</code>",
+        "questionID": 180,
+        "options": {
+            "A": "Error: Command not found",
+            "B": "Checks the integrity of the database schema",
+          "C": "None",
+          "D": "Lists all available Django commands"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "What is the expected output of the following Django view function:<br><code>def hello_world(request):<br>&nbsp;&nbsp;&nbsp;&nbsp;return HttpResponse('Hello, World')</code>",
+        "questionID": 181,
+        "options": {
+          "A": "Returns a response with the text 'Hello, World!'",
+          "B": "Error: Invalid HttpResponse usage",
+          "C": "None",
+          "D": "Redirects to the home page"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "What is the expected output of the following Django model definition:<br><code>class Book(models.Model):<br>\ttitle = models.CharField(max_length=200)<br>\tauthor = models.ForeignKey(Author, on_delete=models.CASCADE)<br></code>",
+        "questionID": 182,
+        "options": {
+            "A": "None",
+            "B": "Error: Invalid ForeignKey definition",
+            "C": "Defines a book model with a title and author field",
+          "D": "Defines a book model with a title and author field, but without specifying the Author model"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "What is the expected output of the following Django template code:<br><code>{{ user.username }}</code>",
+        "questionID": 183,
+        "options": {
+          "A": "The username of the currently logged-in user",
+          "B": "Error: Invalid template tag",
+          "C": "None",
+          "D": "The full name of the currently logged-in user"
+        },
+        "answer": "A"
+      }
     ]
-  }
+}

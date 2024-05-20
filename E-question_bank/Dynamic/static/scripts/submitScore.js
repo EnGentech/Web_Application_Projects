@@ -10,9 +10,9 @@ $(document).ready(function(){
     })
 
     let taskList = {
-        "CTE323": "pythonTasks.json",
-        "COM122": "internetTasks.json",
-        "EED126": "entrepreneur.json"
+        "CTE323": "assignments/pythonTasks.json",
+        "COM122": "assignments/internetTasks.json",
+        "EED126": "assignments/entrepreneur.json"
     }
 
     function onStudentNameChange(mutations) {

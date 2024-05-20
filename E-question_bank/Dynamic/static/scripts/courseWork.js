@@ -2,6 +2,7 @@ $(document).ready(function() {
     var selectedCourse = $('.regCourses');
     var cCodeSelect = $('#cCodeSelect');
     var cTitleSelect = $('#cTitleSelect');
+    let takeTest = $("#takeTest")
     let timerStatus
 
     function makeAjaxRequest() {
@@ -100,6 +101,7 @@ $(document).ready(function() {
         }
     }
 
+    var activeModelTitle
     selectedCourse.click(function() {
         var courseTitle = $(this).text()
         var courseIndex = $(this).index('.regCourses');
@@ -122,6 +124,7 @@ $(document).ready(function() {
             }, 
             success: function(response) {
                 clearTimeout(timerStatus)
+                takeTest.hide()
                 if (response.status === "No task") {
                     $("#countdown").text("Timer: 00::00:00:00");
                     let noTaskTable = $(".progressTable .tableView table tbody");
@@ -160,10 +163,26 @@ $(document).ready(function() {
                 } else {
                     gradeScore.text("0.00%");
                 }
+
+                setTimeout(function() {
+                    $(".tableView tbody tr").each(function(index) {
+                        var taskType = $(this).find("td:eq(2)").text().trim();
+                        var status = $(this).find(".submitStatus").text().trim();
+                        if (taskType === "Test" && status === "Active") {
+                            $(this).find(".clickMe").text("click above").attr('title', "Click the take test above");
+                            $(this).find(".clickMe").prop('disabled', true);
+                            takeTest.show()
+                            activeModelTitle = $(this).find("td:eq(1)").text().trim();
+                        }
+                    });
+                }, 1000);
+                
             },
             error: function(xhr, status, error) {
                 console.error('AJAX request failed:', error);
-            }
+            },
+
+            
         });
         
     });
@@ -216,4 +235,37 @@ $(document).ready(function() {
             onBoard.show();
         }
     });
+
+    $(".closeButton").click(function(){
+        $("#offInstructions").hide()
+        $("body").css("backdrop-filter", "brightness(1)")
+    })
+
+    takeTest.click(function(){
+        $("#offInstructions").show()
+        $("body").css("overflow-x", "hidden")
+        $("#filter").css("backdrop-filter", "brightness(0.2)")
+    })
+
+    $(".proceedButton").click(function(){
+        $("#spinnerSection").show();
+        
+        var dataToSend = {
+            courseCode: $("#cCodeSelect").text(),
+            courseTitle: $("#cTitleSelect").text(),
+            moduleTitle: activeModelTitle,   
+            regNumber: $("#regNo").text()
+        };
+    
+        var params = new URLSearchParams(dataToSend).toString();
+    
+        var url = "/heritage_students/user/take_test/1?" + params;
+    
+        setTimeout(function() {
+            window.location.href = url;
+        }, 3000);
+    });
+    
+
 });
+

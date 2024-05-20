@@ -315,13 +315,134 @@ body{
     font-size: 0.85em;
     color: blue;
 }
+
+/* Test taking styling */
+
+#takeTest{
+    border-radius: 20px;
+    border: 1px solid gray;
+    background-color: black;
+    color: white;
+    padding: 1px 12px 1px 12px;
+    cursor: pointer;
+}
+
+#takeTest:hover{
+    background-color: rgb(85, 85, 85);
+}
+
+#filter{
+    height: 125vh;
+    width: 100vw;
+    padding-top: 20px;
+    position: absolute;
+}
+
+#testInstructions {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto auto;
+    background-color: rgba(255, 255, 255, 0.943);
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    z-index: 10000;
+}
+
+
+#instructionHeader {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    width: 70%;
+    color: #070030;
+    margin: auto auto;
+    padding-bottom: 12px;
+    
+}
+
+#instructionList {
+    font-size: 16px;
+}
+
+#instructionList li {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.closeButton {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    color: #a30000;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    background-color: #e9b8b8;
+    border: 1px solid #bbb8b8;
+}
+
+.closeButton:hover{
+    background-color: rgba(227, 39, 39, 0.902);
+    color: white;
+}
+
+.proceedButton {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.proceedButton:hover {
+    background-color: #509d54;
+}
+
+.proceedButton:focus{
+    outline: none;
+}
+
+.signIn_messages{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 22.5%;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    color: red;
+    padding: 3px 50px 3px 50px;
+    border: 1px solid rgba(137, 134, 134, 0.184);
+}
+
+
 /* Hide logics */
 .statusBoard{
     display: none;
 }
 
+#offInstructions{
+    display: none;
+}
+
 #hideRemark{
     display:none;
+}
+
+#takeTest{
+    display: none;
 }
 
 /* Responsiveness logic */
@@ -370,7 +491,13 @@ body{
 }
 
 @media screen and (max-width: 750px) {
-
+    #testInstructions{
+        width: 85%;
+    }
+    
+    #filter{
+        height: 230%;
+    }
 }
 
 @media only screen and (max-device-width: 480px) and (orientation: portrait) {
@@ -380,6 +507,10 @@ body{
 
     .statusBoard{
         visibility: hidden;
+    }
+
+    #filter{
+        display: none;
     }
 
     body {

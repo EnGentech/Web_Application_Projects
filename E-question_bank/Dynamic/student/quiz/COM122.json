@@ -1,0 +1,1105 @@
+{
+    "questions": [
+        {
+            "question": "Who is responsible for establishing universal protocols for the Internet?",
+            "questionID": 1,
+            "options": {
+                "A": "Internet Assigned Numbers Authority (IANA)",
+                "B": "U.S. National Science Foundation (NSF)",
+                "C": "Advanced Research Projects Agency Network (ARPANET)",
+                "D": "Defense Department"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What is the main difference between the Internet and the World Wide Web?",
+            "questionID": 2,
+            "options": {
+                "A": "The Internet refers to hardware and infrastructure, while the Web refers to a service.",
+                "B": "The Internet is a collection of public networks, while the Web is a private network.",
+                "C": "The Internet is a service communicated over the Web, while the Web is a hardware infrastructure.",
+                "D": "The Internet is governed by agencies, while the Web is managed by private organizations."
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What was the precursor to the Internet developed by the U.S. government?",
+            "questionID": 3,
+            "options": {
+                "A": "NSFNET",
+                "B": "ARPANET",
+                "C": "TCP/IP",
+                "D": "Sputnik satellite"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "When did the ARPANET and the Defense Data Network switch to the TCP/IP standard?",
+            "questionID": 4,
+            "options": {
+                "A": "1985",
+                "B": "1960",
+                "C": "1995",
+                "D": "1983"
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What event is considered the official birthday of the Internet?",
+            "questionID": 5,
+            "options": {
+                "A": "Launch of the Sputnik satellite",
+                "B": "Formation of the ARPANET",
+                "C": "Establishment of the TCP/IP protocol",
+                "D": "January 1, 1983"
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What communications protocol allowed different computers on different networks to communicate with each other?",
+            "questionID": 6,
+            "options": {
+                "A": "TCP/IP",
+                "B": "ARPANET",
+                "C": "NSFNET",
+                "D": "IANA"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What is the main difference between an intranet and the Internet?",
+            "questionID": 7,
+            "options": {
+                "A": "The Internet is a closed network, while an intranet is a public network.",
+                "B": "The Internet is for a select group of people, while an intranet is for all.",
+                "C": "The Internet is a global communication system, while an intranet is a business-specific network.",
+                "D": "The Internet is managed by private organizations, while an intranet is governed by agencies."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What does the term 'intranet' refer to?",
+            "questionID": 8,
+            "options": {
+                "A": "A public network similar to the Internet",
+                "B": "A globally connected network system",
+                "C": "A business-specific network for internal use",
+                "D": "A closed network accessible to everyone"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "How is the Internet related to the Cold War?",
+            "questionID": 9,
+            "options": {
+                "A": "It led to the development of the ARPANET.",
+                "B": "It spurred the U.S. Defense Department to consider information dissemination after a nuclear attack.",
+                "C": "It established the TCP/IP protocol.",
+                "D": "It originated from the U.S. government."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What organization commissioned the development of the NSFNET?",
+            "questionID": 10,
+            "options": {
+                "A": "Internet Assigned Numbers Authority (IANA)",
+                "B": "U.S. National Science Foundation (NSF)",
+                "C": "Advanced Research Projects Agency Network (ARPANET)",
+                "D": "Defense Department"
+            },
+            "answer": "B"
+        },
+       
+        {
+            "question": "What is the primary function of the Internet?",
+            "questionID": 11,
+            "options": {
+                "A": "To facilitate worldwide communication",
+                "B": "To provide universal protocols",
+                "C": "To govern agencies like IANA",
+                "D": "To commission university network backbones"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "How has the Internet impacted global communication?",
+            "questionID": 12,
+            "options": {
+                "A": "It has limited communication to specific regions",
+                "B": "It has facilitated communication across the world",
+                "C": "It has reduced the need for communication",
+                "D": "It has increased communication costs"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What distinguishes the Internet from the World Wide Web?",
+            "questionID": 13,
+            "options": {
+                "A": "Hardware and infrastructure",
+                "B": "Universal protocols",
+                "C": "Services communicated",
+                "D": "Government networks"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "How did the ARPANET contribute to the development of the Internet?",
+            "questionID": 14,
+            "options": {
+                "A": "By establishing universal protocols",
+                "B": "By enabling information sharing among government researchers",
+                "C": "By providing public internet access",
+                "D": "By commissioning university network backbones"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Why was the TCP/IP protocol significant for the Internet?",
+            "questionID": 15,
+            "options": {
+                "A": "It allowed communication between different kinds of computers",
+                "B": "It replaced the ARPANET",
+                "C": "It facilitated public internet access",
+                "D": "It limited communication to specific regions"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "Describe the impact of the Sputnik satellite launch on the development of the Internet.",
+            "questionID": 16,
+            "options": {
+                "A": "It led to the formation of ARPANET",
+                "B": "It spurred the U.S. Defense Department to consider alternative information dissemination methods",
+                "C": "It established universal protocols",
+                "D": "It facilitated the TCP/IP standardization"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What role do commercial internet service providers play in the evolution of the Internet?",
+            "questionID": 17,
+            "options": {
+                "A": "They govern agencies like IANA",
+                "B": "They provide public internet access",
+                "C": "They commission university network backbones",
+                "D": "They develop hardware and infrastructure"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Differentiate between an intranet and the internet.",
+            "questionID": 18,
+            "options": {
+                "A": "An intranet is a closed network, while the internet is a public network",
+                "B": "An intranet is for all, while the internet is for a select group of people",
+                "C": "An intranet provides universal protocols, while the internet provides hardware and infrastructure",
+                "D": "An intranet is for a select group of people, while the internet is a closed network"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "Who governs the Internet and establishes universal protocols?",
+            "questionID": 19,
+            "options": {
+                "A": "U.S. National Science Foundation (NSF)",
+                "B": "Internet Assigned Numbers Authority (IANA)",
+                "C": "Defense Department",
+                "D": "Agencies like IANA"
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What events led to the formation of ARPANET?",
+            "questionID": 20,
+            "options": {
+                "A": "Development of the TCP/IP protocol",
+                "B": "Launch of the Sputnik satellite",
+                "C": "Cold War tensions",
+                "D": "U.S. National Science Foundation (NSF) commissioning"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Who were the developers of Ethernet technology?",
+            "questionID": 21,
+            "options": {
+                "A": "Xerox and DEC",
+                "B": "Xerox, DEC, and Intel",
+                "C": "Intel and Microsoft",
+                "D": "Xerox and Microsoft"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What is the most common Ethernet cable and its transmission rate?",
+            "questionID": 22,
+            "options": {
+                "A": "10BASE-T, 100 Mbps",
+                "B": "10BASE-T, 10 Mbps",
+                "C": "Coaxial cable, 100 Mbps",
+                "D": "Special twisted pairs, 10 Mbps"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Up to what maximum distance can modern Ethernet technology extend a network?",
+            "questionID": 23,
+            "options": {
+                "A": "1 kilometer",
+                "B": "5 kilometers",
+                "C": "10 kilometers",
+                "D": "20 kilometers"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "How are computers usually connected in an Ethernet network?",
+            "questionID": 24,
+            "options": {
+                "A": "Wirelessly",
+                "B": "Through coaxial cables or special twisted pairs",
+                "C": "Via satellite",
+                "D": "Using fiber optic cables"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What is a key difference between Ethernet and the Internet?",
+            "questionID": 25,
+            "options": {
+                "A": "Ethernet is a WAN, and the Internet is a LAN",
+                "B": "Ethernet is a LAN, and the Internet is a WAN",
+                "C": "Ethernet is wireless, and the Internet uses cables",
+                "D": "Ethernet is global, and the Internet is local"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Why are Ethernet networks considered relatively secure?",
+            "questionID": 26,
+            "options": {
+                "A": "They use wireless connections",
+                "B": "They are closed networks",
+                "C": "They are managed by a single system administrator",
+                "D": "They do not connect to the Internet"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What is a potential security risk associated with the Internet?",
+            "questionID": 27,
+            "options": {
+                "A": "Limited access for users",
+                "B": "Unauthorized access by external devices",
+                "C": "Closed network system",
+                "D": "High transmission rates"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "How is Ethernet typically managed in a home setting?",
+            "questionID": 28,
+            "options": {
+                "A": "By Internet service providers",
+                "B": "By a technical department",
+                "C": "By a single user or parent",
+                "D": "By government agencies"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What protocol does the Internet use for communication?",
+            "questionID": 29,
+            "options": {
+                "A": "10BASE-T",
+                "B": "TCP/IP",
+                "C": "Coaxial",
+                "D": "FDDI"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "At what layer does Ethernet primarily operate?",
+            "questionID": 30,
+            "options": {
+                "A": "Application layer",
+                "B": "Transport layer",
+                "C": "Network layer",
+                "D": "Network interface layer"
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What is the main function of the Physical Layer in the OSI model?",
+            "questionID": 31,
+            "options": {
+                "A": "Error correction",
+                "B": "Data transfer coordination",
+                "C": "Electrical and physical representation",
+                "D": "Session management"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which layer is responsible for packet forwarding and routing through different routers?",
+            "questionID": 32,
+            "options": {
+                "A": "Transport Layer",
+                "B": "Network Layer",
+                "C": "Data Link Layer",
+                "D": "Physical Layer"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What role does the Transport Layer play in data transfer?",
+            "questionID": 33,
+            "options": {
+                "A": "Encrypting and decrypting data",
+                "B": "Managing end-to-end data transfer",
+                "C": "Node-to-node data transfer",
+                "D": "Session establishment"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Which layer is primarily responsible for data encryption and decryption?",
+            "questionID": 34,
+            "options": {
+                "A": "Application Layer",
+                "B": "Session Layer",
+                "C": "Presentation Layer",
+                "D": "Data Link Layer"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "At which layer do web browsers and FTP operate in the OSI model?",
+            "questionID": 35,
+            "options": {
+                "A": "Presentation Layer",
+                "B": "Application Layer",
+                "C": "Transport Layer",
+                "D": "Network Layer"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Which layer is responsible for establishing, managing, and terminating sessions between two devices?",
+            "questionID": 36,
+            "options": {
+                "A": "Transport Layer",
+                "B": "Session Layer",
+                "C": "Network Layer",
+                "D": "Data Link Layer"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What is the mnemonic for remembering the OSI model layers from Physical to Application?",
+            "questionID": 37,
+            "options": {
+                "A": "All People Seem To Need Data Processing",
+                "B": "Please Do Not Throw Sausage Pizza Away",
+                "C": "People Don't Need To Study Physics Anymore",
+                "D": "All Dogs Should Not Take Peanut Butter"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "In which layer do most switches operate in the OSI model?",
+            "questionID": 38,
+            "options": {
+                "A": "Network Layer",
+                "B": "Physical Layer",
+                "C": "Data Link Layer",
+                "D": "Transport Layer"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "When were the two separate models merged to create the OSI model?",
+            "questionID": 39,
+            "options": {
+                "A": "1970",
+                "B": "1983",
+                "C": "1984",
+                "D": "1990"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Which OSI layer is closest to the end user and facilitates communication between applications?",
+            "questionID": 40,
+            "options": {
+                "A": "Presentation Layer",
+                "B": "Application Layer",
+                "C": "Session Layer",
+                "D": "Transport Layer"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What is the primary function of the Domain Name System (DNS)?",
+            "questionID": 41,
+            "options": {
+                "A": "Encrypting internet traffic",
+                "B": "Translating domain names to IP addresses",
+                "C": "Hosting websites",
+                "D": "Monitoring network security"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Which type of domain name is at the top of the internet hierarchy?",
+            "questionID": 42,
+            "options": {
+                "A": "Second-Level Domains",
+                "B": "Third-Level Domains",
+                "C": "Top-Level Domains",
+                "D": "Country Code Top-Level Domains"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What does the 'com' in 'www.example.com' represent?",
+            "questionID": 43,
+            "options": {
+                "A": "Country code",
+                "B": "Commercial entity",
+                "C": "Educational institution",
+                "D": "Non-profit organization"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Which domain suffix is used by educational institutions?",
+            "questionID": 44,
+            "options": {
+                "A": ".org",
+                "B": ".gov",
+                "C": ".edu",
+                "D": ".mil"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What type of domain is 'co.uk'?",
+            "questionID": 45,
+            "options": {
+                "A": "Top-Level Domain",
+                "B": "Second-Level Domain",
+                "C": "Third-Level Domain",
+                "D": "Country Code Top-Level Domain"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Which domain suffix would you expect for a government website in the United States?",
+            "questionID": 46,
+            "options": {
+                "A": ".org",
+                "B": ".edu",
+                "C": ".mil",
+                "D": ".gov"
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What type of domain is used by military organizations?",
+            "questionID": 47,
+            "options": {
+                "A": ".gov",
+                "B": ".org",
+                "C": ".mil",
+                "D": ".net"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which domain suffix is commonly used by non-profit organizations?",
+            "questionID": 48,
+            "options": {
+                "A": ".com",
+                "B": ".net",
+                "C": ".edu",
+                "D": ".org"
+            },
+            "answer": "D"
+        },
+        {
+            "question": "If a website has the domain suffix '.in', what is likely the geographic origin?",
+            "questionID": 49,
+            "options": {
+                "A": "Indonesia",
+                "B": "India",
+                "C": "Italy",
+                "D": "Ireland"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What is an example of a third-level domain?",
+            "questionID": 50,
+            "options": {
+                "A": "www.hostgator.com",
+                "B": "blog.hostgator.com",
+                "C": "hostgator.com",
+                "D": "hostgator.co.uk"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What does WWW stand for?",
+            "questionID": 41,
+            "options": {
+                "A": "World Wide Web",
+                "B": "Wide Web World",
+                "C": "Web Wide World",
+                "D": "World Web Wide"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What is the main language used to create web pages on the World Wide Web?",
+            "questionID": 42,
+            "options": {
+                "A": "HTML",
+                "B": "HTTP",
+                "C": "FTP",
+                "D": "URL"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "Which component of the web defines the communication protocol between a browser and a server?",
+            "questionID": 43,
+            "options": {
+                "A": "HTML",
+                "B": "HTTP",
+                "C": "URL",
+                "D": "Hypertext"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What does URL stand for?",
+            "questionID": 44,
+            "options": {
+                "A": "Uniform Resource Locator",
+                "B": "Universal Resource Locator",
+                "C": "Uniform Resource Link",
+                "D": "Universal Resource Link"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "Which of the following is a feature of the World Wide Web?",
+            "questionID": 45,
+            "options": {
+                "A": "Static content",
+                "B": "Closed standards",
+                "C": "Cross-platform",
+                "D": "Local access only"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What part of a URL tells the browser what type of address it is?",
+            "questionID": 46,
+            "options": {
+                "A": "Domain name",
+                "B": "Scheme",
+                "C": "File path",
+                "D": "Anchor"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Which part of a URL specifies a specific page or resource within a website?",
+            "questionID": 47,
+            "options": {
+                "A": "Domain name",
+                "B": "Scheme",
+                "C": "File path",
+                "D": "Anchor"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What is the function of an anchor in a URL?",
+            "questionID": 48,
+            "options": {
+                "A": "To define the main domain",
+                "B": "To specify the file type",
+                "C": "To direct the browser to a specific part of the page",
+                "D": "To load a default page"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which of the following is NOT a common feature of a web browser?",
+            "questionID": 49,
+            "options": {
+                "A": "Displaying text and images",
+                "B": "Conducting searches",
+                "C": "Translating domain names to IP addresses",
+                "D": "Transferring files"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which component of the web serves as the address system for resources on the web?",
+            "questionID": 50,
+            "options": {
+                "A": "HTML",
+                "B": "HTTP",
+                "C": "URL",
+                "D": "Anchor"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What does HTML stand for?",
+            "questionID": 51,
+            "options": {
+                "A": "HyperText Markup Language",
+                "B": "Hyperlinks and Text Markup Language",
+                "C": "Highway Traffic Management Language",
+                "D": "Hyperlink Text Management Language"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "Which of the following tags is used to create a hyperlink in HTML?",
+            "questionID": 52,
+            "options": {
+                "A": "<a>",
+                "B": "<h1>",
+                "C": "<p>",
+                "D": "<div>"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What does the 'HTTP' in 'HTTP protocol' stand for?",
+            "questionID": 53,
+            "options": {
+                "A": "Hypertext Text Protocol",
+                "B": "Hyper Transfer Text Protocol",
+                "C": "Hypertext Transfer Protocol",
+                "D": "Hyper Transfer Transfer Protocol"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which of the following is NOT a commonly used web browser?",
+            "questionID": 54,
+            "options": {
+                "A": "Google Chrome",
+                "B": "Mozilla Firefox",
+                "C": "Microsoft Excel",
+                "D": "Safari"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What part of a URL specifies a specific page or resource within a website?",
+            "questionID": 55,
+            "options": {
+                "A": "Domain name",
+                "B": "Scheme",
+                "C": "File path",
+                "D": "Anchor"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which of the following is the correct HTML tag for inserting a line break?",
+            "questionID": 56,
+            "options": {
+                "A": "<br>",
+                "B": "<lb>",
+                "C": "<break>",
+                "D": "<newline>"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What is the primary function of a web browser?",
+            "questionID": 57,
+            "options": {
+                "A": "Storing data",
+                "B": "Creating webpages",
+                "C": "Accessing and displaying web content",
+                "D": "Running scripts"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which component of the web serves as the address system for resources on the web?",
+            "questionID": 58,
+            "options": {
+                "A": "HTML",
+                "B": "HTTP",
+                "C": "URL",
+                "D": "Anchor"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What is the purpose of an anchor tag in HTML?",
+            "questionID": 59,
+            "options": {
+                "A": "To define the main domain",
+                "B": "To specify the file type",
+                "C": "To direct the browser to a specific part of the page",
+                "D": "To load a default page"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which of the following is NOT a common feature of a web browser?",
+            "questionID": 60,
+            "options": {
+                "A": "Displaying text and images",
+                "B": "Conducting searches",
+                "C": "Translating domain names to IP addresses",
+                "D": "Transferring files"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What does CSS stand for in web development?",
+            "questionID": 61,
+            "options": {
+                "A": "Computer Style Sheets",
+                "B": "Cascading Style Sheets",
+                "C": "Creative Style Sheets",
+                "D": "Content Style Sheets"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Which HTML tag is used to define an unordered list?",
+            "questionID": 62,
+            "options": {
+                "A": "<ul>",
+                "B": "<ol>",
+                "C": "<li>",
+                "D": "<dl>"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What does the 'www' in 'www.example.com' represent?",
+            "questionID": 63,
+            "options": {
+                "A": "Web World Wide",
+                "B": "Web Widget Workstation",
+                "C": "World Wide Web",
+                "D": "Web Wizard Window"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which of the following is NOT a valid HTTP response status code?",
+            "questionID": 64,
+            "options": {
+                "A": "404",
+                "B": "200",
+                "C": "300",
+                "D": "500"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What is the purpose of the 'alt' attribute in HTML image tags?",
+            "questionID": 65,
+            "options": {
+                "A": "To specify the alignment of the image",
+                "B": "To define the size of the image",
+                "C": "To provide alternative text for the image",
+                "D": "To link the image to another webpage"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which of the following is NOT a valid HTML color value?",
+            "questionID": 66,
+            "options": {
+                "A": "#FFFFFF",
+                "B": "blue",
+                "C": "rgb(255, 0, 0)",
+                "D": "hsl(0, 100%, 50%)"
+            },
+            "answer": "B"
+        },
+        {
+            "question": "In HTML, which attribute is used to specify additional information about an element?",
+            "questionID": 67,
+            "options": {
+                "A": "src",
+                "B": "alt",
+                "C": "class",
+                "D": "title"
+            },
+            "answer": "D"
+        },
+        {
+            "question": "Which HTML tag is used to define the header for a webpage or section?",
+            "questionID": 68,
+            "options": {
+                "A": "<header>",
+                "B": "<title>",
+                "C": "<h1>",
+                "D": "<head>"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What does FTP stand for in the context of file transfer?",
+            "questionID": 69,
+            "options": {
+                "A": "File Transmission Protocol",
+                "B": "File Transfer Process",
+                "C": "File Transfer Protocol",
+                "D": "File Transcription Process"
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Which of the following is used to define the structure and content of a webpage?",
+            "questionID": 70,
+            "options": {
+                "A": "HTML",
+                "B": "CSS",
+                "C": "JavaScript",
+                "D": "PHP"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What is the major network address range for Class A IP addresses?",
+            "questionID": 71,
+            "options": {
+              "A": "1.0.0.0 - 127.255.255.255",
+              "B": "128.0.0.0 - 191.255.255.255",
+              "C": "192.0.0.0 - 223.255.255.255",
+              "D": "224.0.0.0 - 239.255.255.255"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What is the major network address range for Class B IP addresses?",
+            "questionID": 72,
+            "options": {
+              "A": "1.0.0.0 - 127.255.255.255",
+              "B": "128.0.0.0 - 191.255.255.255",
+              "C": "192.0.0.0 - 223.255.255.255",
+              "D": "224.0.0.0 - 239.255.255.255"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is the major network address range for Class C IP addresses?",
+            "questionID": 73,
+            "options": {
+              "A": "1.0.0.0 - 127.255.255.255",
+              "B": "128.0.0.0 - 191.255.255.255",
+              "C": "192.0.0.0 - 223.255.255.255",
+              "D": "224.0.0.0 - 239.255.255.255"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is the primary difference between IPv4 and IPv6 in terms of addressing?",
+            "questionID": 74,
+            "options": {
+              "A": "IPv4 addresses are decimal, while IPv6 addresses are hexadecimal",
+              "B": "IPv4 addresses have 32 bits, while IPv6 addresses have 128 bits",
+              "C": "IPv4 addresses have a larger address space than IPv6 addresses",
+              "D": "IPv4 addresses use colons to separate numbers, while IPv6 addresses use dots"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Which of the following is a feature of IPv6 that distinguishes it from IPv4?",
+            "questionID": 75,
+            "options": {
+              "A": "IPv6 has a smaller address space",
+              "B": "IPv6 addresses are not compatible with older networking protocols",
+              "C": "IPv6 has a hierarchical addressing structure",
+              "D": "IPv6 does not support subnetting"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is the purpose of network masks in IP addressing?",
+            "questionID": 76,
+            "options": {
+              "A": "To identify the manufacturer of networking equipment",
+              "B": "To specify the size of a network",
+              "C": "To determine the maximum bandwidth of a network",
+              "D": "To differentiate between the network and host portions of an IP address"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "Which class of IP addresses is suitable for networks with less than 254 hosts?",
+            "questionID": 77,
+            "options": {
+              "A": "Class A",
+              "B": "Class B",
+              "C": "Class C",
+              "D": "Class D"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is the default subnet mask for a Class B network?",
+            "questionID": 78,
+            "options": {
+              "A": "255.0.0.0",
+              "B": "255.255.0.0",
+              "C": "255.255.255.0",
+              "D": "255.255.255.255"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What does IPv6 use to represent addresses?",
+            "questionID": 79,
+            "options": {
+              "A": "Decimal numbers",
+              "B": "Hexadecimal numbers",
+              "C": "Binary numbers",
+              "D": "Alphanumeric characters"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is the primary reason for the transition from IPv4 to IPv6?",
+            "questionID": 80,
+            "options": {
+              "A": "IPv6 offers faster data transfer speeds",
+              "B": "IPv6 provides a larger address space",
+              "C": "IPv6 is more compatible with legacy systems",
+              "D": "IPv6 is simpler to configure"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of an IP address?",
+            "questionID": 81,
+            "options": {
+              "A": "To identify a device on an IP network",
+              "B": "To determine the speed of internet connection",
+              "C": "To encrypt network traffic",
+              "D": "To authenticate users on a network"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "How many bits make up an IPv4 address?",
+            "questionID": 82,
+            "options": {
+              "A": "64 bits",
+              "B": "128 bits",
+              "C": "32 bits",
+              "D": "256 bits"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is the maximum number of hosts that can be accommodated in a Class B network?",
+            "questionID": 83,
+            "options": {
+              "A": "256",
+              "B": "65,536",
+              "C": "16,777,216",
+              "D": "254"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Which version of the Internet Protocol is more commonly used today?",
+            "questionID": 84,
+            "options": {
+              "A": "IPv4",
+              "B": "IPv6",
+              "C": "IPv5",
+              "D": "IPv3"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is the primary advantage of IPv6 over IPv4?",
+            "questionID": 85,
+            "options": {
+              "A": "Improved security features",
+              "B": "Smaller address space",
+              "C": "Backward compatibility",
+              "D": "Larger address space"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "What does the term 'subnetting' refer to in IP networking?",
+            "questionID": 86,
+            "options": {
+              "A": "Dividing a network into smaller subnetworks",
+              "B": "Connecting two separate networks",
+              "C": "Assigning IP addresses to devices",
+              "D": "Encrypting network traffic"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "Which of the following is a valid IPv6 address format?",
+            "questionID": 87,
+            "options": {
+              "A": "192.168.1.1",
+              "B": "fe80::d4a8:6435:d2d8:d9f3b11",
+              "C": "255.255.255.0",
+              "D": "10.0.0.1"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is the function of a network mask in IP networking?",
+            "questionID": 88,
+            "options": {
+              "A": "To identify the manufacturer of a device",
+              "B": "To specify the size of a network",
+              "C": "To authenticate users",
+              "D": "To determine the speed of a network connection"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Which class of IP addresses is reserved for multicasting?",
+            "questionID": 89,
+            "options": {
+              "A": "Class A",
+              "B": "Class B",
+              "C": "Class C",
+              "D": "Class D"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "What is the default subnet mask for a Class C network?",
+            "questionID": 90,
+            "options": {
+              "A": "255.0.0.0",
+              "B": "255.255.0.0",
+              "C": "255.255.255.0",
+              "D": "255.255.255.255"
+            },
+            "answer": "C"
+          }
+    ]
+}

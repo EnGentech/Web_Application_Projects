@@ -21,9 +21,9 @@ from django.core.paginator import Paginator, EmptyPage
 
 
 tasks = {
-    "CTE323": "pythonTasks.json",
-    "COM122": "internetTasks.json",
-    "EED126": "entrepreneur.json"
+    "CTE323": "assignments/pythonTasks.json",
+    "COM122": "assignments/internetTasks.json",
+    "EED126": "assignments/entrepreneur.json"
 }
 
 def student_required(view_func):
@@ -32,7 +32,7 @@ def student_required(view_func):
         if request.user.is_authenticated and isinstance(request.user, Students_data):
             return view_func(request, *args, **kwargs)
         else:
-            return redirect('signInLec')  # Redirect to the login page or another page
+            return redirect('login')
     return _wrapped_view
 
 # Create your views here.
@@ -41,8 +41,8 @@ def logout_required(view_func):
     def _wrapped_view(request):
         if request.user.is_authenticated and "client" in request.path:
             messages.error(request, f"{request.user} is already Signed in, please Sign Out!")
-            return redirect('landing_page') 
-        return view_func(request) 
+            return redirect('landing_page')
+        return view_func(request)
     return _wrapped_view
 
 @logout_required
@@ -105,7 +105,7 @@ def loadQuestion(request):
         semester = request.POST.get("semester")
         courseCode = request.POST.get("cCode")
         year = request.POST.get("year")
-        
+
         question = Upload.objects.filter(year=year, semester=semester, courses__course_code=courseCode, courses__level=level).first()
         if question:
             messages.success(request, "Question loaded successfully")
@@ -113,7 +113,7 @@ def loadQuestion(request):
         else:
             messages.error(request, f"Question for {courseCode} not found, check back later!")
             return render(request, "questionPage.html", {"code": courseCode, 'year': year})
-    
+
     return render(request, "questionPage.html")
 
 @student_required
@@ -141,7 +141,7 @@ def profileUpdate(request):
         semester = ajax_data.get('semester')
         regNo = ajax_data.get("reg_no")
         profile_picture = request.FILES.get('profile_picture')
-        
+
         data.first_name = firstName
         data.last_name = lastName
         data.otherName = otherName
@@ -183,7 +183,7 @@ def timer(endDate):
     days = time_difference.days
     hours, remainder = divmod(time_difference.seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
-    
+
     timePart = [days, hours, minutes, seconds]
     return timePart
 
@@ -198,7 +198,7 @@ def courseWork(request):
             return courseWorkLoad(request, f'student/{tasks[courseCode]}', courseCode)
         except Exception:
             return JsonResponse({"status": "No task"})
-        
+
     data = Students_data.objects.filter(username=request.user).first()
     registered = CourseWork.objects.filter(student=data).all()
     return render(request, 'courseWork.html', {"data": registered})
@@ -235,7 +235,7 @@ def courseWorkLoad(request, filePath, courseCode):
     return render(request, 'courseWork.html', {"data": registered, "taskUpdate": returnList, "remainder": remainderTimer})
 
 @student_required
-@login_required(login_url="login")   
+@login_required(login_url="login")
 def assessment(request):
     """render Users assessment"""
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
@@ -258,7 +258,7 @@ def assessment(request):
         }
         email = EmailLogic()
         email.assessmentSubmision(email_data)
-        
+
         data = Students_data.objects.filter(username=request.user).first()
         courseData = CourseWork.objects.filter(courseCode=courseCode).first()
         level = courseData.level
@@ -278,7 +278,7 @@ def assessment(request):
         return JsonResponse({"message": "Assessment received"})
 
 @student_required
-@login_required(login_url="login")   
+@login_required(login_url="login")
 def validateAssessment(request):
     """validate assessment"""
     if request.method == "GET":
@@ -291,7 +291,7 @@ def validateAssessment(request):
         return JsonResponse({"status": 0})
 
 @lecturer_required
-@login_required(login_url="signInLec")  
+@login_required(login_url="signInLec")
 def listSubmittedStudents(request):
     """list submitted students data"""
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
@@ -305,7 +305,7 @@ def listSubmittedStudents(request):
         return JsonResponse({"dataResponse": dataResponse})
 
 @lecturer_required
-@login_required(login_url="signInLec")    
+@login_required(login_url="signInLec")
 def returnScores(request):
     """return User Grade to user"""
     if request.method == "POST" and request.headers.get('x-requested-with') == 'XMLHttpRequest':
@@ -326,7 +326,6 @@ def returnScores(request):
             return JsonResponse({"response": "No Score for this course yet!", "status": 501})
         if averageTime > 0:
             returnData = []
-            print(returnData)
             for user in users:
                 total = 0
                 result = Assessment.objects.filter(course_code=courseCode, student=user, level=level, semester=semester).all()
@@ -388,7 +387,7 @@ def taskNotificationMailSent(request):
     return JsonResponse({"message": "Notification sent successfully"})
 
 @student_required
-@login_required(login_url="login") 
+@login_required(login_url="login")
 def validateReferenceNumber(request):
     """validate user reference Number"""
     if request.method == "POST":
@@ -410,7 +409,7 @@ def resetPinCode(request, type=None):
             request.session['resetCode'] = resetCode
             request.session['email'] = email
             request.session.set_expiry(180)
-            
+
             emailData = {
                 "email": email,
                 "username": user.username,
@@ -421,7 +420,7 @@ def resetPinCode(request, type=None):
             return JsonResponse({"message": "Pin code reset successful"})
         else:
             return JsonResponse({"message": "Not Found"})
-        
+
     elif request.method == 'POST' and type == "reset":
         resetCode = request.session.get('resetCode')
         email = request.session.get('email')
@@ -442,24 +441,28 @@ def resetPinCode(request, type=None):
                 return JsonResponse({"message": "User not found"})
         except ValidationError as e:
             return JsonResponse({"message": e.messages[0]}, status=400)
-    
+
     elif request.method == "POST":
         resetCode = request.session.get('resetCode')
         requestCode = request.POST.get("resetCode")
-        print(resetCode)
-        print(requestCode)
         if int(requestCode) == int(resetCode):
             return JsonResponse({"status": "1"})
         else:
             return JsonResponse({"status": "0"})
-        
+
+@student_required
+@login_required(login_url="login")
 def takeTest(request, pageNumber=1):
-    courseCode = "CTE323"
+    courseCode = request.GET.get("courseCode")
+    courseTitle = request.GET.get("courseTitle")
+    moduleTitle = request.GET.get("moduleTitle")
+    regNumber = request.GET.get("regNumber")
+
     duration = 30
     markScheme = {}
 
     pickedQuestion = request.session.get('pickedQuestion', [])
-    request.session.set_expiry(duration + 5)
+    request.session.set_expiry((duration + 5) * 60)
 
     if request.method == "POST":
         data = request.body.decode('utf-8')
@@ -472,20 +475,19 @@ def takeTest(request, pageNumber=1):
 
         for key, value in quiz_data.items():
             if str(key) in str(markScheme) and value == markScheme[int(key)]:
-                score += 5
-            
-        return JsonResponse({"score": score})
+                score += (100 / 30)
+        return JsonResponse({"score": round(score, 2)})
 
     if not pickedQuestion:
         with open(f"student/quiz/{courseCode}.json", "r") as file:
             content = json.load(file)
             questions = content.get("questions")
-        
+
         length = len(questions)
         picks = []
-        for _ in range(20):
+        for _ in range(0, length - 1):
             while True:
-                pick = randint(0, length - 1)
+                pick = randint(150, 181)
                 if pick in picks:
                     continue
                 else:
@@ -497,13 +499,53 @@ def takeTest(request, pageNumber=1):
 
         request.session['pickedQuestion'] = pickedQuestion
 
-    paginator = Paginator(pickedQuestion, 5)
+    paginator = Paginator(pickedQuestion, 6)
     try:
         page_obj = paginator.page(pageNumber)
     except EmptyPage:
         raise Http404("No questions available")
-    
+
     totalPages = paginator.num_pages
     count = paginator.page_range.index(pageNumber) + 1
 
-    return render(request, "testPage.html", {"quiz": page_obj, "totalPages": totalPages, "pageCount": count, "duration": duration})
+    checkSubmition = Assessment.objects.filter(course_code=courseCode, student=request.user, moduleName=moduleTitle).first()
+    if checkSubmition:
+        status = checkSubmition.taskStatus
+        if status:
+            messages.error(request, "You have already taken this test")
+            data = Students_data.objects.filter(username=request.user).first()
+            registered = CourseWork.objects.filter(student=data).all()
+            return render(request, 'courseWork.html', {"data": registered})
+
+    activate = Assessment.objects.filter(course_code=courseCode, student=request.user, moduleName=moduleTitle).first()
+    if not activate:
+        user = Students_data.objects.filter(username=request.user, regNumber=regNumber).first()
+        courseData = CourseWork.objects.filter(courseCode=courseCode).first()
+        if courseData:
+            level = courseData.level
+            semester = courseData.semester
+            assessmentData = Assessment(
+                student=user,
+                course_code=courseCode,
+                score=0,
+                moduleName=moduleTitle,
+                taskStatus=True,
+                level=level,
+                semester=semester,
+            )
+            # assessmentData.save()
+    return render(request, "testPage.html", {"quiz": page_obj, "totalPages": totalPages, "pageCount": count, "duration": duration, "courseCode": courseCode, "courseTitle": courseTitle, "moduleTitle": moduleTitle})
+
+@student_required
+@login_required(login_url="login")
+def autoScore(request):
+    """Update score automatically based on test passed"""
+    if request.method == "POST":
+        obtainedScore = request.POST.get("obtainedScore")
+        courseCode = request.POST.get("cCode")
+        moduleTitle = request.POST.get("moduleTitle")
+        updateScore = Assessment.objects.filter(course_code=courseCode, student=request.user, moduleName=moduleTitle).first()
+        updateScore.score = round(float(obtainedScore))
+        updateScore.remark = "Test completed and score uploaded successfully"
+        #updateScore.save()
+        return JsonResponse({"score":"success"})

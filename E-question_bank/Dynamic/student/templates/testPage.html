@@ -12,19 +12,21 @@
 <div id="allContent">
     <div class="headContent">
         <div id="floatRight">
-            <h5 id="timeAllowed">Time allowed: <span id="duration">{{ duration }}mins</span></h5>
+            <h5 id="timeAllowed">Time allowed <span id="duration">{{ duration }}mins</span></h5>
             <div id="scoreLog">
                 <section id="score">
                     <h5 id="numerator">0</h5>
                     <h5 id="denomenator">100</h5>
                 </section>
-                <p id="name">Gentle Inyang</p>
-                <p id="reg">230115003</p>
+                <p id="name">{{ request.user }}</p>
+                <p id="reg">{{ request.user.regNumber }}</p>
             </div>
         </div>
         <h2>QUIZ ON</h2>
         <section id="userDetails">
-            <p>CTE323: <span>Python Programming Language</span></p>
+            <p id="cCode" style="display: none">{{ courseCode }}</p>
+            <p id="mTitle" style="display: none">{{ moduleTitle }}</p>
+            <p>{{ courseCode }}: <span>{{ courseTitle }}</span></p>
         </section>
     </div><hr>
     <p id="instruction">
@@ -41,7 +43,7 @@
                             <h5>Q_{{ forloop.counter }}:</h5>
                         </section>
                         <section class="question_text">
-                            <p>{{ questions.question }}</p>
+                            <p>{{ questions.question | safe}}</p>
                         </section>
                     </div>
             
