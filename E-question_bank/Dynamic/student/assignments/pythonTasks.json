@@ -1,34 +1,50 @@
 {
     "Module1":{
         "intro": "Basic syntax",
-        "startDate": "08/05/2024",
-        "endDate": "12/05/2024",
+        "startDate": "24/04/2024",
+        "endDate": "26/04/2024",
         "activation": 1,
         "score": 0,
         "taskType": "Assignment"
     },
     "Module2":{
-        "intro": "Control Structure 1",
-        "startDate": "03/04/2024",
-        "endDate": "10/04/2024",
-        "activation": 0,
+        "intro": "Control Structure",
+        "startDate": "01/05/2024",
+        "endDate": "03/05/2024",
+        "activation": 1,
         "score": 0,
         "taskType": "Assignment"
     },
     "Module3":{
         "intro": "Functions",
-        "startDate": "11/04/2024",
-        "endDate": "15/04/2024",
-        "activation": 0,
+        "startDate": "08/05/2024",
+        "endDate": "13/05/2024",
+        "activation": 1,
         "score": 0,
         "taskType": "Assignment"
     },
     "Module4":{
-        "intro": "Intro to Python",
-        "startDate": "12/05/2024",
-        "endDate": "20/05/2024",
+        "intro": "Test_1",
+        "startDate": "23/05/2024",
+        "endDate": "25/05/2024",
         "activation": 1,
         "score": 0,
-        "taskType": "Test"
+        "taskType":  "Test"
+    },
+    "Module5":{
+        "intro": "Data Structure",
+        "startDate": "22/05/2024",
+        "endDate": "2/05/2024",
+        "activation": 1,
+        "score": 0,
+        "taskType": "Assignment"
+    },
+    "Module6":{
+        "intro": "Project_1",
+        "startDate": "27/05/2024",
+        "endDate": "03/06/2024",
+        "activation": 1,
+        "score": 0,
+        "taskType": "Project"
     }
 }

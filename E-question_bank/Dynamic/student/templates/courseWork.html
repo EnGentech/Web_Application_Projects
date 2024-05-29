@@ -95,8 +95,15 @@
                     <center><p class="signIn_messages fadeOff">{{ message }}</p></center>                 
                 {% endfor %}
             {% endif %}
-
             <section class="toRight">
+                <section id="score">
+                    <h5 id="numerator">0.0</h5>
+                    <h5 id="denomenator">30</h5>
+                </section>
+                <p id="cumScore">Cummulative Assessment Score</p>
+            </section>
+
+            <section class="toLeft">
                 <h3>{{ request.user.faculty }}</h3>
                 <h5>{{ request.user.department }}</h5>
             </section>
@@ -130,7 +137,8 @@
                 <section class="mainContent">
                     <section class="toRightContent">
                         <h5>Grade: <span id="gradeColor">0.00%</span></h5>
-                        <button id="takeTest">Take Practice Test</button>
+                        <button id="takeTest">Take Test</button>
+                        <button id="clone"><a href="https://github.com/EnGentech/PyProjects" target="_black">Clone repo</a></button>
                     </section>
                     <section class="courseDetail">
                         <h5>Course Code: <span id='cCodeSelect'>--Select Registered Course--</span></h5>

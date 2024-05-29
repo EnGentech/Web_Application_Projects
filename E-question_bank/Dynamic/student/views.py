@@ -198,7 +198,7 @@ def courseWork(request):
             return courseWorkLoad(request, f'student/{tasks[courseCode]}', courseCode)
         except Exception:
             return JsonResponse({"status": "No task"})
-
+       
     data = Students_data.objects.filter(username=request.user).first()
     registered = CourseWork.objects.filter(student=data).all()
     return render(request, 'courseWork.html', {"data": registered})
@@ -228,7 +228,7 @@ def courseWorkLoad(request, filePath, courseCode):
         return HttpResponse("File not found", status=404)
     except json.JSONDecodeError:
         return HttpResponse("Invalid JSON content", status=500)
-
+ 
     remainderTimer = timer(task['endDate']) if returnList else None
     data = Students_data.objects.filter(username=request.user).first()
     registered = CourseWork.objects.filter(student=data).all()
@@ -456,7 +456,7 @@ def takeTest(request, pageNumber=1):
     courseCode = request.GET.get("courseCode")
     courseTitle = request.GET.get("courseTitle")
     moduleTitle = request.GET.get("moduleTitle")
-    regNumber = request.GET.get("regNumber")
+    regNumber = request.GET.get("regNumber")    
 
     duration = 30
     markScheme = {}

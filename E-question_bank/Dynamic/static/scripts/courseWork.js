@@ -3,6 +3,7 @@ $(document).ready(function() {
     var cCodeSelect = $('#cCodeSelect');
     var cTitleSelect = $('#cTitleSelect');
     let takeTest = $("#takeTest")
+    let clone = $("#clone")
     let timerStatus
 
     function makeAjaxRequest() {
@@ -59,7 +60,11 @@ $(document).ready(function() {
             totalScore += parseInt(splitScore[0])
         })
         let average = totalScore/count
-        return average.toFixed(2)
+        let cumScore = average * 0.3
+        return {
+            avg: average.toFixed(2),
+            score: cumScore.toFixed(1)
+        }
     }
 
     function updateCountdown(startDate, endDate) {
@@ -125,6 +130,7 @@ $(document).ready(function() {
             success: function(response) {
                 clearTimeout(timerStatus)
                 takeTest.hide()
+                clone.hide()
                 if (response.status === "No task") {
                     $("#countdown").text("Timer: 00::00:00:00");
                     let noTaskTable = $(".progressTable .tableView table tbody");
@@ -134,6 +140,7 @@ $(document).ready(function() {
                 
                 let count = 0
                 let gradeScore = $("#gradeColor")
+                let scoreNumerator = $("#numerator")
                 
                 var updatedContent = $(response).find('.progressTable').html();
                 $('.progressTable').html(updatedContent);
@@ -157,10 +164,20 @@ $(document).ready(function() {
                 $('#allTask').text(`All Task: ${count}`);
 
                 updateCountdown(startDateText, endDateText);
+
                 let unitScore = totalGrade();
-                if (!isNaN(unitScore) && unitScore !== null && unitScore !== undefined) {
-                    gradeScore.text(`${unitScore}%`);
+                if (!isNaN(unitScore.avg) && unitScore.avg !== null && unitScore.avg !== undefined) {
+                    gradeScore.text(`${unitScore.avg}%`);
+                    if (unitScore.score < 12) {
+                        gradeScore.css("color", "red");
+                        scoreNumerator.css("color", "red")
+                    } else {
+                        gradeScore.css("color", "green");
+                        scoreNumerator.css("color", "green")
+                    }
+                    scoreNumerator.text(unitScore.score)
                 } else {
+                    scoreNumerator.text("0.0");
                     gradeScore.text("0.00%");
                 }
 
@@ -173,6 +190,8 @@ $(document).ready(function() {
                             $(this).find(".clickMe").prop('disabled', true);
                             takeTest.show()
                             activeModelTitle = $(this).find("td:eq(1)").text().trim();
+                        } else if (taskType === "Project" && status === "Active"){
+                            clone.show()
                         }
                     });
                 }, 1000);

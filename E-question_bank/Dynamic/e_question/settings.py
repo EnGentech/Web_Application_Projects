@@ -35,6 +35,8 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'django_celery_beat',
+    'django_celery_results',
     'courses',
     'student',
     'generic',
@@ -157,3 +159,22 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = email_address
 EMAIL_HOST_PASSWORD = email_password
+
+# Celery settings
+CELERY_BROKER_URL = 'sqla+mysql://equestionuser:E_question123$@localhost/equestiondb'
+CELERY_RESULT_BACKEND = 'db+mysql://equestionuser:E_question123$@localhost/equestiondb'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'UTC'
+CELERY_TASK_TRACK_STARTED = True
+
+
+# Celery Beat settings
+# CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+# CELERY_BEAT_SCHEDULE = {
+#     'send-notification-email-every-5-seconds': {
+#         'task': 'e_question.tasks.send_notification_email',
+#         'schedule': 5.0,
+#     },
+# }
