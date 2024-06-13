@@ -4,6 +4,7 @@ $(document).ready(function() {
     var cTitleSelect = $('#cTitleSelect');
     let takeTest = $("#takeTest")
     let clone = $("#clone")
+    let defense = $("#defense")
     let timerStatus
 
     function makeAjaxRequest() {
@@ -131,6 +132,8 @@ $(document).ready(function() {
                 clearTimeout(timerStatus)
                 takeTest.hide()
                 clone.hide()
+                defense.hide()
+
                 if (response.status === "No task") {
                     $("#countdown").text("Timer: 00::00:00:00");
                     let noTaskTable = $(".progressTable .tableView table tbody");
@@ -192,6 +195,10 @@ $(document).ready(function() {
                             activeModelTitle = $(this).find("td:eq(1)").text().trim();
                         } else if (taskType === "Project" && status === "Active"){
                             clone.show()
+                        } else if (taskType == "Defense" && status == "Active") {
+                            $(this).find(".clickMe").text("click above").attr('title', "Join from link above");
+                            $(this).find(".clickMe").prop('disabled', true);
+                            defense.show()
                         }
                     });
                 }, 1000);

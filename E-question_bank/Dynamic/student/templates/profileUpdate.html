@@ -5,7 +5,7 @@
     <title>Load Resources</title>
     <link rel="stylesheet" href="{% static 'styles/updateProfile.css' %}">
     <link rel="stylesheet" href="{% static 'styles/spinner.css' %}">
-    <script src="{% static 'scripts/updateProfile.js' %}"></script>
+    <script src="{% static 'scripts/profileUpdate.js' %}"></script>
 {% endblock head %}
 
     
@@ -28,7 +28,7 @@
 
                     <br><label for="OtherName" id="oName">Other Name <label for="regNo" class="label_"><span class="asteriskColor">* </span>Registration Number</label></label><br>
                     <input type="text" name="otherName" id="oName" placeholder="Other Name" required>
-                    <input type="number" name="regNo" id="regNo" placeholder="xxxxxxxx" pattern="\d{8}" required>
+                    <input type="number" name="regNo" id="regNo" placeholder="xxxxxxxx" required>
 
                     <br><label for="level" id="label_level"><span class="asteriskColor">* </span> Level <label for="semester" id="label_reg"><span class="asteriskColor">* </span>Semester</label></label><br>
 

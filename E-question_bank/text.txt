@@ -1,0 +1,28 @@
+Using celery to handle notification based on task
+
+installation -> pip install celery django-celery-beat django-celery-results redis
+
+Celery Configuration with mysql, meanwhile it best to use redis for scalability and getting more message
+# settings.py
+
+# Celery configuration
+CELERY_BROKER_URL = 'sqla+mysql://username:password@hostname/database'
+CELERY_RESULT_BACKEND = 'db+mysql://username:password@hostname/database'
+
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'UTC'
+
+# To use sql database, you will need to install sqlalchemy with pip install sqlalchemy
+
+celery -A e_question worker --loglevel=info
+celery -A e_question beat --loglevel=info
+
+To test your code, after running worker above, open djando shell and import the tasks created, e.g
+python manage.py shell
+from student.tasks import send_notification_email
+send_notification_email()
+
+for the fact that celery always sends an argument, when defining a function to collect that is null, ensure to user *args and **kwargs
+even if you dont use it just to avoid error in your calling

@@ -237,6 +237,19 @@ input[type='file']::-webkit-file-upload-button{
     padding: 3px 50px 3px 50px;
     border: 1px solid rgba(137, 134, 134, 0.184);
 }
+
+.flash-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: red;
+    padding: 10px 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+    z-index: 9999;
+}
 /* media query responsiveness */
 
 @media screen and (max-width: 1200px) {

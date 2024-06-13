@@ -15,20 +15,38 @@ $(document).ready(function(){
 
     function printFunction() {
         var $table = $('#print-table');
-        var $newBody = $('<body>');
         var $newWindow = window.open('', '_blank');
+    
+        var $newBody = $('<body>');
         var $title = $('<h2>').text('Score Sheet').css('text-align', 'center');
         $newBody.append($title).append($table.clone());
-        $newWindow.document.body.appendChild($newBody[0]);
     
-        // Adjust the width of the table to 80% for printing
-        var style = document.createElement('style');
-        style.innerHTML = '@media print { #print-table { width: 90%; } }';
-        $newWindow.document.head.appendChild(style);
+        $($newWindow.document.body).append($newBody);
+    
+        // Add custom styles for the table
+        var style = $('<style>').text(`
+            @media print { 
+                #print-table { 
+                    width: 90%; 
+                    margin: auto;
+                }
+                #print-table thead {
+                    text-align: left;
+                }
+            }
+        `);
+        $($newWindow.document.head).append(style);
+    
+        // Copy existing stylesheets to the new window
+        $('link[rel="stylesheet"]').each(function() {
+            $($newWindow.document.head).append($(this).clone());
+        });
     
         $newWindow.print();
-        $newWindow.close();
-    }
+        setTimeout(function() {
+            $newWindow.close();
+        }, 100); 
+    }    
     
 
     let printBtn = $("#printScoreList")

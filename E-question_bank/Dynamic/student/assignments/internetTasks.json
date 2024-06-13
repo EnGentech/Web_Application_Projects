@@ -2,9 +2,51 @@
     "Module1":{
         "intro": "Basic Research",
         "startDate": "01/05/2024",
-        "endDate": "03/05/2024",
+        "endDate": "31/05/2024",
         "activation": 1,
         "score": 0,
         "taskType": "Assignment"
-    }
+    },
+    "Module2":{
+        "intro": "Internet Revolution",
+        "startDate": "09/05/2024",
+        "endDate": "31/05/2024",
+        "activation": 1,
+        "score": 0,
+        "taskType": "Assignment"
+    },
+     "Module3":{
+     "intro":  "Test_1",
+     "startDate": "22/05/2024",
+     "endDate": "31/05/2024",
+     "activation": 1,
+     "score": 0,
+     "taskType":  "Test"
+     },
+     "Module4":{
+     "intro":  "IP and Plagiarism",
+     "startDate": "31/05/2024",
+     "endDate": "05/06/2024",
+     "activation": 1,
+     "score": 0,
+     "taskType":  "Assignment"
+     },
+
+     "Module5":{
+     "intro":  "Blog Creation",
+     "startDate": "06/06/2024",
+     "endDate": "13/06/2024",
+     "activation": 1,
+     "score": 0,
+     "taskType":  "Group work"
+     },
+
+     "Module6":{
+     "intro":  "Blog Defense",
+     "startDate": "13/06/2024",
+     "endDate": "20/06/2024",
+     "activation": 1,
+     "score": 0,
+     "taskType":  "Defense"
+     }
 }

@@ -1,0 +1,664 @@
+{
+    "questions": [
+        {
+            "question": "What is entrepreneurship?",
+            "questionID": 1,
+            "options": {
+                "A": "All activities carried out by a person to establish and run business enterprises.",
+                "B": "The study of consumer behaviors and preferences.",
+                "C": "Predicting market trends and fashions.",
+                "D": "Detecting opportunities for business growth."
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What characterizes entrepreneurs?",
+            "questionID": 2,
+            "options": {
+                "A": "Risk-averse and conservative.",
+                "B": "Dread risk and innovation.",
+                "C": "Innovative and able to operate profitably in a business environment.",
+                "D": "Small scale owners with limited resources."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What trend is observed regarding students and entrepreneurship?",
+            "questionID": 3,
+            "options": {
+                "A": "Decreasing interest in entrepreneurship.",
+                "B": "Preference for industry jobs over entrepreneurship.",
+                "C": "Increasing exchange of industry jobs for entrepreneurship.",
+                "D": "Static attitude towards entrepreneurship."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What skills make engineers rational candidates for entrepreneurship?",
+            "questionID": 4,
+            "options": {
+                "A": "Mathematical and science skills.",
+                "B": "Technical creativity and business concepts.",
+                "C": "Strong communication skills.",
+                "D": "All of the above."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What must fill the gap between technology development and the market?",
+            "questionID": 5,
+            "options": {
+                "A": "Innovations.",
+                "B": "Business models.",
+                "C": "Marketing strategies.",
+                "D": "Investment opportunities."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What do customers buy according to the text?",
+            "questionID": 6,
+            "options": {
+                "A": "Technologies.",
+                "B": "Solutions to real problems.",
+                "C": "Products.",
+                "D": "Innovations."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What type of entrepreneurs are drawn towards innovations?",
+            "questionID": 7,
+            "options": {
+                "A": "Imitating entrepreneurs.",
+                "B": "Fabian entrepreneurs.",
+                "C": "Drone entrepreneurs.",
+                "D": "Innovative entrepreneurs."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "Which type of entrepreneurs observe an existing successful system and replicate it with improvements?",
+            "questionID": 8,
+            "options": {
+                "A": "Innovative entrepreneurs.",
+                "B": "Imitating entrepreneurs.",
+                "C": "Fabian entrepreneurs.",
+                "D": "Drone entrepreneurs."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What characterizes Fabian entrepreneurs?",
+            "questionID": 9,
+            "options": {
+                "A": "Prone to sudden decisions and innovations.",
+                "B": "Careful in their approaches and cautious in adopting changes.",
+                "C": "Drawn towards innovations and invest a lot of time in research and development.",
+                "D": "Do not like change and prefer traditional methods of business."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What characterizes drone entrepreneurs?",
+            "questionID": 10,
+            "options": {
+                "A": "Prone to sudden decisions and innovations.",
+                "B": "Drawn towards innovations and invest a lot of time in research and development.",
+                "C": "Careful in their approaches and cautious in adopting changes.",
+                "D": "Do not like change and prefer traditional methods of business."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What function of an entrepreneur involves assuming all possible risks of business?",
+            "questionID": 11,
+            "options": {
+                "A": "Formulating strategic business decisions.",
+                "B": "Executing managerial functions.",
+                "C": "Adopting innovation function.",
+                "D": "Risk absorption."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "Which entrepreneur's function involves deciding the nature and type of goods to be produced?",
+            "questionID": 12,
+            "options": {
+                "A": "Formulating strategic business decisions.",
+                "B": "Executing managerial functions.",
+                "C": "Adopting innovation function.",
+                "D": "Risk absorption."
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What tasks are performed by entrepreneurs regarding managerial functions?",
+            "questionID": 13,
+            "options": {
+                "A": "Arranging finance, purchasing raw materials, and organizing sales.",
+                "B": "Formulating production plans and providing production facilities.",
+                "C": "Assuming the task of personnel management.",
+                "D": "All of the above."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What does the innovation function of an entrepreneur involve?",
+            "questionID": 14,
+            "options": {
+                "A": "Introducing new products without considering economic viability.",
+                "B": "Conceiving ideas for improving the quality of production.",
+                "C": "Executing managerial functions efficiently.",
+                "D": "Delegating tasks to paid managerial personnel."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What is emphasized as one of the key competitive advantages in the 'new economy'?",
+            "questionID": 15,
+            "options": {
+                "A": "Globalization.",
+                "B": "Knowledge workers.",
+                "C": "Innovation.",
+                "D": "Time-to-market."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What does getting to market quickly ensure?",
+            "questionID": 16,
+            "options": {
+                "A": "Lower profits due to rushed production.",
+                "B": "Reduction in competition.",
+                "C": "Meeting changing customer needs.",
+                "D": "Higher development costs."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What is the estimated impact of a 6-month jump on competitors' market entry?",
+            "questionID": 17,
+            "options": {
+                "A": "No significant impact.",
+                "B": "Lower profit potential.",
+                "C": "Three times the profit over the market life of the design.",
+                "D": "Minimal profit increase."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "How does the text define innovation?",
+            "questionID": 18,
+            "options": {
+                "A": "The introduction of something new.",
+                "B": "The process of commercializing ideas.",
+                "C": "Imaginative activity producing original and commercial value outcomes.",
+                "D": "Inventing without commercial intent."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What did economist Joseph Schumpeter identify as types of innovation in the 1930s?",
+            "questionID": 19,
+            "options": {
+                "A": "Five types.",
+                "B": "Three types.",
+                "C": "Seven types.",
+                "D": "Ten types."
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What distinguishes disruptive innovations from incremental innovations?",
+            "questionID": 20,
+            "options": {
+                "A": "Disruptive innovations introduce minor changes to existing technology.",
+                "B": "Incremental innovations are radical changes that obsolete previous technology.",
+                "C": "Disruptive innovations have no precedent and significantly alter existing markets.",
+                "D": "Incremental innovations are slower to gain market acceptance."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "According to the entrepreneural manual, How is the commercialization process likened?",
+            "questionID": 21,
+            "options": {
+                "A": "A linear progression.",
+                "B": "A pinball machine.",
+                "C": "A maze.",
+                "D": "A straight line."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What marks the beginning of the innovation process?",
+            "questionID": 22,
+            "options": {
+                "A": "Opportunity recognition.",
+                "B": "Testing technology and market feasibility.",
+                "C": "Discovery.",
+                "D": "Protecting IP assets."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "How is an opportunity defined?",
+            "questionID": 23,
+            "options": {
+                "A": "An idea and an unserved market need.",
+                "B": "A new invention without market analysis.",
+                "C": "A product idea and a well-established market.",
+                "D": "A product prototype and patent protection."
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What is critical for gauging opportunity feasibility in the market?",
+            "questionID": 24,
+            "options": {
+                "A": "Researching market trends.",
+                "B": "Assessing the founding team's capabilities.",
+                "C": "Analyzing technology and market factors together.",
+                "D": "Investing in product development."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Why is safeguarding intellectual property assets important early in the innovation process?",
+            "questionID": 25,
+            "options": {
+                "A": "To prevent competitors from entering the market.",
+                "B": "To secure funding for further development.",
+                "C": "To ensure the technology is commercially viable.",
+                "D": "To have the option to apply for patents later."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What does the prototyping phase of product development entail?",
+            "questionID": 26,
+            "options": {
+                "A": "Launching the product to the market.",
+                "B": "Testing the product with potential customers.",
+                "C": "Building the business infrastructure.",
+                "D": "Designing and developing the product."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What is the significance of field testing in the commercialization process?",
+            "questionID": 27,
+            "options": {
+                "A": "It ensures the product is patented.",
+                "B": "It determines the market feasibility of the product.",
+                "C": "It attracts potential investors.",
+                "D": "It validates the business plan."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What are the three basic launch strategies available to inventors and innovators?",
+            "questionID": 28,
+            "options": {
+                "A": "Developing a prototype, seeking investors, and marketing.",
+                "B": "Licensing, selling, and starting a company.",
+                "C": "Testing, refining, and launching.",
+                "D": "Researching, designing, and prototyping."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What does developing the business plan involve?",
+            "questionID": 29,
+            "options": {
+                "A": "Finding facilities and hiring personnel.",
+                "B": "Setting up the legal structure and negotiating with investors.",
+                "C": "Preparing financial statements and industry analyses.",
+                "D": "Building the product infrastructure and securing patents."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Why is management expertise crucial during the start-up of a business?",
+            "questionID": 30,
+            "options": {
+                "A": "To conduct market research.",
+                "B": "To secure intellectual property rights.",
+                "C": "To ensure smooth operations.",
+                "D": "To attract potential investors."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What is the essence of entrepreneurship?",
+            "questionID": 31,
+            "options": {
+                "A": "Identifying market trends.",
+                "B": "Recognizing or creating opportunities and commercializing them.",
+                "C": "Generating innovative ideas.",
+                "D": "Maximizing profits."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What distinguishes an opportunity from an idea?",
+            "questionID": 32,
+            "options": {
+                "A": "An idea is tangible, whereas an opportunity is intangible.",
+                "B": "An idea is a representation of something known, while an opportunity is a favorable set of circumstances.",
+                "C": "An idea is created, whereas an opportunity is recognized.",
+                "D": "An idea is market-driven, whereas an opportunity is technology-driven."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "When does opportunity recognition occur?",
+            "questionID": 33,
+            "options": {
+                "A": "When there is a surplus of ideas.",
+                "B": "When technology is emergent.",
+                "C": "When entrepreneurs possess relevant skills and industry experience.",
+                "D": "When a market is saturated."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What characterizes an indeterminate problem?",
+            "questionID": 34,
+            "options": {
+                "A": "It has only one answer.",
+                "B": "It produces different answers that can be identified.",
+                "C": "It requires comprehensive information for the correct solution.",
+                "D": "It involves using a specific formula to find a single correct answer."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "How does divergence differ from convergence in problem solving?",
+            "questionID": 35,
+            "options": {
+                "A": "Divergence generates many ideas, while convergence focuses on narrowing down options.",
+                "B": "Divergence relies on critical thinking, while convergence encourages creativity.",
+                "C": "Divergence is used for deterministic problems, while convergence is used for random problems.",
+                "D": "Divergence leads to the most practical solutions, while convergence explores all possibilities."
+            },
+            "answer": "A"
+        },
+        {
+            "question": "In what scenario is divergence not typically needed?",
+            "questionID": 36,
+            "options": {
+                "A": "Simplistic problems.",
+                "B": "Deterministic problems.",
+                "C": "Random problems.",
+                "D": "Indeterminate problems."
+            },
+            "answer": "A"
+        },
+        {
+            "question": "What is the primary focus during the convergence phase of problem-solving?",
+            "questionID": 37,
+            "options": {
+                "A": "Evaluating various scenarios.",
+                "B": "Exploring different options.",
+                "C": "Generating innovative ideas.",
+                "D": "Selecting the most viable solution."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "Which problem-solving technique involves brainstorming sessions?",
+            "questionID": 38,
+            "options": {
+                "A": "Convergence.",
+                "B": "Divergence.",
+                "C": "Both divergence and convergence.",
+                "D": "Neither divergence nor convergence."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What is the purpose of convergence in problem solving?",
+            "questionID": 39,
+            "options": {
+                "A": "To generate a wide range of potential solutions.",
+                "B": "To critically assess options and select the best solution.",
+                "C": "To explore various scenarios and outcomes.",
+                "D": "To encourage creative thinking and brainstorming."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Which type of problem requires extensive exploration of potential strategies and comprehensive information?",
+            "questionID": 40,
+            "options": {
+                "A": "Simplistic problems.",
+                "B": "Deterministic problems.",
+                "C": "Random problems.",
+                "D": "Indeterminate problems."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What are some examples of unexpected occurrences that can lead to entrepreneurial opportunities?",
+            "questionID": 41,
+            "options": {
+                "A": "Predictable successes and failures.",
+                "B": "Consistent market demand.",
+                "C": "Discrepancies between assumptions and reality.",
+                "D": "Static industry structures."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "How can discrepancies between assumptions and reality contribute to entrepreneurial opportunities?",
+            "questionID": 42,
+            "options": {
+                "A": "By confirming existing beliefs.",
+                "B": "By challenging established norms and practices.",
+                "C": "By avoiding innovation.",
+                "D": "By increasing market competition."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "Why is it important for entrepreneurs to study industry or market demographics?",
+            "questionID": 43,
+            "options": {
+                "A": "To maintain traditional business models.",
+                "B": "To adapt to changing consumer preferences and behaviors.",
+                "C": "To avoid competition.",
+                "D": "To minimize financial risks."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "How can entrepreneurs leverage changes in assumptions and beliefs?",
+            "questionID": 44,
+            "options": {
+                "A": "By ignoring market trends.",
+                "B": "By avoiding technological advancements.",
+                "C": "By challenging conventional wisdom and innovating.",
+                "D": "By relying solely on existing knowledge."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What role do government agencies play in providing entrepreneurial opportunities?",
+            "questionID": 45,
+            "options": {
+                "A": "They offer financial grants to entrepreneurs.",
+                "B": "They conduct market research and develop business strategies.",
+                "C": "They publish requests for proposals (RFPs) and license technologies.",
+                "D": "They provide consumer feedback and product testing."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "How can entrepreneurs benefit from dormant patents or trademarks?",
+            "questionID": 46,
+            "options": {
+                "A": "By disregarding them and focusing on new innovations.",
+                "B": "By selling them to competitors for profit.",
+                "C": "By finding new value and commercializing them.",
+                "D": "By avoiding intellectual property laws."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What sources can entrepreneurs utilize to find new opportunities?",
+            "questionID": 47,
+            "options": {
+                "A": "Government agencies and trade associations only.",
+                "B": "Trade publications and suppliers only.",
+                "C": "Internet resources and direct mail solicitation only.",
+                "D": "A variety of sources including government agencies, trade associations, internet resources, and more."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "Why is it important for entrepreneurs to engage with customers?",
+            "questionID": 48,
+            "options": {
+                "A": "To maintain secrecy about their products or services.",
+                "B": "To increase production costs.",
+                "C": "To understand customer needs and pain points.",
+                "D": "To avoid market research and analysis."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What is the primary objective of mapping the value chain in an industry?",
+            "questionID": 49,
+            "options": {
+                "A": "To identify government regulations.",
+                "B": "To understand industry profitability.",
+                "C": "To determine consumer preferences.",
+                "D": "To learn how the industry operates and identify potential opportunities."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "Where can entrepreneurs find opportunities from dormant patents or trademarks?",
+            "questionID": 50,
+            "options": {
+                "A": "Trade associations.",
+                "B": "Government agencies.",
+                "C": "Internet resources.",
+                "D": "A variety of sources including government agencies, trade associations, internet resources, and more."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "What distinguishes the activities of developing a technology and launching a technology company?",
+            "questionID": 51,
+            "options": {
+                "A": "The requirement for technical skills.",
+                "B": "The focus on research and development.",
+                "C": "The need for different skill sets and experiences.",
+                "D": "The level of investment required."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "Why is it essential for entrepreneurs to conduct a feasibility analysis before starting a technology business?",
+            "questionID": 52,
+            "options": {
+                "A": "To determine the potential profits of the business.",
+                "B": "To assess the demand for the product or service.",
+                "C": "To identify the skills required for business operations.",
+                "D": "To understand the regulatory requirements of the industry."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What factors are typically assessed during a feasibility analysis?",
+            "questionID": 53,
+            "options": {
+                "A": "Technical complexity and market potential.",
+                "B": "Employee salaries and benefits.",
+                "C": "Competitor analysis and advertising strategies.",
+                "D": "Market size, capital requirements, and team composition."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "Why is identifying customer benefits crucial in preparing an invention for market introduction?",
+            "questionID": 54,
+            "options": {
+                "A": "To increase production costs.",
+                "B": "To understand the technical specifications of the product.",
+                "C": "To align the product features with customer needs and preferences.",
+                "D": "To ensure compliance with intellectual property laws."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What is the purpose of conducting a feasibility analysis?",
+            "questionID": 55,
+            "options": {
+                "A": "To estimate potential profits.",
+                "B": "To evaluate employee performance.",
+                "C": "To identify market competitors.",
+                "D": "To assess the viability of a technology business idea."
+            },
+            "answer": "D"
+        },
+        {
+            "question": "Why is it important for entrepreneurs to develop a clear and concise concept statement for their business?",
+            "questionID": 56,
+            "options": {
+                "A": "To confuse potential investors.",
+                "B": "To satisfy regulatory requirements.",
+                "C": "To demonstrate an understanding of the market and business potential.",
+                "D": "To conceal business strategies from competitors."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What are the four elements incorporated in a business concept?",
+            "questionID": 57,
+            "options": {
+                "A": "Product, employee, sales strategy, and distribution channel.",
+                "B": "Technical specifications, market analysis, financial projections, and risk management.",
+                "C": "Product or service, customer definition, value proposition, and distribution channel.",
+                "D": "Research and development, marketing, supply chain, and customer service."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "What is the benefit of devising a concise concept statement for a business?",
+            "questionID": 58,
+            "options": {
+                "A": "To increase production costs.",
+                "B": "To complicate business operations.",
+                "C": "To simplify communication and presentation of the business proposition.",
+                "D": "To discourage investor interest."
+            },
+            "answer": "C"
+        },
+        {
+            "question": "How does understanding customer benefits contribute to market success?",
+            "questionID": 59,
+            "options": {
+                "A": "By increasing production costs.",
+                "B": "By aligning product features with customer needs and preferences.",
+                "C": "By ignoring market competition.",
+                "D": "By complicating product development processes."
+            },
+            "answer": "B"
+        },
+        {
+            "question": "What analogy does the text use to describe the process of conducting a feasibility analysis?",
+            "questionID": 60,
+            "options": {
+                "A": "Baking a cake.",
+                "B": "Climbing a mountain.",
+                "C": "Digging at an archeological site.",
+                "D": "Building a bridge."
+            },
+            "answer": "C"
+        }
+    ]
+}

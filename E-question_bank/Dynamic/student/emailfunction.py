@@ -12,7 +12,8 @@ class EmailLogic:
     allTasks = {
         "CTE323": "assignments/pythonTasks.json",
         "COM122": "assignments/internetTasks.json",
-        "EED126": "assignments/entrepreneur.json"
+        "EED126": "assignments/entrepreneur.json",
+        "ICT102": "assignments/vb.json"
     }
     
     def assessmentSubmision(self, data):
