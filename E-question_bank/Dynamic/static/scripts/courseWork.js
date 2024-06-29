@@ -291,7 +291,58 @@ $(document).ready(function() {
             window.location.href = url;
         }, 3000);
     });
+
+    function registerAssessment(url) {
+        var dataToSend = {
+            courseCode: $("#cCodeSelect").text(),
+            courseTitle: $("#cTitleSelect").text(),
+            regNumber: $("#regNo").text()
+        };
+
+        console.log(dataToSend)
+
+        $.ajax({
+            url: url,
+            method: 'GET',
+            data: dataToSend,
+            success: function(response) {
+                if (response.status === 200) {
+                    window.open("https://meet.google.com/bdn-omjh-aun", "_blank");
+                } else {
+                    defense.attr("href", "#")
+                    var flashMessage = document.createElement("div");
+                    flashMessage.classList.add("flash-message");
+                    flashMessage.textContent = `Defense already taken but you can still join the meeting`;
+                
+                    document.body.appendChild(flashMessage);
+                
+                    setTimeout(function() {
+                        window.open("https://meet.google.com/bdn-omjh-aun", "_blank");
+                        flashMessage.remove();
+                    }, 5000);
+                }
+            }
+        });
+    }
+
+    defense.click(function(){
+        var now = new Date();
+        var currentHour = now.getHours();
     
+        if (currentHour >= 13 && currentHour < 15) {
+            registerAssessment("/heritage_students/user/defenseReg/");
+        } else {
+            var flashMessage = document.createElement("div");
+            flashMessage.classList.add("flash-message");
+            flashMessage.textContent = `Meeting time is between 1 and 3pm for Wednesday and 8 - 9am on thurdsay.`;
+        
+            document.body.appendChild(flashMessage);
+        
+            setTimeout(function() {
+                flashMessage.remove();
+            }, 5000);
+        }
+    });
+       
 
 });
-

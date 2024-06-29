@@ -1,14 +1,14 @@
 $(document).ready(function(){
     
     var courses_ComputerScience_ND100_semester1 = [
-        ["Com 111", "Introduction to computing"],
-        ["Com 112", "Introductiion to Digital Electronics"],       
-        ["Com 113", "Intoduction to Programming"],
-        ["Com 114", "Statistics of computing 1"],
-        ["Com 115", "Computer application packages"],
-        ["Mth 111", "Logic of linear algebra"],
-        ["Gns 101", "Use of english 1"],
-        ["Gns 102", "Citizenship Education 1"],
+        ["Com111", "Introduction to computing"],
+        ["Com112", "Introductiion to Digital Electronics"],       
+        ["Com113", "Intoduction to Programming"],
+        ["Com114", "Statistics of computing 1"],
+        ["Com115", "Computer application packages"],
+        ["Mth111", "Logic of linear algebra"],
+        ["Gns101", "Use of english 1"],
+        ["Gns102", "Citizenship Education 1"],
     ]
 
     var courses_ComputerScience_ND100_semester2 = [
@@ -25,15 +25,15 @@ $(document).ready(function(){
     ]
 
     var courses_ComputerScience_ND200_semester1=[
-        ["Com 211", "Programming language using java"],
-        ["Com 212", "Introduction to system program"],
-        ["Com 213", "Unified Modeling Language"],
-        ["Com 214", "Computer system troubleshooting"],
-        ["com 215", "Computer application packages II"],
-        ["Com 216", "Statistics of computing II"],
-        ["SIW 219", "SIWES"],
-        ["Gns 201", "Use of  english II"],
-        ["EED 216", "Practice of entreneurship"],
+        ["Com211", "Programming language using java"],
+        ["Com212", "Introduction to system program"],
+        ["Com213", "Unified Modeling Language"],
+        ["Com214", "Computer system troubleshooting"],
+        ["com215", "Computer application packages II"],
+        ["Com216", "Statistics of computing II"],
+        ["SIW219", "SIWES"],
+        ["Gns201", "Use of  english II"],
+        ["EED216", "Practice of entreneurship"],
     ]
 
     var courses_ComputerScience_ND200_semester2 = [
@@ -41,35 +41,35 @@ $(document).ready(function(){
     ]
 
     var courses_ComputerScience_HND100_semester1 = [
-        ["COM 311", "Operating System I"],
-        ["COM 312", "Database Design I"],       
-        ["COM 313", "computer Programming using C"],
-        ["COM 314", "Computer Architecture"],
-        ["COM 315", "python programmimng language"],
-        ["GNS 301", "use of  english III"],
-        ["STA 311", "statistics Theory I"],
-        ["STA 314", "Operations Research I"],
+        ["COM311", "Operating System I"],
+        ["COM312", "Database Design I"],       
+        ["COM313", "computer Programming using C"],
+        ["COM314", "Computer Architecture"],
+        ["COM315", "python programmimng language"],
+        ["GNS301", "use of  english III"],
+        ["STA311", "statistics Theory I"],
+        ["STA314", "Operations Research I"],
     ]
 
     var courses_ComputerScience_HND100_semester2=[
-        ["COM 321", "Operating System II"],
-        ["COM 322", "Database Design II"],
-        ["COM 323", "Assembly language"],
-        ["COM 324", "intro to software Engineering"],  
-        ["COM 325", "intro to Human computer interface"],
-        ["COM 326", "Mobile Application Development"],
-        ["COM 327", "Intro to Artificial intelligence"],
-        ["GNS 302", "Communication In English III"],
+        ["COM321", "Operating System II"],
+        ["COM322", "Database Design II"],
+        ["COM323", "Assembly language"],
+        ["COM324", "intro to software Engineering"],  
+        ["COM325", "intro to Human computer interface"],
+        ["COM326", "Mobile Application Development"],
+        ["COM327", "Intro to Artificial intelligence"],
+        ["GNS302", "Communication In English III"],
     ]
 
     var courses_ComputerScience_HND200_semester1=[
-        ["COM 411", "Web Development (PHP)"],
-        ["COM 412", "Project Management"],
-        ["COM 413", "Compiler Construction"],
-        ["COM 414", "Data communications and networks"],  
-        ["COM 415", "Multimedia"],
-        ["EED 413", "Entrepreneurship Development"],
-        ["GNS 401", "Communication in english IV"],
+        ["COM411", "Web Development (PHP)"],
+        ["COM412", "Project Management"],
+        ["COM413", "Compiler Construction"],
+        ["COM414", "Data communications and networks"],  
+        ["COM415", "Multimedia"],
+        ["EED413", "Entrepreneurship Development"],
+        ["GNS401", "Communication in english IV"],
     ]
 
     var courses_ComputerScience_HND200_semester2 = [

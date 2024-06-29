@@ -1100,6 +1100,809 @@
               "D": "255.255.255.255"
             },
             "answer": "C"
+          },
+          {
+            "question": "What does network bandwidth measure?",
+            "questionID": 91,
+            "options": {
+              "A": "Speed of data transfer",
+              "B": "Maximum capacity of a communications link",
+              "C": "Distance data travels",
+              "D": "Quality of the network connection"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What unit is bandwidth traditionally expressed in?",
+            "questionID": 92,
+            "options": {
+              "A": "Bytes per second",
+              "B": "Kilobytes per second",
+              "C": "Bits per second",
+              "D": "Megabytes per second"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "Which term refers to the variation in time it takes for data packets to travel?",
+            "questionID": 93,
+            "options": {
+              "A": "Latency",
+              "B": "Jitter",
+              "C": "Packet loss",
+              "D": "Bandwidth"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "In the context of bandwidth, what does 'Mbps' stand for?",
+            "questionID": 94,
+            "options": {
+              "A": "Megabytes per second",
+              "B": "Megabits per second",
+              "C": "Milli-bits per second",
+              "D": "Micro-bits per second"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Which generation of mobile networks has a peak download speed of up to 10 Gbps?",
+            "questionID": 95,
+            "options": {
+              "A": "2G",
+              "B": "3G",
+              "C": "4G",
+              "D": "5G"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "What is the peak download speed of LTE Advanced in 4G networks?",
+            "questionID": 96,
+            "options": {
+              "A": "150 Mbps",
+              "B": "1 Gbps",
+              "C": "10 Gbps",
+              "D": "384 Kbps"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What does 'latency' refer to in the context of internet speed?",
+            "questionID": 97,
+            "options": {
+              "A": "Variation in data packet travel time",
+              "B": "Data packets lost in transmission",
+              "C": "Delay between sending data and receiving a response",
+              "D": "Maximum capacity of a network link"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is a common cause of network congestion?",
+            "questionID": 98,
+            "options": {
+              "A": "High latency",
+              "B": "Long distances",
+              "C": "Too many devices using the network",
+              "D": "Poor quality cables"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is one of the effects of high packet loss?",
+            "questionID": 99,
+            "options": {
+              "A": "Increased network speed",
+              "B": "Faster data transfer",
+              "C": "Need for data to be resent",
+              "D": "Reduced network capacity"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "Which factor can impact Wi-Fi signal strength?",
+            "questionID": 100,
+            "options": {
+              "A": "Network latency",
+              "B": "Wireless interference",
+              "C": "Packet loss",
+              "D": "Routing efficiency"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is a web browser?",
+            "questionID": 101,
+            "options": {
+              "A": "A type of hardware to connect to the Internet",
+              "B": "Software that allows you to find and view websites on the Internet",
+              "C": "A device to increase internet speed",
+              "D": "A tool to create websites"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Which of the following is NOT a common web browser?",
+            "questionID": 102,
+            "options": {
+              "A": "Google Chrome",
+              "B": "Mozilla Firefox",
+              "C": "Safari",
+              "D": "Microsoft Word"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "What does URL stand for?",
+            "questionID": 103,
+            "options": {
+              "A": "Universal Resource Locator",
+              "B": "Uniform Resource Locator",
+              "C": "Uniform Response Locator",
+              "D": "Universal Response Locator"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of the Refresh button in a web browser?",
+            "questionID": 104,
+            "options": {
+              "A": "To go back to the previous page",
+              "B": "To open a new tab",
+              "C": "To reload the current page",
+              "D": "To close the current tab"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What does a hyperlink do?",
+            "questionID": 105,
+            "options": {
+              "A": "Saves the current webpage",
+              "B": "Opens a new browser window",
+              "C": "Navigates to a different webpage",
+              "D": "Closes the current tab"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "How can you open a link in a new tab?",
+            "questionID": 106,
+            "options": {
+              "A": "Double-click the link",
+              "B": "Right-click the link and select 'Open link in new tab'",
+              "C": "Drag the link to the address bar",
+              "D": "Press Ctrl and click the link"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is the function of bookmarks in a web browser?",
+            "questionID": 107,
+            "options": {
+              "A": "To increase browsing speed",
+              "B": "To save and organize specific websites for later access",
+              "C": "To delete browsing history",
+              "D": "To open multiple tabs"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What does the term 'plugin' refer to?",
+            "questionID": 108,
+            "options": {
+              "A": "A type of web browser",
+              "B": "A software module to handle specific content or tasks",
+              "C": "A tool for saving bookmarks",
+              "D": "A method for opening new tabs"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What are add-ons typically developed using?",
+            "questionID": 109,
+            "options": {
+              "A": "HTML, CSS, and JavaScript",
+              "B": "Java and Python",
+              "C": "C++ and PHP",
+              "D": "SQL and Ruby"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What is one common example of an add-on?",
+            "questionID": 110,
+            "options": {
+              "A": "Adobe Flash Player",
+              "B": "Toolbar for shortcuts",
+              "C": "Microsoft Excel",
+              "D": "Google Maps"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is a cookie in the context of web browsing?",
+            "questionID": 111,
+            "options": {
+              "A": "A small text file created by a website that is stored on the user's computer",
+              "B": "A type of web browser",
+              "C": "A plugin for playing videos",
+              "D": "A software component to block ads"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What is a 'magic cookie'?",
+            "questionID": 112,
+            "options": {
+              "A": "A type of cookie used in modern web applications",
+              "B": "A data token passed from a server to a browser to track and authenticate a user",
+              "C": "A cookie that contains user preferences",
+              "D": "A persistent cookie used for tracking"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is the main purpose of HTTP cookies?",
+            "questionID": 113,
+            "options": {
+              "A": "To increase internet speed",
+              "B": "To store and retrieve information between web pages or browser sessions",
+              "C": "To provide virus protection",
+              "D": "To manage browser extensions"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "How are cookies used for authentication?",
+            "questionID": 114,
+            "options": {
+              "A": "They store user passwords",
+              "B": "They contain a unique identifier representing the authenticated session",
+              "C": "They track the number of visits to a website",
+              "D": "They block unauthorized access"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What type of cookies are used to store information about the items in a shopping cart?",
+            "questionID": 115,
+            "options": {
+              "A": "Magic cookies",
+              "B": "Authentication cookies",
+              "C": "Shopping cart cookies",
+              "D": "Session cookies"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "What is a session cookie?",
+            "questionID": 116,
+            "options": {
+              "A": "A cookie used only while navigating a website",
+              "B": "A cookie stored indefinitely on a computer",
+              "C": "A third-party tracking cookie",
+              "D": "A cookie that contains user preferences"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What are persistent cookies used for?",
+            "questionID": 117,
+            "options": {
+              "A": "Only for storing shopping cart items",
+              "B": "Tracking multiple visits to the same site over time and streamlining login information",
+              "C": "Only for authentication",
+              "D": "Providing virus protection"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Why are third-party cookies considered riskier than first-party cookies?",
+            "questionID": 118,
+            "options": {
+              "A": "They are used to track surfing habits across multiple websites",
+              "B": "They store user passwords",
+              "C": "They contain viruses",
+              "D": "They are created by the website you are visiting"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "Which type of cookie is generally allowed by default settings in a web browser?",
+            "questionID": 119,
+            "options": {
+              "A": "Third-party tracking cookies",
+              "B": "First-party personal cookies",
+              "C": "Magic cookies",
+              "D": "Session cookies"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What are the two primary purposes of persistent cookies?",
+            "questionID": 120,
+            "options": {
+              "A": "Authentication and virus protection",
+              "B": "Tracking and storing shopping cart items",
+              "C": "Authentication and tracking multiple visits to the same site",
+              "D": "Blocking ads and enhancing browser speed"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is intellectual property (IP)?",
+            "questionID": 121,
+            "options": {
+              "A": "Physical assets owned by a person",
+              "B": "Creations of the mind, such as inventions, literary and artistic works, designs, and symbols",
+              "C": "Software used to protect data",
+              "D": "A type of computer virus"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What does copyright protect?",
+            "questionID": 122,
+            "options": {
+              "A": "Inventions",
+              "B": "Logos and trademarks",
+              "C": "Literary and artistic works",
+              "D": "Trade secrets"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is a patent?",
+            "questionID": 123,
+            "options": {
+              "A": "A legal term for creative works",
+              "B": "An exclusive right granted for an invention",
+              "C": "A type of trademark",
+              "D": "A software application"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is a trademark?",
+            "questionID": 124,
+            "options": {
+              "A": "A sign capable of distinguishing goods or services of one enterprise from those of other enterprises",
+              "B": "A type of patent",
+              "C": "An artistic work",
+              "D": "A software program"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What does plagiarism involve?",
+            "questionID": 125,
+            "options": {
+              "A": "Using someone else’s work without giving proper credit",
+              "B": "Inventing a new product",
+              "C": "Registering a trademark",
+              "D": "Filing for a patent"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What is global plagiarism?",
+            "questionID": 126,
+            "options": {
+              "A": "Plagiarizing a small part of a text",
+              "B": "Plagiarizing an entire text",
+              "C": "Using your own previous work",
+              "D": "Copying phrases from different sources"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is patchwork or mosaic plagiarism?",
+            "questionID": 127,
+            "options": {
+              "A": "Plagiarizing an entire text",
+              "B": "Using your own previous work",
+              "C": "Copying phrases and ideas from different sources",
+              "D": "Using a small part of a text"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is incremental plagiarism?",
+            "questionID": 128,
+            "options": {
+              "A": "Plagiarizing an entire text",
+              "B": "Copying phrases from different sources",
+              "C": "Using your own previous work",
+              "D": "Inserting a small amount of plagiarized content in a mostly original text"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "What is self-plagiarism?",
+            "questionID": 129,
+            "options": {
+              "A": "Plagiarizing an entire text",
+              "B": "Using someone else's work without credit",
+              "C": "Using your own previous work that you’ve already submitted or published",
+              "D": "Copying phrases from different sources"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What are the consequences of plagiarism in an academic context?",
+            "questionID": 130,
+            "options": {
+              "A": "Failing an assignment",
+              "B": "Academic probation",
+              "C": "Expulsion",
+              "D": "All of the above"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "How can you avoid plagiarism?",
+            "questionID": 131,
+            "options": {
+              "A": "By quoting sources",
+              "B": "By paraphrasing sources",
+              "C": "By citing sources",
+              "D": "All of the above"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "What should you do when you want to include an exact phrase from a source?",
+            "questionID": 132,
+            "options": {
+              "A": "Paraphrase the phrase",
+              "B": "Use a synonym tool",
+              "C": "Use quotation marks around the text",
+              "D": "Ignore the source"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is Internet censorship?",
+            "questionID": 133,
+            "options": {
+              "A": "The practice of speeding up internet connections",
+              "B": "The practice of prohibiting or suppressing certain online content",
+              "C": "The practice of creating new websites",
+              "D": "The practice of enhancing internet security"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Which of the following is NOT typically included in content blocked by Internet censorship?",
+            "questionID": 134,
+            "options": {
+              "A": "Porn",
+              "B": "Torrenting",
+              "C": "Social media",
+              "D": "Weather updates"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "What is the Great Firewall?",
+            "questionID": 135,
+            "options": {
+              "A": "A parental control software",
+              "B": "A type of antivirus program",
+              "C": "China's system of Internet censorship",
+              "D": "A method of keyword blocking"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "How do parents typically censor Internet content at home?",
+            "questionID": 136,
+            "options": {
+              "A": "Using firewalls only",
+              "B": "Employing blacklists and keyword blocking",
+              "C": "Blocking IP addresses exclusively",
+              "D": "Setting up secure browsers"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Why do businesses censor the Internet at work?",
+            "questionID": 137,
+            "options": {
+              "A": "To block inappropriate content",
+              "B": "To increase productivity",
+              "C": "Both A and B",
+              "D": "None of the above"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is the role of Internet Service Providers (ISPs) in Internet censorship?",
+            "questionID": 138,
+            "options": {
+              "A": "They create content to be censored",
+              "B": "They block certain websites from view",
+              "C": "They provide parental controls",
+              "D": "They ensure net neutrality"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is net neutrality?",
+            "questionID": 139,
+            "options": {
+              "A": "The principle that ISPs should charge extra fees for bandwidth",
+              "B": "The principle that ISPs should favor certain websites",
+              "C": "The principle that ISPs should not favor any particular company or website",
+              "D": "The principle that ISPs should block social media"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is IP blocking?",
+            "questionID": 140,
+            "options": {
+              "A": "Blocking certain domain names",
+              "B": "Blocking certain IP addresses",
+              "C": "Filtering for keywords",
+              "D": "Hiding web activity"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What does keyword filtering involve?",
+            "questionID": 141,
+            "options": {
+              "A": "Blocking IP addresses",
+              "B": "Blocking certain keywords",
+              "C": "Blocking entire websites",
+              "D": "Increasing internet speed"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is packet filtering based on?",
+            "questionID": 142,
+            "options": {
+              "A": "Blocking specific domain names",
+              "B": "Filtering based on protocols, ports, and IP addresses",
+              "C": "Filtering by keywords",
+              "D": "Enhancing website design"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Which of the following can help avoid Internet censorship?",
+            "questionID": 143,
+            "options": {
+              "A": "VPNs",
+              "B": "Secure browsers like Tor",
+              "C": "Not using Incognito Mode alone",
+              "D": "All of the above"
+            },
+            "answer": "D"
+          },
+          {
+            "question": "Why is Incognito Mode not sufficient to avoid Internet censorship?",
+            "questionID": 144,
+            "options": {
+              "A": "It deletes web history locally but ISPs can still see online activities",
+              "B": "It hides IP addresses effectively",
+              "C": "It encrypts web activity three times",
+              "D": "It blocks certain websites"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "Why is Incognito Mode not sufficient to avoid Internet censorship?",
+            "questionID": 145,
+            "options": {
+              "A": "It deletes web history locally but ISPs can still see online activities",
+              "B": "It hides IP addresses effectively",
+              "C": "It encrypts web activity three times",
+              "D": "It blocks certain websites"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What is the purpose of patents?",
+            "questionID": 146,
+            "options": {
+              "A": "To protect literary and artistic works",
+              "B": "To protect inventions",
+              "C": "To protect trademarks",
+              "D": "To prevent plagiarism"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Which type of intellectual property protects signs capable of distinguishing goods or services?",
+            "questionID": 147,
+            "options": {
+              "A": "Copyright",
+              "B": "Patents",
+              "C": "Trademarks",
+              "D": "Trade secrets"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What does plagiarism involve?",
+            "questionID": 148,
+            "options": {
+              "A": "Using someone else’s work without giving proper credit",
+              "B": "Creating new inventions",
+              "C": "Developing trademarks",
+              "D": "Protecting digital identity"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What is the definition of digital identity?",
+            "questionID": 149,
+            "options": {
+              "A": "A person's name on social media",
+              "B": "A map of online information about a person or brand",
+              "C": "A person's digital reputation",
+              "D": "An encrypted web activity"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "Which social media platform has the largest user base as of 2020?",
+            "questionID": 150,
+            "options": {
+              "A": "Facebook",
+              "B": "Twitter",
+              "C": "LinkedIn",
+              "D": "Instagram"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What is the primary characteristic of a wiki?",
+            "questionID": 151,
+            "options": {
+              "A": "Allows users to add and edit content",
+              "B": "Provides real-time chat functionality",
+              "C": "Displays information in reverse chronological order",
+              "D": "Restricts access to registered users only"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What is the term for bullying using digital technologies?",
+            "questionID": 152,
+            "options": {
+              "A": "Face-to-face bullying",
+              "B": "Traditional bullying",
+              "C": "Cyberbullying",
+              "D": "Physical bullying"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is a common method of internet censorship?",
+            "questionID": 153,
+            "options": {
+              "A": "Using VPNs",
+              "B": "Filtering keywords",
+              "C": "Encrypting web traffic",
+              "D": "Promoting net neutrality"
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What is the primary goal of social networking sites?",
+            "questionID": 154,
+            "options": {
+              "A": "To encrypt user data",
+              "B": "To provide real-time news updates",
+              "C": "To allow users to communicate and connect",
+              "D": "To restrict access to specific demographics"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is a digital footprint?",
+            "questionID": 155,
+            "options": {
+              "A": "A physical impression left by digital devices.",
+              "B": "A trail of data created by online activities.",
+              "C": "A type of cookie used by marketers.",
+              "D": "A type of screen resolution."
+            },
+            "answer": "B"
+          },
+          {
+            "question": "What does 'self-Googling' involve?",
+            "questionID": 156,
+            "options": {
+              "A": "Searching for the latest Google trends.",
+              "B": "Checking your internet speed.",
+              "C": "Monitoring search results of your own name.",
+              "D": "Learning about new Google features."
+            },
+            "answer": "C"
+          },
+          {
+            "question": "Why is it recommended to set up Google Alerts for your name?",
+            "questionID": 157,
+            "options": {
+              "A": "To receive notifications about online mentions of your name.",
+              "B": "To improve your Google search ranking.",
+              "C": "To access exclusive Google features.",
+              "D": "To block unwanted Google ads."
+            },
+            "answer": "A"
+          },
+          {
+            "question": "What is the purpose of purchasing a domain name?",
+            "questionID": 158,
+            "options": {
+              "A": "To prevent others from using the internet.",
+              "B": "To share personal photos online.",
+              "C": "To secure a personalized web address.",
+              "D": "To access free online courses."
+            },
+            "answer": "C"
+          },
+          {
+            "question": "Why is blogging considered beneficial for building an online presence?",
+            "questionID": 159,
+            "options": {
+              "A": "To share personal anecdotes.",
+              "B": "To increase online privacy.",
+              "C": "To build credibility and visibility.",
+              "D": "To sell personal items online."
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What is one of the uses of video conferencing mentioned?",
+            "questionID": 160,
+            "options": {
+              "A": "Streaming live sports events.",
+              "B": "Hosting virtual reality sessions.",
+              "C": "Conducting remote training sessions.",
+              "D": "Sending international mail."
+            },
+            "answer": "C"
+          },
+          {
+            "question": "Why is screen sharing important in video conferencing?",
+            "questionID": 161,
+            "options": {
+              "A": "To block unwanted participants.",
+              "B": "To secure confidential information.",
+              "C": "To enhance interaction during meetings.",
+              "D": "To improve internet connectivity."
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What feature of video conferencing allows users to switch between voice and video calls seamlessly?",
+            "questionID": 162,
+            "options": {
+              "A": "VoIP integration",
+              "B": "Unlimited recording",
+              "C": "HD video capability",
+              "D": "Chat features"
+            },
+            "answer": "A"
+          },
+          {
+            "question": "Why is HD video beneficial in video conferencing?",
+            "questionID": 163,
+            "options": {
+              "A": "To improve audio quality.",
+              "B": "To reduce internet bandwidth.",
+              "C": "To create professional-looking webinars.",
+              "D": "To reduce screen sharing latency."
+            },
+            "answer": "C"
           }
     ]
 }

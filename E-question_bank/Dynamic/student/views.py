@@ -24,7 +24,8 @@ tasks = {
     "CTE323": "assignments/pythonTasks.json",
     "COM122": "assignments/internetTasks.json",
     "EED126": "assignments/entrepreneur.json",
-    "ICT102": "assignments/vb.json"
+    "ICT102": "assignments/vb.json",
+    "COM321": "assignments/osTasks.json",
 }
 
 def student_required(view_func):
@@ -176,7 +177,6 @@ def timer(endDate):
     current_datetime = datetime.now()
 
     if end_datetime <= current_datetime:
-        print("End date should be in the future.")
         return
 
     time_difference = end_datetime - current_datetime
@@ -534,7 +534,7 @@ def takeTest(request, pageNumber=1):
                 level=level,
                 semester=semester,
             )
-            # assessmentData.save()
+            assessmentData.save()
     return render(request, "testPage.html", {"quiz": page_obj, "totalPages": totalPages, "pageCount": count, "duration": duration, "courseCode": courseCode, "courseTitle": courseTitle, "moduleTitle": moduleTitle})
 
 @student_required
@@ -548,5 +548,31 @@ def autoScore(request):
         updateScore = Assessment.objects.filter(course_code=courseCode, student=request.user, moduleName=moduleTitle).first()
         updateScore.score = round(float(obtainedScore))
         updateScore.remark = "Test completed and score uploaded successfully"
-        #updateScore.save()
+        updateScore.save()
         return JsonResponse({"score":"success"})
+
+@student_required
+@login_required(login_url="login")    
+def submitDefenseReg(request):
+    cCode = request.GET.get("courseCode")
+    regNumber = request.GET.get("regNumber")
+    user = Students_data.objects.filter(username=request.user, regNumber=regNumber).first()
+    checkStatus = Assessment.objects.filter(course_code=cCode, student=request.user, moduleName="Blog Defense").first()
+    if checkStatus:
+        return JsonResponse({"message": "You have already submitted your defense registration", "status": 400})
+    courseData = CourseWork.objects.filter(courseCode=cCode).first()
+    if courseData:
+        level = courseData.level
+        semester = courseData.semester
+        assessmentData = Assessment(
+            student=user,
+            course_code=cCode,
+            score=0,
+            moduleName="Blog Defense",
+            taskStatus=True,
+            level=level,
+            semester=semester,
+        )
+        assessmentData.save()
+    return JsonResponse({"message": "Data received successfully and updated successfully", "status":200})
+    

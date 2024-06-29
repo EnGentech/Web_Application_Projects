@@ -9,7 +9,7 @@
     <script src="{% static 'scripts/assessment.js' %}"></script>
 {% endblock head %}
 
-    
+
 {% block content %}
     {% csrf_token %}
     <div id="offInstructions">
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="statusBoard">
         <div class="statusContent">
             <h2 id="title">
@@ -92,7 +92,7 @@
 
             {% if messages %}
                 {% for message in messages %}
-                    <center><p class="signIn_messages fadeOff">{{ message }}</p></center>                 
+                    <center><p class="signIn_messages fadeOff">{{ message }}</p></center>
                 {% endfor %}
             {% endif %}
             <section class="toRight">
@@ -124,8 +124,8 @@
                     <h5>Registered Courses</h5>
                     <ul class="listCourses">
                     {% if data %}
-                        {% for course in data %} 
-                            <p class="regC_code" style="display: none">{{ course.courseCode }}</p>                       
+                        {% for course in data %}
+                            <p class="regC_code" style="display: none">{{ course.courseCode }}</p>
                             <li class='regCourses' title="{{ course.courseTitle }}">{{ course.courseTitle }}</li>
                         {% endfor %}
                     {% else %}
@@ -139,7 +139,7 @@
                         <h5>Grade: <span id="gradeColor">0.00%</span></h5>
                         <button id="takeTest">Take Test</button>
                         <button id="clone"><a href="https://github.com/EnGentech/PyProjects" target="_black">Clone repo</a></button>
-                        <button id="defense"><a href="#" target="_black">Join Meeting</a></button>
+                        <button id="defense">Join Meeting</button>
                     </section>
                     <section class="courseDetail">
                         <h5>Course Code: <span id='cCodeSelect'>--Select Registered Course--</span></h5>
@@ -163,7 +163,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {% if taskUpdate %}                                                             
+                                    {% if taskUpdate %}
                                         {% for task in taskUpdate %}
                                             <tr class="allDataSchedule">
                                                 <td>{{ forloop.counter }}</td>
@@ -188,7 +188,7 @@
                         </section>
                     </section>
 
-                    
+
                 </section>
             </div>
             <section class="statistics">
@@ -197,9 +197,9 @@
                     <p id="allTask">All Task: 0 </p>
                     <p id="completedTask">Completed: 0</p>
                 </section>
-                    
+
             </section>
         </div>
     </div>
-   
+
 {% endblock content %}

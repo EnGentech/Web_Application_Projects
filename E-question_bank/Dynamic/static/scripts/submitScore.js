@@ -13,7 +13,8 @@ $(document).ready(function(){
         "CTE323": "assignments/pythonTasks.json",
         "COM122": "assignments/internetTasks.json",
         "EED126": "assignments/entrepreneur.json",
-        "ICT102": "assignments/vb.json"
+        "ICT102": "assignments/vb.json",
+        "COM321": "assignments/osTasks.json",
     }
 
     function onStudentNameChange(mutations) {
