@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+  <title>Student management system</title>
+</head>
+<body>
+  {% block header %}
+  <header>
+    <h2 class="logo"></h2>
+    <nav class="navigate">
+      {% comment %} <a href="{% url 'landingPage' %}"> Home</a> {% endcomment %}
+      <a href="#"> Project</a>
+
+      {% block event %}
+        <a href="{% url 'event' %}"> event </a>
+      {% endblock %}
+
+      <a href="attendance.html"> Attendance </a>
+      <a href="about.html"> About us</a>
+
+      <button class="btn_login"> <a href="login.html">Login</a></button>
+
+
+    </nav>
+  </header>
+  {% endblock %}  
+
+  {% block content %}
+  <div class="content">
+
+    <div class="logo">
+      <img src="{% static 'images/logo.jpeg' %}" alt="logo">
+    </div> 
+    
+    <br>
+    <div class="wrapper">
+    <h1 class="container" style="color: aliceblue;">Heritage Polytechnic</h1> <br> 
+      WELCOME TO: <br>
+      School Event Management <br>
+      System (S.E.M.S)
+    </div>
+  </div>
+  <br>
+<div class="images">
+  <img src="{% static 'images/Hp2.jpeg' %}" alt="image" style="height: 500px; margin-left: 20px;">
+</div>
+
+
+    <h1 style="color: aliceblue; font-style: italic;">Welcome to Our School Event Management System</h1>
+    <p style="color: aliceblue; font-style: italic;">Streamline your school events effortlessly</p>
+
+
+<section id="features" class="features" style="color: aliceblue;">
+<img src="{% static 'images/Hp3.JPG' %}" alt="image" style="height: 500px; margin-left: 20px;">
+    <h2 style="color: aliceblue;">Features</h2>
+    <ul>
+        <li><strong>Event Scheduling:</strong> Easily plan and schedule events with our intuitive interface.</li>
+        <li><strong>Online Registration:</strong> Simplify sign-ups with online forms and automated confirmation emails.</li>
+        <li><strong>Communication Tools:</strong> Keep everyone informed with announcements, reminders, and updates.</li>
+        <li><strong>Resource Management:</strong> Efficiently manage venue bookings, equipment, and other resources.</li>
+        <li><strong>Analytics and Reporting:</strong> Get insights into event attendance, feedback, and more.</li>
+    </ul>
+</section>
+
+<section id="benefits" style="color: aliceblue;">
+<img src="{% static 'images/Hp2.jpeg' %}" alt="image" style="height: 500px; margin-right: 40px; justify-content: center">
+    <h2 style="color: aliceblue;">Why Choose Us?</h2>
+    <p>Our system is designed to make event planning easier for schools. With our user-friendly platform, you can:</p>
+    <ul>
+        <li>Save time and reduce administrative burden.</li>
+        <li>Enhance communication with students, parents, and staff.</li>
+        <li>Ensure a smooth and organized event experience.</li>
+        <li>Gain valuable insights through detailed analytics.</li>
+    </ul>
+</section>
+
+<section id="testimonials">
+    <h2 style="color: aliceblue;">What Our Users Say</h2>
+    <blockquote>
+        <p>"This system has transformed the way we organize events at our school. It's so easy to use and has saved us countless hours!"</p>
+        <footer>- Jane Doe, School Administrator</footer>
+    </blockquote>
+    <blockquote>
+        <p>"The online registration feature is fantastic! Parents love the convenience, and it has streamlined our process significantly."</p>
+        <footer>- John Smith, Event Coordinator</footer>
+    </blockquote>
+</section>
+
+<section id="call-to-action">
+    <h2 style="color: aliceblue;">Get Started Today!</h2>
+    <p>Ready to streamline your school's event management? <a href="signup.html">Sign up now</a> for a free trial and see the difference for yourself!</p>
+</section>
+{% endblock %}
+
+{% block footer %}
+
+<footer>
+    <p>&copy; 2024 School Event Management System. All rights reserved.</p>
+</footer>
+{% endblock %}
+</body>
+</html>
