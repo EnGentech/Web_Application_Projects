@@ -9,26 +9,31 @@
   <title>Student management system</title>
 </head>
 <body>
-  {% block header %}
   <header>
-    <h2 class="logo"></h2>
-    <nav class="navigate">
-      {% comment %} <a href="{% url 'landingPage' %}"> Home</a> {% endcomment %}
-      <a href="#"> Project</a>
-
-      {% block event %}
+    <div class="logo_to_left">
+      <h2 class="logo">E.M.S</h2>
+    </div>
+    
+    <div class="head-content">
+      <nav class="navigate">
+        <a href="{% url 'landingPage' %}"> Home</a>
+        <a href="#"> Project</a>
+        
+        {% block event %}
         <a href="{% url 'event' %}"> event </a>
-      {% endblock %}
-
-      <a href="attendance.html"> Attendance </a>
-      <a href="about.html"> About us</a>
-
-      <button class="btn_login"> <a href="login.html">Login</a></button>
-
-
-    </nav>
+        {% endblock %}
+        
+        <a href="attendance.html"> Attendance </a>
+        <a href="about.html"> About us</a>
+        
+        <button class="btn_login"> <a href="login.html">Login</a></button>
+        
+        
+      </nav>
+      {% block header %}
+      {% endblock %}  
+    </div>
   </header>
-  {% endblock %}  
 
   {% block content %}
   <div class="content">

@@ -10,11 +10,16 @@ body {
 header {
     background-color: white;
     color: navy;
+    height: 60px;
     padding: 20px;
-    padding-left: 750px;
+    padding-right: 100px;
     border-radius: 2px;
     position: relative;
     z-index: 10; /* Ensure header stays on top of background image */
+}
+
+.head-content {
+    float: right;   
 }
 
 header .logo img {
@@ -23,7 +28,6 @@ header .logo img {
     height: 70px;
     width: auto;
     vertical-align: middle;
-
 }
 
 header nav {
@@ -131,6 +135,12 @@ footer {
     text-align: center;
     padding: 10px 0;
     background-color: rgba(0, 128, 0, 0.829);
+}
+
+.logo {
+    color: green;
+    float: left;
+    margin: 10px 0px 0px 100px;
 }
 
 /* Responsive Design */

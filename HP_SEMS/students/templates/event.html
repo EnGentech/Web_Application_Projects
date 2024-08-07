@@ -2,9 +2,69 @@
 
 {% load static %}
 
+{% block header %}
+    <link rel="stylesheet" href="{% static 'styles/event.css' %}">
+    <script src="{% static 'scripts/event.js' %}"></script>
+{% endblock %}
+
 {% block event %}
 {% endblock %}
 
 {% block content %}
-{% endblock %}
+<div class="content">
+    <h1>Event Management</h1>
+    <button id="openModalBtn">Create Event</button>
+</div>
 
+<div id="eventModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create Event</h2>
+        <form id="eventForm">
+            <div class="form-group">
+                <label for="event-date">Event Date:</label>
+                <input type="date" id="event-date" name="event-date" required>
+            </div>
+            <div class="form-group">
+                <label for="event-title">Event Title:</label>
+                <input type="text" id="event-title" name="event-title" required>
+            </div>
+            <div class="form-group">
+                <label for="event-description">Event Description:</label>
+                <textarea id="event-description" name="event-description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="saveEvent()">Save</button>
+                <button type="button" class="update" onclick="updateEvent()">Update</button>
+                <button type="button" class="delete" onclick="deleteEvent()">Delete</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="events-list" id="eventsList">
+    <h2>Saved Events</h2>
+    <table class="events-table" id="eventsTable">
+        <thead>
+            <tr>
+                <th>s/n</th>
+                <th>Event Title</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Title</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Exams</td>
+                <td>2021-09-30</td>
+                <td>2021-10-30</td>
+                <td>Exams</td>
+                <td class="event-description">this is preventable</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
