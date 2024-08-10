@@ -8,3 +8,9 @@ def landingPage(request):
 
 def event(request):
     return render(request, 'event.html')
+
+def update(request):
+    return render(request, 'update.html')
+
+def delete(request):
+    return render(request, 'delete.html')
