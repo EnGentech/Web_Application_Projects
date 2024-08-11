@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'styles/adminRegister.css' %}">
+    <script src="{% static 'scripts/adminRegister.js' %}"></script>
+{% endblock %}
+
+{% block event %}
+{% endblock %}
+
+{% block content %}
+
+<div class="auth-container" id="admin-auth-container">
+    <span class="auth-close-btn" id="admin-close-btn">&times;</span>
+    <h2 class="auth-title">Sign-Up for admin privilege using your passcode</h2><hr><br>
+    <form id="admin-auth-form" method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <input type="text" id="admin-username" class="auth-input" placeholder="Username" required name='username'>
+        <input type="password" id="admin-password" class="auth-input" placeholder="Password" required name='password1'>
+        <input type="password" id="admin-confirm-password" class="auth-input" placeholder="Confirm Password" required name='password2'>
+        <input type="password" id="admin-passcode" class="auth-input" placeholder="Privilege Passcode" required name='privilege_passcode'>
+        <div class="auth-button-group">
+            <button type="submit" class="auth-submit-btn">Submit</button>
+            <button type="button" class="auth-cancel-btn" id="admin-cancel-btn">Cancel</button>
+        </div>
+        <p id="admin-error-message" class="auth-error-message"></p>
+        {% if messages %}
+            {% for message in messages %}
+                <p id="admin-error-message" class="auth-jango-message">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    </form>
+</div>
+
+{% endblock %}

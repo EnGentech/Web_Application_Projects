@@ -1,0 +1,84 @@
+#admin-auth-container {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    position: relative;
+    margin: 50px auto;
+}
+
+.auth-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.auth-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.auth-input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-submit-btn {
+    width: 48%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-submit-btn:hover {
+    background-color: #45a049;
+}
+
+.auth-cancel-btn {
+    width: 48%;
+    padding: 10px;
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-cancel-btn:hover {
+    background-color: #e53935;
+}
+
+.auth-error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-top: 10px;
+}
+
+.auth-jango-message {
+    color: red !important;
+    font-size: 14px;
+    display: none;
+    margin-top: 10px;
+}
