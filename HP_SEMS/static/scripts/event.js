@@ -1,6 +1,7 @@
     document.addEventListener('DOMContentLoaded', (event) => {
         const auth = document.getElementById("form-wrapper");
         const btn = document.getElementById("openModalBtn");
+        const error_message = document.getElementById("error-message")
         btn.addEventListener('click', () => {
             auth.style.display = "block";
         });
@@ -24,15 +25,16 @@
         cancelButton.addEventListener('click', () => {
             document.getElementById('login-form').reset();
             spinner.style.display = 'none';
+            error_message.style.display = 'none';
         });
 
         submitButton.addEventListener('click', (event) => {
+            error_message.style.display = 'none'
             event.preventDefault();
             spinner.style.display = 'block';
         
             setTimeout(() => {
-                spinner.style.display = 'none';
-        
+                     
                 const data = {
                     username: document.getElementById('username').value,
                     password: document.getElementById('password').value
@@ -58,6 +60,8 @@
                 .then(response => {
                     const status_code = response.status_code;
                     if (status_code === 200){
+                        spinner.style.display = 'none';
+
                         auth.style.display = 'none';
                         const modal = document.getElementById("eventModal");
                         const span = document.getElementsByClassName("close")[0];
@@ -136,13 +140,24 @@
                         }
 
                     }        
+                    else if (status_code == 400) {
+                        spinner.style.display = 'none';
+                        error_message.style.display = 'block'
+                        error_message.innerText = "Invalid PassCode"
+                    }
+                    else if (status_code == 401) {
+                        spinner.style.display = 'none';
+                        error_message.style.display = 'block'
+                        error_message.innerText = "Invalid Credentials"
+                    }
                 
                 })
+
                 .catch(error => {
                     console.log(error)
                 });
         
-            }, 2000);
+            }, 1000);
         });
         
 

@@ -25,6 +25,7 @@
                 <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
                 <input type="text" id="username" class="form-input" placeholder="Username" required>
                 <input type="password" id="password" class="form-input" placeholder="Password" required>
+                <p id="error-message"></p>
                 <div class="spinner" id="spinner"></div>
                 <div class="form-button-group">
                     <button type="submit" class="form-submit-btn">Submit</button>

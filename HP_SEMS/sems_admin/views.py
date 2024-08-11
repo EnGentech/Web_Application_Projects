@@ -34,7 +34,7 @@ def authenticate_User(request):
             if check_password(password, user.password):
                 return JsonResponse({"status_code": 200})
             else:
-                return JsonResponse({"status_response": 400})
+                return JsonResponse({"status_code": 400})
         else:
             return JsonResponse({"status_code": 401})
     return redirect('landingPage')
