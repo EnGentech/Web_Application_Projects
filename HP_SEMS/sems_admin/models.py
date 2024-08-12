@@ -34,4 +34,4 @@ class Event(models.Model):
     event_description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    event_admin = models.ForeignKey(AdminUser, related_name='events', on_delete=models.CASCADE)
+    # event_admin = models.ForeignKey(AdminUser, related_name='events', on_delete=models.CASCADE)

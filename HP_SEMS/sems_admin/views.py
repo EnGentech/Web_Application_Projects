@@ -1,5 +1,5 @@
 import json
-from .models import AdminUser
+from .models import AdminUser, Event
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 from django.contrib import messages
@@ -38,3 +38,36 @@ def authenticate_User(request):
         else:
             return JsonResponse({"status_code": 401})
     return redirect('landingPage')
+
+def submit_event(request):
+    if request.method == "POST":
+        title = request.POST.get('event-title')
+        start_date = request.POST.get("event-start-date")
+        end_date = request.POST.get("event-end-date")
+        description = request.POST.get("event-description")
+
+        events = Event.objects.filter(event_title=title).first()
+        if events:
+            return redirect('event')
+        new_event = Event(
+            event_title=title,
+            event_start_date=start_date,
+            event_end_date=end_date,
+            event_description=description
+        )
+        new_event.save()
+
+        return redirect('event')
+    return redirect('event')
+
+def delete_event(request):
+    if request == 'POST':
+        print(True)
+        delete_title = request.POST.get('delete-title')
+        event = Event.objects.filter(event_title = delete_title).first()
+        if event:
+            event.delete()
+            return redirect('event')
+    else:
+        print(False)
+    return redirect('event')

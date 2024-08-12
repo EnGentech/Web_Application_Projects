@@ -164,13 +164,8 @@
 }
 
 .events-table td:nth-child(2),
-.events-table th:nth-child(2),
 .events-table td:nth-child(3),
-.events-table th:nth-child(3),
-.events-table td:nth-child(4),
-.events-table th:nth-child(4),
-.events-table td:nth-child(5),
-.events-table th:nth-child(5) {
+.events-table td:nth-child(4) {
     width: 12%;
     white-space: nowrap;
 }
@@ -297,8 +292,9 @@
     background-color: #c82333;
 }
 
-#error-message{
+#error-message, #event-error-message{
     color: red;
     font-size: small;
     display: none;
+    text-align: center;
 }
