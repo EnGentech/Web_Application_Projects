@@ -1,5 +1,6 @@
 from email_validator import validate_email, EmailNotValidError
 
+
 class Client:
     """
     This class will handle the client side of the application.
@@ -31,7 +32,7 @@ class Client:
         if not stripped_value:
             raise ValueError("First name cannot be blank.")
         self.__first_name = stripped_value
-    
+
     @property
     def last_name(self):
         return self.__last_name
@@ -50,10 +51,15 @@ class Client:
     @email_address.setter
     def email_address(self, value):
         try:
-            valid_email = validate_email(value, check_deliverability=False).email
+            valid_email = validate_email(value,
+                                         check_deliverability=False).email
             self.__email_address = valid_email
         except EmailNotValidError as e:
             raise ValueError(f"Invalid email address: {value}") from e
 
     def __str__(self):
-        return f"{self.__last_name}, {self.__first_name} [{self.__client_number}] - {self.__email_address}\n"
+        l_name = self.__last_name
+        f_name = self.__first_name
+        c_number = self.__client_number
+        email = self.__email_address
+        return f"{l_name}, {f_name} [{c_number}] - {email}\n"

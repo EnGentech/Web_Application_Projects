@@ -2,6 +2,7 @@ import unittest
 from email_validator import EmailNotValidError
 from client.client import Client
 
+
 class TestClient(unittest.TestCase):
     """
     Test cases to validate the Client class.
